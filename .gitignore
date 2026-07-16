@@ -5,3 +5,4 @@ __pycache__/
 # Local preview and earlier hosting experiments; not part of the Pages source.
 internet/
 internet-app/
+.worktrees/
