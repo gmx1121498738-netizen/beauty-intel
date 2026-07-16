@@ -24,6 +24,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Check out published files
+        uses: actions/checkout@v4
       - name: Upload published site
         uses: actions/upload-pages-artifact@v3
         with:

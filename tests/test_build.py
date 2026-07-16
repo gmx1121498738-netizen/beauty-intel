@@ -21,6 +21,12 @@ build = load_build_module()
 
 
 class SiteBuildTests(unittest.TestCase):
+    def test_pages_workflow_checks_out_the_repository_before_uploading_public(self):
+        workflow = (ROOT / "site" / ".github" / "workflows" / "deploy-pages.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("uses: actions/checkout@v4", workflow)
+
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
         self.output = Path(self.temp_dir.name) / "public"
