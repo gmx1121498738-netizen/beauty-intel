@@ -4,8 +4,29 @@ import tempfile
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-BUILD_PATH = ROOT / "site/build.py"
+
+SITE_ROOT = Path(__file__).resolve().parents[1]
+
+
+def find_workspace_root(site_root: Path) -> Path:
+    """Locate the report archive for both the main checkout and git worktrees."""
+    direct_root = site_root.parent
+    if (direct_root / "archive").is_dir():
+        return direct_root
+
+    git_pointer = site_root / ".git"
+    if git_pointer.is_file():
+        git_dir = Path(git_pointer.read_text(encoding="utf-8").split(":", 1)[1].strip())
+        common_site_root = git_dir.parents[2]
+        worktree_root = common_site_root.parent
+        if (worktree_root / "archive").is_dir():
+            return worktree_root
+
+    raise RuntimeError("Could not locate the beauty report workspace archive")
+
+
+ROOT = find_workspace_root(SITE_ROOT)
+BUILD_PATH = SITE_ROOT / "build.py"
 
 
 def load_build_module():
@@ -21,8 +42,16 @@ build = load_build_module()
 
 
 class SiteBuildTests(unittest.TestCase):
+    def valid_daily_report(self):
+        return {
+            "kind": "daily",
+            "date": "2026-07-15",
+            "title": "美妆竞对情报日报｜2026年7月15日",
+            "source": "archive/日报/2026-07-15/beauty-daily-20260715.html",
+        }
+
     def test_pages_workflow_checks_out_the_repository_before_uploading_public(self):
-        workflow = (ROOT / "site" / ".github" / "workflows" / "deploy-pages.yml").read_text(
+        workflow = (SITE_ROOT / ".github" / "workflows" / "deploy-pages.yml").read_text(
             encoding="utf-8"
         )
         self.assertIn("uses: actions/checkout@v4", workflow)
@@ -47,6 +76,28 @@ class SiteBuildTests(unittest.TestCase):
         }
         with self.assertRaisesRegex(ValueError, "HTML"):
             build.validate_manifest(data, ROOT)
+
+    def test_manifest_accepts_approved_variable_push_items(self):
+        report = self.valid_daily_report()
+        report["push"] = {
+            "status": "approved",
+            "heading": "昨日重点",
+            "items": ["第一条。", "第二条。", "第三条。", "第四条。"],
+            "detail_label": "查看完整日报",
+        }
+        self.assertEqual(build.validate_manifest({"reports": [report]}, ROOT), [report])
+
+    def test_manifest_rejects_approved_push_without_items(self):
+        report = self.valid_daily_report()
+        report["push"] = {"status": "approved", "items": []}
+        with self.assertRaisesRegex(ValueError, "push.items"):
+            build.validate_manifest({"reports": [report]}, ROOT)
+
+    def test_manifest_rejects_unknown_push_status(self):
+        report = self.valid_daily_report()
+        report["push"] = {"status": "ready", "items": ["第一条。"]}
+        with self.assertRaisesRegex(ValueError, "push.status"):
+            build.validate_manifest({"reports": [report]}, ROOT)
 
     def test_daily_route_is_date_based(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -139,7 +190,12 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output)
         hosted = Path(self.temp_dir.name) / "hosted"
-        build.prepare_hosted_output(self.output, hosted)
+        original_site_dir = build.SITE_DIR
+        try:
+            build.SITE_DIR = ROOT / "site"
+            build.prepare_hosted_output(self.output, hosted)
+        finally:
+            build.SITE_DIR = original_site_dir
         self.assertTrue((hosted / "dist/server/index.js").is_file())
         self.assertTrue((hosted / "dist/assets/index.html").is_file())
         self.assertTrue((hosted / "static/index.html").is_file())

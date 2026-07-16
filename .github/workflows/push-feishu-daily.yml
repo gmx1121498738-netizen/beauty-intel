@@ -1,0 +1,58 @@
+name: Push approved daily to Feishu
+
+on:
+  schedule:
+    # GitHub Actions uses UTC. 03:00 UTC = 11:00 Asia/Shanghai.
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: "Report date (YYYY-MM-DD); blank means yesterday in Shanghai"
+        required: false
+        type: string
+      dry_run:
+        description: "Preview only; do not call Feishu"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: feishu-daily-push
+  cancel-in-progress: true
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SITE_BASE_URL: https://gmx1121498738-netizen.github.io/beauty-intel
+      FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+      FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+    steps:
+      - name: Check out published reports
+        uses: actions/checkout@v4
+
+      - name: Push yesterday's approved daily
+        if: github.event_name == 'schedule'
+        run: python3 push_daily.py
+
+      - name: Preview a manually selected daily
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+        run: |
+          args=()
+          if [[ -n "$TARGET_DATE" ]]; then args+=(--date "$TARGET_DATE"); fi
+          python3 push_daily.py "${args[@]}" --dry-run
+        env:
+          TARGET_DATE: ${{ inputs.target_date }}
+
+      - name: Push a manually selected daily
+        if: github.event_name == 'workflow_dispatch' && !inputs.dry_run
+        run: |
+          args=()
+          if [[ -n "$TARGET_DATE" ]]; then args+=(--date "$TARGET_DATE"); fi
+          python3 push_daily.py "${args[@]}"
+        env:
+          TARGET_DATE: ${{ inputs.target_date }}

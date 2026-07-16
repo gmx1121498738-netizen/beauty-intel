@@ -36,6 +36,32 @@ def site_url(path: str, base_path: str = "") -> str:
     return normal_base + normal_path
 
 
+def validate_push(report: dict) -> None:
+    """Validate optional, human-reviewed group-message content."""
+    if "push" not in report:
+        return
+    push = report["push"]
+    if not isinstance(push, dict):
+        raise ValueError("push must be an object")
+
+    status = push.get("status")
+    if status not in {"draft", "approved", "disabled"}:
+        raise ValueError("push.status must be draft, approved, or disabled")
+
+    for field in ("heading", "detail_label"):
+        if field in push and (not isinstance(push[field], str) or not push[field].strip()):
+            raise ValueError(f"push.{field} must be a non-empty string")
+
+    items = push.get("items")
+    if items is not None and (
+        not isinstance(items, list)
+        or any(not isinstance(item, str) or not item.strip() for item in items)
+    ):
+        raise ValueError("push.items must be a list of non-empty strings")
+    if status == "approved" and not items:
+        raise ValueError("approved push.items must contain at least one item")
+
+
 def validate_manifest(data: dict, root: Path) -> list[dict]:
     """Validate only explicitly published, standalone HTML reports."""
     reports = data.get("reports")
@@ -49,9 +75,12 @@ def validate_manifest(data: dict, root: Path) -> list[dict]:
             raise ValueError("Report kind must be daily or weekly")
         if kind == "daily":
             date.fromisoformat(report.get("date", ""))
+            validate_push(report)
         else:
             if not re.fullmatch(r"\d{4}-W\d{2}", report.get("week", "")):
                 raise ValueError("Weekly reports need a YYYY-Www week key")
+            if "push" in report:
+                raise ValueError("push is only supported for daily reports")
 
         source = report.get("source", "")
         if Path(source).suffix.lower() != ".html":
