@@ -100,6 +100,16 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("2026-07-14", home)
         self.assertIn("beauty-daily-20260714", home)
 
+    def test_github_pages_build_uses_repository_base_path_and_keeps_home_images(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        build.build_site(ROOT, self.output, base_path="/beauty-intel")
+        home = (self.output / "index.html").read_text(encoding="utf-8")
+        daily = (self.output / "daily/2026-07-14/index.html").read_text(encoding="utf-8")
+        self.assertIn('href="/beauty-intel/calendar/"', home)
+        self.assertIn('href="/beauty-intel/pdf/beauty-daily-20260714.pdf"', daily)
+        self.assertIn('href="/beauty-intel/assets/site-shell.css"', daily)
+        self.assertTrue((self.output / "assets/01-cloud-aurora-campaign.png").is_file())
+
     def test_published_daily_copies_the_confirmed_pdf_and_shows_export_link(self):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output)

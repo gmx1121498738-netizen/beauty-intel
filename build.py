@@ -6,6 +6,7 @@ from __future__ import annotations
 import calendar
 import html
 import json
+import os
 import re
 import shutil
 from collections import defaultdict
@@ -26,6 +27,13 @@ def route_for(report: dict) -> str:
     if report.get("kind") == "weekly":
         return f"weekly/{report['week']}/index.html"
     raise ValueError("Report kind must be daily or weekly")
+
+
+def site_url(path: str, base_path: str = "") -> str:
+    """Build a root-relative link that also works from a GitHub Pages project URL."""
+    normal_path = "/" + path.lstrip("/")
+    normal_base = "/" + base_path.strip("/") if base_path.strip("/") else ""
+    return normal_base + normal_path
 
 
 def validate_manifest(data: dict, root: Path) -> list[dict]:
@@ -65,12 +73,12 @@ def load_manifest(root: Path) -> list[dict]:
     return validate_manifest(data, root)
 
 
-def nav_html(active: str, pdf_href: str = "") -> str:
+def nav_html(active: str, pdf_href: str = "", base_path: str = "") -> str:
     labels = (("daily", "日报", "/"), ("calendar", "日历", "/calendar/"), ("weekly", "周报", "/weekly/"), ("search", "搜索", "/search/"))
     links = []
     for key, label, href in labels:
         current = ' aria-current="page"' if active == key else ""
-        links.append(f'<a href="{href}"{current}>{label}</a>')
+        links.append(f'<a href="{site_url(href, base_path)}"{current}>{label}</a>')
     export = f'<a class="site-pdf-export" href="{pdf_href}" download>导出 PDF</a>' if pdf_href else ""
     return '<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索">' + "<span>｜</span>".join(links) + export + "</nav>"
 
@@ -114,7 +122,7 @@ def replace_dimension_index(source_html: str) -> str:
     return re.sub(r"<nav\b[^>]*\bclass=\"side\"[^>]*>.*?</nav>", replace_nav, source_html, count=1, flags=re.S | re.I)
 
 
-def link_volume_dates(source_html: str, daily_routes: dict[str, str], report_date: str = "") -> str:
+def link_volume_dates(source_html: str, daily_routes: dict[str, str], report_date: str = "", base_path: str = "") -> str:
     """Link every near-five-day volume card to its report or the calendar fallback."""
     year = report_date[:4] if report_date else next(iter(sorted(daily_routes)), "2026")[:4]
 
@@ -124,7 +132,7 @@ def link_volume_dates(source_html: str, daily_routes: dict[str, str], report_dat
         if not short_date:
             return cell_match.group(0)
         target_date = f"{year}-{int(short_date.group(1)):02d}-{int(short_date.group(2)):02d}"
-        href = daily_routes.get(target_date, f"/calendar/?date={target_date}")
+        href = daily_routes.get(target_date, site_url(f"calendar/?date={target_date}", base_path))
         linked_attrs = re.sub(r'(\bclass=")([^"]*)"', r'\1\2 date-link"', attrs, count=1)
         return f'<a {linked_attrs} href="{href}">{content}</a>'
 
@@ -143,12 +151,13 @@ def decorate_report(
     daily_routes: dict[str, str] | None = None,
     report_date: str = "",
     pdf_href: str = "",
+    base_path: str = "",
 ) -> str:
     """Add site navigation without changing the source report card markup."""
     if active == "daily":
         source_html = replace_dimension_index(source_html)
-        source_html = link_volume_dates(source_html, daily_routes or {}, report_date)
-    shell_link = '<link rel="stylesheet" href="/assets/site-shell.css" />'
+        source_html = link_volume_dates(source_html, daily_routes or {}, report_date, base_path)
+    shell_link = f'<link rel="stylesheet" href="{site_url("assets/site-shell.css", base_path)}" />'
     if "site-shell.css" not in source_html:
         source_html = re.sub(r"</head>", shell_link + "\n</head>", source_html, count=1, flags=re.I)
     source_html = re.sub(
@@ -159,7 +168,7 @@ def decorate_report(
         flags=re.I,
     )
     source_note = f"\n<!-- Published source: {html.escape(source_path)} -->" if source_path else ""
-    return re.sub(r"(<body\b[^>]*>)", r"\1\n" + nav_html(active, pdf_href) + source_note, source_html, count=1, flags=re.I)
+    return re.sub(r"(<body\b[^>]*>)", r"\1\n" + nav_html(active, pdf_href, base_path) + source_note, source_html, count=1, flags=re.I)
 
 
 def render_template(name: str, **values: str) -> str:
@@ -167,17 +176,18 @@ def render_template(name: str, **values: str) -> str:
     return template.safe_substitute(values)
 
 
-def archive_shell(title: str, active: str, body: str, script: str = "") -> str:
+def archive_shell(title: str, active: str, body: str, script: str = "", base_path: str = "") -> str:
     return render_template(
         "archive.html",
         title=html.escape(title),
-        nav=nav_html(active),
+        nav=nav_html(active, base_path=base_path),
+        shell_href=site_url("assets/site-shell.css", base_path),
         body=body,
         script=script,
     )
 
 
-def calendar_cells(dailies: list[dict]) -> str:
+def calendar_cells(dailies: list[dict], base_path: str = "") -> str:
     by_date = {item["date"]: item for item in dailies}
     months = sorted({(date.fromisoformat(item["date"]).year, date.fromisoformat(item["date"]).month) for item in dailies})
     result: list[str] = []
@@ -190,7 +200,7 @@ def calendar_cells(dailies: list[dict]) -> str:
                 if day.month != month:
                     rows.append('<span class="calendar-blank" aria-hidden="true"></span>')
                 elif iso in by_date:
-                    rows.append(f'<a class="calendar-day has-report" href="/{route_for(by_date[iso]).removesuffix("index.html")}" data-date="{iso}">{day.day}</a>')
+                    rows.append(f'<a class="calendar-day has-report" href="{site_url(route_for(by_date[iso]).removesuffix("index.html"), base_path)}" data-date="{iso}">{day.day}</a>')
                 else:
                     rows.append(f'<span class="calendar-day" data-date="{iso}">{day.day}</span>')
         rows.append("</div></section>")
@@ -198,10 +208,10 @@ def calendar_cells(dailies: list[dict]) -> str:
     return "\n".join(result)
 
 
-def weekly_index(weeklies: list[dict]) -> str:
+def weekly_index(weeklies: list[dict], base_path: str = "") -> str:
     cards = []
     for report in sorted(weeklies, key=lambda item: item["week"], reverse=True):
-        href = "/" + route_for(report).removesuffix("index.html")
+        href = site_url(route_for(report).removesuffix("index.html"), base_path)
         cards.append(
             '<a class="weekly-link" href="%s"><span>%s</span><strong>%s</strong></a>'
             % (href, html.escape(report["week"]), html.escape(report["title"]))
@@ -209,16 +219,16 @@ def weekly_index(weeklies: list[dict]) -> str:
     return "".join(cards)
 
 
-def build_calendar_page(dailies: list[dict], weeklies: list[dict]) -> str:
+def build_calendar_page(dailies: list[dict], weeklies: list[dict], base_path: str = "") -> str:
     latest = max(dailies, key=lambda item: item["date"])
-    latest_href = "/" + route_for(latest).removesuffix("index.html")
+    latest_href = site_url(route_for(latest).removesuffix("index.html"), base_path)
     body = f'''<main class="archive-shell calendar-page">
   <section class="archive-heading"><p class="kicker">DAILY ARCHIVE</p><h1>日报日历</h1></section>
   <div class="calendar-layout">
-    <div class="month-list">{calendar_cells(dailies)}</div>
+    <div class="month-list">{calendar_cells(dailies, base_path)}</div>
     <aside class="calendar-side">
       <a class="selected-report" href="{latest_href}"><span>{latest['date']}</span><strong>{html.escape(latest['title'])}</strong><p>{html.escape(latest.get('summary', ''))}</p></a>
-      <section class="weekly-rail"><p class="rail-label">周报索引</p>{weekly_index(weeklies)}</section>
+      <section class="weekly-rail"><p class="rail-label">周报索引</p>{weekly_index(weeklies, base_path)}</section>
     </aside>
   </div>
 </main>'''
@@ -226,22 +236,23 @@ def build_calendar_page(dailies: list[dict], weeklies: list[dict]) -> str:
         "日报日历｜美妆竞对情报",
         "calendar",
         body,
-        '<script src="/assets/site-calendar.js"></script>',
+        f'<script src="{site_url("assets/site-calendar.js", base_path)}"></script>',
+        base_path,
     )
 
 
-def build_weekly_index_page(weeklies: list[dict]) -> str:
+def build_weekly_index_page(weeklies: list[dict], base_path: str = "") -> str:
     cards = []
     for report in sorted(weeklies, key=lambda item: item["week"], reverse=True):
-        href = "/" + route_for(report).removesuffix("index.html")
+        href = site_url(route_for(report).removesuffix("index.html"), base_path)
         cards.append(f'''<a class="week-card" href="{href}">
   <p>{html.escape(report['week'])}</p><h2>{html.escape(report['title'])}</h2><span>{html.escape(report.get('summary', ''))}</span>
 </a>''')
     body = '<main class="archive-shell weekly-index"><section class="archive-heading"><p class="kicker">WEEKLY INSIGHTS</p><h1>周报</h1></section><section class="week-card-list">' + "\n".join(cards) + "</section></main>"
-    return archive_shell("周报｜美妆竞对情报", "weekly", body)
+    return archive_shell("周报｜美妆竞对情报", "weekly", body, base_path=base_path)
 
 
-def search_records(reports: list[dict]) -> list[dict]:
+def search_records(reports: list[dict], base_path: str = "") -> list[dict]:
     records = []
     for report in reports:
         records.append({
@@ -250,7 +261,7 @@ def search_records(reports: list[dict]) -> list[dict]:
             "week": report.get("week", ""),
             "title": report["title"],
             "summary": report.get("summary", ""),
-            "href": "/" + route_for(report).removesuffix("index.html"),
+            "href": site_url(route_for(report).removesuffix("index.html"), base_path),
             "dimensions": report.get("dimensions", []),
             "brands": report.get("brands", []),
             "categories": report.get("categories", []),
@@ -260,8 +271,8 @@ def search_records(reports: list[dict]) -> list[dict]:
     return records
 
 
-def build_search_page(reports: list[dict]) -> str:
-    records = search_records(reports)
+def build_search_page(reports: list[dict], base_path: str = "") -> str:
+    records = search_records(reports, base_path)
     all_values = defaultdict(set)
     for record in records:
         for field in ("dimensions", "brands", "categories", "channels", "event_types"):
@@ -278,8 +289,8 @@ def build_search_page(reports: list[dict]) -> str:
   <section class="search-panel"><label class="search-input"><span>关键词</span><input id="query" type="search" placeholder="搜索品牌、赛道、渠道或事件" /></label><div class="filter-row">{''.join(selects)}<label><span>日期</span><input id="report-date" type="date" /></label></div></section>
   <p class="search-count" id="search-count"></p><section class="search-results" id="search-results"></section>
 </main>'''
-    script = f'<script>window.__REPORTS__={safe_data};</script><script src="/assets/site-search.js"></script>'
-    return archive_shell("搜索｜美妆竞对情报", "search", body, script)
+    script = f'<script>window.__REPORTS__={safe_data};</script><script src="{site_url("assets/site-search.js", base_path)}"></script>'
+    return archive_shell("搜索｜美妆竞对情报", "search", body, script, base_path)
 
 
 def write_file(path: Path, content: str) -> None:
@@ -306,14 +317,14 @@ def prepare_hosted_output(public_dir: Path, hosted_project: Path) -> None:
     shutil.copy2(worker_source, dist / "server/index.js")
 
 
-def build_site(root: Path, output: Path) -> None:
+def build_site(root: Path, output: Path, base_path: str = "") -> None:
     """Build all public pages. The manifest is the single publication gate."""
     reports = load_manifest(root)
     dailies = [report for report in reports if report["kind"] == "daily"]
     weeklies = [report for report in reports if report["kind"] == "weekly"]
     if not dailies:
         raise ValueError("At least one published daily report is required")
-    daily_routes = {item["date"]: "/" + route_for(item).removesuffix("index.html") for item in dailies}
+    daily_routes = {item["date"]: site_url(route_for(item).removesuffix("index.html"), base_path) for item in dailies}
 
     if output.exists():
         shutil.rmtree(output)
@@ -330,10 +341,10 @@ def build_site(root: Path, output: Path) -> None:
             pdf_name = Path(report["pdf"]).name
             (output / "pdf").mkdir(parents=True, exist_ok=True)
             shutil.copy2(root / report["pdf"], output / "pdf" / pdf_name)
-            pdf_href = "/pdf/" + pdf_name
+            pdf_href = site_url("pdf/" + pdf_name, base_path)
         write_file(
             route_path,
-            decorate_report(source, active, report["source"], daily_routes, report.get("date", ""), pdf_href),
+            decorate_report(source, active, report["source"], daily_routes, report.get("date", ""), pdf_href, base_path),
         )
         source_assets = source_file.parent / "assets"
         if source_assets.is_dir():
@@ -349,16 +360,20 @@ def build_site(root: Path, output: Path) -> None:
             latest_daily["source"],
             daily_routes,
             latest_daily["date"],
-            "/pdf/" + Path(latest_daily["pdf"]).name if latest_daily.get("pdf") else "",
+            site_url("pdf/" + Path(latest_daily["pdf"]).name, base_path) if latest_daily.get("pdf") else "",
+            base_path,
         ),
     )
-    write_file(output / "calendar/index.html", build_calendar_page(dailies, weeklies))
-    write_file(output / "weekly/index.html", build_weekly_index_page(weeklies))
-    write_file(output / "search/index.html", build_search_page(reports))
+    latest_assets = (root / latest_daily["source"]).parent / "assets"
+    if latest_assets.is_dir():
+        shutil.copytree(latest_assets, output / "assets", dirs_exist_ok=True)
+    write_file(output / "calendar/index.html", build_calendar_page(dailies, weeklies, base_path))
+    write_file(output / "weekly/index.html", build_weekly_index_page(weeklies, base_path))
+    write_file(output / "search/index.html", build_search_page(reports, base_path))
 
 
 if __name__ == "__main__":
     project_root = SITE_DIR.parent
-    build_site(project_root, SITE_DIR / "public")
+    build_site(project_root, SITE_DIR / "public", os.environ.get("PAGES_BASE_PATH", "/beauty-intel"))
     prepare_hosted_output(SITE_DIR / "public", SITE_DIR / "internet")
     print("Built site/public from approved reports.")
