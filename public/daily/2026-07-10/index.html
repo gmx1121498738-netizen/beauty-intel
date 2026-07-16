@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆竞对情报日报｜2026年7月10日</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/" aria-current="page">日报</a><span>｜</span><a href="/calendar/">日历</a><span>｜</span><a href="/weekly/">周报</a><span>｜</span><a href="/search/">搜索</a><a class="site-pdf-export" href="/pdf/beauty-daily-20260710.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-10/beauty-daily-20260710.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">
+        <strong>美妆竞对情报日报</strong>
+        <span>2026年第28周 · 7月10日</span>
+      </div>
+      <nav class="nav" aria-label="快速跳转">
+        <a href="#summary">今日结论</a>
+        <a href="#feed">情报卡片</a>
+        <a href="#volume">近5日事件量</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">DAILY SIGNAL MONITOR</div>
+        <h1>7月10日<br>美妆行业日报</h1>
+      </div>
+      <aside class="meta-panel">
+        <div class="focus-card">
+          <small>重点关注</small>
+          <strong>国货出海、线上渠道榜单、品牌代言</strong>
+        </div>
+        <div class="stat-row">
+          <div class="stat total-stat"><small>今日收录</small><strong>6</strong></div>
+          <div class="stat brand-stat"><small>品牌动态</small><strong>3</strong></div>
+          <div class="stat market-stat"><small>市场版图</small><strong>2</strong></div>
+          <div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="shell">
+    <nav class="side" aria-label="日报维度索引">
+      <a href="#summary"><span>今日结论</span><b>00</b></a>
+      <a href="#item-1"><span>市场版图</span><b>01</b></a>
+      <a href="#item-2"><span>渠道生态</span><b>02</b></a>
+      <a href="#item-3"><span>市场版图</span><b>03</b></a>
+      <a href="#item-4"><span>品牌动态</span><b>04</b></a>
+      <a href="#item-5"><span>品牌动态</span><b>05</b></a>
+      <a href="#item-6"><span>品牌动态</span><b>06</b></a>
+    </nav>
+
+    <div>
+      <section class="section reveal" id="summary">
+        <div class="section-title">
+          <h2>今日结论</h2>
+          <span>7月10日 00:00-24:00</span>
+        </div>
+        <div class="conclusion">
+          7月10日，美妆行业有效信号集中在国货出海和渠道分化。INTO YOU披露海外年销售额，广州更新化妆品出口数据，品牌端和产业带端同时出现可量化进展。渠道侧，青眼情报发布6月线上美妆榜，外资高端品牌占据总榜前列，京东平台高端护肤集中度更明显。品牌传播层面，当日出现MAC、纪梵希、BOBBI BROWN等新品或代言素材，信息增量集中在唇部彩妆传播、明星素材和经典SKU更新。
+        </div>
+      </section>
+
+      <section class="section" id="feed">
+        <div class="section-title">
+          <h2>情报卡片</h2>
+          <span>按重要性排序</span>
+        </div>
+        <div class="feed">
+          <article class="card market-card reveal" id="item-1">
+            <div class="rank"><b>#1</b><span class="tag">市场版图</span></div>
+            <div>
+              <h3>INTO YOU披露海外年销1.5亿元，唇泥单品进入多国渠道</h3>
+              <p>7月10日，INTO YOU海外负责人Kevin接受界面新闻采访披露，品牌海外年销售额达1.5亿元，业务覆盖近50个国家，线下合作门店超过3200家。品牌在越南进入Shopee唇部彩妆前三，在日本进入LOFT、@cosme、松本清等线下渠道；女主角唇泥累计销量突破6800万支，海外社交平台相关话题标签曝光量超4350万。（<a href="https://new.qq.com/rain/a/20260710A09JG200" target="_blank" rel="noopener">界面新闻/腾讯</a>｜<a href="https://www.163.com/dy/article/KTP4JDRN0530HI28.html" target="_blank" rel="noopener">中国广告/网易</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>国货彩妆出海开始出现较完整的数据链条：销售额、国家覆盖、线下门店、平台排名和社媒曝光同时可见。唇泥单品先建立海外认知，再进入日本线下和东南亚电商，细分彩妆单品仍有机会承担出海破局角色。</div>
+              <figure class="media">
+                <button type="button" data-img="assets/intoyou.jpg" aria-label="放大查看 INTO YOU 图片">
+                  <img src="assets/intoyou.jpg" alt="INTO YOU海外负责人采访来源封面图" />
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card channel-card reveal" id="item-2">
+            <div class="rank"><b>#2</b><span class="tag">渠道生态</span></div>
+            <div>
+              <h3>青眼情报发布6月线上美妆榜，外资高端占据总榜前列</h3>
+              <p>7月10日，青眼情报发布6月线上渠道美妆品牌榜，覆盖淘系、京东、抖音。榜单显示，线上渠道总榜TOP20中兰蔻、欧莱雅、雅诗兰黛位列前三；京东平台TOP20中兰蔻、SK-II、海蓝之谜位列前三。（<a href="https://www.toutiao.com/article/7660833904546300450/" target="_blank" rel="noopener">青眼情报/头条</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>榜单口径显示，6月线上美妆头部席位仍由外资高端品牌主导。京东平台的高端护肤集中度更明显，抖音和淘系需结合单平台榜单继续拆分。</div>
+              <div class="media-grid">
+                <figure class="media full">
+                  <button type="button" data-img="assets/qingyan-all-channel.png" aria-label="放大查看青眼总榜">
+                    <img src="assets/qingyan-all-channel.png" alt="青眼情报6月线上渠道美妆TOP20总榜" />
+                  </button>
+                </figure>
+                <figure class="media full">
+                  <button type="button" data-img="assets/qingyan-jd.png" aria-label="放大查看青眼京东榜">
+                    <img src="assets/qingyan-jd.png" alt="青眼情报6月京东平台美妆TOP20榜单" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card market-card reveal" id="item-3">
+            <div class="rank"><b>#3</b><span class="tag">市场版图</span></div>
+            <div>
+              <h3>广州1-5月出口化妆品58亿元，同比增31%</h3>
+              <p>7月10日，中新社披露，2026年1-5月广州市出口化妆品58亿元，同比增长31%，保持中国第一大美妆洗护用品出口城市地位。（<a href="https://www.chinanews.com/dwq/2026/07-10/10657136.shtml" target="_blank" rel="noopener">中新社</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>广州仍是美妆洗护出口的关键城市。该数据可与品牌出海案例一起观察，用于判断产业带、通关和制造配套对海外交付的支撑能力。</div>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-4">
+            <div class="rank"><b>#4</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>MAC官宣程潇为品牌大使，同步推广水漾棒棒糖唇釉</h3>
+              <p>7月10日，MAC官宣程潇为品牌大使，并同步推广水漾棒棒糖唇釉。（来源：品牌微博）</p>
+              <div class="signal"><strong>信号判断：</strong>彩妆品牌仍在通过唱跳、剧集、综艺型艺人连接年轻用户。唇釉产品与明星妆容内容适配度高，MAC此次主打甜酷形象与程潇舞台气质匹配。</div>
+              <div class="media-grid">
+                <figure class="media portrait">
+                  <button type="button" data-img="assets/mac-chengxiao-1.jpg" aria-label="放大查看MAC程潇素材1">
+                    <img src="assets/mac-chengxiao-1.jpg" alt="MAC程潇水漾棒棒糖唇釉传播素材" />
+                  </button>
+                </figure>
+                <figure class="media portrait">
+                  <button type="button" data-img="assets/mac-chengxiao-2.jpg" aria-label="放大查看MAC程潇素材2">
+                    <img src="assets/mac-chengxiao-2.jpg" alt="MAC程潇水漾棒棒糖唇釉传播素材" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-5">
+            <div class="rank"><b>#5</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>纪梵希G方管唇膏由赵丽颖演绎，全球代言人身份驱动新品上市首日断货</h3>
+              <p>7月6日，纪梵希美妆正式发布全新G方管高定缎光唇膏，由全球彩妆及香氛代言人赵丽颖拍摄品牌广告大片同步释出。赵丽颖以黑西装与红裙两套造型出镜，主推N05暖调裸杏色号，上市首日即出现专柜断货。（来源：LOFFICIEL）</p>
+              <div class="signal"><strong>信号判断：</strong>纪梵希G方管定价420元/3.4g，15款色号覆盖裸调、粉调、红调三大色系。赵丽颖同款N05上市首日即断货，说明头部女演员、高定级产品包装、全渠道同步上线的组合，在高端彩妆新品推广中仍能驱动即时销售。</div>
+              <figure class="media portrait">
+                <button type="button" data-img="assets/givenchy-zhao.jpg" aria-label="放大查看纪梵希赵丽颖素材">
+                  <img src="assets/givenchy-zhao.jpg" alt="纪梵希赵丽颖唇膏传播素材" />
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-6">
+            <div class="rank"><b>#6</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>BOBBI BROWN橘子面霜25年来首次重磅焕新，5倍超能维他命体系重塑妆前标准</h3>
+              <p>7月8日，BOBBI BROWN宣布全球销量冠军单品“橘子面霜”迎来25年首次重大配方升级。新版引入由维生素B3、B5及维生素C组成的5倍超能维他命体系，并升级0挥发硅油“底妆双面胶”配方，实现向下贴合肌肤、向上抓附粉底的双向持妆。96%受试者反馈持妆度大幅提升，即时补水力提升122%。（来源：LOFFICIEL）</p>
+              <div class="signal"><strong>信号判断：</strong>经典单品焕新正在成为高端护肤维持复购和制造新鲜感的重要方式。25年不改配方的大单品首次升级，说明即使是最稳固的明星SKU也需要迭代来应对竞争。配方升级方向为维他命体系和持妆科技，与当前“妆养一体”趋势吻合。</div>
+              <figure class="media compact">
+                <button type="button" data-img="assets/bobbi-orange.jpg" aria-label="放大查看BOBBI BROWN橘子面霜">
+                  <img src="assets/bobbi-orange.jpg" alt="BOBBI BROWN橘子面霜产品图" />
+                </button>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="volume-section reveal" id="volume">
+        <div class="section-title">
+          <h2>近5日事件量</h2>
+        </div>
+        <div class="date-strip">
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-06">7/6<b>3</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-07">7/7<b>5</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-08">7/8<b>4</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-09">7/9<b>3</b></a>
+          <a class="date-cell active date-link" href="/daily/2026-07-10/">7/10<b>6</b></a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <a class="to-top" href="#" aria-label="返回顶部">↑</a>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body>
+</html>

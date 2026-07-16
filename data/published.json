@@ -1,0 +1,68 @@
+{
+  "reports": [
+    {
+      "kind": "daily",
+      "date": "2026-07-10",
+      "title": "美妆竞对情报日报｜2026年7月10日",
+      "source": "archive/日报/2026-07-10/beauty-daily-20260710.html",
+      "pdf": "archive/日报/2026-07-10/beauty-daily-20260710.pdf",
+      "summary": "国际品牌新品与渠道动态",
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["MAC", "Bobbi Brown", "Givenchy"],
+      "categories": ["彩妆", "护肤"],
+      "channels": ["电商", "线下"],
+      "event_types": ["新品", "代言"]
+    },
+    {
+      "kind": "daily",
+      "date": "2026-07-13",
+      "title": "美妆竞对情报日报｜2026年7月13日",
+      "source": "archive/日报/2026-07-13/beauty-daily-20260713.html",
+      "pdf": "archive/日报/2026-07-13/beauty-daily-20260713.pdf",
+      "summary": "品牌订阅、财务与合规信号",
+      "dimensions": ["品牌动态", "监管与原料"],
+      "brands": ["倩碧", "花王"],
+      "categories": ["护肤", "个护"],
+      "channels": ["线下", "订阅"],
+      "event_types": ["渠道", "监管"]
+    },
+    {
+      "kind": "daily",
+      "date": "2026-07-14",
+      "title": "美妆竞对情报日报｜2026年7月14日",
+      "source": "archive/日报/2026-07-14/beauty-daily-20260714.html",
+      "pdf": "archive/日报/2026-07-14/beauty-daily-20260714.pdf",
+      "summary": "明星香水、日本渠道与美容数字化",
+      "dimensions": ["品牌动态", "投融资"],
+      "brands": ["Ariana Grande", "SKINFOOD", "DIOR"],
+      "categories": ["香水", "护肤"],
+      "channels": ["药妆店", "线下"],
+      "event_types": ["新品", "渠道", "收购"]
+    },
+    {
+      "kind": "weekly",
+      "week": "2026-W28",
+      "title": "美妆行业洞察 2026年第28周",
+      "source": "archive/周报/2026-W28/beauty-insights-2026w28-0701-0707.html",
+      "summary": "美妆行业周度洞察",
+      "dimensions": ["品牌动态", "市场版图"],
+      "brands": [],
+      "categories": [],
+      "channels": [],
+      "event_types": []
+    },
+    {
+      "kind": "weekly",
+      "week": "2026-W29",
+      "title": "美妆行业洞察 2026年第29周（7/6-7/12）",
+      "source": "archive/周报/2026-W29/beauty-insights-2026w29.html",
+      "pdf": "archive/周报/2026-W29/beauty-insights-2026w29-0706-0712.pdf",
+      "summary": "高端修护、国货出海、渠道履约与原料监管",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管与原料"],
+      "brands": ["雅诗兰黛", "INTO YOU", "倩碧"],
+      "categories": ["护肤", "彩妆", "原料"],
+      "channels": ["TikTok", "跨境电商"],
+      "event_types": ["新品", "出海", "投融资", "监管"]
+    }
+  ]
+}

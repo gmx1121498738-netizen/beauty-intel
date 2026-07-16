@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆竞对情报日报｜2026年7月14日</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --finance: #275d57;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    a { color: #285f66; text-underline-offset: 3px; }
+    img { max-width: 100%; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 80;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brandmark { line-height: 1.2; }
+    .brandmark strong { display: block; font-size: 15px; letter-spacing: .03em; }
+    .brandmark span { display: block; color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #4a443d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      margin: 0;
+      color: #4b463f;
+      font-size: 17px;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.finance-stat { border-color: rgba(39,93,87,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.finance-stat strong { color: var(--finance); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 188px 1fr;
+      gap: 28px;
+      padding: 34px 0 78px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      background: rgba(255,254,253,.5);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .side a:hover {
+      background: #fff;
+      border-color: rgba(159, 79, 92, .22);
+    }
+
+    .section { scroll-margin-top: 84px; margin-bottom: 22px; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+      align-items: baseline;
+    }
+
+    .section-title h2 { margin: 0; font-size: 22px; }
+    .section-title span { color: var(--muted); font-size: 13px; }
+
+    .conclusion {
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .conclusion p { margin: 0 0 12px; }
+    .conclusion p:last-child { margin-bottom: 0; }
+
+    .feed { display: grid; gap: 18px; }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 14px 34px rgba(52, 42, 32, .06);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(52, 42, 32, .1); }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+    .brand-card::before { background: var(--brand); }
+    .channel-card::before { background: var(--channel); }
+    .finance-card::before { background: var(--finance); }
+
+    .rank { display: grid; align-content: start; gap: 10px; }
+    .rank b { font-size: 30px; line-height: 1; letter-spacing: -.04em; }
+    .tag {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      height: 26px;
+      padding: 0 10px;
+      border: 1px solid rgba(159, 79, 92, .2);
+      border-radius: 999px;
+      color: #55504a;
+      background: var(--paper-2);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+    .finance-card .tag { color: var(--finance); background: rgba(39,93,87,.1); border-color: rgba(39,93,87,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 23px;
+      line-height: 1.34;
+      letter-spacing: -.02em;
+    }
+
+    .card p { margin: 0 0 10px; color: #46413a; }
+
+    .signal {
+      margin-top: 12px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(255, 253, 249, .72);
+      border: 1px solid transparent;
+      color: #3b3731;
+    }
+
+    .signal strong { color: var(--accent); }
+    .channel-card .signal strong { color: var(--channel); }
+    .finance-card .signal strong { color: var(--finance); }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .media-grid.three {
+      grid-template-columns: 1.12fr .88fr;
+    }
+
+    .media-grid.three .media:first-child {
+      grid-row: span 2;
+    }
+
+    .media-grid.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f6f2eb;
+      box-shadow: 0 12px 24px rgba(52, 42, 32, .06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 440px;
+      object-fit: contain;
+      background: #fffaf6;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media.tall img { max-height: 620px; }
+    .media.wide img { max-height: 360px; }
+    .media:hover img { transform: scale(1.015); filter: saturate(1.04); }
+
+    .caption { display: none; }
+
+    .focus-card.compact strong {
+      font-size: 14px;
+      color: #4e4a43;
+      font-weight: 650;
+    }
+
+    .source-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border: 1px dashed rgba(167, 137, 99, .5);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 249, .58);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-note h2 { margin: 0 0 8px; font-size: 17px; color: var(--ink); }
+    .source-note p { margin: 0 0 6px; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31, 28, 24, .72);
+    }
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(1040px, 94vw);
+      max-height: 88vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side { position: static; display: flex; overflow-x: auto; padding-bottom: 4px; }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .media-grid, .media-grid.three, .media-grid.four { grid-template-columns: 1fr; }
+      .media-grid.three .media:first-child { grid-row: auto; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/" aria-current="page">日报</a><span>｜</span><a href="/calendar/">日历</a><span>｜</span><a href="/weekly/">周报</a><span>｜</span><a href="/search/">搜索</a><a class="site-pdf-export" href="/pdf/beauty-daily-20260714.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-14/beauty-daily-20260714.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brandmark">
+        <strong>美妆竞对情报日报</strong>
+        <span>2026年第29周 · 7月14日</span>
+      </div>
+      <nav class="nav" aria-label="快速跳转">
+        <a href="#summary">今日结论</a>
+        <a href="#item-1">Cloud Aurora</a>
+        <a href="#item-2">SKINFOOD</a>
+        <a href="#item-3">DIOR</a>
+        <a href="#item-4">ROSE AMIGO</a>
+        <a href="#item-5">中证国际</a>
+        <a href="#volume">近5日事件量</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">DAILY SIGNAL MONITOR</div>
+        <h1>7月14日<br>美妆竞对情报日报</h1>
+        <p class="dek">本期信号以国际新品、线下体验和轻量资本动作为主。国际品牌继续把新品上市、限时展和本地化渠道作为增长抓手，新锐品牌则借高情绪场景完成低成本触达。</p>
+      </div>
+      <aside class="meta-panel">
+        <div class="focus-card">
+          <small>重点关注</small>
+          <strong>Ariana Grande Cloud Aurora全球上市、SKINFOOD日本线下铺货、DIOR花秘逆转面霜中国限时展首秀</strong>
+        </div>
+        <div class="stat-row">
+          <div class="stat brand-stat"><small>今日收录</small><strong>5条</strong></div>
+          <div class="stat channel-stat"><small>覆盖周期</small><strong>7/14</strong></div>
+          <div class="stat brand-stat"><small>核心品类</small><strong>香水/抗老</strong></div>
+          <div class="stat finance-stat"><small>资本信号</small><strong>美业SaaS</strong></div>
+        </div>
+        <div class="focus-card compact">
+          <small>收录口径</small>
+          <strong>按事件发生、产品上市、官方公告、展期或短周期营销触达收录</strong>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="shell">
+    <nav class="side" aria-label="日报维度索引">
+      <a href="#summary"><span>今日结论</span><b>00</b></a>
+      <a href="#item-1"><span>品牌动态</span><b>#1</b></a>
+      <a href="#item-2"><span>渠道生态</span><b>#2</b></a>
+      <a href="#item-3"><span>品牌动态</span><b>#3</b></a>
+      <a href="#item-4"><span>品牌动态</span><b>#4</b></a>
+      <a href="#item-5"><span>投融资</span><b>#5</b></a>
+    </nav>
+
+    <div>
+      <section class="section reveal" id="summary">
+        <div class="section-title">
+          <h2>今日结论</h2>
+          <span>2026.07.14</span>
+        </div>
+        <div class="conclusion">
+          <p>7月14日，美妆竞对信号以国际品牌新品、线下体验和轻量资本动作为主。Ariana Grande与LUXE Brands合作的Cloud Aurora在全球上市，明星香水继续验证“单一爆款系列长期迭代”的商业价值。</p>
+          <p>SKINFOOD将柠檬草纳艾酰胺系列推进日本线下渠道，K-beauty在日本市场延续“KOL共创—电商验证—药妆铺货”的本地化路径。DIOR借上海限时展推出花秘逆转面霜，高端抗老叙事继续向细胞年龄、再生医学和高端体验场景集中。</p>
+          <p>国内方向没有出现大型品牌发布，但可看到两个轻信号：ROSE AMIGO借澳门演唱会场景完成唇膜触达；中证国际收购美容数字化方案商伊美众，显示中小美业SaaS和门店数字化仍具资本化空间。</p>
+        </div>
+      </section>
+
+      <section class="section feed" id="feed">
+        <article class="card brand-card reveal" id="item-1">
+          <div class="rank">
+            <b>#1</b>
+            <span class="tag">品牌动态</span>
+          </div>
+          <div>
+            <h3>Ariana Grande Cloud Aurora全球上市，明星香水继续验证长周期产品线价值</h3>
+            <p>7月14日，Ariana Grande与LUXE Brands合作的Cloud系列新香Cloud Aurora全球上市。LUXE Brands此前通过PR Newswire官方新闻稿披露上市日为7月14日，并给出100ml EDP建议零售价75美元、10ml旅行装建议零售价30美元。Fragrantica和Global Cosmetics News也确认其全球上市时间为7月14日。来源：<a href="https://www.prnewswire.com/news-releases/ariana-grande-in-partnership-with-luxe-brands-launches-cloud-aurora-the-newest-addition-to-the-global-award-winning-cloud-collection-302812459.html" target="_blank" rel="noreferrer">PR Newswire</a> / <a href="https://www.fragrantica.com/news/Ariana-Grande-Cloud-Aurora-25489.html" target="_blank" rel="noreferrer">Fragrantica</a> / <a href="https://www.globalcosmeticsnews.com/ariana-grande-and-luxe-brands-expand-cloud-fragrance-franchise-with-cloud-aurora/" target="_blank" rel="noreferrer">Global Cosmetics News</a></p>
+            <p>Cloud Aurora由Firmenich调香师Clément Gavarry操刀，延续Cloud系列甜感和云朵瓶身资产。Cloud系列首款产品于2018年推出，Cloud Pink于2023年推出，Cloud Aurora是该系列的后续扩展。</p>
+            <div class="signal"><strong>信号判断：</strong>明星香水的竞争重点已经进入系列化运营。Cloud系列用8年时间完成多次迭代，明星IP香水只要能持续稳定产品资产、价格带和渠道节奏，就有机会摆脱一次性粉丝消费。75美元定价位于大众精品香水带，兼具礼赠、粉丝首购和日常香水消费场景。</div>
+            <div class="media-grid three">
+              <figure class="media tall"><button type="button"><img src="assets/01-cloud-aurora-campaign.png" alt="Ariana Grande Cloud Aurora视觉大片"></button><figcaption class="caption">Cloud Aurora视觉大片</figcaption></figure>
+              <figure class="media"><button type="button"><img src="assets/01-cloud-aurora-product-scene.png" alt="Cloud Aurora产品场景图"></button><figcaption class="caption">产品场景图</figcaption></figure>
+              <figure class="media"><button type="button"><img src="assets/01-cloud-aurora-bottle.png" alt="Cloud Aurora瓶身图"></button><figcaption class="caption">瓶身图</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="card channel-card reveal" id="item-2">
+          <div class="rank">
+            <b>#2</b>
+            <span class="tag">渠道生态</span>
+          </div>
+          <div>
+            <h3>SKINFOOD柠檬草纳艾酰胺系列进入日本线下，K-beauty本地化验证链路继续成型</h3>
+            <p>7月14日，SKINFOOD日本运营公司发布新闻稿，宣布柠檬草纳艾酰胺5%棉片和20%精华将于7月16日起在日本全国药妆店等线下渠道铺货。该系列为日本限定商品，此前由韩国美妆YouTuber「Cosme Wota Channel Sara」参与共创，并通过Qoo10等电商渠道验证声量。来源：<a href="https://www.ai-kei.co.jp/files/e756c1662c54adfd943be71067ab3f22.pdf" target="_blank" rel="noreferrer">SKINFOOD日本运营方新闻稿</a></p>
+            <div class="signal"><strong>信号判断：</strong>这条信号的核心价值在于出海路径。SKINFOOD先用本地KOL降低新成分和新系列的理解成本，再用Qoo10等平台验证转化，最后进入药妆店线下触点。国货美妆若进入日本市场，同样需要先解决本地信任和渠道进入问题。</div>
+            <div class="media-grid">
+              <figure class="media wide"><button type="button"><img src="assets/02-skinfood-products.png" alt="SKINFOOD柠檬草纳艾酰胺系列产品图"></button><figcaption class="caption">柠檬草纳艾酰胺系列产品图</figcaption></figure>
+              <figure class="media wide"><button type="button"><img src="assets/02-skinfood-campaign.png" alt="SKINFOOD柠檬草系列人物物料"></button><figcaption class="caption">日本限定系列传播物料</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-3">
+          <div class="rank">
+            <b>#3</b>
+            <span class="tag">品牌动态</span>
+          </div>
+          <div>
+            <h3>DIOR花秘逆转面霜上海限时展首秀，高端抗老叙事继续向“细胞年龄”集中</h3>
+            <p>7月14日至19日，DIOR美妆在上海西岸中環举办花秘匿龄限时展，全新迪奥花秘逆转面霜面向公众亮相。产品主打“10维匿龄重塑”，围绕玫瑰复合成分、细胞年龄和高端抗老体验进行沟通。来源：<a href="https://www.weibo.com/diorbeauty" target="_blank" rel="noreferrer">DIOR美妆官方微博</a></p>
+            <div class="signal"><strong>信号判断：</strong>LVMH系高端护肤正在把高价面霜的卖点继续推向“科技化抗老”。“细胞年龄”“逆转”“肽类复合物”等表达，正在成为国际高端抗老产品争夺消费者心智的核心语言。高端护肤的竞争正在由珍稀植物故事，转入成分机制、医研背书和线下体验共同构成的信任系统。</div>
+            <div class="media-grid four">
+              <figure class="media wide"><button type="button"><img src="assets/03-dior-guests.png" alt="DIOR Prestige活动嘉宾合影"></button><figcaption class="caption">DIOR Prestige活动现场</figcaption></figure>
+              <figure class="media wide"><button type="button"><img src="assets/03-dior-exhibition.png" alt="DIOR Prestige限时展空间"></button><figcaption class="caption">限时展空间</figcaption></figure>
+              <figure class="media tall"><button type="button"><img src="assets/03-dior-cream.png" alt="DIOR Prestige面霜产品图"></button><figcaption class="caption">花秘逆转面霜产品图</figcaption></figure>
+              <figure class="media tall"><button type="button"><img src="assets/03-dior-prestige-space.png" alt="DIOR Prestige展陈空间"></button><figcaption class="caption">展陈空间与玫瑰叙事</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-4">
+          <div class="rank">
+            <b>#4</b>
+            <span class="tag">品牌动态</span>
+          </div>
+          <div>
+            <h3>ROSE AMIGO借澳门演唱会完成唇膜场景触达，新锐品牌继续绑定高情绪消费场景</h3>
+            <p>7月11日至12日，ROSE AMIGO围绕澳门演唱会场景进行唇膜产品触达，并在7月14日前后形成传播扩散。该事件属于短周期营销触达，发生在日报统计日前2-3天，且与7月14日传播节奏相连，可作为轻信号观察。</p>
+            <div class="signal"><strong>信号判断：</strong>唇膜、香氛、身体护理等低决策成本产品，适合绑定演唱会、音乐节、旅行和礼赠等高情绪场景。ROSE AMIGO的动作说明，新锐品牌仍在绕开传统大投放，用现场派样和社交传播建立单品记忆。此类动作规模较小，但能帮助判断新品牌在“场景即渠道”上的试错方向。</div>
+            <div class="media-grid">
+              <figure class="media wide"><button type="button"><img src="assets/04-rose-amigo-shelf.png" alt="ROSE AMIGO演唱会唇膜货架图"></button><figcaption class="caption">演唱会场景触达图</figcaption></figure>
+              <figure class="media wide"><button type="button"><img src="assets/04-rose-amigo-pack.png" alt="ROSE AMIGO唇膜包装图"></button><figcaption class="caption">唇膜包装图</figcaption></figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="card finance-card reveal" id="item-5">
+          <div class="rank">
+            <b>#5</b>
+            <span class="tag">投融资</span>
+          </div>
+          <div>
+            <h3>中证国际6250万港元收购伊美众，中小美业数字化服务进入资本化视野</h3>
+            <p>7月14日，港股上市公司中证国际（00943.HK）公告，以6250万港元代价收购Elise Beauty Group Limited全部股权，后者持有主要运营附属公司伊美众。伊美众在广东省从事美容行业数字化赋能解决方案研发。交易以发行3.42亿股代价股方式支付，发行价0.1828港元；卖方完成后将持有中证国际约16.6%股权。来源：<a href="https://www.aastocks.com/tc/stocks/news/aafn-con/now.1493644/industry-news/hk6" target="_blank" rel="noreferrer">AASTOCKS</a></p>
+            <div class="signal"><strong>信号判断：</strong>这笔交易体量较小，但指向美容门店数字化的资本化机会。传统美容院、区域连锁和轻医美机构对会员管理、预约、营销、库存和复购系统的需求长期存在，服务商如果能绑定线下客户资源，就可能从工具软件变成可被并购的资产。对美妆品牌而言，美业数字化服务商也可能成为线下体验、私域复购和区域渠道触达的基础设施。</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="volume-section reveal" id="volume">
+        <div class="section-title">
+          <h2>近5日事件量</h2>
+        </div>
+        <div class="date-strip">
+          <a class="date-cell date-link" href="/daily/2026-07-10/">7/10<b>6</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-11">7/11<b>2</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-12">7/12<b>2</b></a>
+          <a class="date-cell date-link" href="/daily/2026-07-13/">7/13<b>6</b></a>
+          <a class="date-cell active date-link" href="/daily/2026-07-14/">7/14<b>5</b></a>
+        </div>
+      </section>
+
+      <section class="source-note reveal">
+        <h2>信息来源</h2>
+        <p>官方/企业：<a href="https://www.prnewswire.com/news-releases/ariana-grande-in-partnership-with-luxe-brands-launches-cloud-aurora-the-newest-addition-to-the-global-award-winning-cloud-collection-302812459.html" target="_blank" rel="noreferrer">PR Newswire / LUXE Brands</a>、<a href="https://www.ai-kei.co.jp/files/e756c1662c54adfd943be71067ab3f22.pdf" target="_blank" rel="noreferrer">SKINFOOD日本运营方新闻稿</a>、<a href="https://www.weibo.com/diorbeauty" target="_blank" rel="noreferrer">DIOR美妆官方微博</a></p>
+        <p>海外行业媒体：<a href="https://www.fragrantica.com/news/Ariana-Grande-Cloud-Aurora-25489.html" target="_blank" rel="noreferrer">Fragrantica</a>、<a href="https://www.globalcosmeticsnews.com/ariana-grande-and-luxe-brands-expand-cloud-fragrance-franchise-with-cloud-aurora/" target="_blank" rel="noreferrer">Global Cosmetics News</a></p>
+        <p>财经媒体/公告转述：<a href="https://www.aastocks.com/tc/stocks/news/aafn-con/now.1493644/industry-news/hk6" target="_blank" rel="noreferrer">AASTOCKS</a></p>
+      </section>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""></div>
+  <a class="to-top" href="#" aria-label="返回顶部">↑</a>
+
+  <script>
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, window.scrollY / max)) * 100}%`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('on');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.media button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const img = btn.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.removeAttribute('src');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆竞对情报日报｜2026年7月13日</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --finance: #275d57;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.finance-stat { border-color: rgba(39,93,87,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.finance-stat strong { color: var(--finance); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.finance-card::before { background: var(--finance); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+    .card.finance-card:hover { border-color: rgba(39,93,87,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+    .finance-card .tag { color: var(--finance); background: rgba(39,93,87,.1); border-color: rgba(39,93,87,.24); }
+
+    .media.hero-image img {
+      max-height: 420px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+
+    @media print {
+      .progress,
+      .lightbox,
+      .to-top {
+        display: none !important;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/" aria-current="page">日报</a><span>｜</span><a href="/calendar/">日历</a><span>｜</span><a href="/weekly/">周报</a><span>｜</span><a href="/search/">搜索</a><a class="site-pdf-export" href="/pdf/beauty-daily-20260713.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-13/beauty-daily-20260713.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">
+        <strong>美妆竞对情报日报</strong>
+        <span>2026年第29周 · 7月13日</span>
+      </div>
+      <nav class="nav" aria-label="快速跳转">
+        <a href="#summary">今日结论</a>
+        <a href="#feed">情报卡片</a>
+        <a href="#volume">近5日事件量</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">DAILY SIGNAL MONITOR</div>
+        <h1>7月13日<br>美妆行业日报</h1>
+      </div>
+      <aside class="meta-panel">
+        <div class="focus-card">
+          <small>重点关注</small>
+          <strong>维琪科技北交所申购、半亩花田IPO问询、花王中国首发染后护理套装</strong>
+        </div>
+        <div class="stat-row">
+          <div class="stat total-stat"><small>今日收录</small><strong>6</strong></div>
+          <div class="stat brand-stat"><small>品牌动态</small><strong>3</strong></div>
+          <div class="stat market-stat"><small>市场版图</small><strong>1</strong></div>
+          <div class="stat finance-stat"><small>投融资</small><strong>2</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <main class="shell">
+    <nav class="side" aria-label="日报维度索引">
+      <a href="#summary"><span>今日结论</span><b>00</b></a>
+      <a href="#item-1"><span>投融资</span><b>01</b></a>
+      <a href="#item-2"><span>投融资</span><b>02</b></a>
+      <a href="#item-3"><span>品牌动态</span><b>03</b></a>
+      <a href="#item-4"><span>品牌动态</span><b>04</b></a>
+      <a href="#item-5"><span>品牌动态</span><b>05</b></a>
+      <a href="#item-6"><span>市场版图</span><b>06</b></a>
+    </nav>
+
+    <div>
+      <section class="section reveal" id="summary">
+        <div class="section-title">
+          <h2>今日结论</h2>
+          <span>7月13日 00:00-24:00</span>
+        </div>
+        <div class="conclusion">
+          7月13日，美妆行业核心信号集中在资本市场和产品策略两端。维琪科技以国产多肽原料龙头身份进入北交所申购，半亩花田港股IPO遭遇监管问询，两条IPO信息同时指向一个判断：资本市场正在重新评估美妆产业链资产的质量，上游创新原料的资本叙事更清晰，流量型消费品牌需要接受更严格的治理和增长质量审查。<br><br>
+          品牌侧，花王将Liese染后护理套装的全球首发地放在中国，倩碧以重组PDRN切入日常护肤，国际集团继续把中国市场作为新品验证和功效概念落地的重要阵地。渠道和政策侧当天未见重大新增事件，日报重点落在投融资、品牌产品和市场出清三条线。
+        </div>
+      </section>
+
+      <section class="section" id="feed">
+        <div class="section-title">
+          <h2>情报卡片</h2>
+          <span>按重要性排序</span>
+        </div>
+        <div class="feed">
+          <article class="card finance-card reveal" id="item-1">
+            <div class="rank"><b>#1</b><span class="tag">投融资</span></div>
+            <div>
+              <h3>维琪科技定价22.16元/股开启北交所申购，国产多肽原料企业进入资本市场</h3>
+              <p>7月13日，深圳市维琪科技股份有限公司（920176.BJ）在北交所开启申购，发行价22.16元/股，发行市盈率14.99倍，国信证券为保荐机构。公司主营化妆品原料和化妆品成品研发、生产、销售及相关服务，是化妆品原料专精特新“小巨人”企业。</p>
+              <p>招股书信息显示，维琪科技拥有22个经国家药监局批准备案的化妆品新原料，其中9个为创新新原料，创新新原料备案获批数量位居行业前列。公司设计开发的Erasin0003为国内首个拥有自主知识产权并获得国家药监局备案的创新新原料。2023—2025年，公司营收分别为1.65亿元、2.48亿元、2.75亿元，净利润分别为4228.72万元、7064.4万元、9085万元。</p>
+              <p>客户侧，公司已进入宝洁、联合利华、资生堂等国际品牌商，以及科丝美诗、莹特丽、韩国科玛等国际化妆品制造商供应体系，并与多家国内品牌建立合作关系。（<a href="https://www.bbtnews.com.cn/2026/0713/599083.shtml" target="_blank" rel="noopener">北京商报</a>｜<a href="https://news.qq.com/rain/a/20260713A02KRJ00" target="_blank" rel="noopener">21世纪经济报道/腾讯新闻</a>｜<a href="https://i.ifeng.com/c/8ujIOV5r61r" target="_blank" rel="noopener">凤凰网</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>维琪科技2.75亿元营收对应约9000万元净利，净利率约33%，国际大牌、全球代工集团、国货新锐三个客户梯度已经跑通。这是中国化妆品原料企业首次以“创新原料龙头”身份登陆资本市场，意味着原料端国产替代进入活性物多肽阶段，且具备独立资本故事。</div>
+              <figure class="media full">
+                <button type="button" data-img="assets/01-weiqi-subscription.png" aria-label="放大查看维琪科技申购数据图">
+                  <img src="assets/01-weiqi-subscription.png" alt="维琪科技申购、业绩与募资方向数据图" />
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card finance-card reveal" id="item-2">
+            <div class="rank"><b>#2</b><span class="tag">投融资</span></div>
+            <div>
+              <h3>半亩花田港股IPO遭监管问询，身体护理头部国货进入上市合规压力测试</h3>
+              <p>7月13日，多家媒体报道，半亩花田母公司山东花物堂生物科技有限公司在冲刺港股上市过程中收到证监会《境外发行上市备案补充材料要求》。问询重点包括股权结构、上市前入股、股权激励、特殊股东权利、业务资质、全流通股份权属等方面。</p>
+              <p>公开报道显示，半亩花田创始人亓云吉与妻子商西梅通过多个持股平台合计控制较高表决权；上市前夕，公司引入华泰、启承等投资方，估值被推至约42亿元。业务层面，半亩花田主打身体乳、磨砂膏等平价身体护理产品，2025年前三季度营收18.95亿元，同比增长76.7%，同期营销投入接近9亿元。（<a href="https://news.qq.com/rain/a/20260713A03EYP00" target="_blank" rel="noopener">腾讯新闻</a>｜<a href="https://www.fengkouapp.com/news.html?id=1269997751874359296" target="_blank" rel="noopener">风口财经</a>｜<a href="https://www.163.com/dy/article/L06M5A6F05129QAF.html" target="_blank" rel="noopener">网易财经</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>半亩花田面临的监管质问高度典型：家族绝对控制、高营销投入、IPO前突击融资推高估值、业务范围与主营业务存在杂项。身体护理赛道仍有规模化机会，但资本市场会更关注增长质量、治理结构和费用效率。招股书有效期临近，如果回复和整改节奏跟不上，本轮上市进程存在搁浅风险。</div>
+              <figure class="media hero-image">
+                <button type="button" data-img="assets/02-banmuhuatian-products.png" aria-label="放大查看半亩花田产品图">
+                  <img src="assets/02-banmuhuatian-products.png" alt="半亩花田产品矩阵" />
+                </button>
+              </figure>
+              <div class="media-grid">
+                <figure class="media full">
+                  <button type="button" data-img="assets/02-banmuhuatian-shareholders.png" aria-label="放大查看半亩花田股权资料">
+                    <img src="assets/02-banmuhuatian-shareholders.png" alt="半亩花田相关股东资料" />
+                  </button>
+                </figure>
+                <figure class="media full">
+                  <button type="button" data-img="assets/02-banmuhuatian-financials.png" aria-label="放大查看半亩花田财务资料">
+                    <img src="assets/02-banmuhuatian-financials.png" alt="半亩花田营收、营销费用与利润数据" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-3">
+            <div class="rank"><b>#3</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>everbab发布“假日海风”主题新品预告，国货轻彩妆继续强化视觉主题上新</h3>
+              <p>7月13日，国货轻彩妆品牌everbab艾蓓拉在微博发布“假日海风”主题新品预告。品牌此前以素哑面部综合盘、一飞冲天睫毛膏等产品建立基础声量，新品预告延续轻彩妆品牌常见的主题化视觉表达。（<a href="https://weibo.com/6443096134/5319205474009259" target="_blank" rel="noopener">品牌微博</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>everbab延续“轻彩妆+情绪化主题”的产品发布模式，依靠视觉主题制造社交传播素材。国货轻彩妆的竞争重点仍在内容辨识度、产品组合速度和平台素材转化，后续需要观察新品是否能形成明确单品销量或达人扩散。</div>
+              <figure class="media portrait">
+                <button type="button" data-img="assets/03-everbab-preview.png" aria-label="放大查看everbab新品预告">
+                  <img src="assets/03-everbab-preview.png" alt="everbab假日海风主题新品预告" />
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-4">
+            <div class="rank"><b>#4</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>花王将Liese染后护理套装全球首发放在中国，染发品类强化染后护理延伸</h3>
+              <p>7月13日，花王在东京表参道举办美发事业战略暨技术发布会，发布最新毛发研究成果及亚洲美发事业战略。花王宣布旗下亚洲战略品牌“Liese莉婕”将推出采用“H-Linx TECH”技术的染护系列，并于2026年8月起在包括中国在内的亚洲7个国家和地区陆续上市。</p>
+              <p>该系列首次包含洗发水、护发素和精华霜组成的染后护理套装，中国市场为全球首发地。花王方面表示，研究发现染发后7天内毛发内部仍持续发生损伤，H-Linx TECH主要针对染后修护与锁色需求。（<a href="https://www.jiemian.com/article/14752330.html" target="_blank" rel="noopener">界面新闻</a>｜<a href="https://www.kao.com/content/dam/sites/kao/www-kao-com/jp/ja/corporate/news/2026/pdf/20260713-001-02.pdf" target="_blank" rel="noopener">花王官方PDF</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>花王把染后护理套装的全球首发放在中国，反映中国家用染发市场在亚洲战略中的权重提升。染发产品竞争正在进入组合化阶段，染膏、洗护、锁色精华会共同承担客单提升和复购承接，国内染发品牌需要补齐染后护理链路。</div>
+              <div class="media-grid">
+                <figure class="media full">
+                  <button type="button" data-img="assets/04-liese-products.png" aria-label="放大查看Liese产品陈列">
+                    <img src="assets/04-liese-products.png" alt="Liese染护产品陈列" />
+                  </button>
+                </figure>
+                <figure class="media full">
+                  <button type="button" data-img="assets/04-liese-campaign.png" aria-label="放大查看Liese品牌视觉">
+                    <img src="assets/04-liese-campaign.png" alt="Liese品牌传播视觉" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card brand-card reveal" id="item-5">
+            <div class="rank"><b>#5</b><span class="tag">品牌动态</span></div>
+            <div>
+              <h3>倩碧在中国发布重组PDRN水光系列，高端护肤继续吸收医美成分叙事</h3>
+              <p>7月13日，雅诗兰黛集团旗下倩碧（Clinique）在中国发布CX肌源深修水光系列，以重组PDRN为核心成分。PDRN最早在韩国医美市场中以皮肤修护、再生相关概念被消费者认知，此次倩碧将其放入日常护肤产品线，切入“水光”“修护”“维稳”等高频护肤需求。（<a href="https://www.163.com/dy/article/L1ND0VGQ05118DFD.html" target="_blank" rel="noopener">36氪/网易订阅</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>PDRN进入大众高端护肤线，代表医美成分正在被国际品牌重新包装为日常护肤概念。对竞品跟踪来说，重点是品牌如何处理“医美认知”和“日常可用”的表达边界，同时观察重组PDRN是否带动一批同类成分型新品。</div>
+              <div class="media-grid">
+                <figure class="media full">
+                  <button type="button" data-img="assets/05-clinique-installation.png" aria-label="放大查看倩碧CX线下装置">
+                    <img src="assets/05-clinique-installation.png" alt="倩碧CX水光系列线下传播装置" />
+                  </button>
+                </figure>
+                <figure class="media full">
+                  <button type="button" data-img="assets/05-clinique-products.png" aria-label="放大查看倩碧CX产品图">
+                    <img src="assets/05-clinique-products.png" alt="倩碧CX重组PDRN产品" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card market-card reveal" id="item-6">
+            <div class="rank"><b>#6</b><span class="tag">市场版图</span></div>
+            <div>
+              <h3>2026年多地化妆品企业注销继续增加，中小代工厂和白牌承压</h3>
+              <p>7月13日前后，行业媒体援引妆知情报数据称，2026年已有超60家化妆品企业完成注销。此前7月6日也有报道称，广州前6个月已有55家企业注销《化妆品生产许可证》。注销主体多集中在缺乏差异化能力的中小代工厂和依赖短期流量的新锐白牌。（<a href="http://mp.weixin.qq.com/s?__biz=Mzg5NzIwNzM4NA==&amp;mid=2247512949&amp;idx=3&amp;sn=ed0246ec8d6216d180a029dfb368c8b2" target="_blank" rel="noopener">妆知情报微信线索</a>｜<a href="https://www.163.com/dy/article/L16M560S0518L346.html" target="_blank" rel="noopener">聚美丽/网易订阅</a>）</p>
+              <div class="signal"><strong>信号判断：</strong>行业零售额保持增长，企业端出清同步发生。没有稳定品牌溢价、研发壁垒和渠道议价能力的中间环节承压最明显，代工厂和白牌的竞争会继续向合规能力、成本效率和客户结构集中。</div>
+              <div class="media-grid">
+                <figure class="media full">
+                  <button type="button" data-img="assets/06-license-cancellation.png" aria-label="放大查看生产许可证注销通告">
+                    <img src="assets/06-license-cancellation.png" alt="广州市市场监督管理局化妆品生产许可证注销通告" />
+                  </button>
+                </figure>
+                <figure class="media full">
+                  <button type="button" data-img="assets/06-administrative-penalty.png" aria-label="放大查看化妆品行政处罚资料">
+                    <img src="assets/06-administrative-penalty.png" alt="化妆品生产企业行政处罚资料" />
+                  </button>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="volume-section reveal" id="volume">
+        <div class="section-title">
+          <h2>近5日事件量</h2>
+        </div>
+        <div class="date-strip">
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-09">7/9<b>3</b></a>
+          <a class="date-cell date-link" href="/daily/2026-07-10/">7/10<b>6</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-11">7/11<b>2</b></a>
+          <a class="date-cell date-link" href="/calendar/?date=2026-07-12">7/12<b>2</b></a>
+          <a class="date-cell active date-link" href="/daily/2026-07-13/">7/13<b>6</b></a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <a class="to-top" href="#" aria-label="返回顶部">↑</a>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body>
+</html>

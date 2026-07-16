@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local preview and earlier hosting experiments; not part of the Pages source.
+internet/
+internet-app/

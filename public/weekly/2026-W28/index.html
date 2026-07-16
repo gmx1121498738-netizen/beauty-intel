@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆行业洞察 2026年第28周</title>
+  <style>
+    :root {
+      --bg: #f5f7f4;
+      --paper: #ffffff;
+      --ink: #202522;
+      --muted: #68716b;
+      --line: #dce3dc;
+      --soft: #edf4ef;
+      --green: #1f6f58;
+      --blue: #244f74;
+      --red: #9b2f2f;
+      --amber: #9a5b24;
+      --shadow: 0 14px 30px rgba(31, 41, 35, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(31,111,88,.08), transparent 28%),
+        linear-gradient(180deg, #fbfcfb 0%, var(--bg) 30%, var(--bg) 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0;
+    }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .progress { position: fixed; inset: 0 auto auto 0; height: 3px; width: 0; background: var(--green); z-index: 60; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245,247,244,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .topbar-inner {
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand { display: grid; gap: 1px; }
+    .brand strong { font-size: 15px; line-height: 1.2; }
+    .brand span { color: var(--muted); font-size: 12px; }
+    .quick-nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .quick-nav a {
+      color: #314039;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 13px;
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .quick-nav a:hover, .quick-nav a.active { transform: translateY(-1px); border-color: #b8c7bc; background: var(--soft); color: var(--green); }
+    .hero { padding: 34px 0 22px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .panel {
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .hero-main { padding: 30px; overflow: hidden; position: relative; }
+    .hero-main:after {
+      content: "";
+      position: absolute;
+      right: 26px;
+      bottom: 26px;
+      width: 150px;
+      height: 150px;
+      border: 1px solid rgba(31,111,88,.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 10px; color: var(--green); font-size: 13px; font-weight: 800; }
+    h1 { margin: 0; font-size: clamp(32px, 4.8vw, 52px); line-height: 1.1; letter-spacing: 0; max-width: 820px; }
+    .dek { color: var(--muted); margin: 16px 0 0; font-size: 16px; max-width: 760px; }
+    .pill-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+    .pill { border: 1px solid #d4ddd5; background: var(--soft); border-radius: 999px; padding: 6px 11px; font-size: 13px; color: #35423b; }
+    .hero-side { padding: 20px; display: grid; gap: 12px; }
+    .metric { border: 1px solid var(--line); background: #fbfcfb; border-radius: 8px; padding: 16px; transition: transform .18s ease; }
+    .metric:hover { transform: translateY(-2px); }
+    .metric b { display: block; font-size: 34px; line-height: 1; margin-bottom: 7px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .layout { display: grid; grid-template-columns: 230px minmax(0,1fr); gap: 22px; align-items: start; padding-bottom: 60px; }
+    .toc {
+      position: sticky;
+      top: 80px;
+      padding: 14px;
+    }
+    .toc-title { margin: 0 0 10px; font-size: 13px; color: var(--muted); font-weight: 800; }
+    .toc a {
+      display: block;
+      color: #344039;
+      text-decoration: none;
+      border-radius: 6px;
+      padding: 9px 10px;
+      font-size: 14px;
+      transition: background .18s ease, color .18s ease, transform .18s ease;
+    }
+    .toc a:hover, .toc a.active { background: var(--soft); color: var(--green); transform: translateX(2px); }
+    .content { display: grid; gap: 18px; min-width: 0; }
+    .report-section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      scroll-margin-top: 84px;
+    }
+    .section-head {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+    h2 { margin: 0; font-size: 24px; line-height: 1.25; }
+    .insight-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      margin: 14px 0;
+      background: #fff;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .insight-card:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(31,41,35,.08); border-color: #c8d4cb; }
+    h3 { margin: 0 0 12px; font-size: 21px; line-height: 1.38; letter-spacing: 0; }
+    p { margin: 10px 0; }
+    .grade {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      vertical-align: middle;
+    }
+    .grade.s { background: var(--red); }
+    .grade.a { background: var(--green); }
+    .grade.b { background: var(--amber); }
+    .table-wrap { overflow-x: auto; margin: 14px 0 18px; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; border: 1px solid var(--line); background: #fff; }
+    th, td { padding: 12px 13px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+    th { background: var(--soft); color: #344039; font-weight: 800; }
+    tr:last-child td { border-bottom: 0; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .back-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--green);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      z-index: 40;
+    }
+    .back-top.show { display: block; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal, .quick-nav a, .toc a, .insight-card, .metric { transition: none; }
+    }
+    @media (max-width: 920px) {
+      .hero-grid, .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .toc nav { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+      .toc a { white-space: nowrap; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 20px, 1180px); }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .quick-nav { justify-content: flex-start; }
+      .hero-main, .report-section { padding: 18px; }
+      h1 { font-size: 31px; }
+      h2 { font-size: 22px; }
+      h3 { font-size: 19px; }
+    }
+  </style>
+<link rel="stylesheet" href="/assets/site-shell.css" />
+</head>
+<body data-site-section="weekly">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/">日报</a><span>｜</span><a href="/calendar/">日历</a><span>｜</span><a href="/weekly/" aria-current="page">周报</a><span>｜</span><a href="/search/">搜索</a></nav>
+<!-- Published source: archive/周报/2026-W28/beauty-insights-2026w28-0701-0707.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">
+        <strong>美妆行业洞察</strong>
+        <span>2026年第28周 · 7/1-7/7</span>
+      </div>
+      <nav class="quick-nav" aria-label="核心维度跳转">
+        <a href="#brand">品牌动态</a>
+        <a href="#market">市场版图</a>
+        <a href="#channel">渠道生态</a>
+        <a href="#capital">投融资</a>
+        <a href="#other">其他动态</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="panel hero-main reveal">
+          <p class="eyebrow">竞对中心 · WEEKLY BEAUTY INTELLIGENCE</p>
+          <h1>美妆行业洞察 2026年第28周</h1>
+          <p class="dek">本期聚焦彩妆退潮、618渠道迁徙、复购分配规则、区域合规、奢侈美妆授权和出海制造能力。</p>
+          <div class="pill-row">
+            <span class="pill">周期：7/1-7/7</span>
+            <span class="pill">覆盖：7/1-7/7已公开信息</span>
+            <span class="pill">按新标准重写</span>
+          </div>
+        </div>
+        <aside class="panel hero-side reveal" aria-label="本期等级">
+          <div class="metric"><b>0</b><span>S级结构性事件</span></div>
+          <div class="metric"><b>8</b><span>A级可操作信号</span></div>
+          <div class="metric"><b>2</b><span>B级观察信号</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="shell layout">
+      <aside class="panel toc reveal">
+        <p class="toc-title">报告导航</p>
+        <nav>
+          <a href="#distribution">等级分布</a>
+          <a href="#brand">品牌动态</a>
+          <a href="#market">市场版图</a>
+          <a href="#channel">渠道生态</a>
+          <a href="#capital">投融资</a>
+          <a href="#other">其他动态</a>
+          <a href="#events">事件速览</a>
+          <a href="#dedupe">去重说明</a>
+        </nav>
+      </aside>
+      <div class="content">
+        <section class="report-section reveal" id="distribution">
+<div class="section-head"><h2>本期洞察等级分布</h2></div>
+<div class="table-wrap"><table><tr><th>等级</th><th>数量</th><th>洞察</th><th>判定理由</th></tr>
+<tr><td>S</td><td>4</td><td>彩妆退潮、618渠道迁徙、天猫复购分配、Gucci美妆授权易主</td><td>改变品类竞争基准、渠道规则或奢侈美妆授权格局</td></tr>
+<tr><td>A</td><td>5</td><td>代言策略调整、台湾PIF实施、品牌资产流转、合规执法升级、中韩合规制造平台</td><td>对具体品类、区域、渠道、资本和出海供应链有直接操作意义</td></tr>
+<tr><td>B</td><td>1</td><td>上美股份提名法务背景执行董事</td><td>值得持续观察的治理信号</td></tr></table></div>
+</section>
+<section class="report-section reveal" id="brand">
+<div class="section-head"><h2>一、品牌动态</h2></div>
+<article class="insight-card reveal">
+<h3><span class="grade s">S</span>彩妆退潮的三条路径同时出现，复购能力成为彩妆项目的生存线</h3>
+<p>本周三条品牌退场或排名变化信号指向同一个事实：白牌流量、国潮情绪、小众包装型彩妆都在暴露复购不足和渠道成本压力。</p>
+<p>7月2日，可爱物语线上渠道大面积关停被行业媒体披露。该品牌曾以马戏团、独角兽浮雕造型出圈，也曾较早进入海外美妆电商平台；本次披露显示，其天猫两家官方店铺中一家关停，另一家仅剩3个SKU，抖音、小红书、京东旗舰店均已关闭。<a href="https://www.mztoutiao.com/index/index/kuaixun_detail.html?id=4957" target="_blank" rel="noopener">美妆头条</a>、<a href="https://fashion.ifeng.com/c/8uQpAgmQRNm" target="_blank" rel="noopener">凤凰网时尚</a></p>
+<p>肌先知母公司被限高消费。7月1日，深圳市麦凯莱科技有限公司被东亚银行申请限高，法定代表人李冠玮被纳入限高名单。肌先知曾是抖音白牌顶流，后续暴露高投流、低留存和现金流压力。<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>7月初披露的618战报显示，花西子2023-2024年连续位居抖音彩妆第一，2026年跌出TOP10，毛戈平首次登顶；BABI、修可芙等新面孔进入榜单。<a href="https://www.sgpjbg.com/info/9d563efba2933432e4279f1671c8da22.html" target="_blank" rel="noopener">三个皮匠/蝉妈妈</a></p>
+<p>影响推演：彩妆项目的竞争重心已经落到用户回购、核心SKU稳定性、渠道议价和内容效率。包装记忆点仍能带来首购，但难以单独支撑长期经营。</p>
+<p>对产品/市场的含义：彩妆项目立项前应明确复购率基线、流量成本上限、主力SKU生命周期和库存周转目标。只依赖新品节奏的项目，风险敞口偏大。</p>
+</article>
+<article class="insight-card reveal">
+<h3><span class="grade a">A</span>代言策略更强调场景和状态，防晒与高端护肤的沟通逻辑正在变细</h3>
+<p>7月3日，兰蔻宣布蔡依林出任亚太区护肤代言人。45岁的蔡依林刚在第37届金曲奖二度封后，个人状态与高端护肤的长期状态表达高度契合。<a href="https://k.sina.cn/article_7880068204_1d5b04c6c06801armi.html" target="_blank" rel="noopener">新浪</a></p>
+<p>同日，骆驼户外美妆宣布王一博出任防晒全球首席代言人，官宣时间卡位其参加China GT珠海站赛事前夕，将防晒与户外、赛车、运动场景绑定。<a href="https://k.sina.com.cn/article_7880068200_1d5b04c6806801igqk.html" target="_blank" rel="noopener">新浪</a></p>
+<p>7月2日，华伦天奴美妆宣布Dakota Johnson与Alexander Skarsgård为全新香水系列全球代言人；7月6日，纪梵希发布赵丽颖全新品牌大片，并强化其全球彩妆及香氛双线代言人身份。<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>影响推演：头部品牌对代言人的评估正在更重视年龄适配度、场景关联度和品牌调性契合度。防晒品类会继续围绕户外运动、长时间暴露、高湿高温等场景细分，高端护肤会继续强化“状态管理”表达。</p>
+<p>对产品/市场的含义：防晒新品需要准备高温、强UV、高湿、防水防汗、长时间持效等功能证据。熟龄护肤和高端彩妆要把代言人语义与核心产品资产绑定，减少单纯流量型投放。</p>
+</article>
+<article class="insight-card reveal">
+<h3><span class="grade b">B</span>上市国货美妆公司开始把合规治理放进董事会层面</h3>
+<p>7月3日，上美股份公告提名王韬为第二届董事会执行董事候选人，待股东大会批准后生效。王韬履历包含互联网大厂背景与清华大学法学学历，法务背景高管进入美妆上市公司执行董事层值得关注。<a href="https://www.jrj.com.cn/" target="_blank" rel="noopener">金融界</a></p>
+<p>这条信号与禁汞新规、飞行检查、传销执法等监管升级形成呼应。合规能力已经进入公司治理层面，不再只是运营层的流程问题。</p>
+<p>对产品/市场的含义：后续看美妆IPO、融资和并购时，需要把合规治理架构纳入评估。备案、功效宣称、分销层级、工厂质量体系都会进入尽调清单。</p>
+</article>
+</section>
+<section class="report-section reveal" id="market">
+<div class="section-head"><h2>二、市场版图</h2></div>
+<article class="insight-card reveal">
+<h3><span class="grade a">A</span>台湾PIF全面实施，区域合规成本进入全SKU档案管理阶段</h3>
+<p>7月1日起，台湾地区化妆品产品资讯档案制度进入最终阶段，覆盖全品类在售化妆品。产品上市前需完成配方、生产流程、毒理资料、稳定性报告、安全评估等16项档案内容。同日，化妆品GMP第三阶段同步生效，全台化妆品制造场所均须适用GMP规范。<a href="https://www.cirs-group.com/cn/cos" target="_blank" rel="noopener">瑞旭集团</a>、<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>影响推演：台湾市场的准入和在售管理成本明显上升。对于SKU多、更新快的品牌，合规资料准备会影响上新速度和渠道稳定性。</p>
+<p>对产品/市场的含义：进入台湾市场前，应优先处理GMV占比前20%的SKU，并将PIF资料、GMP文件、安全评估、ODM交付节点写入项目计划。低贡献SKU需要重新评估保留必要性。</p>
+</article>
+<article class="insight-card reveal">
+<h3><span class="grade a">A</span>中韩合规制造平台启动，国货出海正在补齐制造端能力</h3>
+<p>7月4日，绵花棠与韩国上市原料企业 SUNJIN BEAUTY SCIENCE 旗下 OTCM 启动合资公司，定位为面向全球品牌、药妆和功能性护肤出海的跨境合规制造平台。合资工厂规划年产能超过6000万件，并整合 SUNJIN 的 FDA NAI 合规体系经验与绵花棠上海基地的CDMO能力。<a href="https://www.mztoutiao.com/index/index/kuaixun_detail.html?id=4962" target="_blank" rel="noopener">美妆头条</a></p>
+<p>这条新闻的价值在于制造能力和法规经验同时进入出海链路。功能性护肤、防晒、药妆类产品更依赖海外法规、注册效率、产地安排和供应链稳定性。</p>
+<p>影响推演：国货出海的竞争不只发生在前端品牌和渠道，也会发生在制造、注册、产地和国际法规适配能力上。合规制造能力会成为功能性护肤出海的基础设施。</p>
+<p>对产品/市场的含义：竞品跟踪要把CDMO、ODM、原料企业和海外合规能力纳入观察。品牌选择出海供应链时，不能只看打样速度和报价，还要看目标市场法规经验和长期供货稳定性。</p>
+</article>
+</section>
+<section class="report-section reveal" id="channel">
+<div class="section-head"><h2>三、渠道生态</h2></div>
+<article class="insight-card reveal">
+<h3><span class="grade s">S</span>618终局数据确认渠道迁徙，内容电商继续承接美妆增量</h3>
+<p>7月初，618覆盖期终了后的完整数据集中披露。美容护肤全周期销售额425亿元，同比下降1.62%；香水彩妆销售额136亿元，同比下降4.9%；合计561亿元，为618大促18年历史上美妆品类首次同比下滑。<a href="https://www.thepaper.cn/newsDetail_forward_33449660" target="_blank" rel="noopener">澎湃新闻/星图数据</a></p>
+<p>7月初披露的抖音618数据还显示，抖音美妆全周期GMV达325.35亿元，同比增长16.70%，所有细分品类均实现双位数增长。淘天与抖音合计占线上美妆76.7%份额，京东10.7%、快手7.3%、拼多多5.3%。<a href="https://www.sgpjbg.com/info/9d563efba2933432e4279f1671c8da22.html" target="_blank" rel="noopener">三个皮匠/易观分析</a></p>
+<p>7月初披露的抖音面部护理榜显示，TOP3由赫莲娜、雅诗兰黛、海蓝之谜包揽，说明高端品牌在内容电商中的运营能力已经成熟。<a href="https://www.sgpjbg.com/info/9d563efba2933432e4279f1671c8da22.html" target="_blank" rel="noopener">三个皮匠/青眼数据</a></p>
+<p>影响推演：美妆消费没有简单萎缩，平台入口和增长结构正在变化。抖音的货架场、搜索和商城能力会继续提升，内容种草与货架复购的联动会变得更重要。</p>
+<p>对产品/市场的含义：品牌复盘618时不能只看淘系GMV。应拆分淘系会员复购、抖音内容成交、抖音货架成交、达播依赖度和利润率。抖音货架场GMV占比低的品牌，增长仍然容易受投流和达人排期影响。</p>
+</article>
+<article class="insight-card reveal">
+<h3><span class="grade s">S</span>天猫用复购重构流量分配规则，88VIP成为美妆渠道基础设施</h3>
+<p>7月初披露的天猫618复盘数据显示，88VIP会员已超6200万，贡献美妆品类超40%的复购与转化率。平台明确将复购作为核心流量分配指标，体验分≥4.8的门槛会直接筛选品牌服务能力。<a href="https://www.sgpjbg.com/info/9d563efba2933432e4279f1671c8da22.html" target="_blank" rel="noopener">三个皮匠/天猫数据</a></p>
+<p>7月初披露的同期平台数据还显示，美妆品类首次纳入国补范围，部分本土头部品牌获得12%-20%直补；天猫千万级新品数同比增长60%，达到504款，覆盖品类扩容至53个。<a href="https://www.sgpjbg.com/info/9d563efba2933432e4279f1671c8da22.html" target="_blank" rel="noopener">三个皮匠/天猫数据</a></p>
+<p>影响推演：天猫正在把会员复购、体验分和新品效率纳入流量分配逻辑。新品牌的启动成本会继续抬高，因为平台需要更早看到复购数据和服务稳定性。</p>
+<p>对产品/市场的含义：天猫新品启动要把体验分、会员转化、复购周期和售后指标作为前置KPI。只靠首发声量和短期折扣，难以持续获得平台资源。</p>
+</article>
+</section>
+<section class="report-section reveal" id="capital">
+<div class="section-head"><h2>四、投融资</h2></div>
+<article class="insight-card reveal">
+<h3><span class="grade s">S</span>Gucci美妆授权提前交接，奢侈美妆授权继续向头部集团集中</h3>
+<p>7月7日，Coty宣布与Kering达成协议，将Gucci美妆授权提前移交回Kering，Kering支付约4亿美元现金。Coty将继续运营Gucci美妆至2027年6月30日。<a href="https://www.vogue.com/article/kering-accelerates-the-gucci-loreal-beauty-deal" target="_blank" rel="noopener">Vogue Business</a>、<a href="https://www.wsj.com/business/coty-to-transfer-gucci-beauty-license-back-to-kering-ahead-of-schedule-for-400-million-227cd3b8" target="_blank" rel="noopener">WSJ</a></p>
+<p>同日，Kering宣布Gucci与L’Oréal签署为期50年的独家美妆授权协议。L’Oréal将负责Gucci香氛和美妆产品的研发、生产与全球分销，新授权预计2027年年中生效。<a href="https://www.vogue.com/article/kering-accelerates-the-gucci-loreal-beauty-deal" target="_blank" rel="noopener">Vogue Business</a></p>
+<p>影响推演：奢侈美妆授权对象的评估标准更看重研发、渠道、香氛运营和全球分销能力。中腰部授权商面临更大压力，头部美妆集团的奢侈品牌资源会继续集中。</p>
+<p>对产品/市场的含义：高端美妆竞争不能只看包装和价格带。香氛、彩妆、护肤之间的品牌资产复用，全球渠道运营能力，长期授权稳定性，会成为高端线的重要壁垒。</p>
+</article>
+<article class="insight-card reveal">
+<h3><span class="grade a">A</span>高端护发资产完成交割，技术型品牌仍有战略买家价值</h3>
+<p>7月7日，汉高完成对高端护发品牌OLAPLEX的收购交割。此前公开信息显示，汉高以约14亿美元收购OLAPLEX，补强其高端护发、专业沙龙和科学修护布局。<a href="https://www.barrons.com/articles/olaplex-stock-price-henkel-acquisition-920f5c69" target="_blank" rel="noopener">Barron’s</a></p>
+<p>7月1-7日窗口内，多起品牌资产流转线索集中披露：SLG Brands将COLAB干洗喷雾与Johnny's Chop Shop护发品牌出售给Thriving Brands；Saltair正在寻求出售；Glossier获得4500万美元循环信贷额度；北京丽源拟出售其持有的资生堂丽源35%股权。<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>影响推演：纯品牌公司独立IPO的难度仍高，但拥有技术资产、专业渠道或清晰人群资产的品牌，仍能获得战略买家关注。护发、身体护理、DTC转批发分销仍是活跃方向。</p>
+<p>对产品/市场的含义：若品牌目标是战略出售，需要提前设计收购方协同接口，包括品类补位、技术壁垒、渠道可迁移性和复购数据。单纯靠声量的品牌资产，退出确定性较弱。</p>
+</article>
+</section>
+<section class="report-section reveal" id="other">
+<div class="section-head"><h2>五、其他动态</h2></div>
+<article class="insight-card reveal">
+<h3><span class="grade a">A</span>合规执法覆盖准入与刑事追责，美妆行业法律风险敞口扩大</h3>
+<p>7月1日起，化妆品全面禁汞。硫柳汞、硼酸苯汞等退出准用防腐剂清单，调整为禁用原料。美白祛斑品类首当其冲，依赖汞化合物实现快速效果的配方方案失去合规基础。<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>7月1-7日窗口内，韩国品牌润美迪欧在华运营主体德特来都（南京）商贸有限公司因传销活动被河南濮阳市监局罚没约5262万元的案件被行业媒体集中披露。涉案期间销售收入13.82亿元，会员遍布全国31省，层级最高达28级。<a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></p>
+<p>影响推演：美白祛斑、分销层级、ODM质量体系都会进入更高压的合规审查。合规能力已经成为品牌经营底线。</p>
+<p>对产品/市场的含义：美白祛斑线应立即复核原料、第三方检测、备案资料和宣称话术。分销体系需要提前进行法律评估，避免层级设计带来罚没风险。</p>
+</article>
+</section>
+<section class="report-section reveal" id="events">
+<div class="section-head"><h2>本周事件速览</h2></div>
+<div class="table-wrap"><table><tr><th>日期</th><th>主体</th><th>事件</th><th>信号</th><th>来源</th></tr>
+<tr><td>7/1</td><td>NMPA相关标准</td><td>化妆品全面禁汞正式实施</td><td>美白祛斑品类合规洗牌</td><td><a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></td></tr>
+<tr><td>7/1</td><td>中国台湾</td><td>PIF新规全面实施，GMP第三阶段生效</td><td>区域合规成本上升</td><td><a href="https://www.cirs-group.com/cn/cos" target="_blank" rel="noopener">瑞旭集团</a></td></tr>
+<tr><td>7/1</td><td>肌先知母公司</td><td>被限高消费</td><td>白牌流量模型风险暴露</td><td><a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></td></tr>
+<tr><td>7/2</td><td>可爱物语</td><td>多平台旗舰店关闭或清仓</td><td>小众彩妆退场信号出现</td><td><a href="https://www.mztoutiao.com/index/index/kuaixun_detail.html?id=4957" target="_blank" rel="noopener">美妆头条</a></td></tr>
+<tr><td>7/3</td><td>兰蔻</td><td>蔡依林出任亚太区护肤代言人</td><td>高端护肤强化状态管理叙事</td><td><a href="https://k.sina.cn/article_7880068204_1d5b04c6c06801armi.html" target="_blank" rel="noopener">新浪</a></td></tr>
+<tr><td>7/3</td><td>骆驼户外美妆</td><td>王一博出任防晒全球首席代言人</td><td>户外防晒场景化</td><td><a href="https://k.sina.com.cn/article_7880068200_1d5b04c6806801igqk.html" target="_blank" rel="noopener">新浪</a></td></tr>
+<tr><td>7/3</td><td>上美股份</td><td>提名法务背景执行董事候选人</td><td>合规治理进入董事会层面</td><td><a href="https://www.jrj.com.cn/" target="_blank" rel="noopener">金融界</a></td></tr>
+<tr><td>7/4</td><td>绵花棠 / SUNJIN</td><td>启动中韩跨境合规制造平台</td><td>出海制造能力补强</td><td><a href="https://www.mztoutiao.com/index/index/kuaixun_detail.html?id=4962" target="_blank" rel="noopener">美妆头条</a></td></tr>
+<tr><td>7/6</td><td>纪梵希</td><td>赵丽颖品牌大片上线，彩妆与香氛双线代言身份强化</td><td>高端彩妆代言深度绑定</td><td><a href="https://news.sohu.com/a/1046051989_121123896" target="_blank" rel="noopener">搜狐</a></td></tr>
+<tr><td>7/7</td><td>Kering / L’Oréal / Coty</td><td>Gucci美妆授权提前交接</td><td>奢侈美妆授权向头部集团集中</td><td><a href="https://www.vogue.com/article/kering-accelerates-the-gucci-loreal-beauty-deal" target="_blank" rel="noopener">Vogue Business</a></td></tr>
+<tr><td>7/7</td><td>汉高 / OLAPLEX</td><td>汉高完成OLAPLEX收购交割</td><td>技术型护发资产仍有战略买家价值</td><td><a href="https://www.barrons.com/articles/olaplex-stock-price-henkel-acquisition-920f5c69" target="_blank" rel="noopener">Barron’s</a></td></tr>
+<tr><td>本周</td><td>618收官数据</td><td>美妆总盘首次同比下滑，抖音美妆增长</td><td>渠道迁徙继续推进</td><td><a href="https://www.thepaper.cn/newsDetail_forward_33449660" target="_blank" rel="noopener">澎湃新闻</a></td></tr></table></div>
+</section>
+<section class="report-section reveal" id="dedupe">
+<div class="section-head"><h2>去重说明</h2></div>
+<div class="table-wrap"><table><tr><th>事件</th><th>处理</th></tr>
+<tr><td>6/29绽妍生物递表</td><td>事件日期不在7/1-7/7，本版不收录</td></tr>
+<tr><td>6/30花王K27计划</td><td>事件日期不在7/1-7/7，本版不收录</td></tr>
+<tr><td>TikTok Shop FBT政策</td><td>发布时间在7/8，归入第29周</td></tr>
+<tr><td>NMPA新原料新规7/15施行</td><td>施行日在后续窗口，本版不展开</td></tr></table></div>
+</section>
+<section class="report-section reveal" id="覆盖说明">
+<div class="section-head"><h2>覆盖说明</h2></div>
+<div class="table-wrap"><table><tr><th>维度</th><th>状态</th><th>说明</th></tr>
+<tr><td>国货出海</td><td>已覆盖</td><td>本周未发现强品牌进入新市场事件，保留中韩合规制造平台作为出海供应链信号</td></tr>
+<tr><td>微信公众号深度验证</td><td>部分覆盖</td><td>当前版本以公开网页和行业媒体为主，未把无法打开的公众号内容写成核心证据</td></tr>
+<tr><td>数据类交叉验证</td><td>部分覆盖</td><td>618渠道数据使用星图、易观、青眼等公开数据源。因部分内容为复盘材料，正文已标注“7月初披露”的数据发布日期口径</td></tr></table></div>
+<p><strong>修改日志：</strong></p>
+<ul>
+<li>v2.1 2026-07-13：补充每条新闻/数据的日期口径；对报告发布日期在窗口内、但内容为复盘或总结的数据材料标注披露时间；同步准备MD、HTML和可分享版本。</li>
+</ul>
+</section>
+      </div>
+    </div>
+  </main>
+
+  <button class="back-top" id="backTop" type="button" aria-label="返回顶部">↑</button>
+  <script>
+    const progress = document.getElementById("progress");
+    const backTop = document.getElementById("backTop");
+    const navLinks = Array.from(document.querySelectorAll(".toc a, .quick-nav a"));
+    const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("in");
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
+    function updateUI() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = max > 0 ? (window.scrollY / max) * 100 + "%" : "0";
+      backTop.classList.toggle("show", window.scrollY > 520);
+      let current = sections[0];
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= 110) current = section;
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", current && link.getAttribute("href") === "#" + current.id);
+      });
+    }
+    window.addEventListener("scroll", updateUI, { passive: true });
+    window.addEventListener("resize", updateUI);
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    updateUI();
+  </script>
+</body>
+</html>
