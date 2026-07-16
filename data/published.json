@@ -40,6 +40,19 @@
       "event_types": ["新品", "渠道", "收购"]
     },
     {
+      "kind": "daily",
+      "date": "2026-07-15",
+      "title": "美妆竞对情报日报｜2026年7月15日",
+      "source": "archive/日报/2026-07-15/beauty-daily-20260715.html",
+      "pdf": "archive/日报/2026-07-15/beauty-daily-20260715.pdf",
+      "summary": "新原料新规、功效护肤大众化与国货 IP 联名",
+      "dimensions": ["监管与原料", "品牌动态", "渠道生态"],
+      "brands": ["L'Oréal Paris", "Neutrogena", "蒂洛薇", "KOSE"],
+      "categories": ["新原料", "护肤", "底妆"],
+      "channels": ["Amazon", "药妆店", "线下"],
+      "event_types": ["监管", "新品", "联名", "渠道"]
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",

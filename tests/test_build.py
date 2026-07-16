@@ -75,6 +75,16 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn('href="/daily/2026-07-10/"', rendered)
         self.assertIn('href="/calendar/?date=2026-07-11"', rendered)
 
+    def test_daily_template_uses_visible_tag_for_dimension_index(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        source = '''<html><head></head><body>
+        <nav class="side" aria-label="日报条目"><a href="#item-1"><span>品牌名</span><b>#1</b></a></nav>
+        <article class="card finance-card" id="item-1"><span class="tag">监管与原料</span></article>
+        </body></html>'''
+        rendered = build.decorate_report(source, "daily", "archive/example.html", {})
+        self.assertIn("监管与原料", rendered)
+        self.assertNotIn(">投融资</span><b>#1</b>", rendered)
+
     def test_calendar_contains_date_targets_for_volume_fallback(self):
         self.assertIsNotNone(build, "site/build.py must exist")
         rendered = build.calendar_cells(
@@ -97,8 +107,8 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output)
         home = (self.output / "index.html").read_text(encoding="utf-8")
-        self.assertIn("2026-07-14", home)
-        self.assertIn("beauty-daily-20260714", home)
+        self.assertIn("2026-07-15", home)
+        self.assertIn("beauty-daily-20260715", home)
 
     def test_github_pages_build_uses_repository_base_path_and_keeps_home_images(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -108,7 +118,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn('href="/beauty-intel/calendar/"', home)
         self.assertIn('href="/beauty-intel/pdf/beauty-daily-20260714.pdf"', daily)
         self.assertIn('href="/beauty-intel/assets/site-shell.css"', daily)
-        self.assertTrue((self.output / "assets/01-cloud-aurora-campaign.png").is_file())
+        self.assertTrue((self.output / "assets/01-nmpa-new-ingredient-rule.png").is_file())
 
     def test_published_daily_copies_the_confirmed_pdf_and_shows_export_link(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -138,7 +148,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         data = json.loads((ROOT / "site/data/published.json").read_text(encoding="utf-8"))
         reports = build.validate_manifest(data, ROOT)
-        self.assertEqual(len(reports), 5)
+        self.assertEqual(len(reports), 6)
 
 
 if __name__ == "__main__":

@@ -95,15 +95,26 @@ DIMENSION_LABELS = {
 def replace_dimension_index(source_html: str) -> str:
     """Change the source template's article index from brand names to dimensions."""
     dimensions: dict[str, str] = {}
-    for article in re.finditer(r"<article\b([^>]*)>", source_html, flags=re.I):
+    for article in re.finditer(r"<article\b([^>]*)>(.*?)</article>", source_html, flags=re.I | re.S):
         attrs = article.group(1)
+        content = article.group(2)
         item_id = re.search(r'\bid="([^"]+)"', attrs, flags=re.I)
         classes = re.search(r'\bclass="([^"]+)"', attrs, flags=re.I)
         if not item_id or not classes:
             continue
-        label = next(
+        fallback_label = next(
             (DIMENSION_LABELS[class_name] for class_name in classes.group(1).split() if class_name in DIMENSION_LABELS),
             "行业动态",
+        )
+        visible_tag = re.search(
+            r'<span\b[^>]*\bclass="[^"]*\btag\b[^"]*"[^>]*>(.*?)</span>',
+            content,
+            flags=re.I | re.S,
+        )
+        label = (
+            html.unescape(re.sub(r"<[^>]+>", "", visible_tag.group(1))).strip()
+            if visible_tag
+            else fallback_label
         )
         dimensions[item_id.group(1)] = label
 
