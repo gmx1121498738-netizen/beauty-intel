@@ -64,6 +64,19 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-16",
+      "title": "美妆竞对情报日报｜2026年7月16日",
+      "source": "archive/日报/2026-07-16/beauty-daily-20260716.html",
+      "pdf": "archive/日报/2026-07-16/beauty-daily-20260716.pdf",
+      "summary": "品牌传播整合、全层年轻化与线下体验型渠道",
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["雅诗兰黛", "爱美客", "LANEIGE", "己出", "DECORTÉ", "DCYPHER"],
+      "categories": ["医美", "护肤", "彩妆", "婴童"],
+      "channels": ["屈臣氏", "松本清", "可开嘉来", "John Lewis", "线下"],
+      "event_types": ["组织", "新品", "联名", "渠道", "展会"]
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",

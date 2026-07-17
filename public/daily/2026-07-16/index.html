@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆竞对情报日报｜2026年7月16日</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --finance: #275d57;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    a { color: #285f66; text-underline-offset: 3px; }
+    img { max-width: 100%; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 80;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brandmark { line-height: 1.2; }
+    .brandmark strong { display: block; font-size: 15px; letter-spacing: .03em; }
+    .brandmark span { display: block; color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #4a443d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      margin: 0;
+      color: #4b463f;
+      font-size: 17px;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.finance-stat { border-color: rgba(39,93,87,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.finance-stat strong { color: var(--finance); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 188px 1fr;
+      gap: 28px;
+      padding: 34px 0 78px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      background: rgba(255,254,253,.5);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .side a:hover {
+      background: #fff;
+      border-color: rgba(159, 79, 92, .22);
+    }
+
+    .section { scroll-margin-top: 84px; margin-bottom: 22px; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+      align-items: baseline;
+    }
+
+    .section-title h2 { margin: 0; font-size: 22px; }
+    .section-title span { color: var(--muted); font-size: 13px; }
+
+    .conclusion {
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .conclusion p { margin: 0 0 12px; }
+    .conclusion p:last-child { margin-bottom: 0; }
+
+    .feed { display: grid; gap: 18px; }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 14px 34px rgba(52, 42, 32, .06);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(52, 42, 32, .1); }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+    .brand-card::before { background: var(--brand); }
+    .channel-card::before { background: var(--channel); }
+    .finance-card::before { background: var(--finance); }
+
+    .rank { display: grid; align-content: start; gap: 10px; }
+    .rank b { font-size: 30px; line-height: 1; letter-spacing: -.04em; }
+    .tag {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      height: 26px;
+      padding: 0 10px;
+      border: 1px solid rgba(159, 79, 92, .2);
+      border-radius: 999px;
+      color: #55504a;
+      background: var(--paper-2);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+    .finance-card .tag { color: var(--finance); background: rgba(39,93,87,.1); border-color: rgba(39,93,87,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 23px;
+      line-height: 1.34;
+      letter-spacing: -.02em;
+    }
+
+    .card p { margin: 0 0 10px; color: #46413a; }
+
+    .signal {
+      margin-top: 12px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(255, 253, 249, .72);
+      border: 1px solid transparent;
+      color: #3b3731;
+    }
+
+    .signal strong { color: var(--accent); }
+    .channel-card .signal strong { color: var(--channel); }
+    .finance-card .signal strong { color: var(--finance); }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .media-grid.three {
+      grid-template-columns: 1.12fr .88fr;
+    }
+
+    .media-grid.three .media:first-child {
+      grid-row: span 2;
+    }
+
+    .media-grid.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f6f2eb;
+      box-shadow: 0 12px 24px rgba(52, 42, 32, .06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 440px;
+      object-fit: contain;
+      background: #fffaf6;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media.tall img { max-height: 620px; }
+    .media.wide img { max-height: 360px; }
+    .media:hover img { transform: scale(1.015); filter: saturate(1.04); }
+
+    .caption { display: none; }
+
+    .focus-card.compact strong {
+      font-size: 14px;
+      color: #4e4a43;
+      font-weight: 650;
+    }
+
+    .source-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border: 1px dashed rgba(167, 137, 99, .5);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 249, .58);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-note h2 { margin: 0 0 8px; font-size: 17px; color: var(--ink); }
+    .source-note p { margin: 0 0 6px; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31, 28, 24, .72);
+    }
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(1040px, 94vw);
+      max-height: 88vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side { position: static; display: flex; overflow-x: auto; padding-bottom: 4px; }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .media-grid, .media-grid.three, .media-grid.four { grid-template-columns: 1fr; }
+      .media-grid.three .media:first-child { grid-row: auto; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+  </style>
+<link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a><a class="site-pdf-export" href="/beauty-intel/pdf/beauty-daily-20260716.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-16/beauty-daily-20260716.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar"><div class="shell topbar-inner">
+    <div class="brandmark"><strong>美妆竞对情报日报</strong><span>2026年第29周 · 7月16日</span></div>
+    <nav class="nav" aria-label="快速跳转"><a href="#summary">今日结论</a>
+        <a href="#item-1">雅诗兰黛</a>
+        <a href="#item-2">爱美客</a>
+        <a href="#item-3">LANEIGE</a>
+        <a href="#item-4">己出×屈臣氏</a>
+        <a href="#item-5">DECORTÉ</a>
+        <a href="#item-6">DCYPHER</a>
+        <a href="#item-7">南京美业展</a>
+        <a href="#volume">近5日事件量</a></nav>
+  </div></header>
+  <section class="hero"><div class="shell hero-grid"><div>
+    <div class="eyebrow">DAILY SIGNAL MONITOR</div>
+    <h1>7月16日<br>美妆竞对情报日报</h1>
+    <p class="dek">本期信号集中于品牌传播组织、医美全层年轻化和线下体验型渠道。国际集团把创作者关系纳入品牌资产管理，国货医美与婴童功效护肤则继续扩展机构与 CS 门店触点。</p>
+  </div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>雅诗兰黛全球品牌传播团队整合、爱美客解索橙上市、LANEIGE 进入松本清/可开嘉来全国门店</strong></div>
+    <div class="stat-row"><div class="stat brand-stat"><small>今日收录</small><strong>7条</strong></div><div class="stat channel-stat"><small>覆盖周期</small><strong>7/16</strong></div><div class="stat brand-stat"><small>核心品类</small><strong>医美/彩妆/婴童</strong></div><div class="stat finance-stat"><small>关键变量</small><strong>组织/渠道</strong></div></div>
+  </aside></div></section>
+  <main class="shell"><nav class="side" aria-label="日报维度索引"><a href="#summary"><span>今日结论</span><b>00</b></a>
+      <a href="#item-1"><span>品牌动态</span><b>#1</b></a>
+      <a href="#item-2"><span>品牌动态</span><b>#2</b></a>
+      <a href="#item-3"><span>品牌动态</span><b>#3</b></a>
+      <a href="#item-4"><span>渠道生态</span><b>#4</b></a>
+      <a href="#item-5"><span>品牌动态</span><b>#5</b></a>
+      <a href="#item-6"><span>渠道生态</span><b>#6</b></a>
+      <a href="#item-7"><span>渠道生态</span><b>#7</b></a>
+    </nav><div>
+      <section class="section reveal" id="summary"><div class="section-title"><h2>今日结论</h2><span>2026.07.16</span></div><div class="conclusion"><p>7 月 16 日的有效信号集中在品牌组织、医美产品与线下零售三端。雅诗兰黛将全球品牌传播整合为独立团队，直接把企业叙事、创作者关系与文化相关性纳入同一管理口径；爱美客则以解索橙上市切入肉毒素市场，并将产品表达扩展至动态、紧塑与头皮管理。</p><p>渠道侧，兰芝、己出分别借“吉伊卡哇”“小黄人”进入药妆与 CS 线下活动，DCYPHER 把 AI 定制底妆带入 John Lewis 实体百货；品牌的内容资产与渠道体验正在被更紧密地绑定。</p></div></section>
+      <section class="section feed" id="feed">
+        <article class="card brand-card reveal" id="item-1">
+          <div class="rank"><b>#1</b><span class="tag">品牌动态</span></div>
+          <div>
+            <h3>雅诗兰黛新设全球品牌传播 SVP，组织架构向品牌叙事端收束</h3>
+            <p>7月16日，雅诗兰黛集团（The Estée Lauder Companies）宣布任命 Madeleine Boyd 为全球品牌传播高级副总裁，7月20日生效。她将组建并领导新的整合型全球品牌传播团队，负责统一集团品牌组合的企业传播策略、消费者导向的品牌叙事及创作者关系。来源：<a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/07-16-2026-212219289" target="_blank" rel="noreferrer">雅诗兰黛官方新闻稿</a> / <a href="https://www.businesswire.com/news/home/20260716738393/en/" target="_blank" rel="noreferrer">Business Wire 全文</a></p>
+            <div class="signal"><strong>信号判断：</strong>该岗位调整超出常规公关补位。雅诗兰黛把品牌组合的企业传播、创作者生态和文化议题收拢到一个全球团队，意味着“Beauty Reimagined”的执行已进入消费者沟通层。对国际品牌在中国的传播团队而言，创作者关系正成为品牌资产管理的一部分。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/01-estee-lauder-madeleine-boyd.png" alt="Madeleine Boyd，雅诗兰黛全球品牌传播高级副总裁"></button><figcaption class="caption">Madeleine Boyd，雅诗兰黛全球品牌传播高级副总裁</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-2">
+          <div class="rank"><b>#2</b><span class="tag">品牌动态</span></div>
+          <div>
+            <h3>爱美客解索橙正式上市，肉毒素、射频与头皮水光三线同步落地全层年轻化战略</h3>
+            <p>7月16日，爱美客举行“正青春·全层年轻化战略发布会”，发布解索橙（注射用 A 型肉毒毒素）、嗨塑射频皮肤治疗仪及元源出头皮水光三项产品/方案，覆盖动态纹管理、紧塑年轻化和毛发管理。解索橙为爱美客在中国（含港澳）独家经销的韩国 Huons BioPharma 进口肉毒毒素，当日进入中国市场。来源：<a href="https://weibo.com/6074229840/5321389395674630" target="_blank" rel="noreferrer">爱美客官方微博</a> / <a href="https://applocal.myzaker.com/article/6a33d7291bc8e08955000007" target="_blank" rel="noreferrer">解索橙上市前共创会报道</a></p>
+            <div class="signal"><strong>信号判断：</strong>爱美客用一场发布会把注射、能量源设备与头皮管理并列呈现，意图是用“全层年轻化”替代单品销售语言。机构端的竞争将落在全面部评估、品相方案、疗程设计与复购管理；射频和头皮水光同时进入矩阵，也让品牌获得更完整的抗衰客群覆盖与机构交叉销售空间。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/02-aimeike-full-layer-strategy.png" alt="爱美客全层年轻化战略发布会现场"></button><figcaption class="caption">爱美客全层年轻化战略发布会现场</figcaption></figure><figure class="media wide"><button type="button"><img src="assets/02-aimeike-launch-stage.png" alt="爱美客全层年轻化战略启动仪式"></button><figcaption class="caption">爱美客全层年轻化战略启动仪式</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-3">
+          <div class="rank"><b>#3</b><span class="tag">品牌动态</span></div>
+          <div>
+            <h3>LANEIGE 兰芝联动吉伊卡哇，限定唇膜进入松本清/可开嘉来全国门店</h3>
+            <p>7月16日，爱茉莉太平洋日本旗下 LANEIGE 兰芝在日本松本清集团及可开嘉来集团门店限量发售“吉伊卡哇”包装的 Lip Sleeping Mask。产品共三款香型，对应吉伊卡哇、哈奇瓦雷和乌萨奇角色，随“松本清/可开嘉来 吉伊卡哇盛夏活动”在全国门店同步启动。来源：<a href="https://prtimes.jp/main/html/rd/p/000000087.000105692.html" target="_blank" rel="noreferrer">爱茉莉太平洋日本新闻稿</a></p>
+            <div class="signal"><strong>信号判断：</strong>兰芝直接绑定日本头部药妆集团的全国门店活动。夜间唇部护理使用门槛低、复购逻辑明确，角色包装和贴纸补上了收藏与社交传播属性；IP 在这里同时承担陈列资源和低客单品转化工具。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/03-laneige-chiikawa-products.png" alt="LANEIGE 吉伊卡哇限定唇膜三款包装"></button><figcaption class="caption">LANEIGE 吉伊卡哇限定唇膜三款包装</figcaption></figure><figure class="media wide"><button type="button"><img src="assets/03-laneige-chiikawa-campaign.png" alt="松本清/可开嘉来吉伊卡哇活动物料"></button><figcaption class="caption">松本清/可开嘉来吉伊卡哇活动物料</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card channel-card reveal" id="item-4">
+          <div class="rank"><b>#4</b><span class="tag">渠道生态</span></div>
+          <div>
+            <h3>己出×屈臣氏小黄人联名上线，功效婴童护肤借 IP 礼盒进入 CS 门店</h3>
+            <p>7月16日，婴童功效护肤品牌己出与屈臣氏推出小黄人独家联名礼盒，以小绿罐 AD 霜为核心单品；屈臣氏同日在线下主题门店启动小黄人“选角大会”活动。己出此前已与屈臣氏围绕婴童皮肤健康开展全国线下活动。来源：<a href="https://weibo.com/7853036357/5320284200501882" target="_blank" rel="noreferrer">己出官方微博</a> / <a href="https://weibo.com/1813387710/5320897990757747" target="_blank" rel="noreferrer">屈臣氏中国官方微博</a> / <a href="https://www.jichu-imine.com/brand/97.html" target="_blank" rel="noreferrer">己出官网</a></p>
+            <div class="signal"><strong>信号判断：</strong>己出把 AD 霜放进大众 IP 礼盒，并借屈臣氏主题门店承接体验，意在补强年轻家庭的低门槛触达。真正值得看的是联名结束后的门店陈列与常规 SKU 留存，而非单日社交声量。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/04-jichu-watsons-minions.png" alt="屈臣氏中国小黄人主题门店活动视频截图"></button><figcaption class="caption">屈臣氏中国小黄人主题门店活动视频截图</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-5">
+          <div class="rank"><b>#5</b><span class="tag">品牌动态</span></div>
+          <div>
+            <h3>黛珂 DECORTÉ 同日扩充口红与眼影，日系高端彩妆以“肤色延伸”强化妆效差异</h3>
+            <p>7月16日，KOSE 旗下黛珂 DECORTÉ 在日本上线 Rouge DECORTÉ Cream Satin 7 色、Cream Glow 新 3 色，以及 Skin Shadow Designing Palette 新色 11“prism chocolate”。品牌将眼影定位为贴合肤色和血色感的色彩设计，主推红棕、玫瑰和暖米色等低饱和色群。来源：<a href="https://www.decorte.com/site/s/pointmakeup_202607.aspx" target="_blank" rel="noreferrer">DECORTÉ 官方线上店</a> / <a href="https://mcs-cosme.com/cosmeticsinfo/7-16%E3%80%80%E3%82%B3%E3%82%B9%E3%83%A1%E3%83%87%E3%82%B3%E3%83%AB%E3%83%86%E5%A4%8F%E3%81%AE%E6%96%B0%E8%89%B2/" target="_blank" rel="noreferrer">日本零售端上新信息</a></p>
+            <div class="signal"><strong>信号判断：</strong>高端彩妆更依赖自然妆效和质地体验维持溢价。黛珂将唇、眼两类色彩锁定在贴合肤色的中性色谱，并以不同唇膏质地并行延展，避免新品只剩色号替换。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/05-decorte-color-makeup.png" alt="DECORTÉ 7 月 16 日上新口红与眼影"></button><figcaption class="caption">DECORTÉ 7 月 16 日上新口红与眼影</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card channel-card reveal" id="item-6">
+          <div class="rank"><b>#6</b><span class="tag">渠道生态</span></div>
+          <div>
+            <h3>DCYPHER 与 John Lewis 达成独家铺设，AI 定制底妆进入百货实体体验</h3>
+            <p>7月16日，英国 AI 定制底妆品牌 DCYPHER Beauty 宣布与 John Lewis 合作，8月先在伦敦牛津街旗舰店启动，随后在 2027 年春季前扩展至该零售商更多门店。消费者将在门店进行肤色分析，并在数分钟内获得定制底妆产品。来源：<a href="https://www.prnewswire.co.uk/news-releases/a-global-first-dcypher-beauty-and-john-lewis-bring-groundbreaking-ai-powered-beauty-personalisation-to-the-high-street-302827372.html" target="_blank" rel="noreferrer">DCYPHER 与 John Lewis 联合发布</a></p>
+            <div class="signal"><strong>信号判断：</strong>DCYPHER 将定制底妆置入百货现场即时交付，消费者可把“选色不确定”转化为可观看、可参与的服务流程。品牌借百货的信任背书降低消费者对算法推荐的疑虑；真正需要验证的是门店高峰时段的交付效率、复购补货方式和单店人效。</div>
+            
+          </div>
+        </article>
+
+        <article class="card channel-card reveal" id="item-7">
+          <div class="rank"><b>#7</b><span class="tag">渠道生态</span></div>
+          <div>
+            <h3>第 41 届南京美业博览会开幕，华东专业线与供应链进入年中线下选品窗口</h3>
+            <p>7月16日，第 41 届南京国际美业博览会在南京国际展览中心开幕，展期至 7月18日，覆盖专业线护肤、日化美妆、美发育发、医美、大健康及化妆品供应链等板块。公开资料显示，本届计划展览面积约 2 万平方米、汇集约 500 家展商。来源：<a href="https://www.zhanxunwang.com/news/1479.html" target="_blank" rel="noreferrer">展会信息页</a> / <a href="https://www.jufair.com/exhibition/nanjing-beauty-expo/" target="_blank" rel="noreferrer">聚展展会资料</a></p>
+            <div class="signal"><strong>信号判断：</strong>南京展的价值不在规模数字，而在华东专业线、日化线和供应链在同一窗口集中接触渠道商。对需要布局下半年线下渠道的国货品牌，展会现场的代理层级、试用反馈和首单政策，比展商数量更值得追踪。</div>
+            <div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/06-nanjing-beauty-expo.png" alt="第 41 届南京美业博览会展期信息"></button><figcaption class="caption">第 41 届南京美业博览会展期信息</figcaption></figure></div>
+          </div>
+        </article>
+      </section>
+      <section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/calendar/?date=2026-07-12">7/12<b>—</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-13/">7/13<b>6</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-14/">7/14<b>5</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-15/">7/15<b>7</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-07-16/">7/16<b>7</b></a></div></section>
+      <section class="source-note reveal"><h2>信息来源</h2><p>企业/品牌：<a href="https://www.elcompanies.com/en/news-and-media/newsroom/press-releases/2026/07-16-2026-212219289" target="_blank" rel="noreferrer">雅诗兰黛</a>、<a href="https://weibo.com/6074229840/5321389395674630" target="_blank" rel="noreferrer">爱美客</a>、<a href="https://prtimes.jp/main/html/rd/p/000000087.000105692.html" target="_blank" rel="noreferrer">爱茉莉太平洋日本</a>、<a href="https://www.decorte.com/site/s/pointmakeup_202607.aspx" target="_blank" rel="noreferrer">DECORTÉ</a>、<a href="https://www.prnewswire.co.uk/news-releases/a-global-first-dcypher-beauty-and-john-lewis-bring-groundbreaking-ai-powered-beauty-personalisation-to-the-high-street-302827372.html" target="_blank" rel="noreferrer">DCYPHER</a>。</p><p>渠道/展会：<a href="https://weibo.com/1813387710/5320897990757747" target="_blank" rel="noreferrer">屈臣氏中国</a>、<a href="https://www.zhanxunwang.com/news/1479.html" target="_blank" rel="noreferrer">南京美业展</a>。</p></section>
+    </div></main>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""></div>
+  <a class="to-top" href="#" aria-label="返回顶部">↑</a>
+
+  <script>
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, window.scrollY / max)) * 100}%`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('on');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.media button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const img = btn.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.removeAttribute('src');
+    });
+  </script>
+</body>
+</html>
