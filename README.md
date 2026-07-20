@@ -23,15 +23,16 @@ python3 -m http.server 8080 --directory site/public
 
 固定群机器人名称统一为 **美妆情报Bot**。每天北京时间 11:00，任务只检查前一自然日：日报已经发布且群消息经过 Grace 审核时发送；没有日报、仍在审核或明确停用时保持安静。
 
-### 创建群机器人
+### 两阶段群机器人
 
-1. 在目标飞书群打开“设置 → 群机器人 → 添加机器人 → 自定义机器人”。
-2. 名称填写“美妆情报Bot”，描述可填写“推送已审核的美妆竞对情报日报与行业洞察”。
-3. 在安全设置中启用“签名校验”。
-4. 分别保存 Webhook 地址和签名密钥，不要粘贴到代码、文档或群聊中。
-5. 在 GitHub 仓库打开“Settings → Secrets and variables → Actions”，添加：
-   - `FEISHU_WEBHOOK_URL`：群机器人的完整 Webhook 地址；
-   - `FEISHU_WEBHOOK_SECRET`：签名校验密钥。
+所有通过审核的内容先发送测试群。Grace 明确说“发正式群”后，才手动选择正式群发送同一张卡片；定时任务永远只发测试群。
+
+1. 分别在测试群和正式“竞对中心”群打开“设置 → 群机器人 → 添加机器人 → 自定义机器人”。
+2. 名称统一填写“美妆情报Bot”，描述可填写“推送已审核的美妆竞对情报日报与行业洞察”，并启用“签名校验”。
+3. 分别保存 Webhook 地址和签名密钥，不要粘贴到代码、文档或群聊中。
+4. 在 GitHub 仓库打开“Settings → Secrets and variables → Actions”，保留现有测试群密钥，并添加正式群密钥：
+   - `FEISHU_WEBHOOK_URL` / `FEISHU_WEBHOOK_SECRET`：测试群；
+   - `FEISHU_FORMAL_WEBHOOK_URL` / `FEISHU_FORMAL_WEBHOOK_SECRET`：正式竞对中心群。
 
 ### 审核群消息
 
@@ -60,8 +61,9 @@ Grace 通知正式发布日报时，先为对应日报生成 `push` 预览：
     python3 push_daily.py --date 2026-07-15 --dry-run
   ```
 
-- GitHub Actions 中可以手动运行“Push approved daily to Feishu”。`dry_run` 默认为开启，只生成预览；关闭后才会真实发送。
-- 自动任务使用 `0 3 * * *`，即北京时间每天 11:00。昨日没有 `approved` 日报时，任务显示 `SKIP` 并正常结束。
+- GitHub Actions 中可以手动运行“Push approved daily to Feishu”。`dry_run` 默认为开启，只生成预览；关闭后才会真实发送。默认 `delivery_target=test`。
+- 正式群发送必须选择 `delivery_target=formal` 并勾选 `formal_approved`；该选项只在 Grace 已明确确认“发正式群”后使用。未勾选会被工作流拦截。
+- 自动任务使用 `0 3 * * *`，即北京时间每天 11:00，固定发送测试群。昨日没有 `approved` 日报时，任务显示 `SKIP` 并正常结束。
 - 次日 11:00 后才完成审核的消息不会自动补发。确需补发时，应手动选择日期，并在发送前再次确认。
 
 飞书卡片使用官方自定义机器人签名算法。凭据只由 GitHub Secrets 注入，程序日志不会输出 Webhook 或签名密钥。

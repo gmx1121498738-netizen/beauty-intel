@@ -275,6 +275,17 @@ class PushDailyCliTests(unittest.TestCase):
 
 
 class PushWorkflowTests(unittest.TestCase):
+    def test_workflow_keeps_formal_delivery_separate_and_explicitly_approved(self):
+        workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("delivery_target", workflow)
+        self.assertIn("formal_approved", workflow)
+        self.assertIn("FEISHU_FORMAL_WEBHOOK_URL", workflow)
+        self.assertIn("FEISHU_FORMAL_WEBHOOK_SECRET", workflow)
+        self.assertIn("inputs.delivery_target == 'formal' && !inputs.formal_approved", workflow)
+
     def test_workflow_supports_a_manual_multi_day_summary(self):
         workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
             encoding="utf-8"
