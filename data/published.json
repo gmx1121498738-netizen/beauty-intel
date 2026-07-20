@@ -88,6 +88,19 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-17",
+      "title": "美妆竞对情报日报｜2026年7月17日",
+      "source": "archive/日报/2026-07-17/beauty-daily-20260717.html",
+      "pdf": "archive/日报/2026-07-17/beauty-daily-20260717.pdf",
+      "summary": "资本身份重构、AI技术叙事与内容电商渠道跃迁",
+      "dimensions": ["投融资", "品牌动态", "渠道生态"],
+      "brands": ["诺斯贝尔", "HBN", "敷尔佳", "欧莱雅", "SHISEIDO", "SUQQU", "TikTok Shop", "纪梵希"],
+      "categories": ["护肤", "彩妆", "原料"],
+      "channels": ["TikTok Shop", "线下"],
+      "event_types": ["更名", "新品", "技术", "AI", "渠道"]
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
