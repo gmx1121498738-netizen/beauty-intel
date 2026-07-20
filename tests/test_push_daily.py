@@ -39,6 +39,16 @@ def make_report(date="2026-07-15", status="approved", items=None):
 
 
 class ReportSelectionTests(unittest.TestCase):
+    def test_select_reports_returns_each_approved_requested_date_in_order(self):
+        self.assertIsNotNone(push_daily, "push_daily.py must exist")
+        reports = [
+            make_report("2026-07-17", items=["17日重点"]),
+            make_report("2026-07-18", items=["18日重点"]),
+            make_report("2026-07-19", items=["19日重点"]),
+        ]
+        selected = push_daily.select_reports(reports, ["2026-07-17", "2026-07-18", "2026-07-19"])
+        self.assertEqual([report["date"] for report in selected], ["2026-07-17", "2026-07-18", "2026-07-19"])
+
     def test_select_report_returns_only_approved_target_date(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         report = make_report()
@@ -70,6 +80,27 @@ class ReportSelectionTests(unittest.TestCase):
 
 
 class FeishuCardTests(unittest.TestCase):
+    def test_multi_day_card_separates_each_report_and_links_to_each_daily_page(self):
+        self.assertIsNotNone(push_daily, "push_daily.py must exist")
+        reports = [
+            make_report("2026-07-17", items=["17日重点"]),
+            make_report("2026-07-18", items=["18日重点"]),
+            make_report("2026-07-19", items=["19日重点"]),
+        ]
+        card = push_daily.build_multi_day_card(
+            reports,
+            "https://gmx1121498738-netizen.github.io/beauty-intel",
+        )
+
+        self.assertEqual(card["header"]["title"]["content"], "美妆情报Bot｜7月17—19日日报")
+        content = card["elements"][0]["text"]["content"]
+        self.assertIn("**7月17日**", content)
+        self.assertIn("**7月18日**", content)
+        self.assertIn("**7月19日**", content)
+        self.assertIn("17日重点", content)
+        self.assertIn("19日重点", content)
+        self.assertIn("/daily/2026-07-17/", content)
+        self.assertIn("/daily/2026-07-19/", content)
     def test_card_uses_bot_name_all_reviewed_items_and_daily_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         report = make_report(items=["重点一", "重点二", "重点三", "重点四"])
@@ -244,6 +275,13 @@ class PushDailyCliTests(unittest.TestCase):
 
 
 class PushWorkflowTests(unittest.TestCase):
+    def test_workflow_supports_a_manual_multi_day_summary(self):
+        workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("target_dates", workflow)
+        self.assertIn("--dates", workflow)
+
     def test_workflow_runs_at_eleven_with_secrets_and_concurrency(self):
         workflow_path = SITE_ROOT / ".github/workflows/push-feishu-daily.yml"
         self.assertTrue(workflow_path.is_file(), "push workflow must exist")

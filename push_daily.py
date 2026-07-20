@@ -48,6 +48,16 @@ def select_report(reports: list[dict], target_date: str) -> dict | None:
     return report
 
 
+def select_reports(reports: list[dict], target_dates: list[str]) -> list[dict]:
+    selected = []
+    for target_date in target_dates:
+        report = select_report(reports, target_date)
+        if report is None:
+            raise ValueError(f"No approved daily push for {target_date}")
+        selected.append(report)
+    return selected
+
+
 def report_url(base_url: str, report_date: str) -> str:
     return f"{base_url.rstrip('/')}/daily/{report_date}/"
 
@@ -92,6 +102,28 @@ def build_card(report: dict, base_url: str) -> dict:
                 ],
             },
         ],
+    }
+
+
+def build_multi_day_card(reports: list[dict], base_url: str) -> dict:
+    """Build one manually-triggered card for a contiguous set of approved dailies."""
+    if not reports:
+        raise ValueError("reports is required")
+
+    dates = [datetime.strptime(report["date"], "%Y-%m-%d") for report in reports]
+    title = f"美妆情报Bot｜{dates[0].month}月{dates[0].day}—{dates[-1].day}日日报"
+    sections = []
+    for report, report_date in zip(reports, dates):
+        items = report.get("push", {}).get("items", [])
+        lines = "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(items, 1))
+        sections.append(
+            f"**{report_date.month}月{report_date.day}日**\n{lines}\n[查看完整日报]({report_url(base_url, report['date'])})"
+        )
+
+    return {
+        "config": {"wide_screen_mode": True},
+        "header": {"template": "blue", "title": {"tag": "plain_text", "content": title}},
+        "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "\n\n".join(sections)}}],
     }
 
 
@@ -140,6 +172,7 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", default="data/published.json")
     parser.add_argument("--date", help="Target report date in YYYY-MM-DD format")
+    parser.add_argument("--dates", help="Comma-separated dates for one manual summary card")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -148,16 +181,23 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
 
     try:
         data = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-        target_date = args.date or shanghai_yesterday()
-        report = select_report(data.get("reports", []), target_date)
-        if report is None:
-            print(f"SKIP: no approved daily push for {target_date}", file=stdout)
-            return 0
+        if args.dates:
+            target_dates = [date.strip() for date in args.dates.split(",") if date.strip()]
+            reports = select_reports(data.get("reports", []), target_dates)
+        else:
+            target_date = args.date or shanghai_yesterday()
+            report = select_report(data.get("reports", []), target_date)
+            if report is None:
+                print(f"SKIP: no approved daily push for {target_date}", file=stdout)
+                return 0
 
         base_url = environ.get("SITE_BASE_URL", "").strip()
         if not base_url:
             raise ValueError("SITE_BASE_URL is required")
-        card = build_card(report, base_url)
+        if args.dates:
+            card = build_multi_day_card(reports, base_url)
+        else:
+            card = build_card(report, base_url)
         if args.dry_run:
             print(
                 json.dumps(
@@ -177,7 +217,10 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             card,
             secret=environ.get("FEISHU_WEBHOOK_SECRET", "").strip(),
         )
-        print(f"SENT: approved daily push for {target_date}", file=stdout)
+        if args.dates:
+            print(f"SENT: approved multi-day push for {','.join(target_dates)}", file=stdout)
+        else:
+            print(f"SENT: approved daily push for {target_date}", file=stdout)
         return 0
     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as error:
         print(f"ERROR: {error}", file=stdout)

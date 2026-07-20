@@ -10,6 +10,10 @@ on:
         description: "Report date (YYYY-MM-DD); blank means yesterday in Shanghai"
         required: false
         type: string
+      target_dates:
+        description: "Comma-separated dates for one combined summary card (manual only)"
+        required: false
+        type: string
       dry_run:
         description: "Preview only; do not call Feishu"
         required: true
@@ -43,16 +47,26 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.dry_run
         run: |
           args=()
-          if [[ -n "$TARGET_DATE" ]]; then args+=(--date "$TARGET_DATE"); fi
+          if [[ -n "$TARGET_DATES" ]]; then
+            args+=(--dates "$TARGET_DATES")
+          elif [[ -n "$TARGET_DATE" ]]; then
+            args+=(--date "$TARGET_DATE")
+          fi
           python3 push_daily.py "${args[@]}" --dry-run
         env:
           TARGET_DATE: ${{ inputs.target_date }}
+          TARGET_DATES: ${{ inputs.target_dates }}
 
       - name: Push a manually selected daily
         if: github.event_name == 'workflow_dispatch' && !inputs.dry_run
         run: |
           args=()
-          if [[ -n "$TARGET_DATE" ]]; then args+=(--date "$TARGET_DATE"); fi
+          if [[ -n "$TARGET_DATES" ]]; then
+            args+=(--dates "$TARGET_DATES")
+          elif [[ -n "$TARGET_DATE" ]]; then
+            args+=(--date "$TARGET_DATE")
+          fi
           python3 push_daily.py "${args[@]}"
         env:
           TARGET_DATE: ${{ inputs.target_date }}
+          TARGET_DATES: ${{ inputs.target_dates }}
