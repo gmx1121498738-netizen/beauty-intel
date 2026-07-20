@@ -180,6 +180,19 @@
       "categories": ["护肤", "彩妆", "原料"],
       "channels": ["TikTok", "跨境电商"],
       "event_types": ["新品", "出海", "投融资", "监管"]
+    },
+    {
+      "kind": "weekly",
+      "week": "2026-W30",
+      "title": "美妆行业洞察 2026年第30周（7/13-7/19）",
+      "source": "archive/周报/2026-W30/beauty-insights-2026w30.html",
+      "pdf": "archive/周报/2026-W30/beauty-insights-2026w30-0713-0719.pdf",
+      "summary": "新原料新规、功效技术、AI基础设施与资本市场分化",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管与原料"],
+      "brands": ["倩碧", "欧莱雅", "联合利华", "爱美客", "敷尔佳", "兰蔻", "TikTok Shop", "维琪科技"],
+      "categories": ["护肤", "彩妆", "个护", "原料"],
+      "channels": ["TikTok Shop", "直播电商", "线下体验"],
+      "event_types": ["监管", "新品", "技术", "AI", "投融资", "渠道"]
     }
   ]
 }
