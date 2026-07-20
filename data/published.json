@@ -114,6 +114,19 @@
       "event_types": ["新品", "代言", "限定", "直播"]
     },
     {
+      "kind": "daily",
+      "date": "2026-07-19",
+      "title": "美妆竞对情报日报｜2026年7月19日",
+      "source": "archive/日报/2026-07-19/beauty-daily-20260719.html",
+      "pdf": "archive/日报/2026-07-19/beauty-daily-20260719.pdf",
+      "summary": "直播合规、包装研发 AI 与体验型渠道转化",
+      "dimensions": ["监管与合规", "品牌动态", "产品与研发", "渠道生态", "市场版图"],
+      "brands": ["Club Cosmetics", "联合利华", "Panasonic", "韩国旅游发展局"],
+      "categories": ["护肤", "彩妆", "洗护", "个护"],
+      "channels": ["直播电商", "药妆店", "Amazon", "线下体验", "OTA"],
+      "event_types": ["监管", "限定", "AI", "渠道", "体验"]
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
