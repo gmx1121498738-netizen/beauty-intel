@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>7月18日｜美妆竞对情报日报</title>
+  <style>
+    :root { --ink:#292723; --muted:#736d63; --line:#e8dfd3; --paper:#fffdf9; --canvas:#f7f3ed; --brand:#8f3f35; --channel:#315f74; --radius:18px; --shadow:0 15px 36px rgba(70,51,32,.08); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:linear-gradient(180deg,#f5f1eb 0,#fffdf9 520px); color:var(--ink); font:15px/1.72 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; }
+    a { color:inherit; }
+    .shell { width:min(1180px,calc(100% - 40px)); margin:auto; }
+    .progress { position:fixed; inset:0 auto auto 0; z-index:50; width:0; height:3px; background:var(--brand); }
+    .topbar { position:sticky; top:0; z-index:20; background:rgba(255,253,249,.9); backdrop-filter:blur(16px); border-bottom:1px solid rgba(232,223,211,.86); }
+    .topbar-in { display:flex; align-items:center; justify-content:space-between; gap:22px; min-height:62px; }
+    .brandmark { display:grid; line-height:1.24; white-space:nowrap; }
+    .brandmark strong { font-size:15px; }
+    .brandmark span { margin-top:3px; color:var(--muted); font-size:12px; }
+    .nav { display:flex; gap:16px; overflow:auto; font-size:13px; white-space:nowrap; }
+    .nav a { color:var(--muted); text-decoration:none; }
+    .nav a:hover { color:var(--brand); }
+    .hero { padding:58px 0 42px; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr); gap:40px; align-items:end; }
+    .eyebrow { color:var(--brand); font-size:12px; font-weight:800; letter-spacing:.14em; }
+    h1 { margin:10px 0 15px; font-size:clamp(38px,5vw,61px); line-height:1.08; letter-spacing:-.055em; }
+    .dek { max-width:670px; margin:0; color:#5e584e; font-size:17px; }
+    .meta { padding:20px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,253,249,.83); box-shadow:var(--shadow); }
+    .meta small { display:block; color:var(--muted); font-size:12px; }
+    .meta strong { display:block; margin-top:5px; font-size:16px; line-height:1.45; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:18px; }
+    .stat { padding:10px 11px; border-radius:12px; background:#faf6f0; }
+    .stat b { display:block; margin-top:1px; font-size:16px; }
+    main { display:grid; grid-template-columns:182px minmax(0,1fr); gap:30px; padding-bottom:72px; }
+    .side { position:sticky; top:82px; display:grid; gap:8px; align-self:start; }
+    .side a { display:flex; justify-content:space-between; gap:8px; padding:9px 10px; border-radius:10px; color:#625b51; text-decoration:none; font-size:13px; }
+    .side a:hover { background:#fff; color:var(--brand); }
+    .section { scroll-margin-top:84px; margin-bottom:22px; }
+    .section-title { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:13px; }
+    .section-title h2 { margin:0; font-size:22px; }
+    .section-title span { color:var(--muted); font-size:13px; }
+    .conclusion { padding:23px 25px; border:1px solid var(--line); border-left:5px solid var(--brand); border-radius:var(--radius); background:var(--paper); box-shadow:var(--shadow); font-size:16px; }
+    .conclusion p { margin:0; }
+    .feed { display:grid; gap:18px; }
+    .card { position:relative; display:grid; grid-template-columns:84px minmax(0,1fr); gap:18px; padding:22px; overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,253,249,.94); box-shadow:var(--shadow); }
+    .card::before { position:absolute; inset:0 auto 0 0; width:4px; background:var(--brand); content:""; }
+    .card.channel::before { background:var(--channel); }
+    .rank { display:grid; align-content:start; gap:9px; }
+    .rank b { font-size:30px; line-height:1; letter-spacing:-.05em; }
+    .tag { width:max-content; padding:3px 9px; border-radius:999px; background:rgba(143,63,53,.09); color:var(--brand); font-size:12px; }
+    .channel .tag { background:rgba(49,95,116,.1); color:var(--channel); }
+    h3 { margin:0 0 10px; font-size:23px; line-height:1.34; letter-spacing:-.025em; }
+    .card p { margin:0; color:#484138; }
+    .signal { margin-top:13px; padding:13px 15px; border:1px solid #eee6db; border-radius:13px; background:#fffcf8; }
+    .signal strong { color:var(--brand); }
+    .channel .signal strong { color:var(--channel); }
+    .media-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
+    .media-grid.three { grid-template-columns:1.08fr .92fr; }
+    .media-grid.three .media:first-child { grid-row:span 2; }
+    figure { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:13px; background:#fff; box-shadow:0 10px 24px rgba(70,51,32,.05); }
+    figure button { display:block; width:100%; height:100%; padding:0; border:0; background:#fffaf7; cursor:zoom-in; }
+    figure img { display:block; width:100%; max-height:440px; object-fit:contain; transition:transform .22s ease; }
+    figure:hover img { transform:scale(1.012); }
+    .media-grid.three figure:first-child img { max-height:620px; }
+    figcaption { display:none; }
+    .volume { margin-top:24px; padding:20px; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,253,249,.75); }
+    .dates { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+    .date { padding:10px 8px; border:1px solid var(--line); border-radius:12px; text-align:center; color:var(--muted); font-size:12px; }
+    .date b { display:block; font-size:20px; }
+    .date.active { border-color:rgba(143,63,53,.42); color:var(--ink); background:#fff; }
+    .sources { margin-top:22px; padding:16px 18px; border:1px dashed #cfbfa8; border-radius:var(--radius); color:var(--muted); font-size:13px; }
+    .sources h2 { margin:0 0 5px; color:var(--ink); font-size:16px; }
+    .sources p { margin:0; }
+    .lightbox { position:fixed; inset:0; z-index:100; display:none; place-items:center; padding:25px; background:rgba(26,23,20,.76); }
+    .lightbox.open { display:grid; }
+    .lightbox img { max-width:min(1000px,94vw); max-height:88vh; border-radius:14px; background:#fff; box-shadow:0 25px 80px rgba(0,0,0,.4); }
+    .to-top { position:fixed; right:18px; bottom:18px; width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:#fff; box-shadow:var(--shadow); color:var(--ink); text-decoration:none; }
+    @media (max-width:860px) { .hero { padding:38px 0 28px; } .hero-grid,main { grid-template-columns:1fr; gap:22px; } .side { position:static; display:flex; overflow:auto; } .side a { flex:none; } .card { grid-template-columns:1fr; } .rank { display:flex; align-items:center; } .media-grid.three { grid-template-columns:1fr; } .media-grid.three .media:first-child { grid-row:auto; } .media-grid.three figure:first-child img { max-height:440px; } .topbar-in { align-items:flex-start; flex-direction:column; padding:10px 0; } }
+  </style>
+<link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a><a class="site-pdf-export" href="/beauty-intel/pdf/beauty-daily-20260718.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-18/beauty-daily-20260718.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar"><div class="shell topbar-in">
+    <div class="brandmark"><strong>美妆竞对情报日报</strong><span>2026年第29周 · 7月18日</span></div>
+    <nav class="nav"><a href="#summary">今日结论</a><a href="#item-1">倩碧</a><a href="#item-2">兰蔻</a><a href="#item-3">OLAY</a><a href="#item-4">IGNIS iO</a><a href="#volume">近5日事件量</a></nav>
+  </div></header>
+  <section class="hero"><div class="shell hero-grid"><div>
+    <div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>7月18日<br>美妆竞对情报日报</h1>
+    <p class="dek">倩碧以PDRN童颜系列和新生大使扩展医美关联护肤表达；兰蔻用黑胶唱片语言更新菁纯唇膏的限定价值；OLAY将大使内容接入头部直播转化，IGNIS iO则落在夏季头皮即时护理。</p>
+  </div><aside class="meta"><small>重点关注</small><strong>倩碧PDRN童颜系列官宣、兰蔻菁纯唇膏“声色”限定</strong><div class="stats"><div class="stat"><small>今日收录</small><b>4条</b></div><div class="stat"><small>覆盖周期</small><b>7/18</b></div><div class="stat"><small>核心品类</small><b>护肤/彩妆/洗护</b></div><div class="stat"><small>关键变量</small><b>成分/内容/渠道</b></div></div></aside>
+  </div></section>
+  <main class="shell"><nav class="side"><a href="#summary"><span>今日结论</span><b>00</b></a><a href="#item-1"><span>品牌动态</span><b>#1</b></a><a href="#item-2"><span>品牌动态</span><b>#2</b></a><a href="#item-3"><span>渠道生态</span><b>#3</b></a><a href="#item-4"><span>洗护新品</span><b>#4</b></a></nav><div>
+    <section class="section" id="summary"><div class="section-title"><h2>今日结论</h2><span>2026.07.18</span></div><div class="conclusion"><p>7月18日的信号集中在成分护肤、高端彩妆与明星渠道触达。倩碧在中国以品牌新生大使官宣同步推PDRN童颜系列；兰蔻以黑胶唱片为视觉原点推出菁纯唇膏“声色”限定；OLAY把宋威龙的品牌大使内容导入李佳琦直播间；日本ALBION旗下IGNIS iO则以免洗凝胶型干洗发切入高温、高湿场景。国际品牌仍在用成分、视觉系统与明星内容，持续为成熟大单品拓展新的消费触点。</p></div></section>
+    <section class="feed">
+      <article class="card" id="item-1"><div class="rank"><b>#1</b><span class="tag">品牌动态</span></div><div><h3>倩碧官宣曾沛慈为品牌新生大使，同步在中国推出PDRN童颜系列</h3><p>7月18日，雅诗兰黛集团旗下倩碧（Clinique）在中国官宣演员、歌手曾沛慈为品牌新生大使，并推出PDRN童颜系列，含次抛精华与面膜。品牌将该系列定义为“双重组PDRN+重组人源化III型胶原蛋白”的组合；“全球首款”等表述均为品牌口径。来源：<a href="https://weibo.com/5411905571/5321823518459033" target="_blank" rel="noreferrer">品牌官号原帖</a> / <a href="https://www.freestyle666.com/m/view.php?aid=29207" target="_blank" rel="noreferrer">行业媒体正文</a></p><div class="signal"><strong>信号判断：</strong>倩碧7月上旬已在中国推出CX肌源深修水光系列，本次再以PDRN童颜系列叠加代言人传播，显示重组PDRN正被纳入品牌的产品组合与内容组合，而非只作为单一成分故事。产品证据、医美关联场景的使用边界，以及代言人内容能否带来常规零售转化，都会影响这类“无创水光”叙事的持续性。</div><div class="media-grid three"><figure class="media"><button><img src="assets/01-clinique-pets-tseng.png" alt="倩碧PDRN童颜系列与品牌新生大使曾沛慈"></button><figcaption>倩碧PDRN童颜系列与曾沛慈</figcaption></figure><figure class="media"><button><img src="assets/01-clinique-pdrn-ampoule.png" alt="倩碧PDRN童颜次抛精华"></button><figcaption>倩碧PDRN童颜次抛精华</figcaption></figure><figure class="media"><button><img src="assets/01-clinique-pdrn-mask.png" alt="倩碧PDRN童颜面膜"></button><figcaption>倩碧PDRN童颜面膜</figcaption></figure></div></div></article>
+      <article class="card" id="item-2"><div class="rank"><b>#2</b><span class="tag">品牌动态</span></div><div><h3>兰蔻推出菁纯唇膏“声色”限定，以黑胶唱片视觉扩展高端口红的收藏属性</h3><p>7月18日，兰蔻（Lancôme）推出菁纯唇膏“声色”限定系列。系列以黑胶唱片声槽为设计灵感，推出#274原声裸茶、#880狂想红棕、#201跳音粉棕、#422变奏粉紫四款限定色；倪妮、张婧仪与张凌赫参与系列传播。来源：<a href="https://www.sina.cn/media/1742666164" target="_blank" rel="noreferrer">兰蔻官方微博页面</a></p><div class="signal"><strong>信号判断：</strong>菁纯唇膏是兰蔻的核心彩妆资产，“声色”限定用黑胶纹路、色号命名和艺人内容形成完整的音乐叙事。高端口红在日常功能差异有限的情况下，限定系列承担的是礼赠、收藏与社交表达功能；品牌需要靠统一的视觉语言放大购买理由，并让限定热度回流至常规色和长期会员资产。</div><div class="media-grid"><figure class="media"><button><img src="assets/02-lancome-sound-color-lineup.png" alt="兰蔻菁纯唇膏声色限定系列"></button><figcaption>兰蔻菁纯唇膏声色限定系列</figcaption></figure><figure class="media"><button><img src="assets/02-lancome-274.png" alt="兰蔻菁纯唇膏声色限定274原声裸茶"></button><figcaption>兰蔻菁纯唇膏声色限定274原声裸茶</figcaption></figure></div></div></article>
+      <article class="card channel" id="item-3"><div class="rank"><b>#3</b><span class="tag">渠道生态</span></div><div><h3>OLAY联动宋威龙进入李佳琦直播间，水光小白瓶承接大使官宣后的首轮达人转化</h3><p>7月18日19:30，OLAY携活力护肤大使宋威龙做客李佳琦直播间，主推水光小白瓶与美白水乳组合。品牌此前于7月6日官宣宋威龙为活力护肤大使，本次直播将大使内容直接接入头部达人带货场景。来源：<a href="https://www.sina.cn/media/1645365377" target="_blank" rel="noreferrer">OLAY官方微博页面</a></p><div class="signal"><strong>信号判断：</strong>代言人官宣后的第一轮直播并不只承担曝光，而是把粉丝关注迅速转换为可购买的组合套装和直播间互动。OLAY用水光小白瓶承接这一链路，延续了以明星内容强化核心单品心智、再由头部主播完成集中转化的成熟打法。后续更值得观察的是直播权益能否沉淀为站内搜索、店播与复购，而非单场声量。</div><div class="media-grid"><figure class="media"><button><img src="assets/03-olay-song-weilong.png" alt="OLAY活力护肤大使宋威龙"></button><figcaption>OLAY活力护肤大使宋威龙</figcaption></figure></div></div></article>
+      <article class="card" id="item-4"><div class="rank"><b>#4</b><span class="tag">洗护新品</span></div><div><h3>IGNIS iO在日本上市免洗凝胶型干洗发，夏季头皮即时护理加码便携场景</h3><p>7月18日，ALBION旗下IGNIS iO在日本上市“Reset Dry Shampoo N”免洗干洗发，150mL、含税1,980日元。产品采用直接涂抹头皮后擦拭的凝胶形态，品牌页面标示其以薄荷醇带来清凉感，并针对汗、皮脂与闷热异味的即时清洁需求。来源：<a href="https://www.cosme.com/products/detail.php?product_id=418277" target="_blank" rel="noreferrer">@cosme官方商城页面</a> / <a href="https://i-voce.jp/cosmetics/4248/111632/" target="_blank" rel="noreferrer">VOCE产品页</a></p><div class="signal"><strong>信号判断：</strong>日本夏季洗护的产品创新仍围绕高温高湿下的“即时恢复”展开。相较喷雾型干洗发，凝胶型更强调直接触达头皮与局部使用，能覆盖通勤、户外活动与临时整理等高频细分场景。对国内洗护品牌而言，头皮清洁、控油、香氛与便携包装可以做成独立场景产品，但需用明确的使用体验和真实清洁力建立差异，不能只停留在凉感营销。</div><div class="media-grid"><figure class="media"><button><img src="assets/04-ignis-io-reset-dry-shampoo.png" alt="IGNIS iO Reset Dry Shampoo N"></button><figcaption>IGNIS iO Reset Dry Shampoo N</figcaption></figure></div></div></article>
+    </section>
+    <section class="volume" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="dates"><div class="date">7/14<b>5</b></div><div class="date">7/15<b>7</b></div><div class="date">7/16<b>7</b></div><div class="date">7/17<b>7</b></div><div class="date active">7/18<b>4</b></div></div></section>
+    <section class="sources"><h2>信息来源</h2><p>品牌/渠道：<a href="https://weibo.com/5411905571/5321823518459033" target="_blank" rel="noreferrer">倩碧</a>、<a href="https://www.sina.cn/media/1742666164" target="_blank" rel="noreferrer">兰蔻</a>、<a href="https://www.sina.cn/media/1645365377" target="_blank" rel="noreferrer">OLAY</a>、<a href="https://www.cosme.com/products/detail.php?product_id=418277" target="_blank" rel="noreferrer">IGNIS iO</a>。</p></section>
+  </div></main>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img alt=""></div><a class="to-top" href="#" aria-label="返回顶部">↑</a>
+  <script>
+    const progress=document.querySelector('#progress'); const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=`${Math.max(0,Math.min(1,scrollY/max))*100}%`}; addEventListener('scroll',update,{passive:true}); update();
+    const box=document.querySelector('#lightbox'), boxImg=box.querySelector('img'); document.querySelectorAll('figure button').forEach(btn=>btn.addEventListener('click',()=>{const img=btn.querySelector('img');boxImg.src=img.src;boxImg.alt=img.alt;box.classList.add('open');box.setAttribute('aria-hidden','false')})); box.addEventListener('click',()=>{box.classList.remove('open');box.setAttribute('aria-hidden','true');boxImg.removeAttribute('src')});
+  </script>
+</body>
+</html>

@@ -101,6 +101,19 @@
       "event_types": ["更名", "新品", "技术", "AI", "渠道"]
     },
     {
+      "kind": "daily",
+      "date": "2026-07-18",
+      "title": "美妆竞对情报日报｜2026年7月18日",
+      "source": "archive/日报/2026-07-18/beauty-daily-20260718.html",
+      "pdf": "archive/日报/2026-07-18/beauty-daily-20260718.pdf",
+      "summary": "PDRN童颜系列、高端彩妆限定与明星直播转化",
+      "dimensions": ["品牌动态", "渠道生态", "其他动态"],
+      "brands": ["倩碧", "兰蔻", "OLAY", "IGNIS iO"],
+      "categories": ["护肤", "彩妆", "洗护"],
+      "channels": ["李佳琦直播间", "线上直播", "日本线下"],
+      "event_types": ["新品", "代言", "限定", "直播"]
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
