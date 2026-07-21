@@ -79,7 +79,7 @@ jobs:
           exit 1
 
       - name: Push a manually selected report
-        if: !inputs.dry_run && (inputs.delivery_target == 'test' || inputs.formal_approved)
+        if: ${{ !inputs.dry_run && (inputs.delivery_target == 'test' || inputs.formal_approved) }}
         run: |
           args=()
           if [[ -n "$TARGET_WEEK" ]]; then
