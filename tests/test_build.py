@@ -87,6 +87,16 @@ class SiteBuildTests(unittest.TestCase):
         }
         self.assertEqual(build.validate_manifest({"reports": [report]}, ROOT), [report])
 
+    def test_manifest_accepts_an_approved_weekly_push(self):
+        report = {
+            "kind": "weekly",
+            "week": "2026-W30",
+            "title": "美妆行业洞察 2026年第30周",
+            "source": "archive/周报/2026-W30/beauty-insights-2026w30.html",
+            "push": {"status": "approved", "items": ["本周重点"]},
+        }
+        self.assertEqual(build.validate_manifest({"reports": [report]}, ROOT), [report])
+
     def test_manifest_rejects_approved_push_without_items(self):
         report = self.valid_daily_report()
         report["push"] = {"status": "approved", "items": []}

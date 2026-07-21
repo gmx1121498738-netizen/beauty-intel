@@ -1,9 +1,6 @@
-name: Push approved daily to Feishu
+name: Push approved report to Feishu
 
 on:
-  schedule:
-    # GitHub Actions uses UTC. 03:00 UTC = 11:00 Asia/Shanghai.
-    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       target_date:
@@ -12,6 +9,10 @@ on:
         type: string
       target_dates:
         description: "Comma-separated dates for one combined summary card (manual only)"
+        required: false
+        type: string
+      target_week:
+        description: "Weekly report target (for example 2026-W30)"
         required: false
         type: string
       delivery_target:
@@ -54,15 +55,13 @@ jobs:
       - name: Check out published reports
         uses: actions/checkout@v4
 
-      - name: Push yesterday's approved daily
-        if: github.event_name == 'schedule'
-        run: python3 push_daily.py
-
-      - name: Preview a manually selected daily
-        if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+      - name: Preview a manually selected report
+        if: inputs.dry_run
         run: |
           args=()
-          if [[ -n "$TARGET_DATES" ]]; then
+          if [[ -n "$TARGET_WEEK" ]]; then
+            args+=(--week "$TARGET_WEEK")
+          elif [[ -n "$TARGET_DATES" ]]; then
             args+=(--dates "$TARGET_DATES")
           elif [[ -n "$TARGET_DATE" ]]; then
             args+=(--date "$TARGET_DATE")
@@ -71,18 +70,21 @@ jobs:
         env:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
+          TARGET_WEEK: ${{ inputs.target_week }}
 
       - name: Block unapproved formal delivery
-        if: github.event_name == 'workflow_dispatch' && inputs.delivery_target == 'formal' && !inputs.formal_approved
+        if: inputs.delivery_target == 'formal' && !inputs.formal_approved
         run: |
           echo "Formal delivery requires Grace's explicit approval."
           exit 1
 
-      - name: Push a manually selected daily
-        if: github.event_name == 'workflow_dispatch' && !inputs.dry_run && (inputs.delivery_target == 'test' || inputs.formal_approved)
+      - name: Push a manually selected report
+        if: !inputs.dry_run && (inputs.delivery_target == 'test' || inputs.formal_approved)
         run: |
           args=()
-          if [[ -n "$TARGET_DATES" ]]; then
+          if [[ -n "$TARGET_WEEK" ]]; then
+            args+=(--week "$TARGET_WEEK")
+          elif [[ -n "$TARGET_DATES" ]]; then
             args+=(--dates "$TARGET_DATES")
           elif [[ -n "$TARGET_DATE" ]]; then
             args+=(--date "$TARGET_DATE")
@@ -91,3 +93,4 @@ jobs:
         env:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
+          TARGET_WEEK: ${{ inputs.target_week }}

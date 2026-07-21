@@ -58,8 +58,35 @@ def select_reports(reports: list[dict], target_dates: list[str]) -> list[dict]:
     return selected
 
 
+def select_weekly_report(reports: list[dict], target_week: str) -> dict | None:
+    matches = [
+        report
+        for report in reports
+        if report.get("kind") == "weekly" and report.get("week") == target_week
+    ]
+    if len(matches) > 1:
+        raise ValueError(f"Duplicate weekly reports for {target_week}")
+    if not matches:
+        return None
+    report = matches[0]
+    if report.get("push", {}).get("status") != "approved":
+        return None
+    items = report["push"].get("items")
+    if (
+        not isinstance(items, list)
+        or not items
+        or any(not isinstance(item, str) or not item.strip() for item in items)
+    ):
+        raise ValueError("approved push.items must contain non-empty strings")
+    return report
+
+
 def report_url(base_url: str, report_date: str) -> str:
     return f"{base_url.rstrip('/')}/daily/{report_date}/"
+
+
+def weekly_report_url(base_url: str, week: str) -> str:
+    return f"{base_url.rstrip('/')}/weekly/{week}/"
 
 
 def build_card(report: dict, base_url: str) -> dict:
@@ -127,6 +154,48 @@ def build_multi_day_card(reports: list[dict], base_url: str) -> dict:
     }
 
 
+def build_weekly_card(report: dict, base_url: str) -> dict:
+    push = report["push"]
+    year, week_number = report["week"].split("-W", 1)
+    summary = "\n".join(
+        f"{index}. {item.strip()}"
+        for index, item in enumerate(push["items"], start=1)
+    )
+    return {
+        "config": {"wide_screen_mode": True},
+        "header": {
+            "template": "blue",
+            "title": {
+                "tag": "plain_text",
+                "content": f"美妆情报Bot｜{year}年第{int(week_number)}周周报",
+            },
+        },
+        "elements": [
+            {
+                "tag": "div",
+                "text": {
+                    "tag": "lark_md",
+                    "content": f"**{push.get('heading', '本周重点')}**\n\n{summary}",
+                },
+            },
+            {
+                "tag": "action",
+                "actions": [
+                    {
+                        "tag": "button",
+                        "type": "primary",
+                        "text": {
+                            "tag": "plain_text",
+                            "content": push.get("detail_label", "点开查看完整周报"),
+                        },
+                        "url": weekly_report_url(base_url, report["week"]),
+                    }
+                ],
+            },
+        ],
+    }
+
+
 def feishu_signature(timestamp: str, secret: str) -> str:
     string_to_sign = f"{timestamp}\n{secret}"
     digest = hmac.new(
@@ -173,6 +242,7 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
     parser.add_argument("--manifest", default="data/published.json")
     parser.add_argument("--date", help="Target report date in YYYY-MM-DD format")
     parser.add_argument("--dates", help="Comma-separated dates for one manual summary card")
+    parser.add_argument("--week", help="Target weekly report in YYYY-Www format")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -181,20 +251,28 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
 
     try:
         data = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-        if args.dates:
+        selections = sum(bool(value) for value in (args.date, args.dates, args.week))
+        if selections != 1:
+            raise ValueError("Specify exactly one of --date, --dates, or --week")
+        if args.week:
+            report = select_weekly_report(data.get("reports", []), args.week)
+            if report is None:
+                raise ValueError(f"No approved weekly push for {args.week}")
+        elif args.dates:
             target_dates = [date.strip() for date in args.dates.split(",") if date.strip()]
             reports = select_reports(data.get("reports", []), target_dates)
         else:
-            target_date = args.date or shanghai_yesterday()
+            target_date = args.date
             report = select_report(data.get("reports", []), target_date)
             if report is None:
-                print(f"SKIP: no approved daily push for {target_date}", file=stdout)
-                return 0
+                raise ValueError(f"No approved daily push for {target_date}")
 
         base_url = environ.get("SITE_BASE_URL", "").strip()
         if not base_url:
             raise ValueError("SITE_BASE_URL is required")
-        if args.dates:
+        if args.week:
+            card = build_weekly_card(report, base_url)
+        elif args.dates:
             card = build_multi_day_card(reports, base_url)
         else:
             card = build_card(report, base_url)
@@ -217,7 +295,9 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             card,
             secret=environ.get("FEISHU_WEBHOOK_SECRET", "").strip(),
         )
-        if args.dates:
+        if args.week:
+            print(f"SENT: approved weekly push for {args.week}", file=stdout)
+        elif args.dates:
             print(f"SENT: approved multi-day push for {','.join(target_dates)}", file=stdout)
         else:
             print(f"SENT: approved daily push for {target_date}", file=stdout)

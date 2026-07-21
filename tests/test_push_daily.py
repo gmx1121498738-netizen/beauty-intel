@@ -38,6 +38,20 @@ def make_report(date="2026-07-15", status="approved", items=None):
     }
 
 
+def make_weekly_report(week="2026-W30", status="approved", items=None):
+    return {
+        "kind": "weekly",
+        "week": week,
+        "title": "美妆行业洞察 2026年第30周（7/13-7/19）",
+        "push": {
+            "status": status,
+            "heading": "本周重点",
+            "items": items if items is not None else ["周报重点一"],
+            "detail_label": "点开查看完整周报",
+        },
+    }
+
+
 class ReportSelectionTests(unittest.TestCase):
     def test_select_reports_returns_each_approved_requested_date_in_order(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
@@ -80,6 +94,22 @@ class ReportSelectionTests(unittest.TestCase):
 
 
 class FeishuCardTests(unittest.TestCase):
+    def test_weekly_card_uses_weekly_route_and_reviewed_button_label(self):
+        self.assertIsNotNone(push_daily, "push_daily.py must exist")
+        card = push_daily.build_weekly_card(
+            make_weekly_report(items=["监管框架变化", "功效技术深化"]),
+            "https://gmx1121498738-netizen.github.io/beauty-intel",
+        )
+
+        self.assertEqual(card["header"]["title"]["content"], "美妆情报Bot｜2026年第30周周报")
+        self.assertIn("**本周重点**", card["elements"][0]["text"]["content"])
+        self.assertIn("1. 监管框架变化", card["elements"][0]["text"]["content"])
+        self.assertEqual(card["elements"][1]["actions"][0]["text"]["content"], "点开查看完整周报")
+        self.assertEqual(
+            card["elements"][1]["actions"][0]["url"],
+            "https://gmx1121498738-netizen.github.io/beauty-intel/weekly/2026-W30/",
+        )
+
     def test_multi_day_card_separates_each_report_and_links_to_each_daily_page(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         reports = [
@@ -228,16 +258,16 @@ class PushDailyCliTests(unittest.TestCase):
         self.addCleanup(temp_dir.cleanup)
         return path
 
-    def test_missing_report_is_a_silent_success(self):
+    def test_missing_report_requires_an_explicit_target(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         output = io.StringIO()
         result = push_daily.main(
-            ["--manifest", str(self.write_manifest([])), "--date", "2026-07-15"],
+            ["--manifest", str(self.write_manifest([]))],
             environ={},
             stdout=output,
         )
-        self.assertEqual(result, 0)
-        self.assertIn("SKIP", output.getvalue())
+        self.assertEqual(result, 2)
+        self.assertIn("Specify exactly one", output.getvalue())
 
     def test_dry_run_prints_card_without_webhook(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
@@ -275,6 +305,13 @@ class PushDailyCliTests(unittest.TestCase):
 
 
 class PushWorkflowTests(unittest.TestCase):
+    def test_workflow_has_no_scheduled_delivery(self):
+        workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("schedule:", workflow)
+        self.assertNotIn("cron:", workflow)
+
     def test_workflow_keeps_formal_delivery_separate_and_explicitly_approved(self):
         workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
             encoding="utf-8"
@@ -293,17 +330,19 @@ class PushWorkflowTests(unittest.TestCase):
         self.assertIn("target_dates", workflow)
         self.assertIn("--dates", workflow)
 
-    def test_workflow_runs_at_eleven_with_secrets_and_concurrency(self):
+    def test_workflow_is_manual_only_with_secrets_and_concurrency(self):
         workflow_path = SITE_ROOT / ".github/workflows/push-feishu-daily.yml"
         self.assertTrue(workflow_path.is_file(), "push workflow must exist")
         workflow = workflow_path.read_text(encoding="utf-8")
-        self.assertIn('cron: "0 3 * * *"', workflow)
+        self.assertNotIn("schedule:", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
         self.assertIn("concurrency:", workflow)
         self.assertIn("SITE_BASE_URL", workflow)
         self.assertIn("FEISHU_WEBHOOK_URL", workflow)
         self.assertIn("FEISHU_WEBHOOK_SECRET", workflow)
         self.assertIn("python3 push_daily.py", workflow)
         self.assertIn("dry_run", workflow)
+        self.assertIn("target_week", workflow)
 
 
 if __name__ == "__main__":

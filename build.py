@@ -79,8 +79,7 @@ def validate_manifest(data: dict, root: Path) -> list[dict]:
         else:
             if not re.fullmatch(r"\d{4}-W\d{2}", report.get("week", "")):
                 raise ValueError("Weekly reports need a YYYY-Www week key")
-            if "push" in report:
-                raise ValueError("push is only supported for daily reports")
+            validate_push(report)
 
         source = report.get("source", "")
         if Path(source).suffix.lower() != ".html":
