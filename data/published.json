@@ -7,11 +7,27 @@
       "source": "archive/日报/2026-07-10/beauty-daily-20260710.html",
       "pdf": "archive/日报/2026-07-10/beauty-daily-20260710.pdf",
       "summary": "国际品牌新品与渠道动态",
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["MAC", "Bobbi Brown", "Givenchy"],
-      "categories": ["彩妆", "护肤"],
-      "channels": ["电商", "线下"],
-      "event_types": ["新品", "代言"]
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "MAC",
+        "Bobbi Brown",
+        "Givenchy"
+      ],
+      "categories": [
+        "彩妆",
+        "护肤"
+      ],
+      "channels": [
+        "电商",
+        "线下"
+      ],
+      "event_types": [
+        "新品",
+        "代言"
+      ]
     },
     {
       "kind": "daily",
@@ -20,11 +36,26 @@
       "source": "archive/日报/2026-07-13/beauty-daily-20260713.html",
       "pdf": "archive/日报/2026-07-13/beauty-daily-20260713.pdf",
       "summary": "品牌订阅、财务与合规信号",
-      "dimensions": ["品牌动态", "监管与原料"],
-      "brands": ["倩碧", "花王"],
-      "categories": ["护肤", "个护"],
-      "channels": ["线下", "订阅"],
-      "event_types": ["渠道", "监管"]
+      "dimensions": [
+        "品牌动态",
+        "监管与原料"
+      ],
+      "brands": [
+        "倩碧",
+        "花王"
+      ],
+      "categories": [
+        "护肤",
+        "个护"
+      ],
+      "channels": [
+        "线下",
+        "订阅"
+      ],
+      "event_types": [
+        "渠道",
+        "监管"
+      ]
     },
     {
       "kind": "daily",
@@ -33,11 +64,28 @@
       "source": "archive/日报/2026-07-14/beauty-daily-20260714.html",
       "pdf": "archive/日报/2026-07-14/beauty-daily-20260714.pdf",
       "summary": "明星香水、日本渠道与美容数字化",
-      "dimensions": ["品牌动态", "投融资"],
-      "brands": ["Ariana Grande", "SKINFOOD", "DIOR"],
-      "categories": ["香水", "护肤"],
-      "channels": ["药妆店", "线下"],
-      "event_types": ["新品", "渠道", "收购"]
+      "dimensions": [
+        "品牌动态",
+        "投融资"
+      ],
+      "brands": [
+        "Ariana Grande",
+        "SKINFOOD",
+        "DIOR"
+      ],
+      "categories": [
+        "香水",
+        "护肤"
+      ],
+      "channels": [
+        "药妆店",
+        "线下"
+      ],
+      "event_types": [
+        "新品",
+        "渠道",
+        "收购"
+      ]
     },
     {
       "kind": "daily",
@@ -46,11 +94,33 @@
       "source": "archive/日报/2026-07-15/beauty-daily-20260715.html",
       "pdf": "archive/日报/2026-07-15/beauty-daily-20260715.pdf",
       "summary": "新原料新规、功效护肤大众化与国货 IP 联名",
-      "dimensions": ["监管与原料", "品牌动态", "渠道生态"],
-      "brands": ["L'Oréal Paris", "Neutrogena", "蒂洛薇", "KOSE"],
-      "categories": ["新原料", "护肤", "底妆"],
-      "channels": ["Amazon", "药妆店", "线下"],
-      "event_types": ["监管", "新品", "联名", "渠道"],
+      "dimensions": [
+        "监管与原料",
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "L'Oréal Paris",
+        "Neutrogena",
+        "蒂洛薇",
+        "KOSE"
+      ],
+      "categories": [
+        "新原料",
+        "护肤",
+        "底妆"
+      ],
+      "channels": [
+        "Amazon",
+        "药妆店",
+        "线下"
+      ],
+      "event_types": [
+        "监管",
+        "新品",
+        "联名",
+        "渠道"
+      ],
       "push": {
         "status": "approved",
         "heading": "昨日重点",
@@ -70,11 +140,38 @@
       "source": "archive/日报/2026-07-16/beauty-daily-20260716.html",
       "pdf": "archive/日报/2026-07-16/beauty-daily-20260716.pdf",
       "summary": "品牌传播整合、全层年轻化与线下体验型渠道",
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["雅诗兰黛", "爱美客", "LANEIGE", "己出", "DECORTÉ", "DCYPHER"],
-      "categories": ["医美", "护肤", "彩妆", "婴童"],
-      "channels": ["屈臣氏", "松本清", "可开嘉来", "John Lewis", "线下"],
-      "event_types": ["组织", "新品", "联名", "渠道", "展会"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "雅诗兰黛",
+        "爱美客",
+        "LANEIGE",
+        "己出",
+        "DECORTÉ",
+        "DCYPHER"
+      ],
+      "categories": [
+        "医美",
+        "护肤",
+        "彩妆",
+        "婴童"
+      ],
+      "channels": [
+        "屈臣氏",
+        "松本清",
+        "可开嘉来",
+        "John Lewis",
+        "线下"
+      ],
+      "event_types": [
+        "组织",
+        "新品",
+        "联名",
+        "渠道",
+        "展会"
+      ],
       "push": {
         "status": "disabled",
         "heading": "昨日重点",
@@ -94,11 +191,37 @@
       "source": "archive/日报/2026-07-17/beauty-daily-20260717.html",
       "pdf": "archive/日报/2026-07-17/beauty-daily-20260717.pdf",
       "summary": "资本身份重构、AI技术叙事与内容电商渠道跃迁",
-      "dimensions": ["投融资", "品牌动态", "渠道生态"],
-      "brands": ["诺斯贝尔", "HBN", "敷尔佳", "欧莱雅", "SHISEIDO", "SUQQU", "TikTok Shop", "纪梵希"],
-      "categories": ["护肤", "彩妆", "原料"],
-      "channels": ["TikTok Shop", "线下"],
-      "event_types": ["更名", "新品", "技术", "AI", "渠道"],
+      "dimensions": [
+        "投融资",
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "诺斯贝尔",
+        "HBN",
+        "敷尔佳",
+        "欧莱雅",
+        "SHISEIDO",
+        "SUQQU",
+        "TikTok Shop",
+        "纪梵希"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "原料"
+      ],
+      "channels": [
+        "TikTok Shop",
+        "线下"
+      ],
+      "event_types": [
+        "更名",
+        "新品",
+        "技术",
+        "AI",
+        "渠道"
+      ],
       "event_count": 5,
       "push": {
         "status": "approved",
@@ -118,11 +241,33 @@
       "source": "archive/日报/2026-07-18/beauty-daily-20260718.html",
       "pdf": "archive/日报/2026-07-18/beauty-daily-20260718.pdf",
       "summary": "PDRN童颜系列、高端彩妆限定与明星直播转化",
-      "dimensions": ["品牌动态", "渠道生态", "其他动态"],
-      "brands": ["倩碧", "兰蔻", "OLAY", "IGNIS iO"],
-      "categories": ["护肤", "彩妆", "洗护"],
-      "channels": ["李佳琦直播间", "线上直播", "日本线下"],
-      "event_types": ["新品", "代言", "限定", "直播"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "其他动态"
+      ],
+      "brands": [
+        "倩碧",
+        "兰蔻",
+        "OLAY",
+        "IGNIS iO"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "洗护"
+      ],
+      "channels": [
+        "李佳琦直播间",
+        "线上直播",
+        "日本线下"
+      ],
+      "event_types": [
+        "新品",
+        "代言",
+        "限定",
+        "直播"
+      ],
       "event_count": 4,
       "push": {
         "status": "approved",
@@ -142,11 +287,39 @@
       "source": "archive/日报/2026-07-19/beauty-daily-20260719.html",
       "pdf": "archive/日报/2026-07-19/beauty-daily-20260719.pdf",
       "summary": "直播合规、包装研发 AI 与体验型渠道转化",
-      "dimensions": ["监管与合规", "品牌动态", "产品与研发", "渠道生态", "市场版图"],
-      "brands": ["Club Cosmetics", "联合利华", "Panasonic", "韩国旅游发展局"],
-      "categories": ["护肤", "彩妆", "洗护", "个护"],
-      "channels": ["直播电商", "药妆店", "Amazon", "线下体验", "OTA"],
-      "event_types": ["监管", "限定", "AI", "渠道", "体验"],
+      "dimensions": [
+        "监管与合规",
+        "品牌动态",
+        "产品与研发",
+        "渠道生态",
+        "市场版图"
+      ],
+      "brands": [
+        "Club Cosmetics",
+        "联合利华",
+        "Panasonic",
+        "韩国旅游发展局"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "洗护",
+        "个护"
+      ],
+      "channels": [
+        "直播电商",
+        "药妆店",
+        "Amazon",
+        "线下体验",
+        "OTA"
+      ],
+      "event_types": [
+        "监管",
+        "限定",
+        "AI",
+        "渠道",
+        "体验"
+      ],
       "push": {
         "status": "approved",
         "heading": "7月19日重点",
@@ -159,12 +332,66 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-20",
+      "title": "美妆竞对情报日报｜2026年7月20日",
+      "source": "archive/日报/2026-07-20/beauty-daily-20260720.html",
+      "pdf": "archive/日报/2026-07-20/beauty-daily-20260720.pdf",
+      "summary": "代言官宣、夏季护肤新品与成熟资产感官化",
+      "dimensions": [
+        "品牌动态"
+      ],
+      "brands": [
+        "DPDP",
+        "SK-II",
+        "WMT",
+        "Revlon",
+        "Gold Bond"
+      ],
+      "categories": [
+        "彩妆",
+        "护肤",
+        "香水",
+        "身体护理"
+      ],
+      "channels": [
+        "抖音",
+        "天猫",
+        "京东",
+        "小红书",
+        "Amazon",
+        "药店渠道",
+        "线下体验"
+      ],
+      "event_types": [
+        "代言",
+        "新品",
+        "限定套组",
+        "香氛",
+        "线下体验"
+      ],
+      "event_count": 5,
+      "push": {
+        "status": "approved",
+        "heading": "7月20日重点",
+        "items": [
+          "DPDP官宣陈靖可为品牌彩妆大使，并同步上线多平台限定套组，以粉丝权益承接剧宣直播后的娱乐热度。",
+          "SK-II与WMT分别推出微流体精华、双冷感面膜，夏季护肤新品继续围绕质地可视化、即时体感和使用场景建立差异。",
+          "Revlon重启White Diamonds经典明星香水，Gold Bond把香氛身体霜带入音乐节试用场景，成熟个护资产正在用香味和体验补充新消费理由。"
+        ],
+        "detail_label": "查看7月20日日报"
+      }
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
       "source": "archive/周报/2026-W28/beauty-insights-2026w28-0701-0707.html",
       "summary": "美妆行业周度洞察",
-      "dimensions": ["品牌动态", "市场版图"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图"
+      ],
       "brands": [],
       "categories": [],
       "channels": [],
@@ -177,11 +404,33 @@
       "source": "archive/周报/2026-W29/beauty-insights-2026w29.html",
       "pdf": "archive/周报/2026-W29/beauty-insights-2026w29-0706-0712.pdf",
       "summary": "高端修护、国货出海、渠道履约与原料监管",
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管与原料"],
-      "brands": ["雅诗兰黛", "INTO YOU", "倩碧"],
-      "categories": ["护肤", "彩妆", "原料"],
-      "channels": ["TikTok", "跨境电商"],
-      "event_types": ["新品", "出海", "投融资", "监管"]
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "监管与原料"
+      ],
+      "brands": [
+        "雅诗兰黛",
+        "INTO YOU",
+        "倩碧"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "原料"
+      ],
+      "channels": [
+        "TikTok",
+        "跨境电商"
+      ],
+      "event_types": [
+        "新品",
+        "出海",
+        "投融资",
+        "监管"
+      ]
     },
     {
       "kind": "weekly",
@@ -190,11 +439,42 @@
       "source": "archive/周报/2026-W30/beauty-insights-2026w30.html",
       "pdf": "archive/周报/2026-W30/beauty-insights-2026w30-0713-0719.pdf",
       "summary": "新原料新规、功效技术、AI基础设施与资本市场分化",
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管与原料"],
-      "brands": ["倩碧", "欧莱雅", "联合利华", "爱美客", "敷尔佳", "兰蔻", "TikTok Shop", "维琪科技"],
-      "categories": ["护肤", "彩妆", "个护", "原料"],
-      "channels": ["TikTok Shop", "直播电商", "线下体验"],
-      "event_types": ["监管", "新品", "技术", "AI", "投融资", "渠道"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "监管与原料"
+      ],
+      "brands": [
+        "倩碧",
+        "欧莱雅",
+        "联合利华",
+        "爱美客",
+        "敷尔佳",
+        "兰蔻",
+        "TikTok Shop",
+        "维琪科技"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "个护",
+        "原料"
+      ],
+      "channels": [
+        "TikTok Shop",
+        "直播电商",
+        "线下体验"
+      ],
+      "event_types": [
+        "监管",
+        "新品",
+        "技术",
+        "AI",
+        "投融资",
+        "渠道"
+      ],
       "push": {
         "status": "approved",
         "heading": "本周重点",
