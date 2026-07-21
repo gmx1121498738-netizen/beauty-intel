@@ -75,6 +75,13 @@ def validate_manifest(data: dict, root: Path) -> list[dict]:
             raise ValueError("Report kind must be daily or weekly")
         if kind == "daily":
             date.fromisoformat(report.get("date", ""))
+            event_count = report.get("event_count")
+            if event_count is not None and (
+                isinstance(event_count, bool)
+                or not isinstance(event_count, int)
+                or event_count < 0
+            ):
+                raise ValueError("daily event_count must be a non-negative integer")
             validate_push(report)
         else:
             if not re.fullmatch(r"\d{4}-W\d{2}", report.get("week", "")):
@@ -183,6 +190,36 @@ def link_volume_dates(source_html: str, daily_routes: dict[str, str], report_dat
     )
 
 
+def fill_volume_counts(source_html: str, daily_event_counts: dict[str, int], report_date: str = "") -> str:
+    """Replace stale daily-volume placeholders with verified publication metadata."""
+    year = report_date[:4] if report_date else next(iter(sorted(daily_event_counts)), "2026")[:4]
+
+    def replace_cell(cell_match: re.Match) -> str:
+        attrs, content = cell_match.group(1), cell_match.group(2)
+        short_date = re.search(r"(?<!\d)(\d{1,2})/(\d{1,2})(?!\d)", content)
+        if not short_date:
+            return cell_match.group(0)
+        target_date = f"{year}-{int(short_date.group(1)):02d}-{int(short_date.group(2)):02d}"
+        event_count = daily_event_counts.get(target_date)
+        if event_count is None:
+            return cell_match.group(0)
+        filled_content = re.sub(
+            r"(<b\b[^>]*>).*?(</b>)",
+            lambda count_match: f"{count_match.group(1)}{event_count}{count_match.group(2)}",
+            content,
+            count=1,
+            flags=re.S | re.I,
+        )
+        return f"<div {attrs}>{filled_content}</div>"
+
+    return re.sub(
+        r'<div\s+([^>]*\bclass="[^"]*(?<![\w-])date(?:-cell)?(?![\w-])[^"]*"[^>]*)>(.*?)</div>',
+        replace_cell,
+        source_html,
+        flags=re.S | re.I,
+    )
+
+
 def decorate_report(
     source_html: str,
     active: str,
@@ -191,11 +228,21 @@ def decorate_report(
     report_date: str = "",
     pdf_href: str = "",
     base_path: str = "",
+    daily_event_counts: dict[str, int] | None = None,
 ) -> str:
     """Add site navigation without changing the source report card markup."""
     if active == "daily":
         source_html = replace_dimension_index(source_html)
+        source_html = fill_volume_counts(source_html, daily_event_counts or {}, report_date)
         source_html = link_volume_dates(source_html, daily_routes or {}, report_date, base_path)
+    if active == "weekly":
+        source_html = re.sub(
+            r"</head>",
+            '<style id="site-weekly-reliability">.reveal{opacity:1!important;transform:none!important}</style>\n</head>',
+            source_html,
+            count=1,
+            flags=re.I,
+        )
     shell_link = f'<link rel="stylesheet" href="{site_url("assets/site-shell.css", base_path)}" />'
     if "site-shell.css" not in source_html:
         source_html = re.sub(r"</head>", shell_link + "\n</head>", source_html, count=1, flags=re.I)
@@ -364,6 +411,9 @@ def build_site(root: Path, output: Path, base_path: str = "") -> None:
     if not dailies:
         raise ValueError("At least one published daily report is required")
     daily_routes = {item["date"]: site_url(route_for(item).removesuffix("index.html"), base_path) for item in dailies}
+    daily_event_counts = {
+        item["date"]: item["event_count"] for item in dailies if "event_count" in item
+    }
 
     if output.exists():
         shutil.rmtree(output)
@@ -383,7 +433,7 @@ def build_site(root: Path, output: Path, base_path: str = "") -> None:
             pdf_href = site_url("pdf/" + pdf_name, base_path)
         write_file(
             route_path,
-            decorate_report(source, active, report["source"], daily_routes, report.get("date", ""), pdf_href, base_path),
+            decorate_report(source, active, report["source"], daily_routes, report.get("date", ""), pdf_href, base_path, daily_event_counts),
         )
         source_assets = source_file.parent / "assets"
         if source_assets.is_dir():
@@ -401,6 +451,7 @@ def build_site(root: Path, output: Path, base_path: str = "") -> None:
             latest_daily["date"],
             site_url("pdf/" + Path(latest_daily["pdf"]).name, base_path) if latest_daily.get("pdf") else "",
             base_path,
+            daily_event_counts,
         ),
     )
     latest_assets = (root / latest_daily["source"]).parent / "assets"

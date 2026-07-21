@@ -146,6 +146,21 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("监管与原料", rendered)
         self.assertNotIn(">投融资</span><b>#1</b>", rendered)
 
+    def test_weekly_report_content_is_visible_without_its_animation_script(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        source = '''<html><head><style>.reveal { opacity:0; transform:translateY(12px); }</style></head>
+        <body><main class="reveal">W29 正文</main></body></html>'''
+        rendered = build.decorate_report(source, "weekly", "archive/example.html")
+        self.assertIn('id="site-weekly-reliability"', rendered)
+        self.assertIn(".reveal{opacity:1!important;transform:none!important}", rendered)
+
+    def test_published_july_19_daily_uses_verified_july_17_and_18_event_counts(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        build.build_site(ROOT, self.output)
+        rendered = (self.output / "daily/2026-07-19/index.html").read_text(encoding="utf-8")
+        self.assertIn("7/17<b>5</b>", rendered)
+        self.assertIn("7/18<b>4</b>", rendered)
+
     def test_calendar_contains_date_targets_for_volume_fallback(self):
         self.assertIsNotNone(build, "site/build.py must exist")
         rendered = build.calendar_cells(

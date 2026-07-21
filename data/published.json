@@ -99,6 +99,7 @@
       "categories": ["护肤", "彩妆", "原料"],
       "channels": ["TikTok Shop", "线下"],
       "event_types": ["更名", "新品", "技术", "AI", "渠道"],
+      "event_count": 5,
       "push": {
         "status": "approved",
         "heading": "7月17日重点",
@@ -122,6 +123,7 @@
       "categories": ["护肤", "彩妆", "洗护"],
       "channels": ["李佳琦直播间", "线上直播", "日本线下"],
       "event_types": ["新品", "代言", "限定", "直播"],
+      "event_count": 4,
       "push": {
         "status": "approved",
         "heading": "7月18日重点",
