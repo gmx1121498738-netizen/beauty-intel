@@ -183,8 +183,8 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output)
         home = (self.output / "index.html").read_text(encoding="utf-8")
-        self.assertIn("2026-07-20", home)
-        self.assertIn("beauty-daily-20260720", home)
+        self.assertIn("2026-07-21", home)
+        self.assertIn("beauty-daily-20260721", home)
 
     def test_github_pages_build_uses_repository_base_path_and_keeps_home_images(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -194,7 +194,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn('href="/beauty-intel/calendar/"', home)
         self.assertIn('href="/beauty-intel/pdf/beauty-daily-20260714.pdf"', daily)
         self.assertIn('href="/beauty-intel/assets/site-shell.css"', daily)
-        self.assertTrue((self.output / "assets/01-dpdp-ambassador.jpg").is_file())
+        self.assertTrue((self.output / "assets/01-rohto-drx-aza-wide.png").is_file())
 
     def test_published_daily_copies_the_confirmed_pdf_and_shows_export_link(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -229,7 +229,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         data = json.loads((ROOT / "site/data/published.json").read_text(encoding="utf-8"))
         reports = build.validate_manifest(data, ROOT)
-        self.assertEqual(len(reports), 12)
+        self.assertEqual(len(reports), 13)
 
 
 if __name__ == "__main__":
