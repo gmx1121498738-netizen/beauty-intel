@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>美妆竞对情报日报｜2026年7月22日</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --finance: #275d57;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    a { color: #285f66; text-underline-offset: 3px; }
+    img { max-width: 100%; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 80;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brandmark { line-height: 1.2; }
+    .brandmark strong { display: block; font-size: 15px; letter-spacing: .03em; }
+    .brandmark span { display: block; color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #4a443d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 10px 0 16px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      margin: 0;
+      color: #4b463f;
+      font-size: 17px;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.finance-stat { border-color: rgba(39,93,87,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.finance-stat strong { color: var(--finance); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 188px 1fr;
+      gap: 28px;
+      padding: 34px 0 78px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      background: rgba(255,254,253,.5);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .side a:hover {
+      background: #fff;
+      border-color: rgba(159, 79, 92, .22);
+    }
+
+    .section { scroll-margin-top: 84px; margin-bottom: 22px; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+      align-items: baseline;
+    }
+
+    .section-title h2 { margin: 0; font-size: 22px; }
+    .section-title span { color: var(--muted); font-size: 13px; }
+
+    .conclusion {
+      padding: 24px 26px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .conclusion p { margin: 0 0 12px; }
+    .conclusion p:last-child { margin-bottom: 0; }
+
+    .feed { display: grid; gap: 18px; }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 14px 34px rgba(52, 42, 32, .06);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(52, 42, 32, .1); }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+    .brand-card::before { background: var(--brand); }
+    .channel-card::before { background: var(--channel); }
+    .finance-card::before { background: var(--finance); }
+
+    .rank { display: grid; align-content: start; gap: 10px; }
+    .rank b { font-size: 30px; line-height: 1; letter-spacing: -.04em; }
+    .tag {
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      height: 26px;
+      padding: 0 10px;
+      border: 1px solid rgba(159, 79, 92, .2);
+      border-radius: 999px;
+      color: #55504a;
+      background: var(--paper-2);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+    .finance-card .tag { color: var(--finance); background: rgba(39,93,87,.1); border-color: rgba(39,93,87,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 23px;
+      line-height: 1.34;
+      letter-spacing: -.02em;
+    }
+
+    .card p { margin: 0 0 10px; color: #46413a; }
+
+    .signal {
+      margin-top: 12px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(255, 253, 249, .72);
+      border: 1px solid transparent;
+      color: #3b3731;
+    }
+
+    .signal strong { color: var(--accent); }
+    .channel-card .signal strong { color: var(--channel); }
+    .finance-card .signal strong { color: var(--finance); }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .media-grid.three {
+      grid-template-columns: 1.12fr .88fr;
+    }
+
+    .media-grid.three .media:first-child {
+      grid-row: span 2;
+    }
+
+    .media-grid.four {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .media {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f6f2eb;
+      box-shadow: 0 12px 24px rgba(52, 42, 32, .06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 440px;
+      object-fit: contain;
+      background: #fffaf6;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media.tall img { max-height: 620px; }
+    .media.wide img { max-height: 360px; }
+    .media:hover img { transform: scale(1.015); filter: saturate(1.04); }
+
+    .caption { display: none; }
+
+    .focus-card.compact strong {
+      font-size: 14px;
+      color: #4e4a43;
+      font-weight: 650;
+    }
+
+    .source-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border: 1px dashed rgba(167, 137, 99, .5);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 249, .58);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .source-note h2 { margin: 0 0 8px; font-size: 17px; color: var(--ink); }
+    .source-note p { margin: 0 0 6px; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+    .reveal.on { opacity: 1; transform: translateY(0); }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31, 28, 24, .72);
+    }
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(1040px, 94vw);
+      max-height: 88vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side { position: static; display: flex; overflow-x: auto; padding-bottom: 4px; }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .media-grid, .media-grid.three, .media-grid.four { grid-template-columns: 1fr; }
+      .media-grid.three .media:first-child { grid-row: auto; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+  
+    .market-card::before { background: var(--market); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.12); }
+    .finance-card::before { background: var(--finance); }
+    .finance-card .tag { color: var(--finance); background: rgba(39,93,87,.12); }
+    .media { aspect-ratio: 4 / 3; min-height: 0; }
+    .media button { height: 100%; }
+    .media img, .media.wide img { height: 100%; max-height: none; object-fit: contain; }
+    .media-grid .media:only-child { max-width: 760px; margin: 0 auto; width: 100%; }
+    
+  </style>
+<link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head>
+<body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a><a class="site-pdf-export" href="/beauty-intel/pdf/beauty-daily-20260722.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-07-22/beauty-daily-20260722.html -->
+  <div class="progress" id="progress"></div>
+  <header class="topbar"><div class="shell topbar-inner"><div class="brandmark"><strong>美妆竞对情报日报</strong><span>2026年第30周 · 7月22日 · 预览版</span></div><nav class="nav" aria-label="快速跳转"><a href="#summary">今日结论</a>
+        <a href="#item-1">#1</a>
+        <a href="#item-2">#2</a>
+        <a href="#item-3">#3</a>
+        <a href="#item-4">#4</a>
+        <a href="#item-5">#5</a>
+        <a href="#item-6">#6</a>
+        <a href="#item-7">#7</a>
+        <a href="#item-8">#8</a>
+        <a href="#item-9">#9</a>
+        <a href="#item-10">#10</a>
+        <a href="#item-11">#11</a>
+        <a href="#item-12">#12</a>
+        <a href="#item-13">#13</a>
+        <a href="#item-14">#14</a>
+        <a href="#volume">近5日事件量</a></nav></div></header>
+  <section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>7月22日<br>美妆竞对情报日报</h1><p class="dek">14条；**重点关注**：敷尔佳械字号扩容、欧莱雅诉盒马开庭、修丽可CE首发20年配方升级、韩国两大集团剥离非核心资产</p></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>敷尔佳械字号扩容、欧莱雅诉盒马开庭、修丽可CE升级、韩国集团瘦身</strong></div><div class="stat-row"><div class="stat brand-stat"><small>今日收录</small><strong>14条</strong></div><div class="stat channel-stat"><small>覆盖周期</small><strong>7/22</strong></div><div class="stat market-stat"><small>区域标识</small><strong>国货/国际</strong></div><div class="stat finance-stat"><small>图片证据</small><strong>12张</strong></div></div><div class="focus-card"><small>收录口径</small><strong>2026年7月22日 00:00-24:00（事件发生日±2天窗口内）</strong></div></aside></div></section>
+  <main class="shell"><nav class="side" aria-label="日报维度索引"><a href="#summary"><span>今日结论</span><b>00</b></a>
+      <a href="#item-1"><span>产品与研发（国货）</span><b>#1</b></a>
+      <a href="#item-2"><span>产品与研发（国际）</span><b>#2</b></a>
+      <a href="#item-3"><span>渠道生态</span><b>#3</b></a>
+      <a href="#item-4"><span>品牌动态（国货）</span><b>#4</b></a>
+      <a href="#item-5"><span>品牌动态（国货）</span><b>#5</b></a>
+      <a href="#item-6"><span>品牌动态（国货轻信号）</span><b>#6</b></a>
+      <a href="#item-7"><span>品牌战略（国际）</span><b>#7</b></a>
+      <a href="#item-8"><span>品牌战略（韩国）</span><b>#8</b></a>
+      <a href="#item-9"><span>品牌动态（国际）</span><b>#9</b></a>
+      <a href="#item-10"><span>品牌动态（国际）</span><b>#10</b></a>
+      <a href="#item-11"><span>品牌动态（国际）</span><b>#11</b></a>
+      <a href="#item-12"><span>品牌动态（国际）</span><b>#12</b></a>
+      <a href="#item-13"><span>投融资全景</span><b>#13</b></a>
+      <a href="#item-14"><span>市场数据</span><b>#14</b></a>
+    </nav><div><section class="section reveal" id="summary"><div class="section-title"><h2>今日结论</h2><span>2026.07.22</span></div><div class="conclusion"><p>7月22日的有效信号集中在品牌资产、渠道合规、产品矩阵和集团战略瘦身四个方向。敷尔佳新获Ⅱ类医疗器械注册证，继续把&quot;医用敷料—术后护理—功效护肤&quot;的边界做深；欧莱雅中国诉盒马的开庭节点，把高端美妆渠道治理推进到品牌对平台主体责任的民事追责。修丽可C E Ferulic在7月20日官宣20年来首次配方升级，新增肌肽和蒲公英根提取物，把抗氧化叙事从&quot;防护&quot;延伸到&quot;长寿科学&quot;，也回应了原配方专利到期后的护城河重建需求。雅诗兰黛7月20日决定放弃出售Too Faced、Smashbox和Dr.Jart，改为内部重组，将Too Faced并入MAC/Bobbi Brown彩妆集群、Origins并入Deciem，集团从&quot;卖资产换现金&quot;转向&quot;内部整合提效&quot;。韩国两大美妆集团同步剥离非核心业务，爱茉莉太平洋出售安城健康食品工厂、LG生活健康推进海太HTB饮料子公司出售，两家龙头都在用&quot;瘦身&quot;为化妆品主业筹措现金流。国货方面，林清轩男士副线「墨旗MOQI」7月21日得物首发，橘宜集团7月20日推出新品牌CADENZA以咖啡因为核心概念切入护肤赛道。</p></div></section><section class="section feed" id="feed">
+        <article class="card finance-card reveal" id="item-1">
+          <div class="rank"><b>#1</b><span class="tag">产品与研发（国货）</span></div>
+          <div><h3>敷尔佳取得第五张Ⅱ类医疗器械注册证，将依克多因引入医用敷料补齐术后修复矩阵</h3><p>7月20日，敷尔佳取得黑龙江省药品监督管理局核发的Ⅱ类医疗器械注册证（注册证编号：黑械注准20262140022），7月22日盘后发布公告。产品为医用透明质酸钠依克多因修复贴，核心成分采用透明质酸钠与依克多因复配，能够在创面表面形成保护层起物理屏障作用，适用于小创口、擦伤、激光/光子/果酸换肤/微整形术后等非慢性创面及周边皮肤护理。截至目前，敷尔佳累计持有5项Ⅱ类医疗器械注册证，此前已有透明质酸钠修复贴、修复液、重组Ⅲ型人源化胶原蛋白贴、海藻糖修复贴4款产品获批。（<a href="https://www.cnstock.com/commonDetail/749219" target="_blank" rel="noreferrer">上海证券报</a> / <a href="https://www.stcn.com/article/detail/4035690.html" target="_blank" rel="noreferrer">证券时报</a> / <a href="https://www.cfi.net.cn/p20260722000645.html" target="_blank" rel="noreferrer">中财网</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>这是敷尔佳在医用敷料合规资产上的增量补位。透明质酸钠叠加依克多因，产品叙事同时覆盖物理屏障、舒缓修护和术后护理场景，适合承接医美术后、敏感肌急救和专业皮肤护理渠道需求。对同赛道功效护肤品牌而言，Ⅱ类器械证仍是进入院线、药房和专业护理心智的强门槛。该产品的审评周期约3个月（4月28日受理至7月20日获批），审批效率较高。但公告也明确短期业绩贡献取决于后续推广，不能直接放大为收入确定性。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/01-fuerjia-registration.png" alt="敷尔佳医疗器械注册证公告截图"></button><figcaption class="caption">敷尔佳医疗器械注册证公告截图</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card finance-card reveal" id="item-2">
+          <div class="rank"><b>#2</b><span class="tag">产品与研发（国际）</span></div>
+          <div><h3>修丽可C E Ferulic 7月20日官宣20年来首次配方升级，新增肌肽+蒲公英根提取物把抗氧化延伸到&quot;长寿科学&quot;赛道</h3><p>7月20日，欧莱雅集团旗下修丽可（SkinCeuticals）官宣C E Ferulic精华首次配方升级，保留15%左旋维C+1%维E+0.5%阿魏酸的核心三重抗氧化组合，新增0.3%肌肽（Carnosine）和1%蒲公英根提取物（Endophytol），采用双专利申请技术。肌肽靶向抗糖化和蛋白稳态维护，蒲公英根提取物靶向抗炎和抗污染。Allure同日发布长文评测，品牌负责人Stephen Lynch确认升级动机为&quot;20周年节点+长寿科学突破&quot;，同时承认原配方专利已于2025年到期。升级版定价维持$185/30ml不变，旧版将逐步退出。（<a href="https://www.allure.com/story/skinceuticals-c-e-ferulic-serum-reformulation-2026" target="_blank" rel="noreferrer">Allure</a> / <a href="https://www.skinceuticals.com/skincare/vitamin-c-serums/c-e-ferulic-with-15-l-ascorbic-acid/S17.html" target="_blank" rel="noreferrer">SkinCeuticals官网</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>C E Ferulic的升级有三层逻辑值得拆解。第一层是配方维度：肌肽和蒲公英根提取物补上了维C在抗糖化和抗炎方向的短板，让&quot;抗氧化&quot;叙事升级为&quot;抗氧+抗糖+抗炎+长寿&quot;四维防护。第二层是专利维度：原配方专利2025年到期后，Drunk Elephant等品牌推出高度近似配方已无侵权风险，双专利申请是修丽可重建护城河的手段——新配方足够差异化才能重新获得法律保护。第三层是品类趋势维度：欧莱雅集团15年投入皮肤长寿科学研究，把&quot;longevity&quot;标签绑定到抗氧化品类标杆产品上，等于提前占位了一个正在全球医美和高端护肤领域快速升温的概念赛道。对国货VC精华品牌的启示是：当抗氧化赛道进入&quot;人人能做15%VC+VE+阿魏酸&quot;的阶段时，竞争的胜负手转向&quot;第二层功效靶点&quot;（抗糖、抗炎、长寿标志物）和&quot;专利护城河&quot;。</div>
+          </div>
+        </article>
+
+        <article class="card channel-card reveal" id="item-3">
+          <div class="rank"><b>#3</b><span class="tag">渠道生态</span></div>
+          <div><h3>欧莱雅中国诉盒马商标侵权案7月22日开庭审理，高端美妆渠道治理从监管处罚延伸到平台主体责任</h3><p>7月22日，浦东新区人民法院开庭审理欧莱雅（中国）有限公司诉上海盒马互联网信息科技有限公司等关联公司侵害商标权纠纷案。公开报道将该案与盒马渠道过往高端美妆假货争议联系起来，涉案背景包括2023年11月至2024年1月假冒&quot;欧莱雅&quot;&quot;雅诗兰黛&quot;等化妆品流入盒马会员店及部分门店的刑事案件，相关假冒商品金额达人民币320余万元。（<a href="https://finance.sina.com.cn/jjxw/2026-06-16/doc-inicqxfn9488181.shtml" target="_blank" rel="noreferrer">新浪财经</a> / <a href="https://www.ronzelaw.com/news_details/88.html" target="_blank" rel="noreferrer">上海至融至泽律师事务所案例梳理</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>高端美妆品牌对新零售渠道的治理重点正在落到&quot;平台自营/关联主体责任&quot;和&quot;进货审查义务&quot;。若平台以低价高端美妆拉动客单价，但授权链路、供货主体和采购价格无法自证合规，品牌方会把维权对象从假货供货商扩展到渠道运营方。该案后续判决将影响商超、即时零售和跨境集合渠道经营高端美妆时的供货审查标准。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/02-loreal-hema-notice.png" alt="盒马会员店公告与会员店现场提示"></button><figcaption class="caption">盒马会员店公告与会员店现场提示</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-4">
+          <div class="rank"><b>#4</b><span class="tag">品牌动态（国货）</span></div>
+          <div><h3>林清轩男士副线品牌「墨旗MOQI」7月21日得物首发，以七夕礼赠场景切入男士控油赛道</h3><p>7月21日，林清轩旗下首个男士专属副线品牌「墨旗MOQI」在得物平台全网首发上线。该系列以七夕节日为契机，借助礼赠经济登陆市场。产品定位&quot;为他专研，净衡油光&quot;，针对油皮、敏糙肌，首发三款产品：男士控油净澈炭爽洁面膏、男士控油修护精华乳、男士控油修护精华水。包装上采用哑光黑色极简瓶身，保留&quot;林清轩&quot;文字标识但移除山茶花图形Logo，与主品牌高端贵妇定位形成区隔。配方上延续了林清轩灵魂成分清轩萃（山茶花活性提取物），并复配百脉根籽提取物与水杨酸。（<a href="https://t.10jqka.com.cn/pid_662978599.shtml" target="_blank" rel="noreferrer">同顺号</a> / <a href="https://www.xiaoyuzhoufm.com/episode/6a5a094ca3fec224d59f272f" target="_blank" rel="noreferrer">美妆内行人播客</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>林清轩在港股上市后加速多品牌布局，两个月内即从&quot;缺少男士线&quot;的公开表态推进到产品首发。选择得物作为首发渠道而非天猫/抖音，表明品牌瞄准的是男性消费者中具备潮流消费习惯的年轻群体。墨旗在产品设计上刻意与主品牌区隔（去山茶花Logo、极简黑灰），说明林清轩对男士护肤的理解是&quot;独立品牌心智&quot;而非&quot;主品牌延伸&quot;。截至发稿，该系列具体定价尚未披露，高端定位还是平价策略仍有待观察。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/03-linqingxuan-moqi-xhs.png" alt="林清轩墨旗小红书官方账号与新品预告"></button><figcaption class="caption">林清轩墨旗小红书官方账号与新品预告</figcaption></figure><figure class="media wide"><button type="button"><img src="assets/04-mens-skincare-map.png" alt="国内部分美妆集团/品牌男士护肤布局"></button><figcaption class="caption">国内部分美妆集团/品牌男士护肤布局</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-5">
+          <div class="rank"><b>#5</b><span class="tag">品牌动态（国货）</span></div>
+          <div><h3>橘宜集团7月20日推出全新护肤品牌CADENZA，以咖啡因为核心概念复配环糊精包裹技术</h3><p>7月20日，橘宜集团全新自有护肤品牌CADENZA首款产品&quot;咖啡喷雾&quot;完成备案，由集团全资工厂上海家诺华生产。该品牌商标早在2013年即完成注册，属集团长期战略规划。产品以咖啡因为核心差异化概念，复配积雪草、马齿苋，采用环糊精包裹技术提升活性物稳定性和透皮吸收。橘宜集团2025年整体零售额突破51亿元，CADENZA将与黎感、辑光等新品牌共同构成集团在护肤板块的第二增长曲线。（<a href="https://www.beautytop100.com/22647.html" target="_blank" rel="noreferrer">妆榜导航网</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>橘宜集团从彩妆（橘朵、酵色）向护肤延伸的意图明确。CADENZA选择&quot;咖啡因+环糊精包裹&quot;作为技术锚点，切入的是提神醒肤、去水肿和抗氧化赛道，与集团原有彩妆用户群的年轻化特征一致。但护肤赛道的竞争逻辑与彩妆差异显著，需要更长的研发周期和临床验证支撑，CADENZA能否承接橘宜的渠道能力和用户流量仍有待观察。</div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-6">
+          <div class="rank"><b>#6</b><span class="tag">品牌动态（国货轻信号）</span></div>
+          <div><h3>自然堂男士去屑蓬松洗发露7月21日上市，以&quot;1洗击退油·屑·痒·塌&quot;定位补齐男士洗护矩阵</h3><p>7月21日，自然堂通过官方微博官宣男士去屑蓬松洗发露上市，并同步开启宠粉福利抽奖活动（活动期7月21日-7月31日）。该产品主打&quot;专为男士定制&quot;，宣称72小时长效蓬松有型、7天头屑不反复，以酷爽凉感为差异化卖点，适配日常通勤和运动出汗等多场景。这是自然堂蓬松洗发露家族的新成员，此前已有面向大众市场的控油蓬松洗发露（蓝瓶）。（<a href="https://weibo.com/1863495000/5323162910460841" target="_blank" rel="noreferrer">自然堂官方微博</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>自然堂在男士洗护领域持续加码，在基础保湿系列基础上延伸至功能性更强的去屑蓬松细分场景。选择7月下旬上市并搭配微博抽奖活动，目的是在盛夏高温期强化&quot;控油清爽&quot;的季节性心智。该产品定价预计延续自然堂男士线99元以下的平价策略，与林清轩墨旗的高端男士护肤形成明显区隔，反映国货品牌对男士赛道的分层布局正在加速。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/05-chando-men-shampoo.png" alt="自然堂男士去屑蓬松洗发露"></button><figcaption class="caption">自然堂男士去屑蓬松洗发露</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card market-card reveal" id="item-7">
+          <div class="rank"><b>#7</b><span class="tag">品牌战略（国际）</span></div>
+          <div><h3>雅诗兰黛7月20日决定放弃出售Too Faced、Smashbox和Dr.Jart，改为内部重组整合进现有业务集群</h3><p>7月20日，据妆榜周报报道，雅诗兰黛公司决定不再出售Too Faced、Smashbox和Dr.Jart，而是选择对其运营模式进行重组。Too Faced将把总部从洛杉矶迁至纽约，并与MAC和Bobbi Brown一同加入公司的彩妆业务集群，同时大幅精简团队。Smashbox将继续留在洛杉矶但规模有所缩减，Dr.Jart则继续在韩国运营。此外，Origins也将并入Deciem，以借助其&quot;数字优先&quot;的运营模式。（<a href="https://www.beautytop100.com/22647.html" target="_blank" rel="noreferrer">妆榜导航网</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>雅诗兰黛此前传出出售三大品牌的消息，市场解读为&quot;卖资产换现金&quot;以应对业绩压力。此次改为内部重组，表明集团评估后认为这三个品牌的剩余价值高于外部出售对价，或者市场出价未达预期。将Too Faced并入MAC/Bobbi Brown彩妆集群、Origins并入Deciem，逻辑是&quot;弱品牌依附强平台的运营能力&quot;——用成熟品牌的渠道、供应链和数字化能力给表现不佳的品牌续命。但这种&quot;集群化&quot;整合在美妆行业历史上成功率并不高，品牌调性冲突、内部资源争夺和团队文化摩擦是常见风险点。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/11-estee-lauder-restructure.png" alt="雅诗兰黛集团保留并重组三大品牌报道截图"></button><figcaption class="caption">雅诗兰黛集团保留并重组三大品牌报道截图</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card market-card reveal" id="item-8">
+          <div class="rank"><b>#8</b><span class="tag">品牌战略（韩国）</span></div>
+          <div><h3>爱茉莉太平洋出售安城健康食品工厂+LG生活健康推进海太HTB出售，韩国两大龙头同步&quot;瘦身&quot;聚焦化妆品主业</h3><p>7月21日报道，爱茉莉太平洋已决定出售位于京畿道安城市的健康保健食品工厂，目前已启动出售顾问遴选程序，向多家顾问机构发出招标邀请（RFP）。该工厂2021年收购自爱丝特拉（Aestura），2025年平均开工率仅46%，全年产值1712亿韩元，同比下降7%以上，今年Q1产值仅312亿韩元。集团计划将安城工厂生产的健康食品统一转移至乌山工厂，出售所得资金投入北美等海外市场拓展和线上业务。同期，LG生活健康推进旗下饮料子公司海太HTB的出售事宜，已于去年聘请三井KPMG担任出售顾问，计划本月接收收购意向书并举行初步竞标。海太HTB旗下拥有&quot;鲜梨汁&quot;&quot;Glonsan&quot;等品牌，2011年被LG生活健康收购后拓展健康功能食品业务。报道称，APR、Goodai Global等新锐独立美妆品牌快速扩张，加上核心海外市场中国业务持续低迷，LG生活健康市场竞争力承压。（<a href="https://ajudaily.com/view/20260721080318633" target="_blank" rel="noreferrer">亚洲日报/AjuDaily</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>韩国两大美妆龙头同步剥离非核心资产，背景是K-Beauty市场格局正在被新锐独立品牌（APR的Medicube、Goodai Global的Torriden等）重塑。爱茉莉太平洋2023年终止个性化彩妆定制品牌Tonework、今年出售地方办公楼和安城工厂，瘦身节奏加快；LG生活健康出售运营15年的饮料业务，集中筹措化妆品业务现金流。两家龙头共同的逻辑是：在新锐品牌凭借产品策划力和社媒营销迅速抢份额的窗口期，传统集团必须把资源集中到化妆品主业和海外增量市场。对国货的启示是：当市场增速放缓、竞争格局松动时，&quot;瘦身聚焦&quot;和&quot;卖资产换弹药&quot;是传统龙头最常见的战略选项，速度和执行力比品牌数量更重要。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/12-amorepacific-lg-hq.png" alt="爱茉莉太平洋与LG生活健康总部/园区图"></button><figcaption class="caption">爱茉莉太平洋与LG生活健康总部/园区图</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-9">
+          <div class="rank"><b>#9</b><span class="tag">品牌动态（国际）</span></div>
+          <div><h3>雅诗兰黛集团中国&quot;雅创未来 Beauty X&quot;启动2026年度招募，聚焦AI与本土研发提效</h3><p>7月22日消息，雅诗兰黛集团中国研发中心与上海创智学院联合发起的&quot;雅创未来 Beauty X&quot;项目开启2026年度招募。本届方向聚焦&quot;重塑产品未来、激发AI新势能、革新增效全链路&quot;三类命题，面向美妆科技、AI应用、供应链和研发效率相关创新团队开放。（<a href="https://ccs.pinguan.com/" target="_blank" rel="noreferrer">品观/化妆品观察</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>国际集团在中国的开放创新动作仍然围绕本土研发效率和AI落地展开。Beauty X 更接近&quot;外部技术雷达&quot;，能帮助集团提前筛选原料、功效评价、消费者洞察、内容生成和供应链提效方案。对国货美妆公司而言，AI与研发链路的结合已经进入集团级创新项目层面，市场部门单点工具试用的价值会被进一步压缩。</div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-10">
+          <div class="rank"><b>#10</b><span class="tag">品牌动态（国际）</span></div>
+          <div><h3>ReFa 于日本发售 ReFa AURA 系列，继续扩充头皮与发丝护理工具线</h3><p>7月22日，MTG 旗下美容品牌 ReFa 在日本发售 ReFa AURA 系列。该系列包括多种颜色版本，官方定价13,860日元至23,760日元，销售渠道包括 ReFa GINZA、全国百货店、量贩店和 MTG 官方线上店，后续将进入美容室、Loft 等渠道。品牌同期还发布了 ReFa Aira POINT KEEP、ReFa HEART CRYSTAL、ReFa Aira MIRROR COMB 等7月22日新品。（<a href="https://www.mtg.gr.jp/news/detail/2026/07/article_2612.html" target="_blank" rel="noreferrer">MTG官方新闻稿</a> / <a href="https://www.mtg.gr.jp/news/release/" target="_blank" rel="noreferrer">MTG官方发布列表</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>ReFa 正在把美容仪器品牌资产转化为日常高频护理工具。梳具、定型、镜梳等产品客单低于核心美容仪，更容易进入礼赠、随身护理和线下陈列场景，有助于提升品牌触达频次。对国内个护与头皮护理品牌的参考点在于：高端工具类产品不只卖功能参数，也卖材质、手感、颜色体系和渠道陈列的&quot;可送礼&quot;价值。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/06-refa-aura-product.png" alt="ReFa AURA 产品视觉"></button><figcaption class="caption">ReFa AURA 产品视觉</figcaption></figure><figure class="media wide"><button type="button"><img src="assets/07-refa-aura-gift.png" alt="ReFa AURA 礼赠场景"></button><figcaption class="caption">ReFa AURA 礼赠场景</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-11">
+          <div class="rank"><b>#11</b><span class="tag">品牌动态（国际）</span></div>
+          <div><h3>Kose Cosmeport7月22日发布新品牌「ウルタンク」，以乳化技术切入&quot;角质层储水&quot;细分概念</h3><p>7月22日，Kose Cosmeport株式会社发布全新护肤品牌「ウルタンク」（UruTank），以Kose集团乳化技术为核心，聚焦角质层10μm的&quot;滋润储水层&quot;。首发两款产品：「滋润乳液水」（250ml）和「柔软膜面霜」（50g），定价未公开。产品采用纳米油胶囊和屏蔽胶囊技术，分别实现渗透保湿和锁水成膜。发售节奏为8月21日在Maison KOSÉ电商、Amazon、Loft先行上市，9月18日起在全国量贩店和药妆店铺开。（<a href="https://www.kosecosmeport.co.jp/corporate/source/260722_release_.pdf" target="_blank" rel="noreferrer">Kose Cosmeport官方新闻稿</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>Kose Cosmeport以「シンプル貯水ケア」（简单储水护理）作为新品牌的核心概念，将技术叙事从传统的&quot;补水&quot;升级为&quot;角质层储水&quot;，这是在平价护肤红海中寻找差异化定位的尝试。通过EC和Loft先行、量贩店跟进的错峰发售策略，品牌可以先在核心渠道测试市场反应，再决定是否大规模铺货。对国货品牌的参照意义在于：当基础保湿赛道竞争白热化时，将技术概念细化到具体的皮肤层级（如角质层储水）可能是一条突围路径。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/08-kose-urutank.png" alt="KOSÉ Cosmeport UruTank 乳液水"></button><figcaption class="caption">KOSÉ Cosmeport UruTank 乳液水</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card brand-card reveal" id="item-12">
+          <div class="rank"><b>#12</b><span class="tag">品牌动态（国际）</span></div>
+          <div><h3>常盤薬品7月22日官宣豆乳美肌品牌焕新，北海道产「音更大袖」大豆发酵液成新配方核心</h3><p>7月22日，Noevir集团旗下的常盤薬品工業宣布，畅销20余年的豆乳护肤品牌「なめらか本舗」（豆乳美肌）将于2026年秋实施品牌焕新。第一弹为保湿线焕新，8月4日发售9款更新品及1款新品「牛奶化妆水」。新配方核心为北海道产大豆「音更大袖」提取的豆乳发酵液，配合2022年独自开发的高纯度豆乳异黄酮。品牌2022年创下历史最高销售额，此后连续4年增长。焕新后的品牌概念为「使うほど、ブレない私に。」（越用越稳定的自己），定位从单纯的&quot;保湿&quot;转向&quot;守护肌肤屏障的安定感&quot;。（<a href="https://noevirgroup.jp/cojp/t/t4250/" target="_blank" rel="noreferrer">Noevir Group官方新闻稿</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>常盤薬品对豆乳美肌的焕新是系统性的：从原料端重新筛选（69种大豆中选定「音更大袖」）到配方理念升级（从&quot;补水&quot;到&quot;肌バランス設計&quot;/肌肤平衡设计）。将北海道产大豆和发酵文化作为品牌叙事核心，也顺应了J-Beauty在全球市场的回暖趋势。对国货的启示是：当经典产品线面临增长瓶颈时，回归原料溯源和产地故事可能比单纯叠加新成分更具消费者说服力。</div><div class="media-grid"><figure class="media wide"><button type="button"><img src="assets/09-sana-nameraka-lineup.png" alt="常盤薬品豆乳美肌保湿线焕新产品"></button><figcaption class="caption">常盤薬品豆乳美肌保湿线焕新产品</figcaption></figure><figure class="media wide"><button type="button"><img src="assets/10-sana-nameraka-campaign.png" alt="常盤薬品豆乳美肌焕新传播视觉"></button><figcaption class="caption">常盤薬品豆乳美肌焕新传播视觉</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="card finance-card reveal" id="item-13">
+          <div class="rank"><b>#13</b><span class="tag">投融资全景</span></div>
+          <div><h3>e.l.f. Beauty 确认8月5日披露2027财年一季度业绩，rhode 并表后首个观察窗口临近</h3><p>7月22日，e.l.f. Beauty 公告将于2026年8月5日美东时间16:30举行网络会议，讨论2027财年第一季度业绩，业绩新闻稿将在会议前发布。公告中的公司介绍已将 rhode、Naturium、Well People 与 e.l.f. Cosmetics、e.l.f. SKIN 并列为旗下品牌。（<a href="https://www.streetinsider.com/Business%2BWire/e.l.f.%2BBeauty%2BAnnounces%2BEarnings%2BRelease%2BDate%2Bfor%2BFirst%2BQuarter%2BFiscal%2B2027%2BResults/26802095.html" target="_blank" rel="noreferrer">Business Wire/StreetInsider</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>该公告本身为资本市场时间锚点，正式业绩仍需等8月5日披露。e.l.f. Beauty 近期看点集中在 rhode、Naturium 等品牌纳入后，多品牌矩阵能否延续高增长并稳定毛利与营销效率。对新锐品牌并购和集团化运营的观察，应重点跟踪8月5日披露的收入增速、渠道结构、库存和整合成本。</div>
+          </div>
+        </article>
+
+        <article class="card market-card reveal" id="item-14">
+          <div class="rank"><b>#14</b><span class="tag">市场数据</span></div>
+          <div><h3>万联证券7月22日发布研报：美护行业预盈率67%居消费八大行业第2，化妆品子板块预盈率100%</h3><p>7月22日，万联证券发布美容护理行业跟踪报告。截至7月22日，美容护理（881182）行业30家A股公司中已有6家发布2026年中报业绩预告，行业披露率20%，预盈率67%，在消费八大行业中排名第2，较2025H1的50%有所提升。子板块分化明显：化妆品（884272）板块已披露公司预盈率达100%；个护用品预盈率50%；医疗美容预盈率0%（仅*ST美谷1家披露，为续亏）。从预告类型看，预增公司占比50%，较2025H1的25%提升明显；亏损公司占比33%，较2025H1下降17个百分点。（<a href="https://m.10jqka.com.cn/20260722/c678353667.shtml" target="_blank" rel="noreferrer">同花顺</a>）</p>
+            <div class="signal"><strong>信号判断：</strong>化妆品子板块100%预盈率在消费行业中极为亮眼，但样本量较小（仅3-4家公司披露），拉芳家化、青松股份预增，青岛金王预减。医疗美容板块0%预盈率反映出医美终端消费仍承压。整体而言，美护行业预盈率的提升更多体现的是化妆品龙头企业在弱宏观环境下的相对韧性，而非全行业景气度反转。报告建议关注&quot;强研发、产品力和营销能力优秀的国货化妆品龙头&quot;，这与当前行业头部集中的趋势一致。</div>
+          </div>
+        </article>
+      </section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-18/">7/18<b>4</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-19/">7/19<b>8</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-20/">7/20<b>5</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-07-21/">7/21<b>6</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-07-22/">7/22<b>14</b></a></div></section></div></main>
+  <div class="lightbox" id="lightbox" aria-hidden="true"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""></div>
+  <a class="to-top" href="#" aria-label="返回顶部">↑</a>
+
+  <script>
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, window.scrollY / max)) * 100}%`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('on');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.media button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const img = btn.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.removeAttribute('src');
+    });
+  </script>
+</body>
+</html>
