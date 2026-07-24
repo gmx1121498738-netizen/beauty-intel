@@ -2,6 +2,46 @@
   "reports": [
     {
       "kind": "daily",
+      "date": "2026-07-23",
+      "title": "美妆竞对情报日报｜2026年7月23日",
+      "source": "archive/日报/2026-07-23/beauty-daily-20260723.html",
+      "pdf": "archive/日报/2026-07-23/beauty-daily-20260723.pdf",
+      "summary": "国货出海渠道、全球品牌资产与重组胶原证据标准",
+      "event_count": 7,
+      "dimensions": [
+        "品牌动态",
+        "产品与研发",
+        "渠道生态",
+        "投融资"
+      ],
+      "brands": [
+        "花西子",
+        "逐本",
+        "珂谧 KeyC",
+        "阿玛尼美妆",
+        "Sephora",
+        "Symrise"
+      ],
+      "categories": [
+        "彩妆",
+        "护肤",
+        "香氛"
+      ],
+      "channels": [
+        "百货",
+        "线下",
+        "零售"
+      ],
+      "event_types": [
+        "出海",
+        "代言",
+        "标准",
+        "渠道",
+        "并购"
+      ]
+    },
+    {
+      "kind": "daily",
       "date": "2026-07-10",
       "title": "美妆竞对情报日报｜2026年7月10日",
       "source": "archive/日报/2026-07-10/beauty-daily-20260710.html",
