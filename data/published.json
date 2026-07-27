@@ -590,6 +590,45 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-25",
+      "title": "美妆竞对情报日报｜2026年7月25日",
+      "source": "archive/日报/2026-07-25/beauty-daily-20260725.html",
+      "pdf": "archive/日报/2026-07-25/beauty-daily-20260725.pdf",
+      "summary": "歌舞伎阴影妆、集团级快闪与焦糖美食调新品",
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "KATE",
+        "花王",
+        "NIVEA",
+        "KAYALI"
+      ],
+      "categories": [
+        "彩妆",
+        "个护",
+        "香氛"
+      ],
+      "channels": [
+        "品牌官网",
+        "线下快闪",
+        "Sephora",
+        "官方零售"
+      ],
+      "event_types": [
+        "新品",
+        "亚洲扩张",
+        "快闪",
+        "全球上市"
+      ],
+      "event_count": 4,
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
