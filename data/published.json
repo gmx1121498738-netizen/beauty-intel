@@ -629,6 +629,47 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-26",
+      "title": "美妆竞对情报日报｜2026年7月26日",
+      "source": "archive/日报/2026-07-26/beauty-daily-20260726.html",
+      "pdf": "archive/日报/2026-07-26/beauty-daily-20260726.pdf",
+      "summary": "国货美妆资本进程、专业渠道细分护理与日系秋妆",
+      "dimensions": [
+        "投融资",
+        "渠道生态",
+        "品牌动态"
+      ],
+      "brands": [
+        "护家科技",
+        "HBN",
+        "Joylux",
+        "RMK",
+        "ORBIS"
+      ],
+      "categories": [
+        "护肤",
+        "女性私密护理",
+        "彩妆"
+      ],
+      "channels": [
+        "港股",
+        "Ulta Beauty",
+        "品牌官网",
+        "线下体验"
+      ],
+      "event_types": [
+        "招股书失效",
+        "渠道扩张",
+        "新品",
+        "IP联动"
+      ],
+      "event_count": 4,
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
