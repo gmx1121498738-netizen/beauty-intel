@@ -220,6 +220,17 @@ def fill_volume_counts(source_html: str, daily_event_counts: dict[str, int], rep
     )
 
 
+def remove_version_note_cards(source_html: str) -> str:
+    """Remove internal version-note cards from every published report."""
+    return re.sub(
+        r'<div\b[^>]*\bclass="[^"]*\bfocus-card\b[^"]*"[^>]*>\s*'
+        r"<small\b[^>]*>\s*版本说明\s*</small>.*?</div>",
+        "",
+        source_html,
+        flags=re.S | re.I,
+    )
+
+
 def decorate_report(
     source_html: str,
     active: str,
@@ -231,6 +242,7 @@ def decorate_report(
     daily_event_counts: dict[str, int] | None = None,
 ) -> str:
     """Add site navigation without changing the source report card markup."""
+    source_html = remove_version_note_cards(source_html)
     if active == "daily":
         source_html = replace_dimension_index(source_html)
         source_html = fill_volume_counts(source_html, daily_event_counts or {}, report_date)

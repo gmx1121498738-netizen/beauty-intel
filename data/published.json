@@ -586,7 +586,15 @@
       ],
       "event_count": 10,
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "7月24日重点",
+        "items": [
+          "KANEBO在日本上市Rouge Star Drama 9款新色；Birchbox联合创始人推出Buff Beauty，以皮肤护理逻辑切入裸甲护理。",
+          "Prada发布2026七夕“环形回响”广告大片，SK-II×CRYBABY七夕联名快闪落地上海，七夕营销同步强化明星内容与IP体验。",
+          "品木宣言与倩碧关闭中国台湾官网购物功能，雅诗兰黛集团继续收缩低效自营渠道。",
+          "Beauty of Joseon母公司Goodai Global启动KOSPI上市前沟通，多品牌平台与海外增长能力继续获得资本关注。"
+        ],
+        "detail_label": "查看7月24日的日报"
       }
     },
     {
@@ -625,7 +633,15 @@
       ],
       "event_count": 4,
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "7月25日重点",
+        "items": [
+          "KATE以“歌舞伎×阴影妆”推进亚洲上新，底妆、修容与眼妆同步扩充货盘。",
+          "花王在上海开启六品牌共同快闪，以集章互动串联美妆、护肤、洗护与女性护理场景。",
+          "NIVEA在日本上市美容液棒润唇膏，基础唇部护理叠加淡纹与防晒需求。",
+          "KAYALI焦糖美食调香水完成全球上市，社群需求被直接纳入产品开发和传播叙事。"
+        ],
+        "detail_label": "查看7月25日的日报"
       }
     },
     {
@@ -666,7 +682,15 @@
       ],
       "event_count": 4,
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "7月26日重点",
+        "items": [
+          "HBN母公司护家科技港股招股书满六个月失效，资本市场继续审视国货美妆的营销投入、研发强度和渠道集中度。",
+          "美国女性私密护理品牌Joylux进入Ulta Beauty超400家门店，专业美妆零售继续扩展敏感场景个护品类。",
+          "RMK推出2026秋季彩妆系列，以多质感对立和亚洲肤色适配组织眼影、眼线、腮红与唇妆货盘。",
+          "ORBIS在东京完成PINGU联动预约制互动日，以主题空间、抽选活动和限定套组承接IP到店体验。"
+        ],
+        "detail_label": "查看7月26日的日报"
       }
     },
     {

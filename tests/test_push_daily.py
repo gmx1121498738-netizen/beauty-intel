@@ -123,14 +123,32 @@ class FeishuCardTests(unittest.TestCase):
         )
 
         self.assertEqual(card["header"]["title"]["content"], "美妆情报Bot｜7月17—19日日报")
-        content = card["elements"][0]["text"]["content"]
+        content = "\n".join(
+            element["text"]["content"]
+            for element in card["elements"]
+            if element["tag"] == "div"
+        )
         self.assertIn("**7月17日**", content)
         self.assertIn("**7月18日**", content)
         self.assertIn("**7月19日**", content)
         self.assertIn("17日重点", content)
         self.assertIn("19日重点", content)
-        self.assertIn("/daily/2026-07-17/", content)
-        self.assertIn("/daily/2026-07-19/", content)
+        self.assertEqual(len(card["elements"]), 6)
+        for index, report_date in enumerate(("2026-07-17", "2026-07-18", "2026-07-19")):
+            month_day = datetime.strptime(report_date, "%Y-%m-%d")
+            action = card["elements"][index * 2 + 1]
+            button = action["actions"][0]
+            self.assertEqual(action["tag"], "action")
+            self.assertEqual(button["type"], "primary")
+            self.assertEqual(
+                button["text"]["content"],
+                f"查看{month_day.month}月{month_day.day}日日报",
+            )
+            self.assertEqual(
+                button["url"],
+                f"https://gmx1121498738-netizen.github.io/beauty-intel/daily/{report_date}/",
+            )
+        self.assertNotIn("的日报", json.dumps(card, ensure_ascii=False))
     def test_card_uses_bot_name_all_reviewed_items_and_daily_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         report = make_report(items=["重点一", "重点二", "重点三", "重点四"])

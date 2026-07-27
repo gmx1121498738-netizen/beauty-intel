@@ -146,6 +146,19 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("监管与原料", rendered)
         self.assertNotIn(">投融资</span><b>#1</b>", rendered)
 
+    def test_daily_template_removes_version_note_card(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        source = '''<html><head></head><body>
+        <aside class="meta-panel">
+          <div class="focus-card"><small>重点关注</small><strong>核心事件</strong></div>
+          <div class="focus-card"><small>版本说明</small><strong>采用 Workbuddy 版本；已确认发布。</strong></div>
+        </aside>
+        </body></html>'''
+        rendered = build.decorate_report(source, "daily", "archive/example.html", {})
+        self.assertIn("<small>重点关注</small>", rendered)
+        self.assertNotIn("<small>版本说明</small>", rendered)
+        self.assertNotIn("Workbuddy", rendered)
+
     def test_weekly_report_content_is_visible_without_its_animation_script(self):
         self.assertIsNotNone(build, "site/build.py must exist")
         source = '''<html><head><style>.reveal { opacity:0; transform:translateY(12px); }</style></head>

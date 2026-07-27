@@ -139,18 +139,40 @@ def build_multi_day_card(reports: list[dict], base_url: str) -> dict:
 
     dates = [datetime.strptime(report["date"], "%Y-%m-%d") for report in reports]
     title = f"美妆情报Bot｜{dates[0].month}月{dates[0].day}—{dates[-1].day}日日报"
-    sections = []
+    elements = []
     for report, report_date in zip(reports, dates):
         items = report.get("push", {}).get("items", [])
         lines = "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(items, 1))
-        sections.append(
-            f"**{report_date.month}月{report_date.day}日**\n{lines}\n[查看完整日报]({report_url(base_url, report['date'])})"
+        elements.append(
+            {
+                "tag": "div",
+                "text": {
+                    "tag": "lark_md",
+                    "content": f"**{report_date.month}月{report_date.day}日**\n{lines}",
+                },
+            }
+        )
+        elements.append(
+            {
+                "tag": "action",
+                "actions": [
+                    {
+                        "tag": "button",
+                        "type": "primary",
+                        "text": {
+                            "tag": "plain_text",
+                            "content": f"查看{report_date.month}月{report_date.day}日日报",
+                        },
+                        "url": report_url(base_url, report["date"]),
+                    }
+                ],
+            }
         )
 
     return {
         "config": {"wide_screen_mode": True},
         "header": {"template": "blue", "title": {"tag": "plain_text", "content": title}},
-        "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "\n\n".join(sections)}}],
+        "elements": elements,
     }
 
 
