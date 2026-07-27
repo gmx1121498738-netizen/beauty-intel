@@ -537,6 +537,59 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-24",
+      "title": "美妆竞对情报日报｜2026年7月24日",
+      "source": "archive/日报/2026-07-24/beauty-daily-20260724.html",
+      "pdf": "archive/日报/2026-07-24/beauty-daily-20260724.pdf",
+      "summary": "七夕节点、IP联名、区域渠道调整与美妆集团资本化进程",
+      "dimensions": [
+        "品牌动态",
+        "产品与研发",
+        "品牌战略",
+        "渠道生态",
+        "投融资全景"
+      ],
+      "brands": [
+        "KANEBO",
+        "Buff Beauty",
+        "明色化妆品",
+        "Prada",
+        "品木宣言",
+        "倩碧",
+        "SK-II",
+        "Acqua di Parma",
+        "Goodai Global",
+        "粧美堂",
+        "TAASHEE 她叙"
+      ],
+      "categories": [
+        "彩妆",
+        "护肤",
+        "香氛",
+        "美甲护理",
+        "化妆工具"
+      ],
+      "channels": [
+        "药妆店",
+        "品牌官网",
+        "百货",
+        "快闪",
+        "第三方电商"
+      ],
+      "event_types": [
+        "新品",
+        "联名",
+        "营销",
+        "渠道调整",
+        "上市预沟通"
+      ],
+      "event_count": 10,
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
