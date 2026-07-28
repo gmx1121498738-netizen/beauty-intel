@@ -694,6 +694,59 @@
       }
     },
     {
+      "kind": "daily",
+      "date": "2026-07-27",
+      "title": "美妆竞对情报日报｜2026年7月27日",
+      "source": "archive/日报/2026-07-27/beauty-daily-20260727.html",
+      "pdf": "archive/日报/2026-07-27/beauty-daily-20260727.pdf",
+      "summary": "多肽原料资本化、AI美妆集合店与国际品牌新品渠道扩张",
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "监管与合规"
+      ],
+      "brands": [
+        "维琪科技",
+        "AI SUM BEAUTY爱尚美",
+        "欧莱雅",
+        "YSL Beauty",
+        "CHANEL",
+        "AXZIA",
+        "NYX Professional Makeup",
+        "Gap Beauty",
+        "Perfect One Focus"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "香氛",
+        "口服美容",
+        "个护"
+      ],
+      "channels": [
+        "北交所",
+        "抖音",
+        "线下集合店",
+        "Ulta Beauty",
+        "药房与美妆零售",
+        "品牌官网"
+      ],
+      "event_types": [
+        "上市",
+        "零售数据",
+        "开店",
+        "代言",
+        "联名",
+        "新品",
+        "区域扩张",
+        "经营数据",
+        "监管"
+      ],
+      "event_count": 15
+    },
+    {
       "kind": "weekly",
       "week": "2026-W28",
       "title": "美妆行业洞察 2026年第28周",
