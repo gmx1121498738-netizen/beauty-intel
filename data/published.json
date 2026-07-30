@@ -38,7 +38,18 @@
         "标准",
         "渠道",
         "并购"
-      ]
+      ],
+      "push": {
+        "status": "approved",
+        "heading": "昨日重点",
+        "items": [
+          "花西子成为伊势丹 BEAUTY WEEKS 唯一中国美妆品牌，7月28日起进入新宿 Yep’s 常设店，国货在日本由活动触达进入百货常态化销售。",
+          "逐本围绕檀健次强化“全球品牌代言人”传播，并配套7月22日—8月5日七城户外大屏，品牌资产与出海叙事同步推进。",
+          "福瑞达旗下珂谧 KeyC 发布重组胶原蛋白渗透标准，采用人体在体拉曼光谱法，功效竞争开始强调可量化证据。",
+          "国际补充：阿玛尼美妆官宣谷爱凌全球彩妆代言人；Sephora UK测试boutique店型；Symrise拟收购法国天然香料公司 Floral Concept。"
+        ],
+        "detail_label": "查看完整日报"
+      }
     },
     {
       "kind": "daily",
@@ -817,6 +828,58 @@
           "护发与功能个护继续扩边：HABA推出SURUtto，馥绿德雅官宣张新成；Ulta将plusOne铺入超1300家门店。"
         ],
         "detail_label": "查看7月28日完整日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-07-29",
+      "title": "美妆竞对情报日报｜2026年7月29日",
+      "source": "archive/日报/2026-07-29/beauty-daily-20260729.html",
+      "pdf": "archive/日报/2026-07-29/beauty-daily-20260729.pdf",
+      "summary": "注册备案改革、研发数据AI化与全球品牌渠道动作",
+      "dimensions": [
+        "监管与合规",
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "NMPA",
+        "爱茉莉太平洋",
+        "ESW Beauty",
+        "欧舒丹",
+        "Sally Beauty",
+        "倩碧"
+      ],
+      "categories": [
+        "法规",
+        "护肤",
+        "香氛",
+        "个护"
+      ],
+      "channels": [
+        "线下活动",
+        "校园巡回",
+        "零售门店"
+      ],
+      "event_types": [
+        "监管",
+        "研发数字化",
+        "融资",
+        "新品",
+        "渠道",
+        "营销活动"
+      ],
+      "event_count": 6,
+      "push": {
+        "status": "approved",
+        "heading": "7月29日重点",
+        "items": [
+          "国家药监局第70号公告即日施行：国际新品中国首发免已上市证明、动物试验减免扩容，并明确配方近似产品可共用资料。",
+          "KT与爱茉莉太平洋上线研发生成式AI平台LEMON；R&I中心测试中，产品规划审查由约12天缩至5分钟。",
+          "ESW Beauty完成首轮外部融资，两位TikTok创作者以creator equity partner身份入股，参与消费者洞察、产品反馈和策略制定。",
+          "欧舒丹在日本发售VERVEINE AGRUMES；Sally Beauty重启COLORfest并引入Q+A；樊振东×倩碧杭州线下见面会同步上线限定礼盒。"
+        ],
+        "detail_label": "查看7月29日完整日报"
       }
     },
     {
