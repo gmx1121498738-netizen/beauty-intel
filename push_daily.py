@@ -97,13 +97,14 @@ def build_card(report: dict, base_url: str) -> dict:
         f"{index}. {item.strip()}"
         for index, item in enumerate(push["items"], start=1)
     )
+    summary += f"\n\n*数据日期：{report_date.month}月{report_date.day}日*"
     return {
         "config": {"wide_screen_mode": True},
         "header": {
             "template": "blue",
             "title": {
                 "tag": "plain_text",
-                "content": f"美妆情报Bot｜{report_date.month}月{report_date.day}日日报",
+                "content": push.get("card_title", "美妆情报Bot｜行业日报"),
             },
         },
         "elements": [
