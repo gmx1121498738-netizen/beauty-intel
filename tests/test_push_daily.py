@@ -148,6 +148,17 @@ class FeishuCardTests(unittest.TestCase):
                 button["url"],
                 f"https://gmx1121498738-netizen.github.io/beauty-intel/daily/{report_date}/",
             )
+
+    def test_multi_day_card_uses_both_months_when_range_crosses_month_boundary(self):
+        card = push_daily.build_multi_day_card(
+            [make_report("2026-07-31"), make_report("2026-08-01"), make_report("2026-08-02")],
+            "https://example.com/beauty",
+        )
+
+        self.assertEqual(
+            card["header"]["title"]["content"],
+            "美妆情报Bot｜7月31日—8月2日日报",
+        )
         self.assertNotIn("的日报", json.dumps(card, ensure_ascii=False))
     def test_card_uses_generic_title_subtle_date_all_reviewed_items_and_daily_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")

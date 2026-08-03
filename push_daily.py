@@ -139,7 +139,13 @@ def build_multi_day_card(reports: list[dict], base_url: str) -> dict:
         raise ValueError("reports is required")
 
     dates = [datetime.strptime(report["date"], "%Y-%m-%d") for report in reports]
-    title = f"美妆情报Bot｜{dates[0].month}月{dates[0].day}—{dates[-1].day}日日报"
+    if dates[0].month == dates[-1].month:
+        title = f"美妆情报Bot｜{dates[0].month}月{dates[0].day}—{dates[-1].day}日日报"
+    else:
+        title = (
+            f"美妆情报Bot｜{dates[0].month}月{dates[0].day}日—"
+            f"{dates[-1].month}月{dates[-1].day}日日报"
+        )
     elements = []
     for report, report_date in zip(reports, dates):
         items = report.get("push", {}).get("items", [])

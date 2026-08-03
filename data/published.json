@@ -1098,6 +1098,81 @@
         "detail_label": "查看测试版日报",
         "card_title": "美妆情报Bot｜7月30日日报"
       }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-07-31",
+      "title": "美妆竞对情报日报｜2026年7月31日",
+      "source": "archive/日报/2026-07-31/beauty-daily-20260731.html",
+      "pdf": "archive/日报/2026-07-31/beauty-daily-20260731.pdf",
+      "summary": "经事件日与时区核验，本日无新增高价值动态",
+      "event_count": 0,
+      "dimensions": [],
+      "brands": [],
+      "categories": [],
+      "channels": [],
+      "event_types": [],
+      "push": {
+        "status": "approved",
+        "heading": "当日核验结论",
+        "items": [
+          "候选均为周期外、报道日错配或时区错位信息；百事×Glamlite按上海时区归入8月1日，本日不以旧闻填充。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜7月31日日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-01",
+      "title": "美妆竞对情报日报｜2026年8月1日",
+      "source": "archive/日报/2026-08-01/beauty-daily-20260801.html",
+      "pdf": "archive/日报/2026-08-01/beauty-daily-20260801.pdf",
+      "summary": "FanBeauty红毯气垫、日系品牌首销与百事联名社交电商首发",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["FanBeauty Diary", "POLA", "资生堂", "HOLIKA HOLIKA", "Glamlite", "Pepsi"],
+      "categories": ["底妆", "护肤", "彩妆", "身体护理"],
+      "channels": ["百货", "TikTok Shop"],
+      "event_types": ["新品", "联名", "首发"],
+      "push": {
+        "status": "approved",
+        "heading": "8月1日重点",
+        "items": [
+          "FanBeauty Diary正式发售红毯鎏金气垫霜，以明星妆造经验延展底妆产品线。",
+          "POLA四款高端护肤彩妆与资生堂Basic Care基础护理线同日上市，日系品牌集中扩充日常使用场景。",
+          "HOLIKA HOLIKA×不二家Peko联名彩妆进入台湾，以多品类可爱包装承接韩国市场热度。",
+          "Pepsi×Glamlite身体护理系列于北京时间8月1日凌晨在TikTok Shop首发，以低客单价测试食品IP的内容电商转化。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜8月1日日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-02",
+      "title": "美妆竞对情报日报｜2026年8月2日",
+      "source": "archive/日报/2026-08-02/beauty-daily-20260802.html",
+      "pdf": "archive/日报/2026-08-02/beauty-daily-20260802.pdf",
+      "summary": "敷尔佳注射级医美、义乌拼柜出海、MAC水漾系列与个性化服务试点",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "市场版图", "监管与合规"],
+      "brands": ["敷尔佳", "MAC"],
+      "categories": ["医美", "彩妆", "化妆品服务"],
+      "channels": ["跨境电商", "门店服务"],
+      "event_types": ["注册申请", "出海", "新品", "监管试点"],
+      "push": {
+        "status": "approved",
+        "heading": "8月2日重点",
+        "items": [
+          "敷尔佳首款浅层注射填充类产品注册申请获受理，医用敷料基本盘外新增注射级医美布局。",
+          "义乌化妆品采购地申报检验试点满一年，累计出口货值超6亿元，单票通关时间压缩57.2%。",
+          "MAC Lustreglass水漾系列在美加上市，新品、全球大使与创意团队同波集中露出。",
+          "化妆品个性化服务第二阶段试点自8月1日起扩围至8个省区，门店现场调配和分装的地域范围扩大。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜8月2日日报"
+      }
     }
   ]
 }
