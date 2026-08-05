@@ -1237,6 +1237,32 @@
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜8月2日日报"
       }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-04",
+      "title": "美妆竞对情报日报｜2026年8月4日",
+      "source": "archive/日报/2026-08-04/beauty-daily-20260804.html",
+      "pdf": "archive/日报/2026-08-04/beauty-daily-20260804.pdf",
+      "summary": "爱美客Hutox商业化、复锐医疗Alma中国发布与宝洁收购Thorne",
+      "event_count": 6,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资"],
+      "brands": ["爱美客", "Sisram Medical", "Alma", "P&G", "Thorne", "GRASUS", "Jo Malone London", "なめらか本舗"],
+      "categories": ["医美", "功效护肤", "营养健康", "香氛", "护肤"],
+      "channels": ["医美机构", "天猫U先", "线上", "精品店"],
+      "event_types": ["上市", "新品", "收购", "试用", "焕新"],
+      "push": {
+        "status": "approved",
+        "heading": "昨日重点",
+        "items": [
+          "爱美客在8月4日互动平台确认，Hutox已于8月3日正式上市销售，肉毒毒素业务进入商业化兑现阶段。",
+          "复锐医疗发布面向中国市场的Alma“黑金牛奶光”，把设备首发与机构端活动连续排期。",
+          "宝洁以38亿美元收购Thorne，健康护理加码营养补充剂、检测与个性化健康服务。",
+          "GRASUS在天猫U先开放新品试用，祖玛珑在澳大利亚上线Sea Salt & Bergamot，国货与欧美新品以分层渠道推进。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
     }
   ]
 }
