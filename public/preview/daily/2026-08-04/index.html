@@ -1,0 +1,582 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年8月4日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style></head><body><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第32周 · 8月4日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a><a href="beauty-daily-20260804.pdf" download>下载PDF</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>8月4日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>宝洁收购Thorne扩展健康业务；なめらか本舗保湿线焕新；日系品牌强化高频使用与专业体验</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>5</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>3</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>0</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>投融资</span><b>01</b></a><a href="#item-2"><span>品牌动态</span><b>02</b></a><a href="#item-3"><span>品牌动态</span><b>03</b></a><a href="#item-4"><span>品牌动态</span><b>04</b></a><a href="#item-5"><span>渠道生态</span><b>05</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card finance-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">投融资</span></div><div><p class="region-label">国际</p><h3>宝洁宣布收购科学营养品牌 Thorne，健康护理业务向个性化健康管理延伸</h3><div class="report-body"><p>宝洁于8月4日宣布拟收购科学营养品牌 Thorne。双方已签署最终协议，交易仍待惯常交割条件和监管审批完成；完成后，Thorne 将纳入宝洁健康护理业务。Thorne 的产品组合覆盖营养补充剂、健康检测与个性化健康建议，宝洁在公告中将该交易定位为强化其面向消费者健康与健康管理的能力。</p></div><div class="signal"><strong>信号判断：</strong><p>宝洁把收购标的放在科学营养与健康数据交叉点，反映大众健康护理的增长逻辑正由单品功效向“补充剂+检测+建议”的持续服务延伸。对美妆个护企业而言，口服美容、头皮健康和敏感肌管理等邻近赛道的竞争门槛，正更多取决于证据体系、用户数据和服务协同。</p></div><div class="sources"><p><a href="https://us.pg.com/blogs/thorne/" target="_blank" rel="noopener noreferrer">宝洁官方公告：Thorne 将加入宝洁健康护理业务</a> ｜ <a href="https://www.thorne.com/press-releases/thorne-enters-definitive-agreement-to-be-acquired-by-procter-gamble" target="_blank" rel="noopener noreferrer">Thorne 官方公告：签署被宝洁收购的最终协议</a></p></div></div></article>
+<article class="card brand-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际</p><h3>なめらか本舗于8月4日焕新保湿线，以11个SKU启动秋季品牌升级第一阶段</h3><div class="report-body"><p>常盘药品工业旗下豆乳护肤品牌なめらか本舗于8月4日上市焕新保湿线，共11个SKU，包括新增的“ミルク化粧水”。本次配方加入北海道产大豆来源的新豆乳发酵液，并将高纯度豆乳异黄酮、神经酰胺和甘草酸二钾纳入共同配方表达；企业同期宣布品牌将于2026年秋季推进整体焕新。</p></div><div class="signal"><strong>信号判断：</strong><p>品牌没有以单一爆品切入，而是先更新基础保湿线，借高频、低门槛品类统一成分和“肌肤水油平衡”叙事，为秋季品牌焕新建立可感知的产品底座。对成熟大众护肤品牌，基础线升级仍是更新用户认知、带动多品连带的重要方式。</p></div><div class="sources"><p><a href="https://prtimes.jp/main/html/rd/p/000000499.000000263.html" target="_blank" rel="noopener noreferrer">常盘药品工业官方新闻稿：8月4日保湿线焕新及11个SKU信息</a> ｜ <a href="https://nameraka.jp/" target="_blank" rel="noopener noreferrer">なめらか本舗品牌官网：新品与品牌焕新公告</a></p></div></div></article>
+<article class="card brand-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际</p><h3>YOLU于8月4日在线上首发“メロウナイトリペア”发膜，线下渠道两日后跟进</h3><div class="report-body"><p>日本夜间护理品牌 YOLU（ヨル）于8月4日在官方商城、乐天、Amazon、Yahoo!、Qoo10等电商渠道上线“メロウナイトリペア ミルクヘアマスク”，定价1,650日元（含税）；全国杂货店和药妆店计划自8月6日起陆续铺货。新品补入其“メロウナイトリペア”洗护与护发乳系列，以四种毛发修护成分的胶囊化配方和较轻盈的发膜使用感为卖点。</p></div><div class="signal"><strong>信号判断：</strong><p>线上比线下提前两日发售，为新品获取首批转化与内容反馈留出窗口，再由药妆店和杂货店承接规模触达。夜间洗护品牌将“高修护发膜”补入既有洗、护、乳组合，提升系列内的集中护理场景覆盖，并为客单与复购组合增加一个独立节点。</p></div><div class="sources"><p><a href="https://yolu.jp/topics/p1710/" target="_blank" rel="noopener noreferrer">YOLU品牌官网：8月4日线上发售与8月6日线下发售安排</a></p></div></div></article>
+<article class="card brand-card reveal" id="item-4"><div class="rank"><b>#4</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际</p><h3>SANA“素肌记念日”于8月4日推出护肤型提亮面霜，锁定无妆日的轻底妆需求</h3><div class="report-body"><p>常盘药品工业旗下 SANA（サナ）“素肌记念日”于8月4日推出“スキンケアトーンアップクリーム”，50g建议零售价1,540日元（含税）。企业公告明确当日为厂家出货日，实际可购日期由零售门店决定。产品以保湿成分占85%、可不卸妆使用、自然修饰暗沉与肤色不均为主要卖点，定位介于护肤霜与轻底妆之间。</p></div><div class="signal"><strong>信号判断：</strong><p>产品将“不想化全妆、仍希望面部状态整洁”的日常场景转化为独立品类需求，降低了传统底妆的使用门槛。护肤型底妆以“低负担、可随时使用”的表达吸引轻妆与居家场景，对基础护肤品牌的品类外延具有参考价值。</p></div><div class="sources"><p><a href="https://prtimes.jp/a/?c=263&amp;f=d263-478-7852c70e6c38622b7388dc5dbfac5f6a.pdf&amp;r=478" target="_blank" rel="noopener noreferrer">常盘药品工业官方新闻稿：8月4日厂家出货及产品信息</a></p></div></div></article>
+<article class="card channel-card reveal" id="item-5"><div class="rank"><b>#5</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际</p><h3>POLA于8月4日发售“熊野化妆笔”，通过约2,500个专业销售触点覆盖底妆工具</h3><div class="report-body"><p>POLA于8月4日发售“熊野化妆笔 フィンガーフィット（ベース＆リフトメーク）”，定价7,370日元（含税）。该工具采用指腹形笔头与双层刷毛结构，面向底妆涂布；品牌公告显示，产品在约400家POLA THE BEAUTY及含POLA GINZA在内的约2,500个销售触点，以及官方电商销售，不进入百货与海外市场。</p></div><div class="signal"><strong>信号判断：</strong><p>POLA把底妆工具放进由美容顾问、门店与目录销售组成的既有网络，强化了“专业手法—产品体验—复购”的服务链路。对以高端护肤为核心的品牌而言，工具类可成为门店体验和基础彩妆服务的低频补充，而不必单独扩张彩妆产品线。</p></div><div class="sources"><p><a href="https://www.pola.co.jp/about/news/2026/tldin5000000jdsp-att/po20260420-02.pdf" target="_blank" rel="noopener noreferrer">POLA官方新闻稿：8月4日发售与销售渠道</a></p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><div class="date-cell">7/31<b>4</b></div><div class="date-cell">8/1<b>5</b></div><div class="date-cell">8/2<b>4</b></div><div class="date-cell">8/3<b>6</b></div><div class="date-cell active">8/4<b>5</b></div></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
