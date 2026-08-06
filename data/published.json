@@ -1263,6 +1263,33 @@
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
       }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-05",
+      "title": "美妆竞对情报日报｜2026年8月5日",
+      "source": "archive/日报/2026-08-05/beauty-daily-20260805.html",
+      "pdf": "archive/日报/2026-08-05/beauty-daily-20260805.pdf",
+      "summary": "资生堂上半年利润修复、美丽田园杭州直营整合与欧美个护渠道信号",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "投融资"],
+      "brands": ["资生堂", "美丽田园", "奈瑞儿", "Edgewell", "K18", "OSAJI"],
+      "categories": ["高端美妆", "医美服务", "个护", "洗护", "彩妆"],
+      "channels": ["直营门店", "Sephora", "Amazon Beauty", "专业沙龙", "线上"],
+      "event_types": ["业绩披露", "收购", "新品上市", "全国发售"],
+      "push": {
+        "status": "approved",
+        "heading": "8月5日重点",
+        "items": [
+          "资生堂上半年销售额同比增长6.2%、核心营业利润同比增长90.1%；中国及旅游零售报表销售增长10.0%。",
+          "美丽田园以1,000万元收购杭州奈瑞儿业务，新增10家直营门店，杭州直营门店将增至25家。",
+          "Edgewell三季度北美有机销售增长3.0%，防晒、护肤与理容成为主要拉动。",
+          "K18 FutureIQ头皮精华进入官网、Sephora、Amazon Beauty与美国部分专业渠道。",
+          "OSAJI秋季彩妆在日本全国发售，以眼、唇、颊、眉组合延长换季上新窗口。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
     }
   ]
 }
