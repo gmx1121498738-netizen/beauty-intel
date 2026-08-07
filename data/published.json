@@ -1240,6 +1240,23 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-03",
+      "title": "美妆竞对情报日报｜2026年8月3日",
+      "source": "archive/日报/2026-08-03/beauty-daily-20260803.html",
+      "pdf": "archive/日报/2026-08-03/beauty-daily-20260803.pdf",
+      "summary": "植物医生品牌代言、乌克兰合规切换与国际渠道、定价、彩妆信号",
+      "event_count": 6,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "其他动态"],
+      "brands": ["植物医生", "Bluemercury", "to/one", "Maison KOSÉ", "ARSOA"],
+      "categories": ["护肤", "彩妆", "零售管理", "合规"],
+      "channels": ["直播", "高端美妆零售", "线上", "线下"],
+      "event_types": ["代言", "法规生效", "高管履新", "新品上市", "调价"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-04",
       "title": "美妆竞对情报日报｜2026年8月4日",
       "source": "archive/日报/2026-08-04/beauty-daily-20260804.html",
