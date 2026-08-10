@@ -1,0 +1,593 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年8月7日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a><a class="site-pdf-export" href="/beauty-intel/pdf/beauty-daily-20260807.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-08-07/beauty-daily-20260807.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第32周 · 8月7日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a><a href="beauty-daily-20260807.pdf" download>下载PDF</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>8月7日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>原料资本化、行业大会、护肤彩妆融合、香氛扩品与秋季彩妆集中出现</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>13</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>7</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>1</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>2</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>投融资</span><b>01</b></a><a href="#item-2"><span>其他动态·行业生态</span><b>02</b></a><a href="#item-3"><span>品牌动态</span><b>03</b></a><a href="#item-4"><span>品牌动态</span><b>04</b></a><a href="#item-5"><span>渠道生态</span><b>05</b></a><a href="#item-6"><span>品牌动态</span><b>06</b></a><a href="#item-7"><span>品牌动态</span><b>07</b></a><a href="#item-8"><span>品牌动态</span><b>08</b></a><a href="#item-9"><span>其他动态·健康消费</span><b>09</b></a><a href="#item-10"><span>品牌动态</span><b>10</b></a><a href="#item-11"><span>市场版图</span><b>11</b></a><a href="#item-12"><span>渠道生态</span><b>12</b></a><a href="#item-13"><span>品牌动态</span><b>13</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card finance-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">投融资</span></div><div><p class="region-label"></p><h3>珈凯生物披露北交所上市公告书，计划8月11日上市交易</h3><div class="report-body"><p>WorkBuddy 当日候选显示，珈凯生物披露公开发行并在北交所上市公告书，拟以募集资金投向功能性植物提取物项目及研发中心建设；其客户覆盖自然堂、林清轩、华熙生物等品牌及代工企业。</p></div><div class="signal"><strong>信号判断：</strong><p>功效原料企业的资本化信息可作为观察原料端专业化分工、研发投入与客户结构的线索。</p></div><div class="sources"><p><strong>来源</strong>：<a href="https://finance.sina.com.cn/roll/2026-08-07/doc-inimnzsi3077188.shtml" target="_blank" rel="noopener noreferrer">新浪财经</a> ｜ <a href="https://new.qq.com/rain/a/20260808A03EMY00" target="_blank" rel="noopener noreferrer">腾讯新闻</a></p></div></div></article>
+<article class="card brand-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">其他动态·行业生态</span></div><div><p class="region-label"></p><h3>2026中国化妆品大会进入分论坛日，技术创新与品牌叙事成为本土产业议题</h3><div class="report-body"><p>2026（第十九届）中国化妆品大会于8月6日至7日在上海宝龙美术馆举办，8月7日设置“C-Beauty 的技术前沿：创新走向何方？”和“C-Beauty 的价值叙事：如何找回自己？”两场分论坛。公开议程显示，百雀羚、贝泰妮、林清轩、佰草集等品牌，与原料、制造和咨询机构共同参与讨论；同期主题展持续向公众开放。</p></div><div class="signal"><strong>信号判断：</strong><p>本土美妆的讨论重心同时落在功效技术、品牌表达与全球化沟通，品牌和供应链不再各自分隔出现。大会本身不构成销售业绩信号，但为观察原料端能力如何转化为消费者可感知的产品与叙事提供了集中样本。</p></div><div class="sources"><p>△ 图片说明：中国化妆品大会嘉宾及议程海报；来源：<a href="https://www.yemacaijing.com/Report/view/id/784.html" target="_blank" rel="noopener noreferrer">活动报道</a>。</p><p><strong>来源</strong>：<a href="https://www.yemacaijing.com/Report/view/id/784.html" target="_blank" rel="noopener noreferrer">活动报道：会期、分论坛与参会主体</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/china-cosmetics-conference-program.jpg" aria-label="放大查看 2026中国化妆品大会活动图"><img src="assets/china-cosmetics-conference-program.jpg" alt="2026中国化妆品大会活动图" loading="lazy"></button><figcaption>2026中国化妆品大会活动图</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>e.l.f. Beauty × Bubble 上线三款护肤彩妆融合联名</h3><div class="report-body"><p>e.l.f. Beauty 与 Bubble 于8月7日在双方官网及 e.l.f. App 上线限量「Dual Purpose Hybrids」系列，包含 Bronzing Drops×保湿霜、唇油×唇部精华、液体腮红×玻尿酸精华三款双效产品；Target 门店计划于8月9日跟进发售。</p></div><div class="signal"><strong>信号判断：</strong><p>以两支既有明星单品合并为一个使用步骤，联名的重点落在产品结构，而不仅是包装或传播素材；可观察护肤功效如何在彩妆消费场景中被进一步商品化。</p></div><div class="sources"><p>△ 图片说明：e.l.f. Beauty × Bubble 联名官方主视觉；来源：<a href="https://www.elfbeauty.com/articles/e-l-f-and-bubble-launch-limited-edition-hybrid-holy-grails-in-skincare-makeup-collaboration" target="_blank" rel="noopener noreferrer">e.l.f. Beauty</a>。</p><p><strong>来源</strong>：<a href="https://www.elfbeauty.com/articles/e-l-f-and-bubble-launch-limited-edition-hybrid-holy-grails-in-skincare-makeup-collaboration" target="_blank" rel="noopener noreferrer">e.l.f. Beauty 官方公告</a> ｜ <a href="https://www.businesswire.com/news/home/20260803389571/en/e.l.f." target="_blank" rel="noopener noreferrer">Business Wire</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/elf-bubble-dual-purpose-hybrids.jpg" aria-label="放大查看 e.l.f. Beauty × Bubble 联名主视觉"><img src="assets/elf-bubble-dual-purpose-hybrids.jpg" alt="e.l.f. Beauty × Bubble 联名主视觉" loading="lazy"></button><figcaption>e.l.f. Beauty × Bubble 联名主视觉</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-4"><div class="rank"><b>#4</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>Rare Beauty 推出 Rare Beginnings 香水，并以叠香膏拉开香氛价格与使用场景</h3><div class="report-body"><p>Rare Beauty 于8月7日推出「Rare Beginnings Eau de Parfum」，提供50mL与10mL规格，定价分别为78美元与30美元；品牌同步销售梨香和棉花糖两款 Fragrance Layering Balm，单价20美元。产品页列出梨汁、开心果、栀子、茉莉、香草等香调，并将叠香膏作为与香水组合使用的产品。</p></div><div class="signal"><strong>信号判断：</strong><p>正装、旅行装与叠香膏构成多价位香氛货盘，既承接首次试用，也扩大补香、礼赠和个性化叠香的购买理由。Rare Beauty 的香氛线开始具备系列经营，而非只依赖单支明星香水。</p></div><div class="sources"><p>△ 图片说明：Rare Beginnings 香水产品图；来源：<a href="https://www.rarebeauty.com/collections/shop-all/products/rare-beginnings-eau-de-parfum" target="_blank" rel="noopener noreferrer">Rare Beauty</a>。</p><p><strong>来源</strong>：<a href="https://www.rarebeauty.com/collections/shop-all/products/rare-beginnings-eau-de-parfum" target="_blank" rel="noopener noreferrer">Rare Beauty 产品页：规格、定价与香调</a> ｜ <a href="https://www.rarebeauty.com/collections/fragrance/products/fragrance-layering-balm-sweet-marshmallow" target="_blank" rel="noopener noreferrer">Rare Beauty 叠香膏产品页</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/rare-beauty-rare-beginnings.jpg" aria-label="放大查看 Rare Beauty Rare Beginnings 香水"><img src="assets/rare-beauty-rare-beginnings.jpg" alt="Rare Beauty Rare Beginnings 香水" loading="lazy"></button><figcaption>Rare Beauty Rare Beginnings 香水</figcaption></figure></div></div></article>
+<article class="card channel-card reveal" id="item-5"><div class="rank"><b>#5</b><span class="tag">渠道生态</span></div><div><p class="region-label"></p><h3>PLAZA 启动秋季美妆推广，以 MOMOREI 限定货盘连接会员与日韩品牌组合</h3><div class="report-body"><p>PLAZA 于8月7日至9月3日在日本全国门店开展「BRAND NEW COSMETICS」秋季美妆推广，并发售韩国角色 MOMOREI 设计的限定美妆及周边。公开清单覆盖 JUNG SAEM MOOL、tfit、COSNORI、VT、Anua、dejavu、&amp;honey 等品牌；PLAZA PASS 本会员在活动启动日消费可获得限量购物袋。</p></div><div class="signal"><strong>信号判断：</strong><p>集合店将角色化视觉资产、限定货盘和会员权益同时投放，降低多品牌上新的分散感，并为进口美妆与日本本土品牌提供同场比较和连带购买机会。对渠道而言，限定权益也能将一次性季节消费沉淀为会员触点。</p></div><div class="sources"><p>△ 图片说明：MOMOREI 限定美妆主视觉；来源：<a href="https://prtimes.jp/main/html/rd/p/000001073.000003436.html" target="_blank" rel="noopener noreferrer">PLAZA Style 企业新闻稿</a>。</p><p><strong>来源</strong>：<a href="https://prtimes.jp/main/html/rd/p/000001073.000003436.html" target="_blank" rel="noopener noreferrer">PLAZA Style 企业新闻稿：活动期、品牌清单与会员礼</a> ｜ <a href="https://www.plazastyle.com/shop/e/eBNC202608/" target="_blank" rel="noopener noreferrer">PLAZA 线上活动页</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/plaza-momorei-brand-new-cosmetics.jpg" aria-label="放大查看 PLAZA MOMOREI 秋季美妆推广"><img src="assets/plaza-momorei-brand-new-cosmetics.jpg" alt="PLAZA MOMOREI 秋季美妆推广" loading="lazy"></button><figcaption>PLAZA MOMOREI 秋季美妆推广</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-6"><div class="rank"><b>#6</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>JILL STUART Beauty 秋季彩妆上市，以唇颊一体产品组织完整妆容货盘</h3><div class="report-body"><p>JILL STUART Beauty 于8月7日在日本发售 2026 年秋季彩妆系列。核心新品「Lip &amp; Cheek Blooming Chiffon」为唇颊两用液，提供8色、其中2色限定；系列同步推出眼影新色、限定高光和润唇产品。品牌披露，唇颊新品采用色彩包覆膜，强调服帖、减少二次沾染与持色表现。</p></div><div class="signal"><strong>信号判断：</strong><p>唇颊一体产品承担低步骤、同色系妆容的核心入口，眼影、高光和润唇产品保留了整套彩妆的连带销售空间。产品功能与限定色并行，是季节性彩妆在效率诉求与收藏属性之间的常见组合。</p></div><div class="sources"><p>△ 图片说明：Blooming Chiffon 系列活动素材；来源：<a href="https://prtimes.jp/main/html/rd/p/000000172.000047341.html" target="_blank" rel="noopener noreferrer">高丝战略品牌事业部</a>。</p><p><strong>来源</strong>：<a href="https://prtimes.jp/main/html/rd/p/000000171.000047341.html" target="_blank" rel="noopener noreferrer">高丝战略品牌事业部新闻稿：8月7日上市、SKU 与产品技术</a> ｜ <a href="https://prtimes.jp/main/html/rd/p/000000172.000047341.html" target="_blank" rel="noopener noreferrer">高丝活动素材：同系列图片</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/jill-stuart-blooming-chiffon.jpg" aria-label="放大查看 JILL STUART Blooming Chiffon 秋季系列"><img src="assets/jill-stuart-blooming-chiffon.jpg" alt="JILL STUART Blooming Chiffon 秋季系列" loading="lazy"></button><figcaption>JILL STUART Blooming Chiffon 秋季系列</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-7"><div class="rank"><b>#7</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>SNIDEL BEAUTY 发售「A Scoop of Joy」秋冬冰淇淋彩妆</h3><div class="report-body"><p>SNIDEL BEAUTY 于8月7日发售2026秋冬「A Scoop of Joy」系列，包含多用盘、蜜粉饼、润唇磨砂膏及刷具；系列以冰淇淋、甜薄荷香气和纸杯视觉为创意线索。</p></div><div class="signal"><strong>信号判断：</strong><p>时装品牌美妆线持续把食品灵感转化为包装、色彩与触感语言，强化季节新品的辨识度和收藏理由。</p></div><div class="sources"><p>△ 图片说明：SNIDEL BEAUTY 系列来源图；来源：<a href="https://bestcalendar.jp/press/144126" target="_blank" rel="noopener noreferrer">PLAZA 转载活动资料</a>。</p><p><strong>来源</strong>：<a href="https://weibo.com/1894047394/5326022910150207" target="_blank" rel="noopener noreferrer">品牌微博</a> ｜ <a href="https://bestcalendar.jp/press/144126" target="_blank" rel="noopener noreferrer">PLAZA 资料页</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/snidel-a-scoop-of-joy-source.webp" aria-label="放大查看 SNIDEL BEAUTY A Scoop of Joy"><img src="assets/snidel-a-scoop-of-joy-source.webp" alt="SNIDEL BEAUTY A Scoop of Joy" loading="lazy"></button><figcaption>SNIDEL BEAUTY A Scoop of Joy</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-8"><div class="rank"><b>#8</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>THREE 全国发售「SENSE OF THE SKY」秋季彩妆</h3><div class="report-body"><p>THREE 于8月7日全国发售2026秋季「SENSE OF THE SKY」，包括含美容液成分的唇蜜、乳霜粉体融合腮红及限定提亮液；系列以天竺葵精油和植物感官体验为卖点。</p></div><div class="signal"><strong>信号判断：</strong><p>精油、植物叙事与质地技术被组合为彩妆差异化表达，重点在妆效之外的感官记忆和使用体验。</p></div><div class="sources"><p>△ 图片说明：THREE 秋季系列来源图；来源：<a href="https://www.threecosmetics.com.tw/blogs/products/autumn_collection_2026" target="_blank" rel="noopener noreferrer">THREE</a>。</p><p><strong>来源</strong>：<a href="https://www.threecosmetics.com.tw/blogs/products/autumn_collection_2026" target="_blank" rel="noopener noreferrer">THREE 产品资料</a> ｜ <a href="https://tw.sendai.parco.jp/shopnews?id=107117" target="_blank" rel="noopener noreferrer">仙台 PARCO</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/three-sense-of-the-sky.png" aria-label="放大查看 THREE SENSE OF THE SKY 系列"><img src="assets/three-sense-of-the-sky.png" alt="THREE SENSE OF THE SKY 系列" loading="lazy"></button><figcaption>THREE SENSE OF THE SKY 系列</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-9"><div class="rank"><b>#9</b><span class="tag">其他动态·健康消费</span></div><div><p class="region-label"></p><h3>Lemme 发布首款 NAD+ 补充剂，计划8月11日开售</h3><div class="report-body"><p>Lemme 宣布以 NMN、白藜芦醇、亚精胺及叶黄素复配进入长寿营养品类。</p></div><div class="signal"><strong>信号判断：</strong><p>口服美容品牌向健康老化延伸，扩大了“美容”可覆盖的功能边界。<br><strong>来源</strong>：<a href="https://beautynewsdaily.com/beauty-notes-lemme-native-personal-day-icon-skincare/" target="_blank" rel="noopener noreferrer">BeautyNewsDaily</a></p></div><div class="sources"><p>△ 图片说明：报道配图；来源：<a href="https://beautynewsdaily.com/beauty-notes-lemme-native-personal-day-icon-skincare/" target="_blank" rel="noopener noreferrer">BeautyNewsDaily</a>。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/lemme-personal-day-source.jpg" aria-label="放大查看 Lemme 与 Personal Day 报道来源图"><img src="assets/lemme-personal-day-source.jpg" alt="Lemme 与 Personal Day 报道来源图" loading="lazy"></button><figcaption>Lemme 与 Personal Day 报道来源图</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-10"><div class="rank"><b>#10</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>Personal Day 推出 Overdew Barrier Cream</h3><div class="report-body"><p>演员 Lili Reinhart 创立的 Personal Day 推出主打痤疮肌友好、补水舒缓和屏障修护的面霜。</p></div><div class="signal"><strong>信号判断：</strong><p>围绕痤疮肌的基础保湿产品补齐了品牌的基础护肤组合。<br><strong>来源</strong>：<a href="https://beautynewsdaily.com/beauty-notes-lemme-native-personal-day-icon-skincare/" target="_blank" rel="noopener noreferrer">BeautyNewsDaily</a></p></div></div></article>
+<article class="card market-card reveal" id="item-11"><div class="rank"><b>#11</b><span class="tag">市场版图</span></div><div><p class="region-label"></p><h3>Icon Skincare 在英国 Victoria Health 上线</h3><div class="report-body"><p>iS Clinical 创始人推出的 Icon Skincare 在英国 Victoria Health 独家上线，产品围绕蜂王浆、蜂胶等成分展开。</p></div><div class="signal"><strong>信号判断：</strong><p>新品牌以零售商独家渠道切入英国，后续可关注独家期后的分销扩展。<br><strong>来源</strong>：[WorkBuddy 当日候选稿](/Users/ruixixi/Workbuddy/2026-06-25-14-42-34/美妆竞对情报日报_2026-08-08.md)</p></div></div></article>
+<article class="card channel-card reveal" id="item-12"><div class="rank"><b>#12</b><span class="tag">渠道生态</span></div><div><p class="region-label"></p><h3>FaceBar US 在加州开设旗舰工作室</h3><div class="report-body"><p>Mayra Veronica 创立的 FaceBar US 在 Westlake Village 开设旗舰工作室，并提供上门护肤服务。</p></div><div class="signal"><strong>信号判断：</strong><p>服务型空间与上门服务并行，强调高接触度体验，而非单纯零售上架。<br><strong>来源</strong>：[WorkBuddy 当日候选稿](/Users/ruixixi/Workbuddy/2026-06-25-14-42-34/美妆竞对情报日报_2026-08-08.md)</p></div></div></article>
+<article class="card brand-card reveal" id="item-13"><div class="rank"><b>#13</b><span class="tag">品牌动态</span></div><div><p class="region-label"></p><h3>MEDiLiA 上市；CurSmith 签约品牌大使；Native × Peanuts 推出秋季联名</h3><div class="report-body"><p>Liberta 推出独立包装高浓度美容液品牌 MEDiLiA；CurSmith 签约舞蹈创作者 Starr Kiely；Native 推出覆盖止汗、身体洗护、护发与手部护理的 Peanuts 秋季香氛联名。</p></div><div class="signal"><strong>信号判断：</strong><p>三条候选分别对应功效护肤、卷发社群运营与IP联名的常规经营动作，供持续跟踪。<br><strong>来源</strong>：[WorkBuddy 当日候选稿](/Users/ruixixi/Workbuddy/2026-06-25-14-42-34/美妆竞对情报日报_2026-08-08.md)</p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-03/">8/3<b>6</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-04/">8/4<b>6</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-05/">8/5<b>5</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-06/">8/6<b>5</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-08-07/">8/7<b>13</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
