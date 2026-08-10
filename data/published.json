@@ -1321,7 +1321,18 @@
       "categories": ["原料", "护肤", "彩妆", "香氛", "营养健康"],
       "channels": ["Target", "PLAZA", "英国零售", "旗舰工作室"],
       "event_types": ["上市公告", "行业会议", "联名", "新品", "渠道进入"],
-      "push": {"status": "disabled"}
+      "push": {
+        "status": "approved",
+        "heading": "8月7日重点",
+        "items": [
+          "珈凯生物披露北交所上市公告书，原料端研发与产能投入进入资本化观察窗口。",
+          "中国化妆品大会将技术创新、品牌叙事与全球化沟通放入同一议程。",
+          "e.l.f. Beauty×Bubble将护肤与彩妆组合为三款双效联名产品。",
+          "Rare Beauty、SNIDEL BEAUTY 与 THREE 集中推出香氛和秋季彩妆新品。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
     },
     {
       "kind": "daily",
@@ -1336,7 +1347,18 @@
       "categories": ["护肤", "洗护", "彩妆", "香氛"],
       "channels": ["Yan Lab", "大润发", "Shopee", "药妆店", "直营店"],
       "event_types": ["海外触点", "新品发布", "直播首发", "新品上市", "先行销售"],
-      "push": {"status": "disabled"}
+      "push": {
+        "status": "approved",
+        "heading": "8月8日重点",
+        "items": [
+          "伦敦 Yan Lab 以内容节目与线下集合空间承接多品牌海外体验。",
+          "飘柔在大润发举办青春焕发系列发布会，以商超场景组织新品体验。",
+          "欧莱雅巴黎在 Shopee 直播首发 Laque Resistance Nude Edition。",
+          "SOFINA BASIC+进入大众护肤价格带，ORBIS以限定瓶和会员机制先行销售。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
     },
     {
       "kind": "daily",
@@ -1351,7 +1373,17 @@
       "categories": ["防晒", "香氛", "护肤", "原料"],
       "channels": ["快闪店", "表参道", "线下体验"],
       "event_types": ["监管生效", "快闪收官", "市场测试"],
-      "push": {"status": "disabled"}
+      "push": {
+        "status": "approved",
+        "heading": "8月9日重点",
+        "items": [
+          "Bemotrizinol正式纳入美国OTC防晒专论，最高使用浓度为6%。",
+          "Jo Malone London以预约、社交互动与阶梯赠礼完成原宿快闪收官。",
+          "OXO Project以多品牌体验与生活方式课程测试护肤品牌的本地触点。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
     },
     {
       "kind": "daily",
