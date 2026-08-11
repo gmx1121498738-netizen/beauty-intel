@@ -1391,20 +1391,20 @@
       "title": "美妆竞对情报日报｜2026年8月10日",
       "source": "archive/日报/2026-08-10/beauty-daily-20260810.html",
       "pdf": "archive/日报/2026-08-10/beauty-daily-20260810.pdf",
-      "summary": "Nutrire 首进 Ulta、ReFa 旗舰店洗护先行上市及 Heroine Make 眼部组合更新",
-      "event_count": 3,
-      "dimensions": ["渠道生态", "品牌动态"],
-      "brands": ["Nutrire", "Ulta Beauty", "ReFa", "Heroine Make"],
-      "categories": ["头皮护理", "洗护", "眼部护理", "彩妆"],
-      "channels": ["Ulta.com", "Ulta Beauty", "ReFa GINZA", "日本全国零售"],
-      "event_types": ["零售首发", "先行上市", "新品上市", "包装更新"],
+      "summary": "HBN七周年、上美医研合作、ReFa洗护先行发售、Nutrire进驻Ulta及Kurly美妆大促",
+      "event_count": 14,
+      "dimensions": ["品牌动态", "渠道生态", "投融资"],
+      "brands": ["HBN", "摇滚动物园", "FanBeauty", "上美股份", "ReFa", "CPB", "IPSA", "Nutrire", "Jo Malone London", "Natura", "Kurly", "Aroma-Zone", "Heroine Make"],
+      "categories": ["护肤", "香氛护手", "底妆", "洗护", "头皮护理", "彩妆", "口服美容", "香氛", "DIY美妆"],
+      "channels": ["天猫旗舰店", "ReFa GINZA", "Ulta.com", "Ulta Beauty", "Fortnite", "Walmart", "Kurly"],
+      "event_types": ["品牌营销", "联名", "新品上市", "医研合作", "零售首发", "游戏体验", "大促", "并购洽谈", "包装更新"],
       "push": {
         "status": "approved",
         "heading": "8月10日重点",
         "items": [
-          "Nutrire 通过 Ulta.com 完成零售首发，8月23日起计划进入美国约250家 Ulta Beauty 门店。",
-          "ReFa 在银座旗舰店先行发售 HONEY QUEEN ROSE LINE，以抗毛躁和高保湿切入高端洗护。",
-          "Heroine Make 同日发售眼霜并更新液体眼线笔包装，补齐眼周护理与眼妆组合。"
+          "HBN七周年主题短片与联名礼盒上线；上美股份披露与南方医科大学皮肤病医院的战略合作。",
+          "ReFa在银座旗舰店先行发售HONEY QUEEN ROSE LINE；Nutrire通过Ulta.com完成零售首发，8月23日起计划进入约250家门店。",
+          "Kurly启动覆盖超万款产品的美妆大促；Heroine Make同日上新眼霜并更新液体眼线笔包装。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
