@@ -1387,6 +1387,31 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-10",
+      "title": "美妆竞对情报日报｜2026年8月10日",
+      "source": "archive/日报/2026-08-10/beauty-daily-20260810.html",
+      "pdf": "archive/日报/2026-08-10/beauty-daily-20260810.pdf",
+      "summary": "Nutrire 首进 Ulta、ReFa 旗舰店洗护先行上市及 Heroine Make 眼部组合更新",
+      "event_count": 3,
+      "dimensions": ["渠道生态", "品牌动态"],
+      "brands": ["Nutrire", "Ulta Beauty", "ReFa", "Heroine Make"],
+      "categories": ["头皮护理", "洗护", "眼部护理", "彩妆"],
+      "channels": ["Ulta.com", "Ulta Beauty", "ReFa GINZA", "日本全国零售"],
+      "event_types": ["零售首发", "先行上市", "新品上市", "包装更新"],
+      "push": {
+        "status": "approved",
+        "heading": "8月10日重点",
+        "items": [
+          "Nutrire 通过 Ulta.com 完成零售首发，8月23日起计划进入美国约250家 Ulta Beauty 门店。",
+          "ReFa 在银座旗舰店先行发售 HONEY QUEEN ROSE LINE，以抗毛躁和高保湿切入高端洗护。",
+          "Heroine Make 同日发售眼霜并更新液体眼线笔包装，补齐眼周护理与眼妆组合。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-06",
       "title": "美妆竞对情报日报｜2026年8月6日",
       "source": "archive/日报/2026-08-06/beauty-daily-20260806.html",
