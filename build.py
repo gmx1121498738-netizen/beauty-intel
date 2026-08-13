@@ -255,6 +255,15 @@ def decorate_report(
             count=1,
             flags=re.I,
         )
+    if pdf_href:
+        # Source daily HTML carries a relative download link. Once placed under
+        # /daily/YYYY-MM-DD/, that path would no longer resolve to /pdf/.
+        source_html = re.sub(
+            r'(<a\b(?=[^>]*\bdownload\b)[^>]*\bhref=["\'])[^"\']+\.pdf(["\'])',
+            lambda match: match.group(1) + pdf_href + match.group(2),
+            source_html,
+            flags=re.I,
+        )
     shell_link = f'<link rel="stylesheet" href="{site_url("assets/site-shell.css", base_path)}" />'
     if "site-shell.css" not in source_html:
         source_html = re.sub(r"</head>", shell_link + "\n</head>", source_html, count=1, flags=re.I)

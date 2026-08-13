@@ -214,7 +214,7 @@ class SiteBuildTests(unittest.TestCase):
         build.build_site(ROOT, self.output)
         daily = (self.output / "daily/2026-07-14/index.html").read_text(encoding="utf-8")
         self.assertIn("导出 PDF", daily)
-        self.assertIn("/pdf/beauty-daily-20260714.pdf", daily)
+        self.assertIn('href="/pdf/beauty-daily-20260714.pdf"', daily)
         self.assertTrue((self.output / "pdf/beauty-daily-20260714.pdf").is_file())
 
     def test_search_page_contains_only_published_reports(self):
