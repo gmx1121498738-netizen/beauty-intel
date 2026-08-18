@@ -2,6 +2,106 @@
   "reports": [
     {
       "kind": "daily",
+      "date": "2026-08-16",
+      "title": "美妆竞对情报日报｜2026年8月16日",
+      "source": "archive/日报/2026-08-16/beauty-daily-20260816.html",
+      "pdf": "archive/日报/2026-08-16/beauty-daily-20260816.pdf",
+      "summary": "Ulta与Target合作收口、香港百货会员节点与美妆AI能力开放",
+      "event_count": 3,
+      "dimensions": ["渠道生态", "其他动态"],
+      "brands": ["Ulta Beauty", "Target", "Lane Crawford", "Perfect Corp"],
+      "categories": ["高端美妆零售", "会员运营", "美妆AI"],
+      "channels": ["Target", "Ulta Beauty", "连卡佛门店", "API"],
+      "event_types": ["合作终止", "会员计划", "技术竞赛"],
+      "push": {
+        "status": "approved",
+        "heading": "8月16日重点",
+        "items": [
+          "Ulta Beauty at Target 合作正式结束，积分获取与 Target Circle—Ulta Beauty Rewards 账户关联同步退出。",
+          "Target Beauty Studio 计划今秋进入600多家门店及线上，品牌需重新评估 Target 的高端美妆陈列、服务和会员触达。",
+          "连卡佛三店美妆电子印花计划到期；Perfect Corp 全球美妆与皮肤 AI 应用黑客松完成截稿。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-15",
+      "title": "美妆竞对情报日报｜2026年8月15日",
+      "source": "archive/日报/2026-08-15/beauty-daily-20260815.html",
+      "pdf": "archive/日报/2026-08-15/beauty-daily-20260815.pdf",
+      "summary": "日本IP护肤与大众彩妆、美国明星香水和澳洲专业美业展",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["MISSHA", "DAISY DOLL", "Scent Beauty", "Megan Moroney"],
+      "categories": ["功效护肤", "彩妆", "香氛", "专业美容"],
+      "channels": ["日本药妆", "Walmart", "CVS", "Beauty Expo Australia"],
+      "event_types": ["限定包装", "新色追加", "线下上市", "专业展会"],
+      "push": {
+        "status": "approved",
+        "heading": "8月15日重点",
+        "items": [
+          "MISSHA 在日本以三丽鸥角色包装限量发售两款功效精华，并进入杂货店、药妆店和官方线上渠道。",
+          "Scent Beauty 将 Megan Moroney 首款香水 Calliope 同步导入 Walmart、JCPenney、CVS、Urban Outfitters 等零售网点。",
+          "DAISY DOLL 为既有腮红系列追加3款新色；Beauty Expo Australia 在悉尼开幕，面向专业买家、沙龙与诊所经营者。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-14",
+      "title": "美妆竞对情报日报｜2026年8月14日",
+      "source": "archive/日报/2026-08-14/beauty-daily-20260814.html",
+      "pdf": "archive/日报/2026-08-14/beauty-daily-20260814.pdf",
+      "summary": "Olive Young美国体验节、男士香氛、限定彩妆与美妆社群报名",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["Olive Young", "Sol de Janeiro", "Dior", "Mimi Beauty"],
+      "categories": ["K-Beauty", "男士香氛", "限定彩妆", "美妆社群"],
+      "channels": ["KCON LA", "Sephora", "日本全国门店", "线下课程"],
+      "event_types": ["体验节", "门店首发", "全国上市", "报名启动"],
+      "push": {
+        "status": "approved",
+        "heading": "8月14日重点",
+        "items": [
+          "Olive Young FESTA LA 开幕，55个韩国美妆及生活方式品牌以 KCON 场景触达美国消费者。",
+          "Sol de Janeiro 在 Sephora 指定门店启动首个男士香氛 Cheiroso Cologne Mist 的线下触达，8月21日完成全门店覆盖。",
+          "迪奥日本全国发售 Lucky Clover 限定彩妆；Mimi Beauty 开启品牌协办美妆课程第二轮报名。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-13",
+      "title": "美妆竞对情报日报｜2026年8月13日",
+      "source": "archive/日报/2026-08-13/beauty-daily-20260813.html",
+      "pdf": "archive/日报/2026-08-13/beauty-daily-20260813.pdf",
+      "summary": "PCHi功效研发议程、香港消费展与Ulta线下新品体验",
+      "event_count": 3,
+      "dimensions": ["监管与合规", "品牌动态", "渠道生态"],
+      "brands": ["PCHi", "Revolution Beauty"],
+      "categories": ["精准护肤", "头皮护理", "底妆", "跨境零售"],
+      "channels": ["PCHi", "香港会展", "Ulta Beauty"],
+      "event_types": ["技术峰会", "消费展", "新品体验"],
+      "push": {
+        "status": "approved",
+        "heading": "8月13日重点",
+        "items": [
+          "PCHi Technology Summit 在广州结束，两日议程将循证功效、精准/个性化护肤及头皮“护肤化”纳入研发讨论。",
+          "HKTDC Beauty & Wellness Expo 在香港开幕，为美妆、护发、个护与健康品类提供五日消费端展示窗口。",
+          "Revolution Beauty 在纽约 Ulta 以试妆、礼赠和达人见面会启动 Superfix 粉底的线下新品触达。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-12",
       "title": "美妆竞对情报日报｜2026年8月12日",
       "source": "archive/日报/2026-08-12/beauty-daily-20260812.html",
