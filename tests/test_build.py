@@ -199,6 +199,16 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn("2026-08-16", home)
         self.assertIn("beauty-daily-20260816", home)
 
+    def test_detailed_daily_dimensions_keep_base_card_metadata(self):
+        self.assertIsNotNone(build, "site/build.py must exist")
+        build.build_site(ROOT, self.output)
+        daily = (self.output / "daily/2026-08-16/index.html").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn('class="card channel-card reveal"', daily)
+        self.assertIn('class="stat channel-stat"><small>渠道生态</small><strong>2</strong>', daily)
+        self.assertIn('<span class="tag">渠道生态</span>', daily)
+
     def test_github_pages_build_uses_repository_base_path_and_keeps_home_images(self):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output, base_path="/beauty-intel")
