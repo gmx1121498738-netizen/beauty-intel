@@ -2,6 +2,23 @@
   "reports": [
     {
       "kind": "daily",
+      "date": "2026-08-19",
+      "title": "美妆竞对情报日报｜2026年8月19日",
+      "source": "archive/日报/2026-08-19/beauty-daily-20260819.html",
+      "pdf": "archive/日报/2026-08-19/beauty-daily-20260819.pdf",
+      "summary": "上美盈利预警、FAS底妆扩展与百货美妆会员联动",
+      "event_count": 10,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "监管与原料"],
+      "brands": ["上美股份", "FAS", "大丸松坂屋", "L'Oréal Paris", "CHANEL", "SENSAI", "ETVOS", "keenoniks", "Ice Spice"],
+      "categories": ["业绩预警", "底妆", "香水", "高端护肤", "原料创新"],
+      "channels": ["阪急梅田", "DEPACO", "Ulta Beauty", "TikTok Shop", "@cosme OSAKA"],
+      "event_types": ["盈利警告", "先行发售", "会员活动", "全球大使", "香水首发", "原料品鉴会"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-16",
       "title": "美妆竞对情报日报｜2026年8月16日",
       "source": "archive/日报/2026-08-16/beauty-daily-20260816.html",
