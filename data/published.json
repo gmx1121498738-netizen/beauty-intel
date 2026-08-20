@@ -1375,6 +1375,56 @@
     },
     {
       "kind": "weekly",
+      "week": "2026-W34",
+      "title": "美妆行业洞察 2026年第34周（8/10-8/16）",
+      "source": "archive/周报/2026-W34/beauty-insights-2026w34.html",
+      "pdf": "archive/周报/2026-W34/beauty-insights-2026w34-0810-0816.pdf",
+      "summary": "原料资本化、美国专业零售重排、跨境体验与包装合规前置",
+      "dimensions": [
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "监管与原料"
+      ],
+      "brands": [
+        "珈凯生物",
+        "上美股份",
+        "newpage 一页",
+        "Ulta Beauty",
+        "Target",
+        "Medik8",
+        "Olive Young",
+        "BASF"
+      ],
+      "categories": [
+        "功效原料",
+        "婴童护肤",
+        "临床护肤",
+        "高端美妆零售",
+        "防晒",
+        "包装"
+      ],
+      "channels": [
+        "北交所",
+        "Target",
+        "Ulta Beauty",
+        "Sephora",
+        "KCON LA"
+      ],
+      "event_types": [
+        "上市",
+        "增持",
+        "渠道调整",
+        "渠道首发",
+        "出海",
+        "监管"
+      ],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "weekly",
       "week": "2026-W33",
       "title": "美妆行业洞察 2026年第33周（8/3-8/9）",
       "source": "archive/周报/2026-W33/beauty-insights-2026w33.html",
