@@ -252,7 +252,7 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         data = json.loads((ROOT / "site/data/published.json").read_text(encoding="utf-8"))
         reports = build.validate_manifest(data, ROOT)
-        self.assertEqual(len(reports), 43)
+        self.assertEqual(len(reports), 45)
 
 
 if __name__ == "__main__":

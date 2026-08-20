@@ -19,6 +19,40 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-18",
+      "title": "美妆竞对情报日报｜2026年8月18日",
+      "source": "archive/日报/2026-08-18/beauty-daily-20260818.html",
+      "pdf": "archive/日报/2026-08-18/beauty-daily-20260818.pdf",
+      "summary": "Grupo Boticário门店AI肤测全国部署、ALBION护肤化底妆与KATE×USJ渠道启动",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["Grupo Boticário", "Haut.AI", "ALBION", "KATE"],
+      "categories": ["AI肤测", "底妆", "彩妆"],
+      "channels": ["O Boticário门店", "店头", "线上", "USJ"],
+      "event_types": ["全国部署", "新品上市", "渠道启动"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-17",
+      "title": "美妆竞对情报日报｜2026年8月17日",
+      "source": "archive/日报/2026-08-17/beauty-daily-20260817.html",
+      "pdf": "archive/日报/2026-08-17/beauty-daily-20260817.pdf",
+      "summary": "Dr.Ci:Labo日常角质管理精华上市与SHISEIDO全国试用传播",
+      "event_count": 2,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["Dr.Ci:Labo", "SHISEIDO"],
+      "categories": ["功效护肤", "精华"],
+      "channels": ["全国派样", "线下体验"],
+      "event_types": ["新品上市", "试用传播"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-16",
       "title": "美妆竞对情报日报｜2026年8月16日",
       "source": "archive/日报/2026-08-16/beauty-daily-20260816.html",
