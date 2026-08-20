@@ -14,7 +14,13 @@
       "channels": ["阪急梅田", "DEPACO", "Ulta Beauty", "TikTok Shop", "@cosme OSAKA"],
       "event_types": ["盈利警告", "先行发售", "会员活动", "全球大使", "香水首发", "原料品鉴会"],
       "push": {
-        "status": "disabled"
+        "status": "disabled",
+        "stage_items": [
+          "上美股份盈利警告：预计上半年收入37.18亿至37.59亿元、利润1.2亿至1.3亿元，韩束收入与毛利承压，增长质量需持续跟踪。",
+          "FAS在阪急梅田先行发售精华粉底与粉饼，以高端百货快闪验证发酵护肤向底妆扩展的色号、试妆和套装转化。",
+          "大丸松坂屋以14店美妆交易、DEPACO内容电商和会员积分券联动，拉通到店消费与自营线上账户。",
+          "Revlon香水在Ulta线上首发并承接TikTok Shop预热；ETVOS、keenoniks分别以百货先行和@cosme快闪测试线下体验转化。"
+        ]
       }
     },
     {
@@ -31,7 +37,12 @@
       "channels": ["O Boticário门店", "店头", "线上", "USJ"],
       "event_types": ["全国部署", "新品上市", "渠道启动"],
       "push": {
-        "status": "disabled"
+        "status": "disabled",
+        "stage_items": [
+          "Grupo Boticário将Haut.AI肤测推荐由24家试点店扩展至巴西约4,000家O Boticário门店，数字诊断进入美容顾问的标准服务流程。",
+          "ALBION推出兼具日间乳液属性的8色底妆和水光高光棒，以护理叙事强化底妆的肤感与使用步骤差异。",
+          "KATE先启动USJ联动限定Lip Monster的店头及线上铺货，再衔接快闪和乐园内容，拉长IP合作的购买与体验链路。"
+        ]
       }
     },
     {
@@ -48,7 +59,11 @@
       "channels": ["全国派样", "线下体验"],
       "event_types": ["新品上市", "试用传播"],
       "push": {
-        "status": "disabled"
+        "status": "disabled",
+        "stage_items": [
+          "Dr.Ci:Labo在日本上市可每日使用的角质管理精华，将曼德酸、葡糖酸内酯等成分嵌入“洁面后—VC100精华水前”的固定护理顺序。",
+          "SHISEIDO围绕Ultimune在东京、大阪、福冈设置6处体验活动，并在全国开展派样，以线下上脸体验承接大单品复购与客群扩展。"
+        ]
       }
     },
     {
@@ -1425,8 +1440,7 @@
         "items": [
           "珈凯生物挂牌、上美股份增持newpage 一页，功效原料与婴童敏感肌资产同步进入更强的资源配置阶段。",
           "Ulta Beauty at Target合作终止，Target筹备Beauty Studio；Medik8上线Sephora北美网站，美国专业美妆零售入口正在重排。",
-          "Olive Young首次在美国举办FESTA，PPWR开始适用、Tinosorb S进入美国供应，跨境体验与新品合规需要一并纳入经营排期。",
-          "本周截至8月19日：上美股份盈利预警显示韩束收入承压；Grupo Boticário扩大门店AI肤测部署，大丸松坂屋联动14店与DEPACO会员体系。"
+          "Olive Young首次在美国举办FESTA，PPWR开始适用、Tinosorb S进入美国供应，跨境体验与新品合规需要一并纳入经营排期。"
         ],
         "detail_label": "查看完整周报"
       }

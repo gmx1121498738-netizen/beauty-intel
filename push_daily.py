@@ -225,6 +225,68 @@ def build_weekly_card(report: dict, base_url: str) -> dict:
     }
 
 
+def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) -> dict:
+    """Build one card that keeps the weekly and each daily update distinct."""
+    year, week_number = weekly["week"].split("-W", 1)
+    weekly_items = weekly["push"]["items"]
+    elements = [
+        {
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": "**周报｜%s年第%s周**\n%s"
+                % (
+                    year,
+                    int(week_number),
+                    "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(weekly_items, 1)),
+                ),
+            },
+        },
+        {
+            "tag": "action",
+            "actions": [
+                {
+                    "tag": "button",
+                    "type": "primary",
+                    "text": {"tag": "plain_text", "content": "查看完整周报"},
+                    "url": weekly_report_url(base_url, weekly["week"]),
+                }
+            ],
+        },
+    ]
+    for report in dailies:
+        report_date = datetime.strptime(report["date"], "%Y-%m-%d")
+        items = report.get("push", {}).get("stage_items", report.get("push", {}).get("items", []))
+        if not items:
+            raise ValueError(f"No stage-update items for {report['date']}")
+        lines = "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(items, 1))
+        elements.extend([
+            {
+                "tag": "div",
+                "text": {
+                    "tag": "lark_md",
+                    "content": f"**{report_date.month}月{report_date.day}日日报**\n{lines}",
+                },
+            },
+            {
+                "tag": "action",
+                "actions": [
+                    {
+                        "tag": "button",
+                        "type": "primary",
+                        "text": {"tag": "plain_text", "content": f"查看{report_date.month}月{report_date.day}日日报"},
+                        "url": report_url(base_url, report["date"]),
+                    }
+                ],
+            },
+        ])
+    return {
+        "config": {"wide_screen_mode": True},
+        "header": {"template": "blue", "title": {"tag": "plain_text", "content": "美妆情报Bot｜阶段更新"}},
+        "elements": elements,
+    }
+
+
 def feishu_signature(timestamp: str, secret: str) -> str:
     string_to_sign = f"{timestamp}\n{secret}"
     digest = hmac.new(

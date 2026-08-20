@@ -94,6 +94,41 @@ class ReportSelectionTests(unittest.TestCase):
 
 
 class FeishuCardTests(unittest.TestCase):
+    def test_stage_update_card_keeps_weekly_and_each_daily_summary_separate(self):
+        weekly = make_weekly_report(items=["周报主线一", "周报主线二"])
+        dailies = [
+            make_report("2026-08-17", items=["17日重点一", "17日重点二"]),
+            make_report("2026-08-18", items=["18日重点一", "18日重点二"]),
+            make_report("2026-08-19", items=["19日重点一", "19日重点二"]),
+        ]
+
+        card = push_daily.build_stage_update_card(
+            weekly,
+            dailies,
+            "https://gmx1121498738-netizen.github.io/beauty-intel",
+        )
+
+        self.assertEqual(card["header"]["title"]["content"], "美妆情报Bot｜阶段更新")
+        content = "\n".join(
+            element["text"]["content"]
+            for element in card["elements"]
+            if element["tag"] == "div"
+        )
+        self.assertIn("**周报｜2026年第30周**", content)
+        self.assertIn("周报主线一", content)
+        for day, text in (("8月17日", "17日重点一"), ("8月18日", "18日重点一"), ("8月19日", "19日重点一")):
+            self.assertIn(f"**{day}日报**", content)
+            self.assertIn(text, content)
+
+        self.assertEqual(len(card["elements"]), 8)
+        urls = [element["actions"][0]["url"] for element in card["elements"] if element["tag"] == "action"]
+        self.assertEqual(urls[0], "https://gmx1121498738-netizen.github.io/beauty-intel/weekly/2026-W30/")
+        self.assertEqual(urls[1:], [
+            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-17/",
+            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-18/",
+            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-19/",
+        ])
+
     def test_weekly_card_uses_weekly_route_and_reviewed_button_label(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         card = push_daily.build_weekly_card(
