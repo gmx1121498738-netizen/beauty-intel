@@ -1420,7 +1420,15 @@
         "监管"
       ],
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "阶段更新｜8月10—16日",
+        "items": [
+          "珈凯生物挂牌、上美股份增持newpage 一页，功效原料与婴童敏感肌资产同步进入更强的资源配置阶段。",
+          "Ulta Beauty at Target合作终止，Target筹备Beauty Studio；Medik8上线Sephora北美网站，美国专业美妆零售入口正在重排。",
+          "Olive Young首次在美国举办FESTA，PPWR开始适用、Tinosorb S进入美国供应，跨境体验与新品合规需要一并纳入经营排期。",
+          "本周截至8月19日：上美股份盈利预警显示韩束收入承压；Grupo Boticário扩大门店AI肤测部署，大丸松坂屋联动14店与DEPACO会员体系。"
+        ],
+        "detail_label": "查看完整周报"
       }
     },
     {
