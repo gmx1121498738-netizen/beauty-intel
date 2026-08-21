@@ -2,6 +2,32 @@
   "reports": [
     {
       "kind": "daily",
+      "date": "2026-08-20",
+      "title": "美妆竞对情报日报｜2026年8月20日",
+      "source": "archive/日报/2026-08-20/beauty-daily-20260820.html",
+      "pdf": "archive/日报/2026-08-20/beauty-daily-20260820.pdf",
+      "summary": "国货中期业绩分化、Olive Young×Sephora美国首发与国际集团品牌组合调整",
+      "event_count": 12,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["上海家化", "敷尔佳", "巨子生物", "Olive Young", "Sephora", "Coty", "雅诗兰黛", "Tower 28", "Lush", "HABA", "pdc", "ROAlív", "ORBIS"],
+      "categories": ["中期业绩", "K-Beauty", "高端香氛", "敏感肌底妆", "节日限定", "护肤新品", "护发"],
+      "channels": ["Sephora", "Sephora.com", "Times Square", "ShopHABA", "官方线上", "日本门店"],
+      "event_types": ["业绩沟通会", "业绩披露", "渠道合作", "线上发售", "限量上市"],
+      "push": {
+        "status": "approved",
+        "heading": "8月20日重点",
+        "items": [
+          "上海家化在业绩沟通会上披露，上半年营收37.91亿元、归母净利润3.81亿元；线上收入同比增长超过40%，核心品牌及单品运营进入验证期。",
+          "敷尔佳、巨子生物中期业绩呈现增长质量分化：前者营收增长但扣非利润趋平，后者收入与利润承压，渠道和新品结构仍需跟踪。",
+          "Olive Young与Sephora在美国启动首个联合市场，19个韩国美妆品牌进入500余家门店、Sephora.com及时代广场旗舰店专区。",
+          "雅诗兰黛FY26新增Jo Malone London与TOM FORD两个十亿美元品牌；Coty FY26业绩电话会同步更新国际集团的品牌组合信号。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-19",
       "title": "美妆竞对情报日报｜2026年8月19日",
       "source": "archive/日报/2026-08-19/beauty-daily-20260819.html",

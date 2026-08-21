@@ -196,8 +196,13 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         build.build_site(ROOT, self.output)
         home = (self.output / "index.html").read_text(encoding="utf-8")
-        self.assertIn("2026-08-19", home)
-        self.assertIn("beauty-daily-20260819", home)
+        reports = build.load_manifest(ROOT)
+        latest = max(
+            (report for report in reports if report["kind"] == "daily"),
+            key=lambda report: report["date"],
+        )
+        self.assertIn(latest["date"], home)
+        self.assertIn(Path(latest["source"]).stem, home)
 
     def test_detailed_daily_dimensions_keep_base_card_metadata(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -217,7 +222,14 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIn('href="/beauty-intel/calendar/"', home)
         self.assertIn('href="/beauty-intel/pdf/beauty-daily-20260714.pdf"', daily)
         self.assertIn('href="/beauty-intel/assets/site-shell.css"', daily)
-        self.assertTrue((self.output / "assets/shangmei_profit_warning_1.jpg").is_file())
+        reports = build.load_manifest(ROOT)
+        latest = max(
+            (report for report in reports if report["kind"] == "daily"),
+            key=lambda report: report["date"],
+        )
+        latest_assets = (ROOT / latest["source"]).parent / "assets"
+        self.assertTrue(latest_assets.is_dir())
+        self.assertTrue(any((self.output / "assets" / asset.name).is_file() for asset in latest_assets.iterdir() if asset.is_file()))
 
     def test_published_daily_copies_the_confirmed_pdf_and_shows_export_link(self):
         self.assertIsNotNone(build, "site/build.py must exist")
@@ -252,7 +264,8 @@ class SiteBuildTests(unittest.TestCase):
         self.assertIsNotNone(build, "site/build.py must exist")
         data = json.loads((ROOT / "site/data/published.json").read_text(encoding="utf-8"))
         reports = build.validate_manifest(data, ROOT)
-        self.assertEqual(len(reports), 46)
+        self.assertEqual(len(reports), len(data["reports"]))
+        self.assertGreater(len(reports), 0)
 
 
 if __name__ == "__main__":
