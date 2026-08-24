@@ -2,6 +2,82 @@
   "reports": [
     {
       "kind": "daily",
+      "date": "2026-08-23",
+      "title": "美妆竞对情报日报｜2026年8月23日",
+      "source": "archive/日报/2026-08-23/beauty-daily-20260823.html",
+      "pdf": "archive/日报/2026-08-23/beauty-daily-20260823.pdf",
+      "summary": "夸迪新品线下首发、首尔美容周出海平台与Ulta实体门店新品推进",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["夸迪", "Clarins", "e.l.f.", "Revlon", "Ice Spice"],
+      "categories": ["抗老精华", "高端护肤", "润唇膏", "香水", "K-Beauty"],
+      "channels": ["华熙LIVE", "首尔美容周", "Ulta Beauty", "TikTok Shop"],
+      "event_types": ["新品发布", "线下首发", "全球代言", "贸易展", "实体铺货"],
+      "push": {
+        "status": "disabled",
+        "stage_items": [
+          "夸迪在北京线下首发“注光瓶”精华，以“失光型初老”建立抗老新品的细分传播入口。",
+          "首尔美容周启动贸易展，152家企业计划与115家全球买家开展对接。",
+          "e.l.f.与Revlon分别将话题润唇膏和明星香水推进至全美Ulta实体门店。"
+        ]
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-22",
+      "title": "美妆竞对情报日报｜2026年8月22日",
+      "source": "archive/日报/2026-08-22/beauty-daily-20260822.html",
+      "pdf": "archive/日报/2026-08-22/beauty-daily-20260822.pdf",
+      "summary": "C咖实体零售互动、KiSS品牌焕新快闪与专业沙龙彩妆上新",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["C咖", "KiSS", "CP Cosmetics"],
+      "categories": ["油皮护肤", "彩妆", "专业沙龙"],
+      "channels": ["三福门店", "WITH HARAJUKU", "CP Salon"],
+      "event_types": ["门店互动", "品牌快闪", "新品上市"],
+      "push": {
+        "status": "approved",
+        "heading": "8月22日重点",
+        "items": [
+          "C咖在杭州三福门店以限期消费权益承接一日店长互动，测试线上起量品牌的实体零售转化链路。",
+          "KiSS 在原宿以试用、派样和社媒任务预热焕新后新品；CP Cosmetics 同日向专业沙龙网络上新秋季彩妆。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报",
+        "stage_items": [
+          "C咖在杭州三福门店以限期消费权益承接一日店长互动，测试线上起量品牌的实体零售转化链路。",
+          "KiSS在原宿通过试用、派样和社媒任务预热焕新后新品；CP Cosmetics在专业沙龙网络上新秋季彩妆。"
+        ]
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-21",
+      "title": "美妆竞对情报日报｜2026年8月21日",
+      "source": "archive/日报/2026-08-21/beauty-daily-20260821.html",
+      "pdf": "archive/日报/2026-08-21/beauty-daily-20260821.pdf",
+      "summary": "上美印尼工厂奠基，国货美妆出海进入本地制造与区域供应链阶段",
+      "event_count": 1,
+      "dimensions": ["市场版图"],
+      "brands": ["上美股份", "SCC"],
+      "categories": ["海外供应链", "本地制造"],
+      "channels": ["印尼肯德尔经济特区"],
+      "event_types": ["工厂奠基", "海外产能布局"],
+      "push": {
+        "status": "approved",
+        "heading": "8月21日重点",
+        "items": [
+          "上美股份在印尼肯德尔经济特区启动 SCC 工厂建设，一期规划日产能50万瓶，目标于2027年7月投产。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报",
+        "stage_items": [
+          "上美股份在印尼肯德尔经济特区启动SCC工厂建设，一期规划日产能50万瓶，目标于2027年7月投产。"
+        ]
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-20",
       "title": "美妆竞对情报日报｜2026年8月20日",
       "source": "archive/日报/2026-08-20/beauty-daily-20260820.html",
@@ -55,16 +131,25 @@
       "title": "美妆竞对情报日报｜2026年8月18日",
       "source": "archive/日报/2026-08-18/beauty-daily-20260818.html",
       "pdf": "archive/日报/2026-08-18/beauty-daily-20260818.pdf",
-      "summary": "Grupo Boticário门店AI肤测全国部署、ALBION护肤化底妆与KATE×USJ渠道启动",
-      "event_count": 3,
+      "summary": "国内线下渠道与国货美妆出海、门店AI肤测及护肤化底妆",
+      "event_count": 4,
       "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["Grupo Boticário", "Haut.AI", "ALBION", "KATE"],
-      "categories": ["AI肤测", "底妆", "彩妆"],
-      "channels": ["O Boticário门店", "店头", "线上", "USJ"],
-      "event_types": ["全国部署", "新品上市", "渠道启动"],
+      "brands": ["Grupo Boticário", "Haut.AI", "ALBION", "KATE", "化妆品（中国）百强连锁会议"],
+      "categories": ["AI肤测", "底妆", "彩妆", "线下零售", "美妆出海"],
+      "channels": ["成都龙之梦大酒店", "O Boticário门店", "店头", "线上", "USJ"],
+      "event_types": ["行业会议", "全国部署", "新品上市", "渠道启动"],
       "push": {
-        "status": "disabled",
+        "status": "approved",
+        "heading": "8月18日重点",
+        "items": [
+          "成都百强连锁会议将线下价格体系、品牌出海和跨境合规纳入同一行业议程。",
+          "Grupo Boticário 把 Haut.AI 肤测推荐由试点店扩展至巴西约4,000家门店，数字诊断进入标准服务流程。",
+          "ALBION 与 KATE 分别以护肤化底妆和IP联动铺货，强化体验与购买链路。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报",
         "stage_items": [
+          "成都百强连锁会议将线下价格体系、品牌出海和跨境合规纳入同一行业议程。",
           "Grupo Boticário将Haut.AI肤测推荐由24家试点店扩展至巴西约4,000家O Boticário门店，数字诊断进入美容顾问的标准服务流程。",
           "ALBION推出兼具日间乳液属性的8色底妆和水光高光棒，以护理叙事强化底妆的肤感与使用步骤差异。",
           "KATE先启动USJ联动限定Lip Monster的店头及线上铺货，再衔接快闪和乐园内容，拉长IP合作的购买与体验链路。"
@@ -77,16 +162,25 @@
       "title": "美妆竞对情报日报｜2026年8月17日",
       "source": "archive/日报/2026-08-17/beauty-daily-20260817.html",
       "pdf": "archive/日报/2026-08-17/beauty-daily-20260817.pdf",
-      "summary": "Dr.Ci:Labo日常角质管理精华上市与SHISEIDO全国试用传播",
-      "event_count": 2,
+      "summary": "闻献高端香氛全球代言、日常角质管理新品与高端精华全国试用",
+      "event_count": 3,
       "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["Dr.Ci:Labo", "SHISEIDO"],
-      "categories": ["功效护肤", "精华"],
+      "brands": ["闻献 DOCUMENTS", "龟宝香居", "Dr.Ci:Labo", "SHISEIDO"],
+      "categories": ["高端香氛", "功效护肤", "精华"],
       "channels": ["全国派样", "线下体验"],
-      "event_types": ["新品上市", "试用传播"],
+      "event_types": ["全球代言", "新品上市", "试用传播"],
       "push": {
-        "status": "disabled",
+        "status": "approved",
+        "heading": "8月17日重点",
+        "items": [
+          "闻献 DOCUMENTS 与龟宝香居官宣朱一龙出任全球品牌代言人，合作将延展至产品创作、品牌内容与线下空间。",
+          "Dr.Ci:Labo 在日本推出可每日使用的角质管理精华，将酸类护理嵌入固定的日常护肤顺序。",
+          "SHISEIDO 以六城体验活动和全国派样承接 Ultimune 复购与客群扩展。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报",
         "stage_items": [
+          "闻献DOCUMENTS与龟宝香居官宣朱一龙出任全球品牌代言人，后续合作将覆盖产品创作、品牌内容与线下空间。",
           "Dr.Ci:Labo在日本上市可每日使用的角质管理精华，将曼德酸、葡糖酸内酯等成分嵌入“洁面后—VC100精华水前”的固定护理顺序。",
           "SHISEIDO围绕Ultimune在东京、大阪、福冈设置6处体验活动，并在全国开展派样，以线下上脸体验承接大单品复购与客群扩展。"
         ]
