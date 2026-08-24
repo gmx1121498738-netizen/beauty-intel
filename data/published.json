@@ -14,7 +14,7 @@
       "channels": ["华熙LIVE", "首尔美容周", "Ulta Beauty", "TikTok Shop"],
       "event_types": ["新品发布", "线下首发", "全球代言", "贸易展", "实体铺货"],
       "push": {
-        "status": "disabled",
+        "status": "approved",
         "stage_items": [
           "夸迪在北京线下首发“注光瓶”精华，以“失光型初老”建立抗老新品的细分传播入口。",
           "首尔美容周启动贸易展，152家企业计划与115家全球买家开展对接。",

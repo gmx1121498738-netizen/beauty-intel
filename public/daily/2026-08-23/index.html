@@ -1,0 +1,585 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年8月23日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a><a class="site-pdf-export" href="/beauty-intel/pdf/beauty-daily-20260823.pdf" download>导出 PDF</a></nav>
+<!-- Published source: archive/日报/2026-08-23/beauty-daily-20260823.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第34周 · 8月23日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a><a href="/beauty-intel/pdf/beauty-daily-20260823.pdf" download>下载PDF</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>8月23日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>夸迪新品线下首发、首尔美容周出海平台，以及Ulta实体门店新品推进</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>5</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>2</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>1</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>2</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>品牌动态</span><b>01</b></a><a href="#item-2"><span>市场版图</span><b>02</b></a><a href="#item-3"><span>品牌动态</span><b>03</b></a><a href="#item-4"><span>渠道生态</span><b>04</b></a><a href="#item-5"><span>渠道生态</span><b>05</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card brand-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">品牌动态</span></div><div><p class="region-label">国内</p><h3>夸迪在北京发布“注光瓶”精华，以线粒体概念切入“失光型初老”（B级）</h3><div class="report-body"><p>8月23日16:00，华熙生物旗下护肤品牌夸迪（QUADHA）在北京华熙LIVE·五棵松M空间举办新品发布会，线下首发“注光瓶”精华。品牌认证微博明确将新品定位为面向“失光型初老”的精华，并围绕“线粒体”及“7天焕出素颜光”展开营销传播；活动联动品牌大使黄羿、官鸿及手游《盛世天下》相关内容。</p></div><div class="signal"><strong>信号判断：</strong><p>夸迪把新品首发置于线下发布会，并将功效传播聚焦在“失光型初老”这一可感知的肤色状态，试图在泛抗老叙事中建立更窄的消费者认知入口。线粒体为品牌营销概念，功效表现仍需以产品备案、成分及人体功效评价材料为准；对国货抗老赛道而言，产品首发后的渠道铺货、真实复购与科学证据强度更能决定这一概念的持续性。</p></div><div class="sources"><p>来源：<a href="https://weibo.com/2/detail/5334429188229258" target="_blank" rel="noopener noreferrer">夸迪认证微博：发布会时间、地点、新品定位与现场活动</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/quadi_zhuguangbottle.jpg" aria-label="放大查看 夸迪“注光瓶”精华发布会主视觉"><img src="assets/quadi_zhuguangbottle.jpg" alt="夸迪“注光瓶”精华发布会主视觉" loading="lazy"></button><figcaption>夸迪“注光瓶”精华发布会主视觉</figcaption></figure></div></div></article>
+<article class="card market-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">市场版图</span></div><div><p class="region-label">国际·韩国</p><h3>首尔美容周启动贸易展与公众展区，152家企业对接115家全球买家（B级）</h3><div class="report-body"><p>8月23日，首尔美容周（Seoul Beauty Week）在首尔艺术厅启动展区及美容贸易展：公众可于14:00后入场，贸易展持续至8月25日。首尔市公告显示，本届共有152家企业参展，展示范围由化妆品、Beauty Tech扩展至美容医疗、内在美容与生活方式；贸易展安排中小美容企业与海外买家一对一洽谈，并配套跨境直播、出口咨询和投资路演。主办方计划安排115家全球买家参与商谈；公告披露，2025年该活动促成约177亿韩元出口合同。</p></div><div class="signal"><strong>信号判断：</strong><p>活动把展示、买家匹配、合规/出口咨询和融资路演合并为同一出海服务场景，表明韩国地方产业支持正在覆盖品牌曝光、商谈和跨境成交等连续环节。其短期结果仍取决于商谈转化，但对进入海外零售与分销网络的品牌而言，具备可验证的渠道准备度和跨境履约能力，正成为获取买家对接机会的基础条件。</p></div><div class="sources"><p>来源：<a href="https://japanese.seoul.go.kr/2026-8%E6%9C%88-vol-125/" target="_blank" rel="noopener noreferrer">首尔市官方公告：开放时间、参展规模、买家对接与往届出口合同</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/seoul_beauty_week.jpg" aria-label="放大查看 首尔市发布的2026年8月美容周活动海报"><img src="assets/seoul_beauty_week.jpg" alt="首尔市发布的2026年8月美容周活动海报" loading="lazy"></button><figcaption>首尔市发布的2026年8月美容周活动海报</figcaption></figure></div></div></article>
+<article class="card brand-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际·法国</p><h3>娇韵诗任命章子怡为 Clarins Precious 全球代言人，9月启动全球内容投放（B级）</h3><div class="report-body"><p>8月23日，Clarins（娇韵诗）宣布章子怡出任其高端护肤线 Clarins Precious 全球代言人。公司新闻稿明确，双方创意内容将于2026年9月起在全球市场陆续推出，传播聚焦专业护理、长期护肤习惯与品牌工艺。</p></div><div class="signal"><strong>信号判断：</strong><p>Clarins 将中国演员配置给全球高端线，而非限定单一中国市场，意在用跨文化认知度连接奢护客群。对高客单抗老线，代言传播需要与产品功效、专业服务和高端渠道体验形成一致叙事，才能把明星曝光沉淀为品牌溢价与复购理由。</p></div><div class="sources"><p>来源：<a href="https://www.prnewswire.com/jp/news-releases/zhang-ziyiclarins-precious-302857747.html" target="_blank" rel="noopener noreferrer">Clarins 新闻稿：任命日期、代言身份与全球投放节奏</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/clarins_zhangziyi.jpg" aria-label="放大查看 Clarins Precious全球代言人章子怡官方肖像"><img src="assets/clarins_zhangziyi.jpg" alt="Clarins Precious全球代言人章子怡官方肖像" loading="lazy"></button><figcaption>Clarins Precious全球代言人章子怡官方肖像</figcaption></figure></div></div></article>
+<article class="card channel-card reveal" id="item-4"><div class="rank"><b>#4</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际·美国</p><h3>e.l.f. 限量腌黄瓜润唇膏进入 Ulta 实体门店，并首次进入其 TikTok Shop（B级）</h3><div class="report-body"><p>8月23日，e.l.f. Cosmetics 的三款限量 Glow Reviver Melting Lip Balm 腌黄瓜主题润唇膏及 Briny Blender 美妆蛋开始在美国 Ulta Beauty 实体店独家发售，并附限量赠品。该系列已于8月20日在 e.l.f. 官网、Ulta.com 和 TikTok Shop 上线；公司公告称，这也是 e.l.f. 首次进入 Ulta Beauty 的 TikTok Shop。首款同主题产品此前曾在8分钟内售罄，本次新增含丰唇配方的 Spicy Lil’ Dill。</p></div><div class="signal"><strong>信号判断：</strong><p>e.l.f. 先以社媒与线上渠道验证话题型产品热度，再把限量SKU推进实体门店，并由赠品承接到店转化。产品的关键价值在于以低价、可分享的文化符号缩短新品被讨论和被购买之间的链路；新配方也为系列提供了包装之外的产品增量。</p></div><div class="sources"><p>来源：<a href="https://investor.elfbeauty.com/stock-and-financial/press-releases/landing-news/2026/08-19-2026-050120287" target="_blank" rel="noopener noreferrer">e.l.f. Beauty 投资者关系公告：线上首发、8月23日门店进入与TikTok Shop安排</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/elf_pickle.jpg" aria-label="放大查看 e.l.f. Glow Reviver Melting Lip Balm腌黄瓜主题系列产品图"><img src="assets/elf_pickle.jpg" alt="e.l.f. Glow Reviver Melting Lip Balm腌黄瓜主题系列产品图" loading="lazy"></button><figcaption>e.l.f. Glow Reviver Melting Lip Balm腌黄瓜主题系列产品图</figcaption></figure></div></div></article>
+<article class="card channel-card reveal" id="item-5"><div class="rank"><b>#5</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际·美国</p><h3>Revlon 与 Ice Spice 联名香水进入全美 Ulta 门店，延续社媒优先首发（B级）</h3><div class="report-body"><p>8月23日，Revlon Fragrances 与歌手 Ice Spice 合作的首款香水 In Ha Mood 开始在全美 Ulta Beauty 实体店铺货。该产品于8月19日先在 Ulta.com 与 Ulta Beauty TikTok Shop 独家上线；Revlon 公告显示，上市前的 TikTok Shop 直播由 Ice Spice 参与，获得17.8万次观看及近600万次曝光，品牌将其定位为以社媒优先策略衔接全国零售到店。</p></div><div class="signal"><strong>信号判断：</strong><p>明星香水正把“直播首发—线上独家—实体铺货”作为标准化进店路径：社媒内容先承接粉丝情绪与试水销量，Ulta门店再提供试香和更广的即时购买覆盖。品牌需要在首发热度消退前完成线下陈列、试香体验与补货节奏的衔接，才能把一次性话题转成香水品类的持续动销。</p></div><div class="sources"><p>来源：<a href="https://www.prnewswire.com/news-releases/ice-spice-launches-her-debut-fragrance-in-ha-mood-302854650.html" target="_blank" rel="noopener noreferrer">Revlon 新闻稿：全美Ulta门店起售日、线上首发与直播数据</a></p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/revlon_ice_spice.jpg" aria-label="放大查看 Ice Spice与Revlon联名香水In Ha Mood官方素材"><img src="assets/revlon_ice_spice.jpg" alt="Ice Spice与Revlon联名香水In Ha Mood官方素材" loading="lazy"></button><figcaption>Ice Spice与Revlon联名香水In Ha Mood官方素材</figcaption></figure></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-19/">8/19<b>10</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-20/">8/20<b>12</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-21/">8/21<b>1</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-08-22/">8/22<b>3</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-08-23/">8/23<b>5</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
