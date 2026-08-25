@@ -15,6 +15,14 @@ on:
         description: "Weekly report target (for example 2026-W30)"
         required: false
         type: string
+      stage_week:
+        description: "Weekly report for one combined stage-update card"
+        required: false
+        type: string
+      stage_dates:
+        description: "Comma-separated daily dates for one combined stage-update card"
+        required: false
+        type: string
       delivery_target:
         description: "Destination: test by default; select formal only after Grace explicitly approves"
         required: true
@@ -59,7 +67,9 @@ jobs:
         if: inputs.dry_run
         run: |
           args=()
-          if [[ -n "$TARGET_WEEK" ]]; then
+          if [[ -n "$STAGE_WEEK" || -n "$STAGE_DATES" ]]; then
+            args+=(--stage-week "$STAGE_WEEK" --stage-dates "$STAGE_DATES")
+          elif [[ -n "$TARGET_WEEK" ]]; then
             args+=(--week "$TARGET_WEEK")
           elif [[ -n "$TARGET_DATES" ]]; then
             args+=(--dates "$TARGET_DATES")
@@ -71,6 +81,8 @@ jobs:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
           TARGET_WEEK: ${{ inputs.target_week }}
+          STAGE_WEEK: ${{ inputs.stage_week }}
+          STAGE_DATES: ${{ inputs.stage_dates }}
 
       - name: Block unapproved formal delivery
         if: inputs.delivery_target == 'formal' && !inputs.formal_approved
@@ -82,7 +94,9 @@ jobs:
         if: ${{ !inputs.dry_run && (inputs.delivery_target == 'test' || inputs.formal_approved) }}
         run: |
           args=()
-          if [[ -n "$TARGET_WEEK" ]]; then
+          if [[ -n "$STAGE_WEEK" || -n "$STAGE_DATES" ]]; then
+            args+=(--stage-week "$STAGE_WEEK" --stage-dates "$STAGE_DATES")
+          elif [[ -n "$TARGET_WEEK" ]]; then
             args+=(--week "$TARGET_WEEK")
           elif [[ -n "$TARGET_DATES" ]]; then
             args+=(--dates "$TARGET_DATES")
@@ -94,3 +108,5 @@ jobs:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
           TARGET_WEEK: ${{ inputs.target_week }}
+          STAGE_WEEK: ${{ inputs.stage_week }}
+          STAGE_DATES: ${{ inputs.stage_dates }}

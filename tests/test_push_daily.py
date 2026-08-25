@@ -353,6 +353,30 @@ class PushDailyCliTests(unittest.TestCase):
         self.assertIn("美妆情报Bot", output.getvalue())
         self.assertIn("https://example.com/beauty/daily/2026-07-15/", output.getvalue())
 
+    def test_stage_update_dry_run_combines_one_weekly_and_one_daily(self):
+        output = io.StringIO()
+        result = push_daily.main(
+            [
+                "--manifest",
+                str(self.write_manifest([
+                    make_weekly_report("2026-W35", items=["周报重点"]),
+                    make_report("2026-08-24", items=["日报重点"]),
+                ])),
+                "--stage-week",
+                "2026-W35",
+                "--stage-dates",
+                "2026-08-24",
+                "--dry-run",
+            ],
+            environ={"SITE_BASE_URL": "https://example.com/beauty"},
+            stdout=output,
+        )
+
+        self.assertEqual(result, 0)
+        self.assertIn("美妆情报Bot｜阶段更新", output.getvalue())
+        self.assertIn("https://example.com/beauty/weekly/2026-W35/", output.getvalue())
+        self.assertIn("https://example.com/beauty/daily/2026-08-24/", output.getvalue())
+
     def test_real_send_requires_webhook_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         output = io.StringIO()

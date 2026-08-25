@@ -49,7 +49,43 @@
         "监管"
       ],
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "本周重点",
+        "items": [
+          "上海家化、上美股份与巨子生物集中调整资源与产能：非核心资产处置、海外制造布局和集团资源整合，共同指向经营效率与增长确定性。",
+          "功效原料目录继续动态调整；防晒、抗老等产品开发需要把原料合规、功效证据和上市节奏前置协同。",
+          "Olive Young×Sephora、Ulta与TikTok Shop 的多渠道衔接，显示跨境品牌进入新市场时正把平台首发、线下体验和补货能力连成闭环。"
+        ],
+        "detail_label": "查看完整周报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-08-24",
+      "title": "美妆竞对情报日报｜2026年8月24日",
+      "source": "archive/日报/2026-08-24/beauty-daily-20260824.html",
+      "pdf": "archive/日报/2026-08-24/beauty-daily-20260824.pdf",
+      "summary": "日本美妆零售的分层首发，以及美容垂类直播电商的专业化触点",
+      "event_count": 7,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["Rosette", "Yunth", "KiSS", "THE NIGHT POOL", "MiiS", "8 THE THALASSO", "WABE"],
+      "categories": ["底妆", "美容仪", "彩妆", "贴片面膜", "口腔美容", "洗护", "直播电商"],
+      "channels": ["LoFt", "Hands", "Qoo10", "@cosme STORE", "药妆店", "WABE"],
+      "event_types": ["新品牌首发", "先行销售", "渠道铺货", "直播专场"],
+      "push": {
+        "status": "approved",
+        "heading": "8月24日重点",
+        "items": [
+          "Rosette 以新品牌 Chizuru 切入分区底妆；Yunth 将首款美容仪 Deep Boost 嵌入既有精华与面膜的使用链路。",
+          "KiSS 在品牌焕新后启动底妆、眼妆新品的部分渠道先发；THE NIGHT POOL 以 Hands—LoFt—@cosme STORE 的节奏测试面膜新品牌。",
+          "MiiS 与 8 THE THALASSO 分别扩大至 LoFt、杂货及药妆触点；WABE 以美容专场测试专业讲解、即时问答和成交的一体化直播场景。"
+        ],
+        "stage_items": [
+          "Rosette 的 Chizuru 以 T／颊／U 区三支妆前产品切入分区底妆；Yunth 将首款美容仪嵌入既有精华与面膜链路。",
+          "KiSS、THE NIGHT POOL、MiiS 与 8 THE THALASSO 集中推进新品先发和杂货/药妆铺货；WABE 以美容专场测试直播成交。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
       }
     },
     {

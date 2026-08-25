@@ -334,6 +334,8 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
     parser.add_argument("--date", help="Target report date in YYYY-MM-DD format")
     parser.add_argument("--dates", help="Comma-separated dates for one manual summary card")
     parser.add_argument("--week", help="Target weekly report in YYYY-Www format")
+    parser.add_argument("--stage-week", help="Weekly report for one combined stage-update card")
+    parser.add_argument("--stage-dates", help="Comma-separated daily dates for one combined stage-update card")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args(argv)
 
@@ -342,10 +344,21 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
 
     try:
         data = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-        selections = sum(bool(value) for value in (args.date, args.dates, args.week))
+        stage_selected = bool(args.stage_week or args.stage_dates)
+        selections = sum(bool(value) for value in (args.date, args.dates, args.week, stage_selected))
         if selections != 1:
-            raise ValueError("Specify exactly one of --date, --dates, or --week")
-        if args.week:
+            raise ValueError("Specify exactly one report target or one stage update")
+        if stage_selected:
+            if not args.stage_week or not args.stage_dates:
+                raise ValueError("Stage update requires both --stage-week and --stage-dates")
+            weekly = select_weekly_report(data.get("reports", []), args.stage_week)
+            if weekly is None:
+                raise ValueError(f"No approved weekly push for {args.stage_week}")
+            stage_dates = [date.strip() for date in args.stage_dates.split(",") if date.strip()]
+            if not stage_dates:
+                raise ValueError("Stage update requires at least one daily date")
+            dailies = select_reports(data.get("reports", []), stage_dates)
+        elif args.week:
             report = select_weekly_report(data.get("reports", []), args.week)
             if report is None:
                 raise ValueError(f"No approved weekly push for {args.week}")
@@ -361,7 +374,9 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
         base_url = environ.get("SITE_BASE_URL", "").strip()
         if not base_url:
             raise ValueError("SITE_BASE_URL is required")
-        if args.week:
+        if stage_selected:
+            card = build_stage_update_card(weekly, dailies, base_url)
+        elif args.week:
             card = build_weekly_card(report, base_url)
         elif args.dates:
             card = build_multi_day_card(reports, base_url)
@@ -386,7 +401,12 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             card,
             secret=environ.get("FEISHU_WEBHOOK_SECRET", "").strip(),
         )
-        if args.week:
+        if stage_selected:
+            print(
+                f"SENT: combined stage update for {args.stage_week} and {','.join(stage_dates)}",
+                file=stdout,
+            )
+        elif args.week:
             print(f"SENT: approved weekly push for {args.week}", file=stdout)
         elif args.dates:
             print(f"SENT: approved multi-day push for {','.join(target_dates)}", file=stdout)
