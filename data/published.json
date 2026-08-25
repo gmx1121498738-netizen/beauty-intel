@@ -1,6 +1,58 @@
 {
   "reports": [
     {
+      "kind": "weekly",
+      "week": "2026-W35",
+      "title": "美妆行业洞察 2026年第35周（8/17-8/23）",
+      "source": "archive/周报/2026-W35/beauty-insights-2026w35.html",
+      "pdf": "archive/周报/2026-W35/beauty-insights-2026w35-0817-0823.pdf",
+      "summary": "国货资源再平衡、原料目录动态调整、平台化出海与零售闭环",
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "监管与原料"
+      ],
+      "brands": [
+        "上海家化",
+        "上美股份",
+        "巨子生物",
+        "Coty",
+        "雅诗兰黛集团",
+        "Olive Young",
+        "Sephora",
+        "Grupo Boticário",
+        "e.l.f. Beauty",
+        "Revlon"
+      ],
+      "categories": [
+        "功效护肤",
+        "香水",
+        "功效原料",
+        "彩妆",
+        "K-Beauty"
+      ],
+      "channels": [
+        "Sephora",
+        "Olive Young",
+        "Ulta Beauty",
+        "TikTok Shop",
+        "DEPACO",
+        "LOFT"
+      ],
+      "event_types": [
+        "资产处置",
+        "业绩",
+        "海外产能",
+        "渠道首发",
+        "贸易展",
+        "监管"
+      ],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
       "kind": "daily",
       "date": "2026-08-23",
       "title": "美妆竞对情报日报｜2026年8月23日",
@@ -17,16 +69,11 @@
         "status": "approved",
         "heading": "8月23日重点",
         "items": [
-          "夸迪在北京线下首发“注光瓶”精华，以“失光型初老”建立抗老新品的细分传播入口。",
-          "首尔美容周启动贸易展，152家企业计划与115家全球买家开展对接。",
-          "e.l.f.与Revlon分别将话题润唇膏和明星香水推进至全美Ulta实体门店。"
+          "夸迪在北京线下首发“注光瓶”精华；娇韵诗任命章子怡为Clarins Precious全球代言人，首轮全球内容将于9月启动。",
+          "首尔美容周启动贸易展与公众展区，152家企业对接115家全球买家，并配套跨境咨询和投资路演。",
+          "e.l.f.限量润唇膏与Revlon×Ice Spice香水进入美国Ulta实体门店，分别承接TikTok Shop及线上独家首发后的到店转化。"
         ],
-        "detail_label": "查看完整日报",
-        "stage_items": [
-          "夸迪在北京线下首发“注光瓶”精华，以“失光型初老”建立抗老新品的细分传播入口。",
-          "首尔美容周启动贸易展，152家企业计划与115家全球买家开展对接。",
-          "e.l.f.与Revlon分别将话题润唇膏和明星香水推进至全美Ulta实体门店。"
-        ]
+        "detail_label": "查看完整日报"
       }
     },
     {
@@ -63,13 +110,13 @@
       "title": "美妆竞对情报日报｜2026年8月21日",
       "source": "archive/日报/2026-08-21/beauty-daily-20260821.html",
       "pdf": "archive/日报/2026-08-21/beauty-daily-20260821.pdf",
-      "summary": "上美印尼工厂奠基、LOFT美妆节预告与国际品牌新品、体验动作",
-      "event_count": 6,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["上美股份", "SCC", "LOFT", "M·A·C", "Elixir", "Axxzia", "L’Occitane"],
-      "categories": ["海外供应链", "渠道活动", "秋季彩妆", "高保湿护肤", "艺术家联名"],
-      "channels": ["印尼肯德尔经济特区", "日本LOFT", "官方线上", "Mall at Millenia"],
-      "event_types": ["工厂奠基", "零售活动预告", "新品上市", "新品公告", "海外一般销售", "门店体验"],
+      "summary": "上美印尼工厂奠基，国货美妆出海进入本地制造与区域供应链阶段",
+      "event_count": 1,
+      "dimensions": ["市场版图"],
+      "brands": ["上美股份", "SCC"],
+      "categories": ["海外供应链", "本地制造"],
+      "channels": ["印尼肯德尔经济特区"],
+      "event_types": ["工厂奠基", "海外产能布局"],
       "push": {
         "status": "approved",
         "heading": "8月21日重点",
