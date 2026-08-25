@@ -65,24 +65,24 @@
       "title": "美妆竞对情报日报｜2026年8月24日",
       "source": "archive/日报/2026-08-24/beauty-daily-20260824.html",
       "pdf": "archive/日报/2026-08-24/beauty-daily-20260824.pdf",
-      "summary": "日本美妆零售的分层首发，以及美容垂类直播电商的专业化触点",
+      "summary": "国内品牌与供应链集中披露半年进展，Avon重组、Ulta细分护发与欧洲香水传播同步出现",
       "event_count": 7,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["Rosette", "Yunth", "KiSS", "THE NIGHT POOL", "MiiS", "8 THE THALASSO", "WABE"],
-      "categories": ["底妆", "美容仪", "彩妆", "贴片面膜", "口腔美容", "洗护", "直播电商"],
-      "channels": ["LoFt", "Hands", "Qoo10", "@cosme STORE", "药妆店", "WABE"],
-      "event_types": ["新品牌首发", "先行销售", "渠道铺货", "直播专场"],
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管 / 原料"],
+      "brands": ["贝泰妮", "嘉亨家化", "赞宇科技", "玫琳凯", "Avon", "The Potion Studio", "Valentino Beauty"],
+      "categories": ["敏感肌护肤", "OEM/ODM", "洗护原料", "直销美妆", "香水", "卷发护理"],
+      "channels": ["抖音", "拼多多", "美容顾问", "Ulta Beauty", "Revolve"],
+      "event_types": ["半年报披露", "业务转型", "资产收购", "渠道入驻", "广告发布"],
       "push": {
         "status": "approved",
-        "heading": "8月24日重点",
+        "heading": "8月24日重点（已按国内优先校正）",
         "items": [
-          "Rosette 以新品牌 Chizuru 切入分区底妆；Yunth 将首款美容仪 Deep Boost 嵌入既有精华与面膜的使用链路。",
-          "KiSS 在品牌焕新后启动底妆、眼妆新品的部分渠道先发；THE NIGHT POOL 以 Hands—LoFt—@cosme STORE 的节奏测试面膜新品牌。",
-          "MiiS 与 8 THE THALASSO 分别扩大至 LoFt、杂货及药妆触点；WABE 以美容专场测试专业讲解、即时问答和成交的一体化直播场景。"
+          "贝泰妮披露渠道与多品牌进展；嘉亨家化、赞宇科技同步呈现国内 OEM/ODM、包材和洗护原料端的经营与研发信号。",
+          "玫琳凯中国明确数字化与美容顾问转型；Regent 签约收购 Avon North America，使北美与国际业务重新汇合。",
+          "The Potion Studio 进入450余家 Ulta；Valentino Beauty 以电影化内容推进 Vendetta 高端香水传播。"
         ],
         "stage_items": [
-          "Rosette 的 Chizuru 以 T／颊／U 区三支妆前产品切入分区底妆；Yunth 将首款美容仪嵌入既有精华与面膜链路。",
-          "KiSS、THE NIGHT POOL、MiiS 与 8 THE THALASSO 集中推进新品先发和杂货/药妆铺货；WABE 以美容专场测试直播成交。"
+          "贝泰妮的新增电商渠道和孵化品牌成为增长线索；嘉亨家化、赞宇科技补足国内制造、包材和洗护原料视角。",
+          "Avon 全球资产重组、Ulta 细分护发扩容与 Valentino 香水传播，构成欧美市场的高价值补充。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
