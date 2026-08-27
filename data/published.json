@@ -61,6 +61,23 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-26",
+      "title": "美妆竞对情报日报｜2026年8月26日",
+      "source": "archive/日报/2026-08-26/beauty-daily-20260826.html",
+      "pdf": "archive/日报/2026-08-26/beauty-daily-20260826.pdf",
+      "summary": "国内供应链对接、美国美妆零售新场景与功效护肤品牌的底妆延展",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["Target", "CBF", "舒蕾", "FAS", "OSAJI"],
+      "categories": ["美妆零售", "供应链", "香氛洗护", "底妆", "敏感肌彩妆"],
+      "channels": ["Target", "Target.com", "上海世贸展览馆", "线下路演", "伊势丹新宿店", "品牌官网"],
+      "event_types": ["渠道升级", "行业展会", "线下路演", "新品上市"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-25",
       "title": "美妆竞对情报日报｜2026年8月25日",
       "source": "archive/日报/2026-08-25/beauty-daily-20260825.html",
