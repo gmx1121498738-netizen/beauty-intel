@@ -99,7 +99,15 @@
       "channels": ["品牌官网", "线上问诊", "Amazon.com", "CVS", "Target", "Ulta Beauty", "Walmart"],
       "event_types": ["产品获奖", "处方护肤发布", "高管任命", "新品上市", "跨境渠道进入"],
       "push": {
-        "status": "disabled"
+        "status": "approved",
+        "heading": "8月25日重点",
+        "items": [
+          "薇诺娜宝贝水感精华油获得产品奖项，婴童功效护肤继续以水油双相、低黏腻体验切入屏障修护场景。",
+          "Agency Skin 将线上问诊、处方配方与订阅复购结合；Pierre Fabre 调整美国皮肤学化妆品业务负责人，继续推进零售、医疗和数字渠道协同。",
+          "Ludient 以肤况数据定义美国防晒新品；CLERIVY 以 Amazon 启动美国销售，并清晰区分化妆品祛痘贴与拟上市 OTC 产品的合规边界。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜8月25日日报"
       }
     },
     {
