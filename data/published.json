@@ -61,6 +61,23 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-25",
+      "title": "美妆竞对情报日报｜2026年8月25日",
+      "source": "archive/日报/2026-08-25/beauty-daily-20260825.html",
+      "pdf": "archive/日报/2026-08-25/beauty-daily-20260825.pdf",
+      "summary": "国内婴童功效护肤的水感油体验、处方化护肤与中韩品牌美国渠道进入",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["薇诺娜宝贝", "Agency Skin", "Pierre Fabre", "Ludient", "CLERIVY"],
+      "categories": ["婴童功效护肤", "抗老护肤", "皮肤学化妆品", "防晒", "痘肌护理"],
+      "channels": ["品牌官网", "线上问诊", "Amazon.com", "CVS", "Target", "Ulta Beauty", "Walmart"],
+      "event_types": ["产品获奖", "处方护肤发布", "高管任命", "新品上市", "跨境渠道进入"],
+      "push": {
+        "status": "disabled"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-24",
       "title": "美妆竞对情报日报｜2026年8月24日",
       "source": "archive/日报/2026-08-24/beauty-daily-20260824.html",
