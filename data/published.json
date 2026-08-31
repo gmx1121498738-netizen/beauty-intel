@@ -2,6 +2,29 @@
   "reports": [
     {
       "kind": "weekly",
+      "week": "2026-W36",
+      "title": "美妆行业洞察 2026年第36周（8/24-8/30）",
+      "source": "archive/周报/2026-W36/beauty-insights-2026w36.html",
+      "pdf": "archive/周报/2026-W36/beauty-insights-2026w36-0824-0830.pdf",
+      "summary": "国货美妆经营分化、供应链协同、零售运营与跨境合规",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资"],
+      "brands": ["贝泰妮", "毛戈平", "上美股份", "嘉亨家化", "诺斯贝尔", "丸美", "名创优品", "Target", "Ulta Beauty", "Avon", "Pierre Fabre", "CLERIVY"],
+      "categories": ["功效护肤", "高端彩妆", "OEM/ODM", "生活方式零售", "美妆专业零售", "跨境功效护肤"],
+      "channels": ["抖音", "拼多多", "京东", "名创优品", "Target", "Ulta Beauty", "Amazon.com"],
+      "event_types": ["中期业绩", "供应链经营", "原料替代", "渠道升级", "资产交易", "跨境市场进入"],
+      "push": {
+        "status": "approved",
+        "heading": "本周重点",
+        "items": [
+          "国内中报呈现经营分层：贝泰妮以全域渠道和品牌梯队扩张，毛戈平以高端底妆和服务保持增长，上美的核心品牌波动则放大至集团利润。",
+          "嘉亨家化、诺斯贝尔、丸美与北京未来美城的信号汇聚到研发、中试、采购替代与交付协同，供应链能力需与新品上市效率共同评估。",
+          "名创优品、京东、Target 与 Ulta 把货架、会员、试用和履约组织为一体；海外功效品进入还需同时处理渠道组织与合规属性边界。"
+        ],
+        "detail_label": "查看完整周报"
+      }
+    },
+    {
+      "kind": "weekly",
       "week": "2026-W35",
       "title": "美妆行业洞察 2026年第35周（8/17-8/23）",
       "source": "archive/周报/2026-W35/beauty-insights-2026w35.html",
