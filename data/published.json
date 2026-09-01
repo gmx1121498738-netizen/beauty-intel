@@ -107,6 +107,30 @@
     },
     {
       "kind": "daily",
+      "date": "2026-08-31",
+      "title": "美妆竞对情报日报｜2026年8月31日",
+      "source": "archive/日报/2026-08-31/beauty-daily-20260831.html",
+      "summary": "国内品牌经营与彩妆平台信号，以及防晒、底妆和头皮护理的海外新品与渠道动向",
+      "event_count": 6,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "监管与原料"],
+      "brands": ["贝泰妮", "薇诺娜", "瑷科缦", "OUT OF OFFICE", "Ultra Violette", "Laura Geller Beauty", "AROMATICA", "Huda Beauty"],
+      "categories": ["敏感肌护肤", "国货彩妆", "防晒", "底妆", "头皮护理", "定妆"],
+      "channels": ["天猫", "Sephora at Kohl’s", "Sephora.com", "Target Beauty Studio", "Target.com"],
+      "event_types": ["投资者关系披露", "平台奖项", "新品上市", "线下铺售", "渠道进入"],
+      "push": {
+        "status": "approved",
+        "heading": "8月31日重点",
+        "items": [
+          "贝泰妮披露薇诺娜宝贝、瑷科缦、特色植物原料及海外市场进展，敏感肌集团的子品牌与专业渠道成为新的经营观察线索。",
+          "国货彩妆品牌 OUT OF OFFICE 获天猫金妆奖“年度黑马品牌”，平台背书能否转化为修容主力品类的复购与跨渠道动销值得跟踪。",
+          "Ultra Violette 在美国上线含 BEMT 的防晒成品；Laura Geller 进入 Sephora at Kohl’s，分别体现原料准入转化与底妆线下试色需求。",
+          "AROMATICA 进入 Target Beauty Studio，Huda Beauty 扩展 Easy Bake 定妆线，头皮护理和底妆细分继续通过大型零售与内容共创放大。"
+        ],
+        "detail_label": "查看完整日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-29",
       "title": "美妆竞对情报日报｜2026年8月29日",
       "source": "archive/日报/2026-08-29/beauty-daily-20260829.html",
