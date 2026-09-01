@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="卧室加法软装改造方案：保留原有家具、床品与地毯，仅增加灯光、抱枕、摆件与个性化装饰。">
+  <title>只加不换｜卧室温馨化改造方案</title>
+  <style>
+    :root{
+      --ink:#25221f;--muted:#726b65;--paper:#f6f1ea;--card:#fffdf9;
+      --rose:#c98e87;--clay:#a85d3e;--navy:#253455;--line:#e6ddd2;
+      --shadow:0 16px 50px rgba(54,43,34,.10);--radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+    img{display:block;width:100%}
+    button{font:inherit}
+    .wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+    .hero{padding:72px 0 42px;background:radial-gradient(circle at 80% 20%,rgba(201,142,135,.22),transparent 34%),linear-gradient(135deg,#faf6f0,#efe4d8)}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid rgba(168,93,62,.25);border-radius:999px;color:var(--clay);font-size:13px;letter-spacing:.08em;background:rgba(255,255,255,.55)}
+    h1{font-size:clamp(36px,6vw,72px);line-height:1.08;margin:18px 0 16px;letter-spacing:-.04em;max-width:900px}
+    .lead{font-size:clamp(17px,2vw,21px);color:var(--muted);max-width:760px;margin:0 0 24px}
+    .rules{display:flex;gap:10px;flex-wrap:wrap}.rule{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(246,241,234,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(230,221,210,.8)}
+    .nav .wrap{display:flex;gap:22px;overflow:auto;padding:13px 0}.nav a{color:var(--ink);text-decoration:none;white-space:nowrap;font-size:14px}
+    section{padding:64px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+    h2{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0;letter-spacing:-.03em}.section-head p{margin:0;color:var(--muted);max-width:520px}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .compare-card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .compare-card img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#ece7e0}
+    .compare-caption{padding:14px 18px;color:var(--muted);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .zone{grid-column:span 4;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 9px 30px rgba(54,43,34,.06)}
+    .zone img{height:310px;object-fit:cover}.zone-copy{padding:20px}.zone h3{margin:0 0 8px;font-size:21px}.zone p{margin:0;color:var(--muted);font-size:14px}
+    .zone.wide{grid-column:span 6}.zone.wide img{height:360px}
+    .option{background:#242628;color:#f8f4ee;border-radius:var(--radius);padding:24px;display:grid;grid-template-columns:1.12fr .88fr;gap:26px;align-items:center;box-shadow:var(--shadow)}
+    .option img{border-radius:18px;aspect-ratio:1/1;object-fit:cover}.option h3{font-size:32px;line-height:1.2;margin:10px 0}.option p{color:#ccc4ba}.badge{display:inline-block;background:var(--rose);color:#231f1c;border-radius:999px;padding:6px 11px;font-size:13px;font-weight:700}
+    .items{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.item{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .item img{aspect-ratio:1/1;object-fit:cover;background:#f4ece3}.item-body{padding:16px}.item h3{font-size:17px;margin:0 0 5px}.item p{font-size:13px;color:var(--muted);margin:0}.meta{display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;color:var(--clay)}
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{counter-increment:step;background:var(--card);border:1px solid var(--line);padding:22px;border-radius:18px}.step::before{content:"0" counter(step);display:block;color:var(--rose);font-size:13px;font-weight:700;letter-spacing:.12em}.step h3{margin:8px 0 6px}.step p{margin:0;color:var(--muted);font-size:14px}
+    .note{margin-top:22px;border-left:4px solid var(--rose);background:#fff8f4;padding:18px 20px;border-radius:0 14px 14px 0;color:#5b5049}
+    footer{padding:38px 0 60px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+    @media(max-width:900px){.zone,.zone.wide{grid-column:span 6}.items{grid-template-columns:repeat(2,1fr)}.option{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}}
+    @media(max-width:620px){.hero{padding-top:48px}.wrap{width:min(100% - 22px,1180px)}section{padding:46px 0}.zone,.zone.wide{grid-column:1/-1}.zone img,.zone.wide img{height:300px}.items{grid-template-columns:1fr 1fr}.item-body{padding:13px}.compare{grid-template-columns:1fr}.option{padding:14px}.option h3{font-size:25px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">ADD-ONLY · 只加不换</span>
+      <h1>卧室温馨化<br>软装增补方案</h1>
+      <p class="lead">保留深蓝床品、两块原地毯、窗帘、白色折叠桌、开放架和全部家具，只用灯光、织物、摆件与主人的兴趣元素增加温度。</p>
+      <div class="rules"><span class="rule">保留原床品</span><span class="rule">保留两块地毯</span><span class="rule">不动硬装</span><span class="rule">灰粉只作点缀</span><span class="rule">魏玛猎犬定制元素</span></div>
+    </div>
+  </header>
+
+  <nav class="nav"><div class="wrap"><a href="#compare">前后对照</a><a href="#layout">分区摆放</a><a href="#chair">休闲椅备选</a><a href="#list">配图清单</a><a href="#steps">落地顺序</a></div></nav>
+
+  <main>
+    <section id="compare"><div class="wrap">
+      <div class="section-head"><h2>改造前后完整对照</h2></div>
+      <div class="compare">
+        <figure class="compare-card">
+          <img src="assets/before.jpg" alt="卧室改造前完整原图">
+          <figcaption class="compare-caption">改造前</figcaption>
+        </figure>
+        <figure class="compare-card">
+          <img src="assets/after.png" alt="只增加软装后的完整卧室效果图">
+          <figcaption class="compare-caption">加法改造后</figcaption>
+        </figure>
+      </div>
+    </div></section>
+
+    <section id="layout"><div class="wrap">
+      <div class="section-head"><h2>四个重点区域</h2><p>控制新增物件数量，每个区域只承担一种氛围功能，避免再次显得拥挤。</p></div>
+      <div class="grid">
+        <article class="zone"><img src="assets/zone-posters.png" alt="床头一排男生健身写真海报"><div class="zone-copy"><h3>床头：一整排海报</h3><p>5张同尺寸、同色调的男生健身写真，一字排开。用米色纸胶带固定，不加画框，不做零散拼贴。</p></div></article>
+        <article class="zone"><img src="assets/zone-bed.png" alt="床面新增焦糖色毯子和暖色抱枕"><div class="zone-copy"><h3>床面：暖色织物</h3><p>保留深蓝床品和人物长枕，加焦糖针织毯、奶油与赤陶色小抱枕，形成深蓝＋暖棕的过渡。</p></div></article>
+        <article class="zone"><img src="assets/zone-left.png" alt="左侧架子上的娃娃绿植和玻璃花灯"><div class="zone-copy"><h3>左侧：兴趣陈列</h3><p>架子结构完全保留。娃娃、绿植和彩色玻璃花灯集中在相邻两层，藤编篮收纳零碎物品。</p></div></article>
+        <article class="zone wide"><img src="assets/zone-floor.png" alt="右侧地面粉色坐垫和魏玛猎犬爱心抱枕"><div class="zone-copy"><h3>右侧：轻量宠物角</h3><p>主方案使用可随时挪动的灰粉坐垫，魏玛猎犬爱心抱枕落地靠放；弧形琥珀灯提供低位暖光。</p></div></article>
+        <article class="zone wide"><img src="assets/item-floor-lamp.png" alt="黑色弧形琥珀色落地灯"><div class="zone-copy"><h3>窗边：低位暖光</h3><p>弧形灯靠墙摆放，灯罩不越过阳台门开启范围。白桌保留，只放绿植与无明火小夜灯。</p></div></article>
+      </div>
+    </div></section>
+
+    <section id="chair"><div class="wrap">
+      <div class="option">
+        <img src="assets/chair-option.png" alt="右侧原有地毯上摆放黑色低矮休闲椅的独立备选效果图">
+        <div><span class="badge">独立备选 · 不与粉色坐垫同时购买</span><h3>右侧地毯增加一把低矮休闲椅</h3><p>如果更看重阅读和坐卧舒适度，可把主方案中的粉色圆坐垫换成这一把小体量黑色无扶手躺椅。奶油针织毯只搭一条，魏玛猎犬爱心抱枕靠椅脚放。选购时优先确认宽度不超过约70厘米、椅背不过高、阳台门仍能完全开启。</p></div>
+      </div>
+    </div></section>
+
+    <section id="list"><div class="wrap">
+      <div class="section-head"><h2>新增物件配图清单</h2><p>每一项都有对应图片。尺寸为下单前的建议范围，最终以现场复尺为准。</p></div>
+      <div class="items">
+        <article class="item"><img src="assets/item-posters.png" alt="五张男生健身写真海报"><div class="item-body"><h3>同系列男生海报 ×5</h3><p>A3左右，黑白或暖灰色调；统一裁切、统一纸张。</p><div class="meta"><span>床头墙</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-bedside-lamp.png" alt="奶油色床头蘑菇灯"><div class="item-body"><h3>奶油床头灯</h3><p>2700K暖光，直径约20—26厘米，避免冷白光。</p><div class="meta"><span>左床头柜</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-throw.png" alt="焦糖色针织毯"><div class="item-body"><h3>焦糖针织毯</h3><p>约130×170厘米，横搭床尾，不遮住全部深蓝床品。</p><div class="meta"><span>床尾</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-cushions.png" alt="奶油色米色和赤陶色抱枕"><div class="item-body"><h3>暖色抱枕 ×3</h3><p>奶油、燕麦、赤陶各一只，尺寸40—50厘米。</p><div class="meta"><span>床头</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-floor-lamp.png" alt="琥珀色弧形落地灯"><div class="item-body"><h3>弧形琥珀落地灯</h3><p>细黑杆、小底座、暖琥珀灯罩；不挡阳台门。</p><div class="meta"><span>窗边</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-dog-pillow.png" alt="魏玛猎犬爱心形定制抱枕"><div class="item-body"><h3>魏玛猎犬爱心抱枕</h3><p>用主人真实狗狗照片定制，约40—45厘米，落地靠放。</p><div class="meta"><span>右侧地面</span><span>优先级 A</span></div></div></article>
+        <article class="item"><img src="assets/item-dolls.png" alt="两只幻想风格收藏娃娃"><div class="item-body"><h3>角色娃娃 ×2</h3><p>控制在20厘米左右，同层集中陈列，不分散到床面。</p><div class="meta"><span>左侧架子</span><span>优先级 B</span></div></div></article>
+        <article class="item"><img src="assets/item-glass-lamp.png" alt="彩色花朵玻璃小灯"><div class="item-body"><h3>彩色玻璃花灯</h3><p>选择小型台灯或充电款，和娃娃、绿植组成一组。</p><div class="meta"><span>左侧架子</span><span>优先级 B</span></div></div></article>
+        <article class="item"><img src="assets/item-plant.png" alt="奶油色花盆小绿植"><div class="item-body"><h3>小型绿植 ×2</h3><p>一盆放架子，一盆放窗边白桌；选耐阴、叶形简洁的品种。</p><div class="meta"><span>左右呼应</span><span>优先级 B</span></div></div></article>
+        <article class="item"><img src="assets/item-baskets.png" alt="藤编收纳篮"><div class="item-body"><h3>藤编收纳篮 ×2</h3><p>按架子净宽复尺，统一颜色，用来隐藏零碎物品。</p><div class="meta"><span>架子下层</span><span>优先级 B</span></div></div></article>
+        <article class="item"><img src="assets/item-flowers.png" alt="灰粉色花瓶和花材"><div class="item-body"><h3>灰粉小花瓶</h3><p>只放3—5枝小花，粉色面积控制在约10%—15%。</p><div class="meta"><span>床头柜</span><span>优先级 C</span></div></div></article>
+        <article class="item"><img src="assets/item-candle.png" alt="无明火琥珀小夜灯"><div class="item-body"><h3>无明火氛围灯</h3><p>选充电LED蜡烛，不用真火；与窗边绿植并排。</p><div class="meta"><span>白色小桌</span><span>优先级 C</span></div></div></article>
+        <article class="item"><img src="assets/item-sheer.png" alt="暖白色轻纱帘"><div class="item-body"><h3>暖白轻纱</h3><p>仅在现有轨道允许时加一层，原灰色遮光帘继续保留。</p><div class="meta"><span>窗边</span><span>条件项</span></div></div></article>
+        <article class="item"><img src="assets/zone-chair.png" alt="黑色低矮休闲椅搭配奶油色小毯子"><div class="item-body"><h3>低矮休闲椅（备选）</h3><p>宽度建议不超过约70厘米；与粉色圆坐垫二选一。</p><div class="meta"><span>右侧原地毯</span><span>可选项</span></div></div></article>
+      </div>
+      <div class="note">粉色的使用方式：只放在花瓶、小抱枕或可移动坐垫上，不更换床品、不改墙色。这样既保留主人的偏好，也能和现有深蓝、米灰、木色自然衔接。</div>
+    </div></section>
+
+    <section id="steps"><div class="wrap">
+      <div class="section-head"><h2>建议落地顺序</h2><p>先做最能改变氛围的项目，摆完一轮再决定是否需要休闲椅。</p></div>
+      <div class="steps">
+        <article class="step"><h3>先做灯光与床面</h3><p>床头灯、焦糖毯、3只暖色抱枕先到位，成本低、效果最明显。</p></article>
+        <article class="step"><h3>再做墙面与个人元素</h3><p>测量床头墙可用宽度后统一打印海报，再加入狗狗抱枕和娃娃。</p></article>
+        <article class="step"><h3>最后决定右侧座位</h3><p>先用粉色坐垫试住一周；确实常在窗边阅读，再换成低矮休闲椅。</p></article>
+      </div>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">效果图用于软装摆位与色彩参考。所有新增物件均为可移动物品；购买休闲椅、收纳篮和窗纱前应现场复尺。</div></footer>
+
+</body>
+</html>
