@@ -155,6 +155,31 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-02",
+      "title": "美妆竞对情报日报｜2026年9月2日",
+      "source": "archive/日报/2026-09-02/beauty-daily-20260902.html",
+      "summary": "国货护肤经营、彩妆与洗护品牌触达，以及国际护肤集团组织交接",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "国际集团"],
+      "brands": ["逸仙电商", "Galénic", "DR.WU", "EVE LOM", "Judydoll 橘朵", "KIMTRUE 且初", "雅诗兰黛集团", "La Mer", "Clinique", "Dr.Jart+"],
+      "categories": ["护肤", "彩妆", "洗护发", "高端护肤"],
+      "channels": ["抖音", "品牌官方微博", "线下互动"],
+      "event_types": ["季度业绩", "全球代言", "新品组合", "组织变动"],
+      "push": {
+        "status": "approved",
+        "heading": "9月2日重点",
+        "items": [
+          "逸仙电商二季度护肤收入同比增长40.4%、占集团收入71.5%，资源倾斜与彩妆组合精简的经营效率将进入验证期。",
+          "橘朵宣布杨颖 Angelababy 出任全球代言人，并以唇、颊、底妆和面部彩盘组织秋冬新品组合。",
+          "且初在七周年节点官宣于适为洗护发品类代言人，同步以主题香型和线下互动放大触达。",
+          "雅诗兰黛集团护肤业务负责人将于年末退休，La Mer、Clinique、Origins、Dr.Jart+ 等品牌组合的管理交接值得持续跟踪。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-29",
       "title": "美妆竞对情报日报｜2026年8月29日",
       "source": "archive/日报/2026-08-29/beauty-daily-20260829.html",
