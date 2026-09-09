@@ -228,6 +228,54 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-08",
+      "title": "美妆竞对情报日报｜2026年9月8日",
+      "source": "archive/日报/2026-09-08/beauty-daily-20260908.html",
+      "summary": "头部品牌外部投资、敏感肌产品升级与降温防晒技术",
+      "event_count": 4,
+      "dimensions": ["投融资全景", "品牌动态", "原料与技术"],
+      "brands": ["珀莱雅", "GRASUS 瑰倚丝", "Kolmar Korea", "Heroine Make"],
+      "categories": ["产业基金", "敏感肌护肤", "防晒", "睫毛膏", "眼线笔"],
+      "channels": ["品牌官方微博", "天猫", "日本零售渠道"],
+      "event_types": ["基金认购", "产品升级", "技术发布", "新品上市"],
+      "push": {
+        "status": "approved",
+        "heading": "9月8日重点",
+        "items": [
+          "珀莱雅全资子公司拟出资 1 亿元认购创投基金份额，外部创新布局仍需关注基金备案、投资去向与长期回报。",
+          "GRASUS 以铂光亮妍精华液、清滢舒悦乳液升级回归叠加会员权益承接敏感肌人群，产品体验和常销复购是核心检验项。",
+          "Kolmar Korea 发布降温防晒技术；Heroine Make 上新限定暖灰色睫毛膏与眼线笔，分别反映防晒体感与彩妆轻限定两种产品思路。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-07",
+      "title": "美妆竞对情报日报｜2026年9月7日",
+      "source": "archive/日报/2026-09-07/beauty-daily-20260907.html",
+      "summary": "国货抗老升级、平台榜单与体验零售、新品牌孵化",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "渠道生态", "市场版图"],
+      "brands": ["百雀羚", "京东美妆", "丝芙兰", "Ulta Beauty"],
+      "categories": ["抗老面霜", "美妆榜单", "体验零售", "新品牌孵化"],
+      "channels": ["天猫", "抖音", "京东美妆", "SEPHORiA", "Ulta Beauty"],
+      "event_types": ["新品发布", "平台榜单", "大型活动官宣", "加速器入选"],
+      "push": {
+        "status": "approved",
+        "heading": "9月7日重点",
+        "items": [
+          "百雀羚在 95 周年盛典发布新一代灵玉面霜，产品升级与品牌代言人、官方直播同步组织。",
+          "京东美妆发布年度至美榜单；丝芙兰官宣 SEPHORiA 上海张园活动并设置本土品牌互动区，平台与线下体验共同放大品牌触点。",
+          "Ulta 公布 MUSE 加速器八家入选新品牌，以资助、课程和买手连接建设零售创新供给。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-09-05",
       "title": "美妆竞对情报日报｜2026年9月5日",
       "source": "archive/日报/2026-09-05/beauty-daily-20260905.html",
