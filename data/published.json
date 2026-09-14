@@ -127,43 +127,35 @@
       "date": "2026-09-13",
       "title": "美妆竞对情报日报｜2026年9月13日",
       "source": "archive/日报/2026-09-13/beauty-daily-20260913.html",
-      "summary": "国货彩妆上新、美瞳联名、供应链国际考察与香水体验零售",
-      "event_count": 5,
+      "summary": "香水体验零售与新品快闪转化",
+      "event_count": 2,
       "dimensions": [
         "品牌动态",
         "市场版图",
         "渠道生态"
       ],
       "brands": [
-        "珂拉琪",
-        "可糖",
         "香奈儿",
         "Dolce&Gabbana Beauty"
       ],
       "categories": [
-        "底妆",
-        "美瞳",
         "香水",
-        "OEM/ODM"
+        "体验零售"
       ],
       "channels": [
-        "中国彩妆零售",
         "上海环贸 IAPM",
-        "Sephora",
-        "法国/瑞士供应链"
+        "Sephora"
       ],
       "event_types": [
-        "新品上市",
-        "跨界联名",
-        "供应链考察",
-        "限时体验"
+        "限时体验",
+        "新品快闪"
       ],
       "push": {
         "status": "approved",
         "heading": "09月13日重点",
         "items": [
-          "珂拉琪和可糖补入国货底妆、美瞳新品；供应链考察提供出海协作线索。",
-          "香水快闪通过试香、服务和邻近门店连接即时体验与零售转化。"
+          "上海香奈儿体验空间在收官日以试香、妆容体验与预约制承接触点。",
+          "Dolce&Gabbana 在纽约将新品试香、互动与 Sephora 刻字服务连接为即时转化链路。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -174,8 +166,8 @@
       "date": "2026-09-12",
       "title": "美妆竞对情报日报｜2026年9月12日",
       "source": "archive/日报/2026-09-12/beauty-daily-20260912.html",
-      "summary": "成分内容 IP、运动场景护肤、香氛直营、北美渠道与底妆新品",
-      "event_count": 6,
+      "summary": "成分内容 IP、北美零售进入与秋季底妆新品",
+      "event_count": 4,
       "dimensions": [
         "品牌动态",
         "市场版图",
@@ -183,37 +175,33 @@
       ],
       "brands": [
         "巨量引擎",
-        "敷尔佳",
-        "Santa Maria Novella",
         "Naturium",
         "TEMPTU",
         "Primavista"
       ],
       "categories": [
         "成分内容",
-        "运动修护",
-        "香氛",
-        "底妆"
+        "护肤",
+        "专业底妆",
+        "日常底妆"
       ],
       "channels": [
         "杭州线下活动",
-        "哈尔滨马拉松博览会",
-        "上海恒隆广场",
         "Sephora Canada",
-        "Ulta Beauty Marketplace"
+        "Ulta Beauty Marketplace",
+        "日本零售渠道"
       ],
       "event_types": [
         "线下互动",
-        "赛事合作",
-        "直营开店",
         "市场进入",
+        "零售上线",
         "新品上市"
       ],
       "push": {
         "status": "approved",
         "heading": "09月12日重点",
         "items": [
-          "国内内容 IP、运动护肤与香氛直营覆盖三类线下/渠道动作。",
+          "巨量引擎的成分内容活动提供国内内容场景样本。",
           "Naturium、TEMPTU 和 Primavista 分别提供北美渠道进入与底妆新品参考。"
         ],
         "detail_label": "查看完整日报",
