@@ -2,6 +2,67 @@
   "reports": [
     {
       "kind": "weekly",
+      "week": "2026-W37",
+      "title": "美妆行业洞察 2026年第37周（9/7-9/13）",
+      "source": "archive/周报/2026-W37/beauty-insights-2026w37.html",
+      "pdf": "archive/周报/2026-W37/beauty-insights-2026w37-0907-0913.pdf",
+      "summary": "秋季渠道供给链、研发合规、香氛体验与跨境服务",
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "研发与合规"
+      ],
+      "brands": [
+        "百雀羚",
+        "潘婷 BIO",
+        "颖通集团",
+        "华大集团",
+        "艾尔建美学",
+        "林清轩",
+        "Target",
+        "Shopee",
+        "TikTok Shop Japan"
+      ],
+      "categories": [
+        "抗老面霜",
+        "高端洗护",
+        "香氛",
+        "个性化皮肤健康",
+        "医美",
+        "功效原料"
+      ],
+      "channels": [
+        "京东美妆",
+        "SEPHORiA",
+        "银泰百货",
+        "Target Beauty Studio",
+        "Shopee",
+        "TikTok Shop Japan",
+        "Sephora Canada"
+      ],
+      "event_types": [
+        "新品发布",
+        "渠道升级",
+        "白皮书",
+        "技术服务",
+        "适应症获批",
+        "新原料备案",
+        "跨境大促"
+      ],
+      "push": {
+        "status": "approved",
+        "heading": "本周重点",
+        "items": [
+          "京东、SEPHORiA、银泰与 Target 把品牌发现、体验、会员权益和货盘运营组织为同一条秋季渠道链。",
+          "乔雅登适应症获批、林清轩原料备案及 CBE 研发议程提示新品开发需以合规、证据与放大能力协同推进。",
+          "颖通香氛研究、华大皮肤健康服务和 Shopee/TikTok Shop 跨境动作，分别呈现感官、数据与本地化承接的新要求。"
+        ],
+        "detail_label": "查看完整周报"
+      }
+    },
+    {
+      "kind": "weekly",
       "week": "2026-W36",
       "title": "美妆行业洞察 2026年第36周（8/24-8/30）",
       "source": "archive/周报/2026-W36/beauty-insights-2026w36.html",
