@@ -7,11 +7,51 @@
       "source": "archive/周报/2026-W36/beauty-insights-2026w36.html",
       "pdf": "archive/周报/2026-W36/beauty-insights-2026w36-0824-0830.pdf",
       "summary": "国货美妆经营分化、供应链协同、零售运营与跨境合规",
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资"],
-      "brands": ["贝泰妮", "毛戈平", "上美股份", "嘉亨家化", "诺斯贝尔", "丸美", "名创优品", "Target", "Ulta Beauty", "Avon", "Pierre Fabre", "CLERIVY"],
-      "categories": ["功效护肤", "高端彩妆", "OEM/ODM", "生活方式零售", "美妆专业零售", "跨境功效护肤"],
-      "channels": ["抖音", "拼多多", "京东", "名创优品", "Target", "Ulta Beauty", "Amazon.com"],
-      "event_types": ["中期业绩", "供应链经营", "原料替代", "渠道升级", "资产交易", "跨境市场进入"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资"
+      ],
+      "brands": [
+        "贝泰妮",
+        "毛戈平",
+        "上美股份",
+        "嘉亨家化",
+        "诺斯贝尔",
+        "丸美",
+        "名创优品",
+        "Target",
+        "Ulta Beauty",
+        "Avon",
+        "Pierre Fabre",
+        "CLERIVY"
+      ],
+      "categories": [
+        "功效护肤",
+        "高端彩妆",
+        "OEM/ODM",
+        "生活方式零售",
+        "美妆专业零售",
+        "跨境功效护肤"
+      ],
+      "channels": [
+        "抖音",
+        "拼多多",
+        "京东",
+        "名创优品",
+        "Target",
+        "Ulta Beauty",
+        "Amazon.com"
+      ],
+      "event_types": [
+        "中期业绩",
+        "供应链经营",
+        "原料替代",
+        "渠道升级",
+        "资产交易",
+        "跨境市场进入"
+      ],
       "push": {
         "status": "approved",
         "heading": "本周重点",
@@ -87,19 +127,43 @@
       "date": "2026-09-13",
       "title": "美妆竞对情报日报｜2026年9月13日",
       "source": "archive/日报/2026-09-13/beauty-daily-20260913.html",
-      "summary": "平台成分内容的线下收口与高端护肤沉浸式体验",
-      "event_count": 2,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["巨量引擎", "雪花秀"],
-      "categories": ["成分内容", "高端抗老"],
-      "channels": ["杭州中心户外广场", "上海新天地"],
-      "event_types": ["线下活动收尾", "限时体验收尾"],
+      "summary": "国货彩妆上新、美瞳联名、供应链国际考察与香水体验零售",
+      "event_count": 5,
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "珂拉琪",
+        "可糖",
+        "香奈儿",
+        "Dolce&Gabbana Beauty"
+      ],
+      "categories": [
+        "底妆",
+        "美瞳",
+        "香水",
+        "OEM/ODM"
+      ],
+      "channels": [
+        "中国彩妆零售",
+        "上海环贸 IAPM",
+        "Sephora",
+        "法国/瑞士供应链"
+      ],
+      "event_types": [
+        "新品上市",
+        "跨界联名",
+        "供应链考察",
+        "限时体验"
+      ],
       "push": {
         "status": "approved",
-        "heading": "9月13日重点",
+        "heading": "09月13日重点",
         "items": [
-          "平台成分内容和高端护肤体验在当日完成限时线下活动，均按轻信号观察。",
-          "平台成分内容与高端护肤体验的后续价值，应回到搜索、预约、会员和正装转化验证。"
+          "珂拉琪和可糖补入国货底妆、美瞳新品；供应链考察提供出海协作线索。",
+          "香水快闪通过试香、服务和邻近门店连接即时体验与零售转化。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -110,19 +174,47 @@
       "date": "2026-09-12",
       "title": "美妆竞对情报日报｜2026年9月12日",
       "source": "archive/日报/2026-09-12/beauty-daily-20260912.html",
-      "summary": "国货成分内容、线下高端体验和底妆新品",
-      "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["巨量引擎", "雪花秀", "Primavista"],
-      "categories": ["成分内容", "高端抗老", "底妆"],
-      "channels": ["美博会", "杭州中心户外广场", "上海新天地", "日本零售渠道"],
-      "event_types": ["线下互动", "限时体验", "新品上市"],
+      "summary": "成分内容 IP、运动场景护肤、香氛直营、北美渠道与底妆新品",
+      "event_count": 6,
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "巨量引擎",
+        "敷尔佳",
+        "Santa Maria Novella",
+        "Naturium",
+        "TEMPTU",
+        "Primavista"
+      ],
+      "categories": [
+        "成分内容",
+        "运动修护",
+        "香氛",
+        "底妆"
+      ],
+      "channels": [
+        "杭州线下活动",
+        "哈尔滨马拉松博览会",
+        "上海恒隆广场",
+        "Sephora Canada",
+        "Ulta Beauty Marketplace"
+      ],
+      "event_types": [
+        "线下互动",
+        "赛事合作",
+        "直营开店",
+        "市场进入",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
-        "heading": "9月12日重点",
+        "heading": "09月12日重点",
         "items": [
-          "平台型成分内容以线下场景衔接创作者内容和产品转化。",
-          "雪花秀以人参研发组织高端抗老体验，Primavista 继续强调低门槛底妆体验。"
+          "国内内容 IP、运动护肤与香氛直营覆盖三类线下/渠道动作。",
+          "Naturium、TEMPTU 和 Primavista 分别提供北美渠道进入与底妆新品参考。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -133,19 +225,43 @@
       "date": "2026-09-11",
       "title": "美妆竞对情报日报｜2026年9月11日",
       "source": "archive/日报/2026-09-11/beauty-daily-20260911.html",
-      "summary": "百货美妆活动、国际彩妆亚洲限定与线下体验零售",
-      "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["银泰百货", "NARS", "Charlotte Tilbury"],
-      "categories": ["百货美妆", "秋季彩妆", "定妆"],
-      "channels": ["银泰百货", "日本零售渠道", "上海新世界新丸中心"],
-      "event_types": ["美妆节", "新品上市", "限时快闪"],
+      "summary": "百货美妆活动、AI 研发、内容电商跨境与秋季彩妆香氛",
+      "event_count": 5,
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "原料与技术"
+      ],
+      "brands": [
+        "银泰百货",
+        "TikTok Shop",
+        "NARS",
+        "爱马仕"
+      ],
+      "categories": [
+        "百货美妆",
+        "AI 研发",
+        "彩妆",
+        "香氛"
+      ],
+      "channels": [
+        "银泰百货",
+        "CBE 杭州展",
+        "TikTok Shop Japan",
+        "日本零售渠道"
+      ],
+      "event_types": [
+        "美妆节",
+        "研发论坛",
+        "跨境品类活动",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
-        "heading": "9月11日重点",
+        "heading": "09月11日重点",
         "items": [
-          "银泰进入秋季美妆节第二档，关注新品、会员权益与到店服务的共同承接。",
-          "NARS 以亚洲限定色推进秋季货盘；上海快闪为展期内轻信号。"
+          "银泰和 CBE 分别呈现线下美妆零售与研发供给的国内信号。",
+          "TikTok Shop 日本、NARS 与爱马仕补充跨境内容电商、区域色号和香氛新品观察。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -156,19 +272,45 @@
       "date": "2026-09-10",
       "title": "美妆竞对情报日报｜2026年9月10日",
       "source": "archive/日报/2026-09-10/beauty-daily-20260910.html",
-      "summary": "医美合规扩容、秋季新品交易与高端洗护",
-      "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态", "监管与合规"],
-      "brands": ["乔雅登", "CBE 杭州展", "潘婷 BIO"],
-      "categories": ["医美", "秋冬新品", "高端洗护"],
-      "channels": ["CBE 杭州展", "天猫超级品牌日"],
-      "event_types": ["适应症获批", "行业展会", "品牌发布"],
+      "summary": "医美合规、新原料、秋季交易场、洗护升级与美国零售",
+      "event_count": 6,
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "监管与合规",
+        "原料与技术"
+      ],
+      "brands": [
+        "乔雅登",
+        "林清轩",
+        "潘婷 BIO",
+        "Spes",
+        "Target"
+      ],
+      "categories": [
+        "医美",
+        "植物细胞培养",
+        "高端洗护",
+        "头皮护理"
+      ],
+      "channels": [
+        "CBE 杭州展",
+        "天猫超级品牌日",
+        "Target Beauty Studio"
+      ],
+      "event_types": [
+        "适应症获批",
+        "新原料备案",
+        "行业展会",
+        "品牌发布",
+        "零售上线"
+      ],
       "push": {
         "status": "approved",
-        "heading": "9月10日重点",
+        "heading": "09月10日重点",
         "items": [
-          "乔雅登新增眶下凹陷适应症，CBE 杭州展集中承接新品、原料和渠道资源。",
-          "潘婷 BIO 以高端修护与平台首发进入洗护竞争，持续关注价格带与常销复购。"
+          "医美适应症、新原料备案与秋季展会共同构成当日国内产业侧重点。",
+          "Target Beauty Studio 为高端货盘、导购服务和会员权益协同提供零售样本。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -179,19 +321,43 @@
       "date": "2026-09-09",
       "title": "美妆竞对情报日报｜2026年9月9日",
       "source": "archive/日报/2026-09-09/beauty-daily-20260909.html",
-      "summary": "香氛产业研究、配方开品协同与护发产品更新",
-      "event_count": 3,
-      "dimensions": ["品牌动态", "市场版图", "原料与技术"],
-      "brands": ["颖通集团", "中国化妆品科学开品大会", "ReFa"],
-      "categories": ["香氛", "产品开发", "护发"],
-      "channels": ["行业会议", "日本零售渠道"],
-      "event_types": ["白皮书发布", "行业大会", "新品上市"],
+      "summary": "香氛产业研究、个性化皮肤健康、跨境大促与护发产品升级",
+      "event_count": 6,
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "原料与技术",
+        "渠道生态"
+      ],
+      "brands": [
+        "颖通集团",
+        "华大集团",
+        "康婷",
+        "ReFa"
+      ],
+      "categories": [
+        "香氛",
+        "个性化皮肤健康",
+        "护肤",
+        "护发"
+      ],
+      "channels": [
+        "Shopee",
+        "行业会议",
+        "日本零售渠道"
+      ],
+      "event_types": [
+        "白皮书发布",
+        "技术服务发布",
+        "跨境大促",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
-        "heading": "9月9日重点",
+        "heading": "09月09日重点",
         "items": [
-          "颖通发布嗅觉生态白皮书并启动芳香材料产学研合作。",
-          "开品大会强调原料、配方和上新协同；ReFa 以热响应体验更新护发油。"
+          "颖通、华大与康婷构成国内研究、技术服务和品牌上新的三类信号。",
+          "Shopee 9.9 提供美妆个护跨境履约与直播成交的渠道样本。"
         ],
         "detail_label": "查看完整日报",
         "card_title": "美妆情报Bot｜行业日报"
@@ -204,11 +370,31 @@
       "source": "archive/日报/2026-08-30/beauty-daily-20260830.html",
       "summary": "广州展贸对接与海外美妆渠道的会员、促销和履约机制",
       "event_count": 3,
-      "dimensions": ["市场版图", "渠道生态"],
-      "brands": ["白云国际美博园", "Ulta Beauty", "Olive Young Global"],
-      "categories": ["美妆展贸", "节点促销", "跨境美妆零售"],
-      "channels": ["白云国际美博园", "Ulta Beauty", "Olive Young Global", "App"],
-      "event_types": ["行业展会", "会员促销", "跨境平台活动"],
+      "dimensions": [
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "白云国际美博园",
+        "Ulta Beauty",
+        "Olive Young Global"
+      ],
+      "categories": [
+        "美妆展贸",
+        "节点促销",
+        "跨境美妆零售"
+      ],
+      "channels": [
+        "白云国际美博园",
+        "Ulta Beauty",
+        "Olive Young Global",
+        "App"
+      ],
+      "event_types": [
+        "行业展会",
+        "会员促销",
+        "跨境平台活动"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月30日重点",
@@ -227,11 +413,44 @@
       "source": "archive/日报/2026-08-31/beauty-daily-20260831.html",
       "summary": "国内品牌经营与彩妆平台信号，以及防晒、底妆和头皮护理的海外新品与渠道动向",
       "event_count": 6,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "监管与原料"],
-      "brands": ["贝泰妮", "薇诺娜", "瑷科缦", "OUT OF OFFICE", "Ultra Violette", "Laura Geller Beauty", "AROMATICA", "Huda Beauty"],
-      "categories": ["敏感肌护肤", "国货彩妆", "防晒", "底妆", "头皮护理", "定妆"],
-      "channels": ["天猫", "Sephora at Kohl’s", "Sephora.com", "Target Beauty Studio", "Target.com"],
-      "event_types": ["投资者关系披露", "平台奖项", "新品上市", "线下铺售", "渠道进入"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "监管与原料"
+      ],
+      "brands": [
+        "贝泰妮",
+        "薇诺娜",
+        "瑷科缦",
+        "OUT OF OFFICE",
+        "Ultra Violette",
+        "Laura Geller Beauty",
+        "AROMATICA",
+        "Huda Beauty"
+      ],
+      "categories": [
+        "敏感肌护肤",
+        "国货彩妆",
+        "防晒",
+        "底妆",
+        "头皮护理",
+        "定妆"
+      ],
+      "channels": [
+        "天猫",
+        "Sephora at Kohl’s",
+        "Sephora.com",
+        "Target Beauty Studio",
+        "Target.com"
+      ],
+      "event_types": [
+        "投资者关系披露",
+        "平台奖项",
+        "新品上市",
+        "线下铺售",
+        "渠道进入"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月31日重点",
@@ -251,11 +470,39 @@
       "source": "archive/日报/2026-09-01/beauty-daily-20260901.html",
       "summary": "国内高奢护肤经营、免税美妆渠道与洁面标准实施，以及海外大牌彩妆实体零售扩张",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "监管与原料"],
-      "brands": ["水羊股份", "EDB", "RéVive", "cdf 中免", "Marc Jacobs Beauty", "Coty"],
-      "categories": ["高奢护肤", "免税美妆", "洁面", "彩妆"],
-      "channels": ["cdf 中免商城", "离岛免税", "跨境臻选", "会员优选", "Sephora"],
-      "event_types": ["投资者关系披露", "平台周年活动", "标准实施", "线下铺售"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "监管与原料"
+      ],
+      "brands": [
+        "水羊股份",
+        "EDB",
+        "RéVive",
+        "cdf 中免",
+        "Marc Jacobs Beauty",
+        "Coty"
+      ],
+      "categories": [
+        "高奢护肤",
+        "免税美妆",
+        "洁面",
+        "彩妆"
+      ],
+      "channels": [
+        "cdf 中免商城",
+        "离岛免税",
+        "跨境臻选",
+        "会员优选",
+        "Sephora"
+      ],
+      "event_types": [
+        "投资者关系披露",
+        "平台周年活动",
+        "标准实施",
+        "线下铺售"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月1日重点",
@@ -275,11 +522,39 @@
       "source": "archive/日报/2026-09-02/beauty-daily-20260902.html",
       "summary": "国货护肤经营、彩妆与洗护品牌触达，以及国际护肤集团组织交接",
       "event_count": 4,
-      "dimensions": ["品牌动态", "国际集团"],
-      "brands": ["逸仙电商", "Galénic", "DR.WU", "EVE LOM", "Judydoll 橘朵", "KIMTRUE 且初", "雅诗兰黛集团", "La Mer", "Clinique", "Dr.Jart+"],
-      "categories": ["护肤", "彩妆", "洗护发", "高端护肤"],
-      "channels": ["抖音", "品牌官方微博", "线下互动"],
-      "event_types": ["季度业绩", "全球代言", "新品组合", "组织变动"],
+      "dimensions": [
+        "品牌动态",
+        "国际集团"
+      ],
+      "brands": [
+        "逸仙电商",
+        "Galénic",
+        "DR.WU",
+        "EVE LOM",
+        "Judydoll 橘朵",
+        "KIMTRUE 且初",
+        "雅诗兰黛集团",
+        "La Mer",
+        "Clinique",
+        "Dr.Jart+"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "洗护发",
+        "高端护肤"
+      ],
+      "channels": [
+        "抖音",
+        "品牌官方微博",
+        "线下互动"
+      ],
+      "event_types": [
+        "季度业绩",
+        "全球代言",
+        "新品组合",
+        "组织变动"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月2日重点",
@@ -300,11 +575,41 @@
       "source": "archive/日报/2026-09-03/beauty-daily-20260903.html",
       "summary": "国货出海服务、专业护理与研发供应链，以及国际护肤集团组织交接和底妆新品",
       "event_count": 5,
-      "dimensions": ["市场版图", "品牌动态", "研发与供应链", "国际集团"],
-      "brands": ["广州美博城", "德玛芮", "SIC个护产品大会", "雅诗兰黛集团", "La Mer", "IPSA"],
-      "categories": ["美妆出海", "专业护肤", "胶原护理", "配方评测", "高端护肤", "精华粉底"],
-      "channels": ["阿里国际站", "美博城", "专业院线", "高岛屋 TBEAUT"],
-      "event_types": ["战略合作启动", "新品发布", "行业大会", "组织任命", "新品上市"],
+      "dimensions": [
+        "市场版图",
+        "品牌动态",
+        "研发与供应链",
+        "国际集团"
+      ],
+      "brands": [
+        "广州美博城",
+        "德玛芮",
+        "SIC个护产品大会",
+        "雅诗兰黛集团",
+        "La Mer",
+        "IPSA"
+      ],
+      "categories": [
+        "美妆出海",
+        "专业护肤",
+        "胶原护理",
+        "配方评测",
+        "高端护肤",
+        "精华粉底"
+      ],
+      "channels": [
+        "阿里国际站",
+        "美博城",
+        "专业院线",
+        "高岛屋 TBEAUT"
+      ],
+      "event_types": [
+        "战略合作启动",
+        "新品发布",
+        "行业大会",
+        "组织任命",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月3日重点",
@@ -324,11 +629,34 @@
       "source": "archive/日报/2026-09-06/beauty-daily-20260906.html",
       "summary": "洗卸产品升级、口服美容产业触点与国际彩妆/面膜新品",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "海外新品"],
-      "brands": ["且初", "广州国际美博会", "M·A·C", "Club Cosmetics"],
-      "categories": ["卸妆", "口服美容", "限定彩妆", "面膜"],
-      "channels": ["品牌官方微博", "广州美博会", "日本零售渠道"],
-      "event_types": ["新品升级", "行业论坛", "限定系列发布", "新品上市"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "海外新品"
+      ],
+      "brands": [
+        "且初",
+        "广州国际美博会",
+        "M·A·C",
+        "Club Cosmetics"
+      ],
+      "categories": [
+        "卸妆",
+        "口服美容",
+        "限定彩妆",
+        "面膜"
+      ],
+      "channels": [
+        "品牌官方微博",
+        "广州美博会",
+        "日本零售渠道"
+      ],
+      "event_types": [
+        "新品升级",
+        "行业论坛",
+        "限定系列发布",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月6日重点",
@@ -348,11 +676,36 @@
       "source": "archive/日报/2026-09-08/beauty-daily-20260908.html",
       "summary": "敏感肌产品升级、彩妆社区趋势与降温防晒技术",
       "event_count": 4,
-      "dimensions": ["渠道生态", "品牌动态", "原料与技术"],
-      "brands": ["LIPS", "GRASUS 瑰倚丝", "Kolmar Korea", "Heroine Make"],
-      "categories": ["彩妆趋势", "敏感肌护肤", "防晒", "睫毛膏", "眼线笔"],
-      "channels": ["LIPS", "品牌官方微博", "天猫", "日本零售渠道"],
-      "event_types": ["趋势奖发布", "产品升级", "技术发布", "新品上市"],
+      "dimensions": [
+        "渠道生态",
+        "品牌动态",
+        "原料与技术"
+      ],
+      "brands": [
+        "LIPS",
+        "GRASUS 瑰倚丝",
+        "Kolmar Korea",
+        "Heroine Make"
+      ],
+      "categories": [
+        "彩妆趋势",
+        "敏感肌护肤",
+        "防晒",
+        "睫毛膏",
+        "眼线笔"
+      ],
+      "channels": [
+        "LIPS",
+        "品牌官方微博",
+        "天猫",
+        "日本零售渠道"
+      ],
+      "event_types": [
+        "趋势奖发布",
+        "产品升级",
+        "技术发布",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月8日重点",
@@ -372,11 +725,36 @@
       "source": "archive/日报/2026-09-07/beauty-daily-20260907.html",
       "summary": "国货抗老升级、平台榜单与体验零售、新品牌孵化",
       "event_count": 4,
-      "dimensions": ["品牌动态", "渠道生态", "市场版图"],
-      "brands": ["百雀羚", "京东美妆", "丝芙兰", "Ulta Beauty"],
-      "categories": ["抗老面霜", "美妆榜单", "体验零售", "新品牌孵化"],
-      "channels": ["天猫", "抖音", "京东美妆", "SEPHORiA", "Ulta Beauty"],
-      "event_types": ["新品发布", "平台榜单", "大型活动官宣", "加速器入选"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "市场版图"
+      ],
+      "brands": [
+        "百雀羚",
+        "京东美妆",
+        "丝芙兰",
+        "Ulta Beauty"
+      ],
+      "categories": [
+        "抗老面霜",
+        "美妆榜单",
+        "体验零售",
+        "新品牌孵化"
+      ],
+      "channels": [
+        "天猫",
+        "抖音",
+        "京东美妆",
+        "SEPHORiA",
+        "Ulta Beauty"
+      ],
+      "event_types": [
+        "新品发布",
+        "平台榜单",
+        "大型活动官宣",
+        "加速器入选"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月7日重点",
@@ -396,11 +774,34 @@
       "source": "archive/日报/2026-09-05/beauty-daily-20260905.html",
       "summary": "功效护肤新品、清洁品类品牌触达、限定礼盒与海外彩妆上新",
       "event_count": 4,
-      "dimensions": ["品牌动态", "海外新品"],
-      "brands": ["敷尔佳", "且初", "FanBeauty", "KATE"],
-      "categories": ["精华油", "人参面霜", "面部清洁", "限定礼盒", "限定彩妆"],
-      "channels": ["品牌官方微博", "限定礼赠", "日本零售渠道"],
-      "event_types": ["新品发布", "品类代言", "限定礼盒发布", "新品上市"],
+      "dimensions": [
+        "品牌动态",
+        "海外新品"
+      ],
+      "brands": [
+        "敷尔佳",
+        "且初",
+        "FanBeauty",
+        "KATE"
+      ],
+      "categories": [
+        "精华油",
+        "人参面霜",
+        "面部清洁",
+        "限定礼盒",
+        "限定彩妆"
+      ],
+      "channels": [
+        "品牌官方微博",
+        "限定礼赠",
+        "日本零售渠道"
+      ],
+      "event_types": [
+        "新品发布",
+        "品类代言",
+        "限定礼盒发布",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月5日重点",
@@ -420,11 +821,31 @@
       "source": "archive/日报/2026-09-04/beauty-daily-20260904.html",
       "summary": "新原料备案、个护渠道策略与清洁/居家健康护理新品",
       "event_count": 4,
-      "dimensions": ["监管与原料", "渠道生态", "品牌动态"],
-      "brands": ["深圳瑞德林", "京东超市", "六神", "SKG"],
-      "categories": ["化妆品新原料", "个人清洁", "个人健康护理"],
-      "channels": ["京东超市", "品牌官方微博"],
-      "event_types": ["新原料备案", "行业大会", "新品上市"],
+      "dimensions": [
+        "监管与原料",
+        "渠道生态",
+        "品牌动态"
+      ],
+      "brands": [
+        "深圳瑞德林",
+        "京东超市",
+        "六神",
+        "SKG"
+      ],
+      "categories": [
+        "化妆品新原料",
+        "个人清洁",
+        "个人健康护理"
+      ],
+      "channels": [
+        "京东超市",
+        "品牌官方微博"
+      ],
+      "event_types": [
+        "新原料备案",
+        "行业大会",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "9月4日重点",
@@ -444,11 +865,32 @@
       "source": "archive/日报/2026-08-29/beauty-daily-20260829.html",
       "summary": "丸美品类与采购策略、北京原料创新载体与 KATE 线下体验营销",
       "event_count": 3,
-      "dimensions": ["品牌动态", "市场版图"],
-      "brands": ["丸美生物", "华熙生物", "爱美客", "百雀羚", "KATE"],
-      "categories": ["眼部护理", "功效原料", "彩妆体验"],
-      "channels": ["北京未来美城", "原宿 Six Gallery", "日本环球影城"],
-      "event_types": ["经营数据披露", "产业项目启动", "快闪体验"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图"
+      ],
+      "brands": [
+        "丸美生物",
+        "华熙生物",
+        "爱美客",
+        "百雀羚",
+        "KATE"
+      ],
+      "categories": [
+        "眼部护理",
+        "功效原料",
+        "彩妆体验"
+      ],
+      "channels": [
+        "北京未来美城",
+        "原宿 Six Gallery",
+        "日本环球影城"
+      ],
+      "event_types": [
+        "经营数据披露",
+        "产业项目启动",
+        "快闪体验"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月29日重点",
@@ -467,11 +909,33 @@
       "source": "archive/日报/2026-08-28/beauty-daily-20260828.html",
       "summary": "毛戈平高端彩妆增长、名创优品线下修复、诺斯贝尔 ODM 回升与 Ulta 指引上调",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["毛戈平", "名创优品", "诺斯贝尔", "Ulta Beauty"],
-      "categories": ["高端彩妆", "生活方式零售", "ODM", "美妆专业零售"],
-      "channels": ["名创优品门店", "TOP TOY", "Ulta Beauty"],
-      "event_types": ["中期业绩", "季度业绩", "供应链经营"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "毛戈平",
+        "名创优品",
+        "诺斯贝尔",
+        "Ulta Beauty"
+      ],
+      "categories": [
+        "高端彩妆",
+        "生活方式零售",
+        "ODM",
+        "美妆专业零售"
+      ],
+      "channels": [
+        "名创优品门店",
+        "TOP TOY",
+        "Ulta Beauty"
+      ],
+      "event_types": [
+        "中期业绩",
+        "季度业绩",
+        "供应链经营"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月28日重点",
@@ -490,11 +954,29 @@
       "source": "archive/日报/2026-08-27/beauty-daily-20260827.html",
       "summary": "上美多品牌结构、华熙生物合成生物 AI 研发与京东虚拟试妆入口",
       "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["上美股份", "华熙生物", "玩美移动"],
-      "categories": ["多品牌经营", "合成生物", "彩妆数字化"],
-      "channels": ["京东", "商品详情页"],
-      "event_types": ["中期业绩", "投资者沟通", "数字化工具上线"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "上美股份",
+        "华熙生物",
+        "玩美移动"
+      ],
+      "categories": [
+        "多品牌经营",
+        "合成生物",
+        "彩妆数字化"
+      ],
+      "channels": [
+        "京东",
+        "商品详情页"
+      ],
+      "event_types": [
+        "中期业绩",
+        "投资者沟通",
+        "数字化工具上线"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月27日重点",
@@ -514,11 +996,39 @@
       "pdf": "archive/日报/2026-08-26/beauty-daily-20260826.pdf",
       "summary": "国内供应链对接、美国美妆零售新场景与功效护肤品牌的底妆延展",
       "event_count": 5,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["Target", "CBF", "舒蕾", "FAS", "OSAJI"],
-      "categories": ["美妆零售", "供应链", "香氛洗护", "底妆", "敏感肌彩妆"],
-      "channels": ["Target", "Target.com", "上海世贸展览馆", "线下路演", "伊势丹新宿店", "品牌官网"],
-      "event_types": ["渠道升级", "行业展会", "线下路演", "新品上市"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "Target",
+        "CBF",
+        "舒蕾",
+        "FAS",
+        "OSAJI"
+      ],
+      "categories": [
+        "美妆零售",
+        "供应链",
+        "香氛洗护",
+        "底妆",
+        "敏感肌彩妆"
+      ],
+      "channels": [
+        "Target",
+        "Target.com",
+        "上海世贸展览馆",
+        "线下路演",
+        "伊势丹新宿店",
+        "品牌官网"
+      ],
+      "event_types": [
+        "渠道升级",
+        "行业展会",
+        "线下路演",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月26日重点",
@@ -540,11 +1050,41 @@
       "pdf": "archive/日报/2026-08-25/beauty-daily-20260825.pdf",
       "summary": "国内婴童功效护肤的水感油体验、处方化护肤与中韩品牌美国渠道进入",
       "event_count": 5,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["薇诺娜宝贝", "Agency Skin", "Pierre Fabre", "Ludient", "CLERIVY"],
-      "categories": ["婴童功效护肤", "抗老护肤", "皮肤学化妆品", "防晒", "痘肌护理"],
-      "channels": ["品牌官网", "线上问诊", "Amazon.com", "CVS", "Target", "Ulta Beauty", "Walmart"],
-      "event_types": ["产品获奖", "处方护肤发布", "高管任命", "新品上市", "跨境渠道进入"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "薇诺娜宝贝",
+        "Agency Skin",
+        "Pierre Fabre",
+        "Ludient",
+        "CLERIVY"
+      ],
+      "categories": [
+        "婴童功效护肤",
+        "抗老护肤",
+        "皮肤学化妆品",
+        "防晒",
+        "痘肌护理"
+      ],
+      "channels": [
+        "品牌官网",
+        "线上问诊",
+        "Amazon.com",
+        "CVS",
+        "Target",
+        "Ulta Beauty",
+        "Walmart"
+      ],
+      "event_types": [
+        "产品获奖",
+        "处方护肤发布",
+        "高管任命",
+        "新品上市",
+        "跨境渠道进入"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月25日重点",
@@ -565,11 +1105,44 @@
       "pdf": "archive/日报/2026-08-24/beauty-daily-20260824.pdf",
       "summary": "国内品牌与供应链集中披露半年进展，Avon重组、Ulta细分护发与欧洲香水传播同步出现",
       "event_count": 7,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "监管 / 原料"],
-      "brands": ["贝泰妮", "嘉亨家化", "赞宇科技", "玫琳凯", "Avon", "The Potion Studio", "Valentino Beauty"],
-      "categories": ["敏感肌护肤", "OEM/ODM", "洗护原料", "直销美妆", "香水", "卷发护理"],
-      "channels": ["抖音", "拼多多", "美容顾问", "Ulta Beauty", "Revolve"],
-      "event_types": ["半年报披露", "业务转型", "资产收购", "渠道入驻", "广告发布"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "监管 / 原料"
+      ],
+      "brands": [
+        "贝泰妮",
+        "嘉亨家化",
+        "赞宇科技",
+        "玫琳凯",
+        "Avon",
+        "The Potion Studio",
+        "Valentino Beauty"
+      ],
+      "categories": [
+        "敏感肌护肤",
+        "OEM/ODM",
+        "洗护原料",
+        "直销美妆",
+        "香水",
+        "卷发护理"
+      ],
+      "channels": [
+        "抖音",
+        "拼多多",
+        "美容顾问",
+        "Ulta Beauty",
+        "Revolve"
+      ],
+      "event_types": [
+        "半年报披露",
+        "业务转型",
+        "资产收购",
+        "渠道入驻",
+        "广告发布"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月24日重点",
@@ -595,11 +1168,38 @@
       "pdf": "archive/日报/2026-08-23/beauty-daily-20260823.pdf",
       "summary": "夸迪新品线下首发、首尔美容周出海平台与Ulta实体门店新品推进",
       "event_count": 5,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["夸迪", "Clarins", "e.l.f.", "Revlon", "Ice Spice"],
-      "categories": ["抗老精华", "高端护肤", "润唇膏", "香水", "K-Beauty"],
-      "channels": ["华熙LIVE", "首尔美容周", "Ulta Beauty", "TikTok Shop"],
-      "event_types": ["新品发布", "线下首发", "全球代言", "贸易展", "实体铺货"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "夸迪",
+        "Clarins",
+        "e.l.f.",
+        "Revlon",
+        "Ice Spice"
+      ],
+      "categories": [
+        "抗老精华",
+        "高端护肤",
+        "润唇膏",
+        "香水",
+        "K-Beauty"
+      ],
+      "channels": [
+        "华熙LIVE",
+        "首尔美容周",
+        "Ulta Beauty",
+        "TikTok Shop"
+      ],
+      "event_types": [
+        "新品发布",
+        "线下首发",
+        "全球代言",
+        "贸易展",
+        "实体铺货"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月23日重点",
@@ -619,11 +1219,30 @@
       "pdf": "archive/日报/2026-08-22/beauty-daily-20260822.pdf",
       "summary": "C咖实体零售互动、KiSS品牌焕新快闪与专业沙龙彩妆上新",
       "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["C咖", "KiSS", "CP Cosmetics"],
-      "categories": ["油皮护肤", "彩妆", "专业沙龙"],
-      "channels": ["三福门店", "WITH HARAJUKU", "CP Salon"],
-      "event_types": ["门店互动", "品牌快闪", "新品上市"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "C咖",
+        "KiSS",
+        "CP Cosmetics"
+      ],
+      "categories": [
+        "油皮护肤",
+        "彩妆",
+        "专业沙龙"
+      ],
+      "channels": [
+        "三福门店",
+        "WITH HARAJUKU",
+        "CP Salon"
+      ],
+      "event_types": [
+        "门店互动",
+        "品牌快闪",
+        "新品上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月22日重点",
@@ -647,11 +1266,24 @@
       "pdf": "archive/日报/2026-08-21/beauty-daily-20260821.pdf",
       "summary": "上美印尼工厂奠基，国货美妆出海进入本地制造与区域供应链阶段",
       "event_count": 1,
-      "dimensions": ["市场版图"],
-      "brands": ["上美股份", "SCC"],
-      "categories": ["海外供应链", "本地制造"],
-      "channels": ["印尼肯德尔经济特区"],
-      "event_types": ["工厂奠基", "海外产能布局"],
+      "dimensions": [
+        "市场版图"
+      ],
+      "brands": [
+        "上美股份",
+        "SCC"
+      ],
+      "categories": [
+        "海外供应链",
+        "本地制造"
+      ],
+      "channels": [
+        "印尼肯德尔经济特区"
+      ],
+      "event_types": [
+        "工厂奠基",
+        "海外产能布局"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月21日重点",
@@ -673,11 +1305,50 @@
       "pdf": "archive/日报/2026-08-20/beauty-daily-20260820.pdf",
       "summary": "国货中期业绩分化、Olive Young×Sephora美国首发与国际集团品牌组合调整",
       "event_count": 12,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["上海家化", "敷尔佳", "巨子生物", "Olive Young", "Sephora", "Coty", "雅诗兰黛", "Tower 28", "Lush", "HABA", "pdc", "ROAlív", "ORBIS"],
-      "categories": ["中期业绩", "K-Beauty", "高端香氛", "敏感肌底妆", "节日限定", "护肤新品", "护发"],
-      "channels": ["Sephora", "Sephora.com", "Times Square", "ShopHABA", "官方线上", "日本门店"],
-      "event_types": ["业绩沟通会", "业绩披露", "渠道合作", "线上发售", "限量上市"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "上海家化",
+        "敷尔佳",
+        "巨子生物",
+        "Olive Young",
+        "Sephora",
+        "Coty",
+        "雅诗兰黛",
+        "Tower 28",
+        "Lush",
+        "HABA",
+        "pdc",
+        "ROAlív",
+        "ORBIS"
+      ],
+      "categories": [
+        "中期业绩",
+        "K-Beauty",
+        "高端香氛",
+        "敏感肌底妆",
+        "节日限定",
+        "护肤新品",
+        "护发"
+      ],
+      "channels": [
+        "Sephora",
+        "Sephora.com",
+        "Times Square",
+        "ShopHABA",
+        "官方线上",
+        "日本门店"
+      ],
+      "event_types": [
+        "业绩沟通会",
+        "业绩披露",
+        "渠道合作",
+        "线上发售",
+        "限量上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月20日重点",
@@ -699,11 +1370,45 @@
       "pdf": "archive/日报/2026-08-19/beauty-daily-20260819.pdf",
       "summary": "上美盈利预警、FAS底妆扩展与百货美妆会员联动",
       "event_count": 10,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "监管与原料"],
-      "brands": ["上美股份", "FAS", "大丸松坂屋", "L'Oréal Paris", "CHANEL", "SENSAI", "ETVOS", "keenoniks", "Ice Spice"],
-      "categories": ["业绩预警", "底妆", "香水", "高端护肤", "原料创新"],
-      "channels": ["阪急梅田", "DEPACO", "Ulta Beauty", "TikTok Shop", "@cosme OSAKA"],
-      "event_types": ["盈利警告", "先行发售", "会员活动", "全球大使", "香水首发", "原料品鉴会"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "监管与原料"
+      ],
+      "brands": [
+        "上美股份",
+        "FAS",
+        "大丸松坂屋",
+        "L'Oréal Paris",
+        "CHANEL",
+        "SENSAI",
+        "ETVOS",
+        "keenoniks",
+        "Ice Spice"
+      ],
+      "categories": [
+        "业绩预警",
+        "底妆",
+        "香水",
+        "高端护肤",
+        "原料创新"
+      ],
+      "channels": [
+        "阪急梅田",
+        "DEPACO",
+        "Ulta Beauty",
+        "TikTok Shop",
+        "@cosme OSAKA"
+      ],
+      "event_types": [
+        "盈利警告",
+        "先行发售",
+        "会员活动",
+        "全球大使",
+        "香水首发",
+        "原料品鉴会"
+      ],
       "push": {
         "status": "disabled",
         "stage_items": [
@@ -722,11 +1427,37 @@
       "pdf": "archive/日报/2026-08-18/beauty-daily-20260818.pdf",
       "summary": "国内线下渠道与国货美妆出海、门店AI肤测及护肤化底妆",
       "event_count": 4,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["Grupo Boticário", "Haut.AI", "ALBION", "KATE", "化妆品（中国）百强连锁会议"],
-      "categories": ["AI肤测", "底妆", "彩妆", "线下零售", "美妆出海"],
-      "channels": ["成都龙之梦大酒店", "O Boticário门店", "店头", "线上", "USJ"],
-      "event_types": ["行业会议", "全国部署", "新品上市", "渠道启动"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "Grupo Boticário",
+        "Haut.AI",
+        "ALBION",
+        "KATE",
+        "化妆品（中国）百强连锁会议"
+      ],
+      "categories": [
+        "AI肤测",
+        "底妆",
+        "彩妆",
+        "线下零售",
+        "美妆出海"
+      ],
+      "channels": [
+        "成都龙之梦大酒店",
+        "O Boticário门店",
+        "店头",
+        "线上",
+        "USJ"
+      ],
+      "event_types": [
+        "行业会议",
+        "全国部署",
+        "新品上市",
+        "渠道启动"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月18日重点",
@@ -753,11 +1484,30 @@
       "pdf": "archive/日报/2026-08-17/beauty-daily-20260817.pdf",
       "summary": "闻献高端香氛全球代言、日常角质管理新品与高端精华全国试用",
       "event_count": 3,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["闻献 DOCUMENTS", "龟宝香居", "Dr.Ci:Labo", "SHISEIDO"],
-      "categories": ["高端香氛", "功效护肤", "精华"],
-      "channels": ["全国派样", "线下体验"],
-      "event_types": ["全球代言", "新品上市", "试用传播"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "闻献 DOCUMENTS",
+        "龟宝香居",
+        "Dr.Ci:Labo",
+        "SHISEIDO"
+      ],
+      "categories": [
+        "高端香氛",
+        "功效护肤",
+        "精华"
+      ],
+      "channels": [
+        "全国派样",
+        "线下体验"
+      ],
+      "event_types": [
+        "全球代言",
+        "新品上市",
+        "试用传播"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月17日重点",
@@ -783,11 +1533,32 @@
       "pdf": "archive/日报/2026-08-16/beauty-daily-20260816.pdf",
       "summary": "Ulta与Target合作收口、香港百货会员节点与美妆AI能力开放",
       "event_count": 3,
-      "dimensions": ["渠道生态", "其他动态"],
-      "brands": ["Ulta Beauty", "Target", "Lane Crawford", "Perfect Corp"],
-      "categories": ["高端美妆零售", "会员运营", "美妆AI"],
-      "channels": ["Target", "Ulta Beauty", "连卡佛门店", "API"],
-      "event_types": ["合作终止", "会员计划", "技术竞赛"],
+      "dimensions": [
+        "渠道生态",
+        "其他动态"
+      ],
+      "brands": [
+        "Ulta Beauty",
+        "Target",
+        "Lane Crawford",
+        "Perfect Corp"
+      ],
+      "categories": [
+        "高端美妆零售",
+        "会员运营",
+        "美妆AI"
+      ],
+      "channels": [
+        "Target",
+        "Ulta Beauty",
+        "连卡佛门店",
+        "API"
+      ],
+      "event_types": [
+        "合作终止",
+        "会员计划",
+        "技术竞赛"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月16日重点",
@@ -808,11 +1579,35 @@
       "pdf": "archive/日报/2026-08-15/beauty-daily-20260815.pdf",
       "summary": "日本IP护肤与大众彩妆、美国明星香水和澳洲专业美业展",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["MISSHA", "DAISY DOLL", "Scent Beauty", "Megan Moroney"],
-      "categories": ["功效护肤", "彩妆", "香氛", "专业美容"],
-      "channels": ["日本药妆", "Walmart", "CVS", "Beauty Expo Australia"],
-      "event_types": ["限定包装", "新色追加", "线下上市", "专业展会"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "MISSHA",
+        "DAISY DOLL",
+        "Scent Beauty",
+        "Megan Moroney"
+      ],
+      "categories": [
+        "功效护肤",
+        "彩妆",
+        "香氛",
+        "专业美容"
+      ],
+      "channels": [
+        "日本药妆",
+        "Walmart",
+        "CVS",
+        "Beauty Expo Australia"
+      ],
+      "event_types": [
+        "限定包装",
+        "新色追加",
+        "线下上市",
+        "专业展会"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月15日重点",
@@ -833,11 +1628,35 @@
       "pdf": "archive/日报/2026-08-14/beauty-daily-20260814.pdf",
       "summary": "Olive Young美国体验节、男士香氛、限定彩妆与美妆社群报名",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["Olive Young", "Sol de Janeiro", "Dior", "Mimi Beauty"],
-      "categories": ["K-Beauty", "男士香氛", "限定彩妆", "美妆社群"],
-      "channels": ["KCON LA", "Sephora", "日本全国门店", "线下课程"],
-      "event_types": ["体验节", "门店首发", "全国上市", "报名启动"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "Olive Young",
+        "Sol de Janeiro",
+        "Dior",
+        "Mimi Beauty"
+      ],
+      "categories": [
+        "K-Beauty",
+        "男士香氛",
+        "限定彩妆",
+        "美妆社群"
+      ],
+      "channels": [
+        "KCON LA",
+        "Sephora",
+        "日本全国门店",
+        "线下课程"
+      ],
+      "event_types": [
+        "体验节",
+        "门店首发",
+        "全国上市",
+        "报名启动"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月14日重点",
@@ -858,11 +1677,31 @@
       "pdf": "archive/日报/2026-08-13/beauty-daily-20260813.pdf",
       "summary": "PCHi功效研发议程、香港消费展与Ulta线下新品体验",
       "event_count": 3,
-      "dimensions": ["监管与合规", "品牌动态", "渠道生态"],
-      "brands": ["PCHi", "Revolution Beauty"],
-      "categories": ["精准护肤", "头皮护理", "底妆", "跨境零售"],
-      "channels": ["PCHi", "香港会展", "Ulta Beauty"],
-      "event_types": ["技术峰会", "消费展", "新品体验"],
+      "dimensions": [
+        "监管与合规",
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "PCHi",
+        "Revolution Beauty"
+      ],
+      "categories": [
+        "精准护肤",
+        "头皮护理",
+        "底妆",
+        "跨境零售"
+      ],
+      "channels": [
+        "PCHi",
+        "香港会展",
+        "Ulta Beauty"
+      ],
+      "event_types": [
+        "技术峰会",
+        "消费展",
+        "新品体验"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月13日重点",
@@ -2278,11 +3117,35 @@
       "pdf": "archive/日报/2026-07-31/beauty-daily-20260731.pdf",
       "summary": "自然堂IPO结构、爱茉莉医美投资、DUO洁面升级与eos彩色唇部护理",
       "event_count": 4,
-      "dimensions": ["品牌动态", "投融资"],
-      "brands": ["自然堂", "爱茉莉太平洋", "HIGHER", "DUO", "eos"],
-      "categories": ["护肤", "医美", "洁面", "唇部护理"],
-      "channels": ["港股", "医疗渠道", "电商", "大众零售"],
-      "event_types": ["IPO", "战略投资", "新品", "海外披露"],
+      "dimensions": [
+        "品牌动态",
+        "投融资"
+      ],
+      "brands": [
+        "自然堂",
+        "爱茉莉太平洋",
+        "HIGHER",
+        "DUO",
+        "eos"
+      ],
+      "categories": [
+        "护肤",
+        "医美",
+        "洁面",
+        "唇部护理"
+      ],
+      "channels": [
+        "港股",
+        "医疗渠道",
+        "电商",
+        "大众零售"
+      ],
+      "event_types": [
+        "IPO",
+        "战略投资",
+        "新品",
+        "海外披露"
+      ],
       "push": {
         "status": "approved",
         "heading": "7月31日重点",
@@ -2304,11 +3167,33 @@
       "pdf": "archive/日报/2026-08-01/beauty-daily-20260801.pdf",
       "summary": "FanBeauty红毯气垫、日系品牌首销与百事联名社交电商首发",
       "event_count": 5,
-      "dimensions": ["品牌动态", "渠道生态"],
-      "brands": ["FanBeauty Diary", "POLA", "资生堂", "HOLIKA HOLIKA", "Glamlite", "Pepsi"],
-      "categories": ["底妆", "护肤", "彩妆", "身体护理"],
-      "channels": ["百货", "TikTok Shop"],
-      "event_types": ["新品", "联名", "首发"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态"
+      ],
+      "brands": [
+        "FanBeauty Diary",
+        "POLA",
+        "资生堂",
+        "HOLIKA HOLIKA",
+        "Glamlite",
+        "Pepsi"
+      ],
+      "categories": [
+        "底妆",
+        "护肤",
+        "彩妆",
+        "身体护理"
+      ],
+      "channels": [
+        "百货",
+        "TikTok Shop"
+      ],
+      "event_types": [
+        "新品",
+        "联名",
+        "首发"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月1日重点",
@@ -2330,11 +3215,30 @@
       "pdf": "archive/日报/2026-08-02/beauty-daily-20260802.pdf",
       "summary": "敷尔佳注射级医美、义乌拼柜出海、MAC水漾系列与个性化服务试点",
       "event_count": 4,
-      "dimensions": ["品牌动态", "市场版图", "监管与合规"],
-      "brands": ["敷尔佳", "MAC"],
-      "categories": ["医美", "彩妆", "化妆品服务"],
-      "channels": ["跨境电商", "门店服务"],
-      "event_types": ["注册申请", "出海", "新品", "监管试点"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "监管与合规"
+      ],
+      "brands": [
+        "敷尔佳",
+        "MAC"
+      ],
+      "categories": [
+        "医美",
+        "彩妆",
+        "化妆品服务"
+      ],
+      "channels": [
+        "跨境电商",
+        "门店服务"
+      ],
+      "event_types": [
+        "注册申请",
+        "出海",
+        "新品",
+        "监管试点"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月2日重点",
@@ -2356,11 +3260,38 @@
       "pdf": "archive/日报/2026-08-03/beauty-daily-20260803.pdf",
       "summary": "植物医生品牌代言、乌克兰合规切换与国际渠道、定价、彩妆信号",
       "event_count": 6,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "其他动态"],
-      "brands": ["植物医生", "Bluemercury", "to/one", "Maison KOSÉ", "ARSOA"],
-      "categories": ["护肤", "彩妆", "零售管理", "合规"],
-      "channels": ["直播", "高端美妆零售", "线上", "线下"],
-      "event_types": ["代言", "法规生效", "高管履新", "新品上市", "调价"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "其他动态"
+      ],
+      "brands": [
+        "植物医生",
+        "Bluemercury",
+        "to/one",
+        "Maison KOSÉ",
+        "ARSOA"
+      ],
+      "categories": [
+        "护肤",
+        "彩妆",
+        "零售管理",
+        "合规"
+      ],
+      "channels": [
+        "直播",
+        "高端美妆零售",
+        "线上",
+        "线下"
+      ],
+      "event_types": [
+        "代言",
+        "法规生效",
+        "高管履新",
+        "新品上市",
+        "调价"
+      ],
       "push": {
         "status": "disabled"
       }
@@ -2373,11 +3304,42 @@
       "pdf": "archive/日报/2026-08-04/beauty-daily-20260804.pdf",
       "summary": "爱美客Hutox商业化、复锐医疗Alma中国发布与宝洁收购Thorne",
       "event_count": 6,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资"],
-      "brands": ["爱美客", "Sisram Medical", "Alma", "P&G", "Thorne", "GRASUS", "Jo Malone London", "なめらか本舗"],
-      "categories": ["医美", "功效护肤", "营养健康", "香氛", "护肤"],
-      "channels": ["医美机构", "天猫U先", "线上", "精品店"],
-      "event_types": ["上市", "新品", "收购", "试用", "焕新"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资"
+      ],
+      "brands": [
+        "爱美客",
+        "Sisram Medical",
+        "Alma",
+        "P&G",
+        "Thorne",
+        "GRASUS",
+        "Jo Malone London",
+        "なめらか本舗"
+      ],
+      "categories": [
+        "医美",
+        "功效护肤",
+        "营养健康",
+        "香氛",
+        "护肤"
+      ],
+      "channels": [
+        "医美机构",
+        "天猫U先",
+        "线上",
+        "精品店"
+      ],
+      "event_types": [
+        "上市",
+        "新品",
+        "收购",
+        "试用",
+        "焕新"
+      ],
       "push": {
         "status": "approved",
         "heading": "昨日重点",
@@ -2399,11 +3361,39 @@
       "pdf": "archive/日报/2026-08-05/beauty-daily-20260805.pdf",
       "summary": "资生堂上半年利润修复、美丽田园杭州直营整合与欧美个护渠道信号",
       "event_count": 5,
-      "dimensions": ["品牌动态", "市场版图", "投融资"],
-      "brands": ["资生堂", "美丽田园", "奈瑞儿", "Edgewell", "K18", "OSAJI"],
-      "categories": ["高端美妆", "医美服务", "个护", "洗护", "彩妆"],
-      "channels": ["直营门店", "Sephora", "Amazon Beauty", "专业沙龙", "线上"],
-      "event_types": ["业绩披露", "收购", "新品上市", "全国发售"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "投融资"
+      ],
+      "brands": [
+        "资生堂",
+        "美丽田园",
+        "奈瑞儿",
+        "Edgewell",
+        "K18",
+        "OSAJI"
+      ],
+      "categories": [
+        "高端美妆",
+        "医美服务",
+        "个护",
+        "洗护",
+        "彩妆"
+      ],
+      "channels": [
+        "直营门店",
+        "Sephora",
+        "Amazon Beauty",
+        "专业沙龙",
+        "线上"
+      ],
+      "event_types": [
+        "业绩披露",
+        "收购",
+        "新品上市",
+        "全国发售"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月5日重点",
@@ -2426,11 +3416,41 @@
       "pdf": "archive/日报/2026-08-07/beauty-daily-20260807.pdf",
       "summary": "原料资本化、行业大会、护肤彩妆融合、香氛与秋季彩妆动态",
       "event_count": 13,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "其他动态"],
-      "brands": ["珈凯生物", "e.l.f. Beauty", "Bubble", "Rare Beauty", "SNIDEL BEAUTY", "THREE"],
-      "categories": ["原料", "护肤", "彩妆", "香氛", "营养健康"],
-      "channels": ["Target", "PLAZA", "英国零售", "旗舰工作室"],
-      "event_types": ["上市公告", "行业会议", "联名", "新品", "渠道进入"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态",
+        "投融资",
+        "其他动态"
+      ],
+      "brands": [
+        "珈凯生物",
+        "e.l.f. Beauty",
+        "Bubble",
+        "Rare Beauty",
+        "SNIDEL BEAUTY",
+        "THREE"
+      ],
+      "categories": [
+        "原料",
+        "护肤",
+        "彩妆",
+        "香氛",
+        "营养健康"
+      ],
+      "channels": [
+        "Target",
+        "PLAZA",
+        "英国零售",
+        "旗舰工作室"
+      ],
+      "event_types": [
+        "上市公告",
+        "行业会议",
+        "联名",
+        "新品",
+        "渠道进入"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月7日重点",
@@ -2452,11 +3472,38 @@
       "pdf": "archive/日报/2026-08-08/beauty-daily-20260808.pdf",
       "summary": "伦敦品牌集合空间、商超新品发布、Shopee首发与大众护肤价格带扩展",
       "event_count": 5,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
-      "brands": ["完美日记", "飘柔", "欧莱雅巴黎", "SOFINA", "ORBIS"],
-      "categories": ["护肤", "洗护", "彩妆", "香氛"],
-      "channels": ["Yan Lab", "大润发", "Shopee", "药妆店", "直营店"],
-      "event_types": ["海外触点", "新品发布", "直播首发", "新品上市", "先行销售"],
+      "dimensions": [
+        "品牌动态",
+        "市场版图",
+        "渠道生态"
+      ],
+      "brands": [
+        "完美日记",
+        "飘柔",
+        "欧莱雅巴黎",
+        "SOFINA",
+        "ORBIS"
+      ],
+      "categories": [
+        "护肤",
+        "洗护",
+        "彩妆",
+        "香氛"
+      ],
+      "channels": [
+        "Yan Lab",
+        "大润发",
+        "Shopee",
+        "药妆店",
+        "直营店"
+      ],
+      "event_types": [
+        "海外触点",
+        "新品发布",
+        "直播首发",
+        "新品上市",
+        "先行销售"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月8日重点",
@@ -2478,11 +3525,32 @@
       "pdf": "archive/日报/2026-08-09/beauty-daily-20260809.pdf",
       "summary": "Bemotrizinol OTC专论生效，以及东京香氛与护肤体验零售活动",
       "event_count": 3,
-      "dimensions": ["市场版图", "渠道生态", "其他动态"],
-      "brands": ["DSM", "Jo Malone London", "OYOT"],
-      "categories": ["防晒", "香氛", "护肤", "原料"],
-      "channels": ["快闪店", "表参道", "线下体验"],
-      "event_types": ["监管生效", "快闪收官", "市场测试"],
+      "dimensions": [
+        "市场版图",
+        "渠道生态",
+        "其他动态"
+      ],
+      "brands": [
+        "DSM",
+        "Jo Malone London",
+        "OYOT"
+      ],
+      "categories": [
+        "防晒",
+        "香氛",
+        "护肤",
+        "原料"
+      ],
+      "channels": [
+        "快闪店",
+        "表参道",
+        "线下体验"
+      ],
+      "event_types": [
+        "监管生效",
+        "快闪收官",
+        "市场测试"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月9日重点",
@@ -2503,11 +3571,57 @@
       "pdf": "archive/日报/2026-08-10/beauty-daily-20260810.pdf",
       "summary": "HBN七周年、上美医研合作、ReFa洗护先行发售、Nutrire进驻Ulta及Kurly美妆大促",
       "event_count": 14,
-      "dimensions": ["品牌动态", "渠道生态", "投融资"],
-      "brands": ["HBN", "摇滚动物园", "FanBeauty", "上美股份", "ReFa", "CPB", "IPSA", "Nutrire", "Jo Malone London", "Natura", "Kurly", "Aroma-Zone", "Heroine Make"],
-      "categories": ["护肤", "香氛护手", "底妆", "洗护", "头皮护理", "彩妆", "口服美容", "香氛", "DIY美妆"],
-      "channels": ["天猫旗舰店", "ReFa GINZA", "Ulta.com", "Ulta Beauty", "Fortnite", "Walmart", "Kurly"],
-      "event_types": ["品牌营销", "联名", "新品上市", "医研合作", "零售首发", "游戏体验", "大促", "并购洽谈", "包装更新"],
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "投融资"
+      ],
+      "brands": [
+        "HBN",
+        "摇滚动物园",
+        "FanBeauty",
+        "上美股份",
+        "ReFa",
+        "CPB",
+        "IPSA",
+        "Nutrire",
+        "Jo Malone London",
+        "Natura",
+        "Kurly",
+        "Aroma-Zone",
+        "Heroine Make"
+      ],
+      "categories": [
+        "护肤",
+        "香氛护手",
+        "底妆",
+        "洗护",
+        "头皮护理",
+        "彩妆",
+        "口服美容",
+        "香氛",
+        "DIY美妆"
+      ],
+      "channels": [
+        "天猫旗舰店",
+        "ReFa GINZA",
+        "Ulta.com",
+        "Ulta Beauty",
+        "Fortnite",
+        "Walmart",
+        "Kurly"
+      ],
+      "event_types": [
+        "品牌营销",
+        "联名",
+        "新品上市",
+        "医研合作",
+        "零售首发",
+        "游戏体验",
+        "大促",
+        "并购洽谈",
+        "包装更新"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月10日重点",
@@ -2528,11 +3642,36 @@
       "pdf": "archive/日报/2026-08-06/beauty-daily-20260806.pdf",
       "summary": "化妆品安全新标准、香料产能融资与中日欧美产品渠道信号",
       "event_count": 5,
-      "dimensions": ["品牌动态", "监管与合规", "渠道生态", "投融资"],
-      "brands": ["OLAY", "格林生物", "e.l.f.", "Bubble", "Minon"],
-      "categories": ["抗老护肤", "香料", "彩妆", "敏感肌清洁"],
-      "channels": ["Boots", "Target", "日本零售"],
-      "event_types": ["标准发布", "IPO", "新品传播", "渠道上市"],
+      "dimensions": [
+        "品牌动态",
+        "监管与合规",
+        "渠道生态",
+        "投融资"
+      ],
+      "brands": [
+        "OLAY",
+        "格林生物",
+        "e.l.f.",
+        "Bubble",
+        "Minon"
+      ],
+      "categories": [
+        "抗老护肤",
+        "香料",
+        "彩妆",
+        "敏感肌清洁"
+      ],
+      "channels": [
+        "Boots",
+        "Target",
+        "日本零售"
+      ],
+      "event_types": [
+        "标准发布",
+        "IPO",
+        "新品传播",
+        "渠道上市"
+      ],
       "push": {
         "status": "approved",
         "heading": "8月6日重点",
