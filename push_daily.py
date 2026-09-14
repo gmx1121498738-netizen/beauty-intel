@@ -226,9 +226,25 @@ def build_weekly_card(report: dict, base_url: str) -> dict:
 
 
 def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) -> dict:
-    """Build one card that keeps the weekly and each daily update distinct."""
+    """Build one concise weekly-first card with a link to the daily archive."""
+    if not dailies:
+        raise ValueError("dailies is required")
+
     year, week_number = weekly["week"].split("-W", 1)
     weekly_items = weekly["push"]["items"]
+    daily_dates = [datetime.strptime(report["date"], "%Y-%m-%d") for report in dailies]
+    first_daily, last_daily = daily_dates[0], daily_dates[-1]
+    if first_daily.month == last_daily.month:
+        daily_label = (
+            f"{first_daily.month}月{first_daily.day}日"
+            if first_daily.day == last_daily.day
+            else f"{first_daily.month}月{first_daily.day}—{last_daily.day}日"
+        )
+    else:
+        daily_label = (
+            f"{first_daily.month}月{first_daily.day}日—"
+            f"{last_daily.month}月{last_daily.day}日"
+        )
     elements = [
         {
             "tag": "div",
@@ -253,33 +269,25 @@ def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) ->
                 }
             ],
         },
+        {
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": f"**日报｜{daily_label}**\n日报详情请在网页端查看。",
+            },
+        },
+        {
+            "tag": "action",
+            "actions": [
+                {
+                    "tag": "button",
+                    "type": "primary",
+                    "text": {"tag": "plain_text", "content": "查看日报归档"},
+                    "url": f"{base_url.rstrip('/')}/",
+                }
+            ],
+        },
     ]
-    for report in dailies:
-        report_date = datetime.strptime(report["date"], "%Y-%m-%d")
-        items = report.get("push", {}).get("stage_items", report.get("push", {}).get("items", []))
-        if not items:
-            raise ValueError(f"No stage-update items for {report['date']}")
-        lines = "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(items, 1))
-        elements.extend([
-            {
-                "tag": "div",
-                "text": {
-                    "tag": "lark_md",
-                    "content": f"**{report_date.month}月{report_date.day}日日报**\n{lines}",
-                },
-            },
-            {
-                "tag": "action",
-                "actions": [
-                    {
-                        "tag": "button",
-                        "type": "primary",
-                        "text": {"tag": "plain_text", "content": f"查看{report_date.month}月{report_date.day}日日报"},
-                        "url": report_url(base_url, report["date"]),
-                    }
-                ],
-            },
-        ])
     return {
         "config": {"wide_screen_mode": True},
         "header": {"template": "blue", "title": {"tag": "plain_text", "content": "美妆情报Bot｜阶段更新"}},

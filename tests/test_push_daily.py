@@ -94,7 +94,7 @@ class ReportSelectionTests(unittest.TestCase):
 
 
 class FeishuCardTests(unittest.TestCase):
-    def test_stage_update_card_keeps_weekly_and_each_daily_summary_separate(self):
+    def test_stage_update_card_keeps_weekly_and_links_to_daily_archive(self):
         weekly = make_weekly_report(items=["周报主线一", "周报主线二"])
         dailies = [
             make_report("2026-08-17", items=["17日重点一", "17日重点二"]),
@@ -116,18 +116,16 @@ class FeishuCardTests(unittest.TestCase):
         )
         self.assertIn("**周报｜2026年第30周**", content)
         self.assertIn("周报主线一", content)
-        for day, text in (("8月17日", "17日重点一"), ("8月18日", "18日重点一"), ("8月19日", "19日重点一")):
-            self.assertIn(f"**{day}日报**", content)
-            self.assertIn(text, content)
+        self.assertIn("**日报｜8月17—19日**", content)
+        self.assertIn("日报详情请在网页端查看。", content)
+        self.assertNotIn("17日重点一", content)
+        self.assertNotIn("18日重点一", content)
+        self.assertNotIn("19日重点一", content)
 
-        self.assertEqual(len(card["elements"]), 8)
+        self.assertEqual(len(card["elements"]), 4)
         urls = [element["actions"][0]["url"] for element in card["elements"] if element["tag"] == "action"]
         self.assertEqual(urls[0], "https://gmx1121498738-netizen.github.io/beauty-intel/weekly/2026-W30/")
-        self.assertEqual(urls[1:], [
-            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-17/",
-            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-18/",
-            "https://gmx1121498738-netizen.github.io/beauty-intel/daily/2026-08-19/",
-        ])
+        self.assertEqual(urls[1:], ["https://gmx1121498738-netizen.github.io/beauty-intel/"])
 
     def test_weekly_card_uses_weekly_route_and_reviewed_button_label(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
@@ -375,7 +373,8 @@ class PushDailyCliTests(unittest.TestCase):
         self.assertEqual(result, 0)
         self.assertIn("美妆情报Bot｜阶段更新", output.getvalue())
         self.assertIn("https://example.com/beauty/weekly/2026-W35/", output.getvalue())
-        self.assertIn("https://example.com/beauty/daily/2026-08-24/", output.getvalue())
+        self.assertIn("日报详情请在网页端查看。", output.getvalue())
+        self.assertIn("https://example.com/beauty/", output.getvalue())
 
     def test_real_send_requires_webhook_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
