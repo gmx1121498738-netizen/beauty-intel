@@ -84,6 +84,121 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-13",
+      "title": "美妆竞对情报日报｜2026年9月13日",
+      "source": "archive/日报/2026-09-13/beauty-daily-20260913.html",
+      "summary": "平台成分内容的线下收口与高端护肤沉浸式体验",
+      "event_count": 2,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["巨量引擎", "雪花秀"],
+      "categories": ["成分内容", "高端抗老"],
+      "channels": ["杭州中心户外广场", "上海新天地"],
+      "event_types": ["线下活动收尾", "限时体验收尾"],
+      "push": {
+        "status": "approved",
+        "heading": "9月13日重点",
+        "items": [
+          "当日未检到可确认的新发生强信号，保留的两项均为明确展期最后一天的轻信号。",
+          "平台成分内容与高端护肤体验的后续价值，应回到搜索、预约、会员和正装转化验证。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-12",
+      "title": "美妆竞对情报日报｜2026年9月12日",
+      "source": "archive/日报/2026-09-12/beauty-daily-20260912.html",
+      "summary": "国货成分内容、线下高端体验和底妆新品",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["巨量引擎", "雪花秀", "Primavista"],
+      "categories": ["成分内容", "高端抗老", "底妆"],
+      "channels": ["美博会", "杭州中心户外广场", "上海新天地", "日本零售渠道"],
+      "event_types": ["线下互动", "限时体验", "新品上市"],
+      "push": {
+        "status": "approved",
+        "heading": "9月12日重点",
+        "items": [
+          "平台型成分内容以线下场景衔接创作者内容和产品转化。",
+          "雪花秀以人参研发组织高端抗老体验，Primavista 继续强调低门槛底妆体验。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-11",
+      "title": "美妆竞对情报日报｜2026年9月11日",
+      "source": "archive/日报/2026-09-11/beauty-daily-20260911.html",
+      "summary": "百货美妆活动、国际彩妆亚洲限定与线下体验零售",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["银泰百货", "NARS", "Charlotte Tilbury"],
+      "categories": ["百货美妆", "秋季彩妆", "定妆"],
+      "channels": ["银泰百货", "日本零售渠道", "上海新世界新丸中心"],
+      "event_types": ["美妆节", "新品上市", "限时快闪"],
+      "push": {
+        "status": "approved",
+        "heading": "9月11日重点",
+        "items": [
+          "银泰进入秋季美妆节第二档，关注新品、会员权益与到店服务的共同承接。",
+          "NARS 以亚洲限定色推进秋季货盘；上海快闪为展期内轻信号。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-10",
+      "title": "美妆竞对情报日报｜2026年9月10日",
+      "source": "archive/日报/2026-09-10/beauty-daily-20260910.html",
+      "summary": "医美合规扩容、秋季新品交易与高端洗护",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "渠道生态", "监管与合规"],
+      "brands": ["乔雅登", "CBE 杭州展", "潘婷 BIO"],
+      "categories": ["医美", "秋冬新品", "高端洗护"],
+      "channels": ["CBE 杭州展", "天猫超级品牌日"],
+      "event_types": ["适应症获批", "行业展会", "品牌发布"],
+      "push": {
+        "status": "approved",
+        "heading": "9月10日重点",
+        "items": [
+          "乔雅登新增眶下凹陷适应症，CBE 杭州展集中承接新品、原料和渠道资源。",
+          "潘婷 BIO 以高端修护与平台首发进入洗护竞争，持续关注价格带与常销复购。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-09",
+      "title": "美妆竞对情报日报｜2026年9月9日",
+      "source": "archive/日报/2026-09-09/beauty-daily-20260909.html",
+      "summary": "香氛产业研究、配方开品协同与护发产品更新",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "市场版图", "原料与技术"],
+      "brands": ["颖通集团", "中国化妆品科学开品大会", "ReFa"],
+      "categories": ["香氛", "产品开发", "护发"],
+      "channels": ["行业会议", "日本零售渠道"],
+      "event_types": ["白皮书发布", "行业大会", "新品上市"],
+      "push": {
+        "status": "approved",
+        "heading": "9月9日重点",
+        "items": [
+          "颖通发布嗅觉生态白皮书并启动芳香材料产学研合作。",
+          "开品大会强调原料、配方和上新协同；ReFa 以热响应体验更新护发油。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-08-30",
       "title": "美妆竞对情报日报｜2026年8月30日",
       "source": "archive/日报/2026-08-30/beauty-daily-20260830.html",
