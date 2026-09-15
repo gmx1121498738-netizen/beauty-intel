@@ -185,6 +185,58 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-14",
+      "title": "美妆竞对情报日报｜2026年9月14日",
+      "source": "archive/日报/2026-09-14/beauty-daily-20260914.html",
+      "pdf": "archive/日报/2026-09-14/beauty-daily-20260914.pdf",
+      "summary": "功效护肤 CS 渠道推进、校园人群触达与北美香氛渠道进入",
+      "event_count": 5,
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "市场版图"
+      ],
+      "brands": [
+        "典萃",
+        "Fan Beauty Diary",
+        "Khloé Kardashian Fragrances",
+        "Torriden",
+        "Cymbiotika"
+      ],
+      "categories": [
+        "功效护肤",
+        "面膜",
+        "香水",
+        "补水护肤",
+        "口服美容"
+      ],
+      "channels": [
+        "CS 渠道",
+        "天猫校园",
+        "Sephora",
+        "Sephora at Kohl's",
+        "日本药妆店"
+      ],
+      "event_types": [
+        "区域发布会",
+        "校园快闪",
+        "渠道进入",
+        "系列焕新",
+        "新品上市"
+      ],
+      "push": {
+        "status": "approved",
+        "heading": "09月14日重点",
+        "items": [
+          "典萃与 Fan Beauty Diary 分别以 CS 渠道区域发布和校园快闪推进国内触点。",
+          "Khloé 香氛进入 Sephora 北美体系；Torriden 与 Cymbiotika 补充系列焕新和口服美容观察。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-09-13",
       "title": "美妆竞对情报日报｜2026年9月13日",
       "source": "archive/日报/2026-09-13/beauty-daily-20260913.html",
