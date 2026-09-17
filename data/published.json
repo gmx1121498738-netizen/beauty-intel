@@ -185,6 +185,110 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-16",
+      "title": "美妆竞对情报日报｜2026年9月16日",
+      "source": "archive/日报/2026-09-16/beauty-daily-20260916.html",
+      "pdf": "archive/日报/2026-09-16/beauty-daily-20260916.pdf",
+      "summary": "家用美容仪渠道联动、功效原料平台与产业合规信号",
+      "event_count": 5,
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "其他动态",
+        "监管与合规"
+      ],
+      "brands": [
+        "极萌",
+        "华熙生物",
+        "汕头市化妆品行业协会",
+        "ReFa",
+        "PCD London"
+      ],
+      "categories": [
+        "家用美容仪",
+        "功效原料",
+        "产业合规",
+        "美发造型工具",
+        "包装供应链"
+      ],
+      "channels": [
+        "天猫",
+        "京东",
+        "抖音",
+        "ReFa GINZA",
+        "PCD London"
+      ],
+      "event_types": [
+        "品牌大使",
+        "产品开售",
+        "原料平台",
+        "合规倡议",
+        "新品上市",
+        "行业展会"
+      ],
+      "push": {
+        "status": "approved",
+        "heading": "09月16日重点",
+        "items": [
+          "极萌以品牌大使、多平台开售和城市户外投放串联家用美容仪的内容电商传播。",
+          "华熙生物的原料平台、汕头行业合规倡议与 ReFa、PCD London 分别覆盖研发、供应链治理和个护工具创新。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-15",
+      "title": "美妆竞对情报日报｜2026年9月15日",
+      "source": "archive/日报/2026-09-15/beauty-daily-20260915.html",
+      "pdf": "archive/日报/2026-09-15/beauty-daily-20260915.pdf",
+      "summary": "防脱洗护升级、高校新人群触达与原料端功效证据",
+      "event_count": 5,
+      "dimensions": [
+        "品牌动态",
+        "渠道生态",
+        "其他动态"
+      ],
+      "brands": [
+        "达霏欣",
+        "Fan Beauty Diary",
+        "博溪检测",
+        "Paula’s Choice",
+        "Debut"
+      ],
+      "categories": [
+        "防脱洗护",
+        "面膜",
+        "功效检测",
+        "肽类护肤",
+        "美白活性原料"
+      ],
+      "channels": [
+        "天猫校园",
+        "高校快闪",
+        "品牌官网"
+      ],
+      "event_types": [
+        "产品升级",
+        "校园快闪",
+        "技术发布",
+        "新品上市",
+        "原料发布"
+      ],
+      "push": {
+        "status": "approved",
+        "heading": "09月15日重点",
+        "items": [
+          "达霏欣升级防脱洗护；Fan Beauty Diary 以高校快闪和校园屏持续触达新学期新人群。",
+          "博溪检测、Paula’s Choice 与 Debut 分别从功效评价、肽类面霜和美白活性原料强化证据型产品表达。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-09-14",
       "title": "美妆竞对情报日报｜2026年9月14日",
       "source": "archive/日报/2026-09-14/beauty-daily-20260914.html",
