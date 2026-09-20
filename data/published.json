@@ -185,6 +185,78 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-19",
+      "title": "美妆竞对情报日报｜2026年9月19日",
+      "source": "archive/日报/2026-09-19/beauty-daily-20260919.html",
+      "pdf": "archive/日报/2026-09-19/beauty-daily-20260919.pdf",
+      "summary": "本草护肤研发、香氛产业连接、TikTok Shop 与 K-Beauty ODM 并购",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "其他动态"],
+      "brands": ["敷尔佳", "爱茉莉太平洋", "Sephora", "Hwasung Cosmetic", "NowCos"],
+      "categories": ["本草护肤", "香氛", "敏感肌护理", "短视频零售", "ODM"],
+      "channels": ["CAME", "TikTok Shop", "Sephora Drop Shop"],
+      "event_types": ["行业展会", "产品展示", "渠道试点", "资产收购"],
+      "push": {
+        "status": "approved",
+        "heading": "09月19日重点",
+        "items": [
+          "敷尔佳、爱茉莉太平洋与香蘭香水沙龙分别呈现本草研发、多品牌在华经营和香氛产业讨论。",
+          "Sephora 试点 TikTok Shop；麦格理签约收购两家韩国 ODM 企业，渠道与供应链同时出现新变量。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-18",
+      "title": "美妆竞对情报日报｜2026年9月18日",
+      "source": "archive/日报/2026-09-18/beauty-daily-20260918.html",
+      "pdf": "archive/日报/2026-09-18/beauty-daily-20260918.pdf",
+      "summary": "百货美妆渠道协同、进口防脱注册与便利店彩妆规模化上新",
+      "event_count": 5,
+      "dimensions": ["渠道生态", "监管与合规", "品牌动态"],
+      "brands": ["康绮墨丽", "hana by hince", "UruTank", "TOM FORD BEAUTY"],
+      "categories": ["防脱洗护", "便利店彩妆", "大众护肤", "高端彩妆"],
+      "channels": ["百货", "FamilyMart", "Maison KOSÉ", "Loft"],
+      "event_types": ["行业论坛", "进口特证", "新品上市", "渠道铺货"],
+      "push": {
+        "status": "approved",
+        "heading": "09月18日重点",
+        "items": [
+          "国内购百端讨论国货线下布局与内容种草；进口防脱特证继续抬高跨境洗护的合规门槛。",
+          "FamilyMart、KOSÉ Cosmeport 与 TOM FORD BEAUTY 分别以便利店、大众零售和高端妆容套组推动上新。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-17",
+      "title": "美妆竞对情报日报｜2026年9月17日",
+      "source": "archive/日报/2026-09-17/beauty-daily-20260917.html",
+      "pdf": "archive/日报/2026-09-17/beauty-daily-20260917.pdf",
+      "summary": "国货新品首发、IP美妆新店与敏感肌功效产品升级",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "渠道生态"],
+      "brands": ["花西子", "Hello Kitty 化妆品", "薇诺娜", "玫琳凯", "YSL 美妆"],
+      "categories": ["定妆", "香氛", "IP彩妆", "敏感肌美白", "唇妆"],
+      "channels": ["抖音", "小红书", "CAME", "品牌官方社交媒体"],
+      "event_types": ["新品首发", "旗舰店开售", "产品升级", "品牌平台"],
+      "push": {
+        "status": "approved",
+        "heading": "09月17日重点",
+        "items": [
+          "花西子、薇诺娜以新品与水乳升级强化国货的功效和品类表达。",
+          "Hello Kitty 美妆同步开设抖音与小红书旗舰店；玫琳凯和 YSL 在中国推进本地化品牌与新品传播。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-09-16",
       "title": "美妆竞对情报日报｜2026年9月16日",
       "source": "archive/日报/2026-09-16/beauty-daily-20260916.html",
