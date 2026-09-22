@@ -185,6 +185,54 @@
     },
     {
       "kind": "daily",
+      "date": "2026-09-21",
+      "title": "美妆竞对情报日报｜2026年9月21日",
+      "source": "archive/日报/2026-09-21/beauty-daily-20260921.html",
+      "pdf": "archive/日报/2026-09-21/beauty-daily-20260921.pdf",
+      "summary": "上美丽驻兰本土化合作、MONCLOS 进入 Target 与日系护肤新品上市",
+      "event_count": 5,
+      "dimensions": ["品牌动态", "市场版图", "渠道生态"],
+      "brands": ["上美股份", "REJURAN", "SK-II", "MONCLOS", "Clé de Peau Beauté", "AquaLabel"],
+      "categories": ["PDRN", "高端护肤", "大众抗老", "洗护", "身体护理"],
+      "channels": ["Target Beauty Studio", "Target.com", "资生堂线上商城"],
+      "event_types": ["战略合作", "全球代言", "市场进入", "新品上市"],
+      "push": {
+        "status": "approved",
+        "heading": "09月21日重点",
+        "items": [
+          "上美与 PharmaResearch 签署 MOU，拟推动丽驻兰化妆品在中国的本土化运营，并探讨成立合资公司。",
+          "MONCLOS 计划以 11 个 SKU 于 11 月进入 Target Beauty Studio；日系高端与大众护肤同日完成新品上市。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-20",
+      "title": "美妆竞对情报日报｜2026年9月20日",
+      "source": "archive/日报/2026-09-20/beauty-daily-20260920.html",
+      "pdf": "archive/日报/2026-09-20/beauty-daily-20260920.pdf",
+      "summary": "上美 Hello Kitty 化妆品入天猫、Uhue 旗舰店终止运营与 SK-II 全球代言",
+      "event_count": 3,
+      "dimensions": ["品牌动态", "市场版图"],
+      "brands": ["上美股份", "Hello Kitty 化妆品", "Uhue", "SK-II"],
+      "categories": ["唇部护理", "彩妆", "高端护肤"],
+      "channels": ["天猫", "抖音", "小红书"],
+      "event_types": ["渠道上线", "经营调整", "全球代言"],
+      "push": {
+        "status": "approved",
+        "heading": "09月20日重点",
+        "items": [
+          "上美旗下 Hello Kitty 化妆品进入天猫，以唇部护理小品类测试 IP 品牌的多平台经营。",
+          "Uhue 旗舰店拟于 9 月 24 日终止运营；SK-II 官宣谷爱凌为全球品牌代言人。"
+        ],
+        "detail_label": "查看完整日报",
+        "card_title": "美妆情报Bot｜行业日报"
+      }
+    },
+    {
+      "kind": "daily",
       "date": "2026-09-19",
       "title": "美妆竞对情报日报｜2026年9月19日",
       "source": "archive/日报/2026-09-19/beauty-daily-20260919.html",
