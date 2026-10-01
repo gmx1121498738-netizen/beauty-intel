@@ -193,6 +193,34 @@ class FeishuCardTests(unittest.TestCase):
             "美妆情报Bot｜7月31日—8月2日日报",
         )
         self.assertNotIn("的日报", json.dumps(card, ensure_ascii=False))
+
+    def test_multi_weekly_card_keeps_each_week_separate_and_links_to_each_weekly_page(self):
+        card = push_daily.build_multi_weekly_card(
+            [
+                make_weekly_report("2026-W38", items=["W38重点"]),
+                make_weekly_report("2026-W39", items=["W39重点"]),
+            ],
+            "https://example.com/beauty",
+        )
+
+        self.assertEqual(card["header"]["title"]["content"], "美妆情报Bot｜阶段周报")
+        content = "\n".join(
+            element["text"]["content"]
+            for element in card["elements"]
+            if element["tag"] == "div"
+        )
+        self.assertIn("**2026年第38周**", content)
+        self.assertIn("**2026年第39周**", content)
+        self.assertIn("W38重点", content)
+        self.assertIn("W39重点", content)
+        urls = [element["actions"][0]["url"] for element in card["elements"] if element["tag"] == "action"]
+        self.assertEqual(
+            urls,
+            [
+                "https://example.com/beauty/weekly/2026-W38/",
+                "https://example.com/beauty/weekly/2026-W39/",
+            ],
+        )
     def test_card_uses_generic_title_subtle_date_all_reviewed_items_and_daily_url(self):
         self.assertIsNotNone(push_daily, "push_daily.py must exist")
         report = make_report(items=["重点一", "重点二", "重点三", "重点四"])
@@ -418,6 +446,13 @@ class PushWorkflowTests(unittest.TestCase):
         )
         self.assertIn("target_dates", workflow)
         self.assertIn("--dates", workflow)
+
+    def test_workflow_supports_a_manual_multi_weekly_summary(self):
+        workflow = (SITE_ROOT / ".github" / "workflows" / "push-feishu-daily.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("target_weeks", workflow)
+        self.assertIn("--weeks", workflow)
 
     def test_workflow_is_manual_only_with_secrets_and_concurrency(self):
         workflow_path = SITE_ROOT / ".github/workflows/push-feishu-daily.yml"

@@ -81,6 +81,16 @@ def select_weekly_report(reports: list[dict], target_week: str) -> dict | None:
     return report
 
 
+def select_weekly_reports(reports: list[dict], target_weeks: list[str]) -> list[dict]:
+    selected = []
+    for target_week in target_weeks:
+        report = select_weekly_report(reports, target_week)
+        if report is None:
+            raise ValueError(f"No approved weekly push for {target_week}")
+        selected.append(report)
+    return selected
+
+
 def report_url(base_url: str, report_date: str) -> str:
     return f"{base_url.rstrip('/')}/daily/{report_date}/"
 
@@ -225,6 +235,51 @@ def build_weekly_card(report: dict, base_url: str) -> dict:
     }
 
 
+def build_multi_weekly_card(reports: list[dict], base_url: str) -> dict:
+    """Build one manual card containing separately linked weekly summaries."""
+    if not reports:
+        raise ValueError("reports is required")
+
+    elements = []
+    for report in reports:
+        year, week_number = report["week"].split("-W", 1)
+        items = report["push"]["items"]
+        summary = "\n".join(f"{index}. {item.strip()}" for index, item in enumerate(items, 1))
+        elements.extend(
+            [
+                {
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": f"**{year}年第{int(week_number)}周**\n{summary}",
+                    },
+                },
+                {
+                    "tag": "action",
+                    "actions": [
+                        {
+                            "tag": "button",
+                            "type": "primary",
+                            "text": {
+                                "tag": "plain_text",
+                                "content": report["push"].get("detail_label", "查看完整周报"),
+                            },
+                            "url": weekly_report_url(base_url, report["week"]),
+                        }
+                    ],
+                },
+            ]
+        )
+    return {
+        "config": {"wide_screen_mode": True},
+        "header": {
+            "template": "blue",
+            "title": {"tag": "plain_text", "content": "美妆情报Bot｜阶段周报"},
+        },
+        "elements": elements,
+    }
+
+
 def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) -> dict:
     """Build one concise weekly-first card with a link to the daily archive."""
     if not dailies:
@@ -342,6 +397,7 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
     parser.add_argument("--date", help="Target report date in YYYY-MM-DD format")
     parser.add_argument("--dates", help="Comma-separated dates for one manual summary card")
     parser.add_argument("--week", help="Target weekly report in YYYY-Www format")
+    parser.add_argument("--weeks", help="Comma-separated weekly reports for one manual summary card")
     parser.add_argument("--stage-week", help="Weekly report for one combined stage-update card")
     parser.add_argument("--stage-dates", help="Comma-separated daily dates for one combined stage-update card")
     parser.add_argument("--dry-run", action="store_true")
@@ -353,7 +409,7 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
     try:
         data = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
         stage_selected = bool(args.stage_week or args.stage_dates)
-        selections = sum(bool(value) for value in (args.date, args.dates, args.week, stage_selected))
+        selections = sum(bool(value) for value in (args.date, args.dates, args.week, args.weeks, stage_selected))
         if selections != 1:
             raise ValueError("Specify exactly one report target or one stage update")
         if stage_selected:
@@ -370,6 +426,11 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             report = select_weekly_report(data.get("reports", []), args.week)
             if report is None:
                 raise ValueError(f"No approved weekly push for {args.week}")
+        elif args.weeks:
+            target_weeks = [week.strip() for week in args.weeks.split(",") if week.strip()]
+            if not target_weeks:
+                raise ValueError("--weeks requires at least one week")
+            reports = select_weekly_reports(data.get("reports", []), target_weeks)
         elif args.dates:
             target_dates = [date.strip() for date in args.dates.split(",") if date.strip()]
             reports = select_reports(data.get("reports", []), target_dates)
@@ -386,6 +447,8 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             card = build_stage_update_card(weekly, dailies, base_url)
         elif args.week:
             card = build_weekly_card(report, base_url)
+        elif args.weeks:
+            card = build_multi_weekly_card(reports, base_url)
         elif args.dates:
             card = build_multi_day_card(reports, base_url)
         else:
@@ -416,6 +479,8 @@ def main(argv=None, environ=None, stdout=None, send_fn=send_webhook) -> int:
             )
         elif args.week:
             print(f"SENT: approved weekly push for {args.week}", file=stdout)
+        elif args.weeks:
+            print(f"SENT: approved multi-weekly push for {','.join(target_weeks)}", file=stdout)
         elif args.dates:
             print(f"SENT: approved multi-day push for {','.join(target_dates)}", file=stdout)
         else:

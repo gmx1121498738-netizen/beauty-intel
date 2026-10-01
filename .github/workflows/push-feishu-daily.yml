@@ -15,6 +15,10 @@ on:
         description: "Weekly report target (for example 2026-W30)"
         required: false
         type: string
+      target_weeks:
+        description: "Comma-separated weekly reports for one combined summary card (manual only)"
+        required: false
+        type: string
       stage_week:
         description: "Weekly report for one combined stage-update card"
         required: false
@@ -69,6 +73,8 @@ jobs:
           args=()
           if [[ -n "$STAGE_WEEK" || -n "$STAGE_DATES" ]]; then
             args+=(--stage-week "$STAGE_WEEK" --stage-dates "$STAGE_DATES")
+          elif [[ -n "$TARGET_WEEKS" ]]; then
+            args+=(--weeks "$TARGET_WEEKS")
           elif [[ -n "$TARGET_WEEK" ]]; then
             args+=(--week "$TARGET_WEEK")
           elif [[ -n "$TARGET_DATES" ]]; then
@@ -81,6 +87,7 @@ jobs:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
           TARGET_WEEK: ${{ inputs.target_week }}
+          TARGET_WEEKS: ${{ inputs.target_weeks }}
           STAGE_WEEK: ${{ inputs.stage_week }}
           STAGE_DATES: ${{ inputs.stage_dates }}
 
@@ -96,6 +103,8 @@ jobs:
           args=()
           if [[ -n "$STAGE_WEEK" || -n "$STAGE_DATES" ]]; then
             args+=(--stage-week "$STAGE_WEEK" --stage-dates "$STAGE_DATES")
+          elif [[ -n "$TARGET_WEEKS" ]]; then
+            args+=(--weeks "$TARGET_WEEKS")
           elif [[ -n "$TARGET_WEEK" ]]; then
             args+=(--week "$TARGET_WEEK")
           elif [[ -n "$TARGET_DATES" ]]; then
@@ -108,5 +117,6 @@ jobs:
           TARGET_DATE: ${{ inputs.target_date }}
           TARGET_DATES: ${{ inputs.target_dates }}
           TARGET_WEEK: ${{ inputs.target_week }}
+          TARGET_WEEKS: ${{ inputs.target_weeks }}
           STAGE_WEEK: ${{ inputs.stage_week }}
           STAGE_DATES: ${{ inputs.stage_dates }}
