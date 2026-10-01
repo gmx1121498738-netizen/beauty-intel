@@ -12,7 +12,16 @@
       "categories": ["功效护肤", "香氛", "洗护", "彩色隐形眼镜", "新原料"],
       "channels": ["妍丽", "Hands", "区域美业展"],
       "event_types": ["本土化合作", "连锁铺货", "新品焕新", "新原料备案"],
-      "push": {"status": "disabled"}
+      "push": {
+        "status": "approved",
+        "heading": "9月21日—27日重点",
+        "items": [
+          "上美与 PharmaResearch 围绕 Rejuran 的合作，为功效护肤本土化与专业线协同提供观察样本。",
+          "Santa Monica 进入妍丽 200 家门店，香氛品牌开始以专业美妆连锁检验规模化线下触达。",
+          "韩束、诗肤理与吕 RYO 的新品动作覆盖护肤、香氛与洗护，研发端同步出现新原料与区域展会信号。"
+        ],
+        "detail_label": "查看完整周报"
+      }
     },
     {
       "kind": "weekly",
@@ -26,7 +35,16 @@
       "categories": ["IP 化妆品", "功效护肤", "洗护", "彩妆", "美妆原料"],
       "channels": ["抖音", "小红书", "天猫", "FamilyMart", "TikTok Shop"],
       "event_types": ["多平台首发", "行业展会", "渠道试点", "供应链并购"],
-      "push": {"status": "disabled"}
+      "push": {
+        "status": "approved",
+        "heading": "9月14日—20日重点",
+        "items": [
+          "上美 Hello Kitty 化妆品同步覆盖抖音、小红书与天猫，国货 IP 运营正从单点联名走向多平台货架协同。",
+          "花西子、薇诺娜等品牌在 CAME 期间强化新品与功效沟通，展会成为研发叙事与渠道触点的叠加场。",
+          "FamilyMart 引入 hana by hince、韩国 ODM 并购推进，分别提供便利店美妆货架与供应链资本化的观察信号。"
+        ],
+        "detail_label": "查看完整周报"
+      }
     },
     {
       "kind": "weekly",
