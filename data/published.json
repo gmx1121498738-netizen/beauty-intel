@@ -2,6 +2,34 @@
   "reports": [
     {
       "kind": "weekly",
+      "week": "2026-W39",
+      "title": "美妆行业洞察 2026年第39周（9/21-9/27）",
+      "source": "archive/周报/2026-W39/beauty-insights-2026w39.html",
+      "pdf": "archive/周报/2026-W39/beauty-insights-2026w39-0921-0927.pdf",
+      "summary": "功效护肤本土化、专业连锁铺货、线下组织与研发合规",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "研发与合规"],
+      "brands": ["上美", "PharmaResearch", "Santa Monica", "韩束", "诗肤理", "吕 RYO"],
+      "categories": ["功效护肤", "香氛", "洗护", "彩色隐形眼镜", "新原料"],
+      "channels": ["妍丽", "Hands", "区域美业展"],
+      "event_types": ["本土化合作", "连锁铺货", "新品焕新", "新原料备案"],
+      "push": {"status": "disabled"}
+    },
+    {
+      "kind": "weekly",
+      "week": "2026-W38",
+      "title": "美妆行业洞察 2026年第38周（9/14-9/20）",
+      "source": "archive/周报/2026-W38/beauty-insights-2026w38.html",
+      "pdf": "archive/周报/2026-W38/beauty-insights-2026w38-0914-0920.pdf",
+      "summary": "国货 IP 多平台经营、在华展会沟通、零售分化与研发供应链",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "研发与供应链"],
+      "brands": ["上美", "花西子", "薇诺娜", "爱茉莉太平洋", "华熙生物"],
+      "categories": ["IP 化妆品", "功效护肤", "洗护", "彩妆", "美妆原料"],
+      "channels": ["抖音", "小红书", "天猫", "FamilyMart", "TikTok Shop"],
+      "event_types": ["多平台首发", "行业展会", "渠道试点", "供应链并购"],
+      "push": {"status": "disabled"}
+    },
+    {
+      "kind": "weekly",
       "week": "2026-W37",
       "title": "美妆行业洞察 2026年第37周（9/7-9/13）",
       "source": "archive/周报/2026-W37/beauty-insights-2026w37.html",
@@ -182,6 +210,20 @@
         ],
         "detail_label": "查看完整周报"
       }
+    },
+    {
+      "kind": "daily",
+      "date": "2026-09-30",
+      "title": "美妆竞对情报日报｜2026年9月30日",
+      "source": "archive/日报/2026-09-30/beauty-daily-20260930.html",
+      "summary": "中国研发、敏感肌系列化与秋季彩妆内容营销",
+      "event_count": 4,
+      "dimensions": ["品牌动态", "研发与科技"],
+      "brands": ["Dr.Althea", "e.l.f. Cosmetics", "广东袋鼠妈妈", "嘉科生物"],
+      "categories": ["敏感肌护肤", "彩妆", "功效评价", "皮肤微生态"],
+      "channels": ["国际化妆品科学大会", "品牌自有渠道"],
+      "event_types": ["科研交流", "系列扩展", "季节营销"],
+      "push": {"status": "disabled"}
     },
     {
       "kind": "daily",
