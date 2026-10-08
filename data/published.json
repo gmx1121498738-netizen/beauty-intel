@@ -230,18 +230,39 @@
       }
     },
     {
-      "kind": "daily",
-      "date": "2026-10-07",
-      "title": "美妆竞对情报日报｜2026年10月1—7日（假期合刊）",
-      "source": "archive/日报/2026-10-07/beauty-daily-20261007.html",
-      "summary": "国内线下创新、供应链出海与研发国际化，补充免税渠道和高端底妆信号",
-      "event_count": 6,
-      "dimensions": ["品牌动态", "市场版图", "渠道生态", "其他动态"],
-      "brands": ["美创静界", "自然堂集团", "爱茉莉太平洋", "欧莱雅", "SENSAI"],
-      "categories": ["AI 测肤", "供应链出海", "功效护肤", "旅行零售", "高端底妆"],
-      "channels": ["上海南京西路", "全球机场免税", "进博会"],
-      "event_types": ["快闪首发", "出口生产", "科研交流", "免税展会", "参展预告", "新品上市"],
-      "push": {"status": "disabled"}
+      "kind": "daily", "date": "2026-10-07", "title": "美妆竞对情报日报｜2026年10月7日",
+      "source": "archive/日报/2026-10-07/beauty-daily-20261007.html", "summary": "护理型高端底妆的产品与服务组合", "event_count": 1,
+      "dimensions": ["品牌动态"], "brands": ["SENSAI"], "categories": ["高端底妆"], "channels": ["日本零售"], "event_types": ["新品上市"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-06", "title": "美妆竞对情报日报｜2026年10月6日",
+      "source": "archive/日报/2026-10-06/beauty-daily-20261006.html", "summary": "精细眉妆工具的任务型产品竞争", "event_count": 1,
+      "dimensions": ["品牌动态"], "brands": ["Browlash EX"], "categories": ["彩妆工具"], "channels": ["日本零售"], "event_types": ["新品上市"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-05", "title": "美妆竞对情报日报｜2026年10月5日",
+      "source": "archive/日报/2026-10-05/beauty-daily-20261005.html", "summary": "国货科研国际化与全球集团的中国科技叙事", "event_count": 2,
+      "dimensions": ["其他动态", "市场版图"], "brands": ["自然堂集团", "欧莱雅"], "categories": ["功效护肤", "美妆科技"], "channels": ["进博会"], "event_types": ["科研交流", "参展预告"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-04", "title": "美妆竞对情报日报｜2026年10月4日",
+      "source": "archive/日报/2026-10-04/beauty-daily-20261004.html", "summary": "口服美容新品的原料、合规与复购承接", "event_count": 1,
+      "dimensions": ["品牌动态"], "brands": ["KISOCARE"], "categories": ["内服美容"], "channels": ["日本零售"], "event_types": ["新品上市"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-03", "title": "美妆竞对情报日报｜2026年10月3日",
+      "source": "archive/日报/2026-10-03/beauty-daily-20261003.html", "summary": "秋季大众底妆的自然肤感与修饰需求", "event_count": 1,
+      "dimensions": ["品牌动态"], "brands": ["Club"], "categories": ["大众底妆"], "channels": ["日本零售"], "event_types": ["新品上市"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-02", "title": "美妆竞对情报日报｜2026年10月2日",
+      "source": "archive/日报/2026-10-02/beauty-daily-20261002.html", "summary": "旅行零售合作与便携洗护新品上市", "event_count": 2,
+      "dimensions": ["渠道生态", "品牌动态"], "brands": ["爱茉莉太平洋", "plus eau"], "categories": ["旅行零售", "洗护"], "channels": ["全球机场免税", "日本零售"], "event_types": ["免税展会", "新品上市"], "push": {"status": "disabled"}
+    },
+    {
+      "kind": "daily", "date": "2026-10-01", "title": "美妆竞对情报日报｜2026年10月1日",
+      "source": "archive/日报/2026-10-01/beauty-daily-20261001.html", "summary": "国内线下美妆新零售与供应链出口假期交付", "event_count": 2,
+      "dimensions": ["渠道生态", "市场版图"], "brands": ["美创静界"], "categories": ["AI 测肤", "供应链出海"], "channels": ["上海南京西路"], "event_types": ["快闪首发", "出口生产"], "push": {"status": "disabled"}
     },
     {
       "kind": "daily",
