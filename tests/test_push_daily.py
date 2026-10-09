@@ -403,7 +403,8 @@ class PushDailyCliTests(unittest.TestCase):
         self.assertEqual(result, 0)
         self.assertIn("美妆情报Bot｜阶段更新", output.getvalue())
         self.assertIn("https://example.com/beauty/weekly/2026-W35/", output.getvalue())
-        self.assertIn("日报详情请在网页端查看。", output.getvalue())
+        self.assertIn("**日报｜8月24日阶段总结**", output.getvalue())
+        self.assertIn("8月24日｜日报重点", output.getvalue())
         self.assertIn("https://example.com/beauty/", output.getvalue())
 
     def test_real_send_requires_webhook_url(self):
