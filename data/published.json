@@ -2,6 +2,29 @@
   "reports": [
     {
       "kind": "weekly",
+      "week": "2026-W40",
+      "title": "美妆行业洞察 2026年第40周（9/28-10/4）",
+      "source": "archive/周报/2026-W40/beauty-insights-2026w40.html",
+      "pdf": "archive/周报/2026-W40/beauty-insights-2026w40-0928-1004.pdf",
+      "summary": "本土零售验证、供应链与研发出海、国际渠道协作、爆品系列化",
+      "dimensions": ["品牌动态", "市场版图", "渠道生态", "投融资", "产品与科研趋势"],
+      "brands": ["美创静界", "Dr.Althea", "e.l.f.", "爱茉莉太平洋", "KAYALI"],
+      "categories": ["功效护肤", "香氛身体护理", "彩妆", "洗护", "供应链"],
+      "channels": ["南京西路快闪", "旅行零售", "TikTok Shop", "CosmoBeaute Malaysia"],
+      "event_types": ["线下首发", "出口排产", "国际科研交流", "免税合作", "跨品类扩张"],
+      "push": {
+        "status": "approved",
+        "heading": "9月28日—10月4日重点",
+        "items": [
+          "上海美创静界将 AI 检测、试用和细分新品首发放入同一零售场景，线下体验开始承担更具体的产品验证任务。",
+          "湖州美妆出口排产与 IFSCC 议程共同呈现中国美妆在制造交付、研究设计和功效评价上的国际化能力。",
+          "爱茉莉太平洋、Lagardère Travel Retail、KAYALI 与 e.l.f. 的动作，分别呈现旅行零售、数字化导购、体验营销和跨品类扩张的渠道新要求。"
+        ],
+        "detail_label": "查看完整周报"
+      }
+    },
+    {
+      "kind": "weekly",
       "week": "2026-W39",
       "title": "美妆行业洞察 2026年第39周（9/21-9/27）",
       "source": "archive/周报/2026-W39/beauty-insights-2026w39.html",
