@@ -300,6 +300,11 @@ def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) ->
             f"{first_daily.month}月{first_daily.day}日—"
             f"{last_daily.month}月{last_daily.day}日"
         )
+    daily_summary = "\n".join(
+        f"{report_date.month}月{report_date.day}日｜"
+        f"{(report.get('summary') or '；'.join(report['push']['items'])).strip()}"
+        for report, report_date in zip(dailies, daily_dates)
+    )
     elements = [
         {
             "tag": "div",
@@ -328,7 +333,7 @@ def build_stage_update_card(weekly: dict, dailies: list[dict], base_url: str) ->
             "tag": "div",
             "text": {
                 "tag": "lark_md",
-                "content": f"**日报｜{daily_label}**\n日报详情请在网页端查看。",
+                "content": f"**日报｜{daily_label}阶段总结**\n{daily_summary}",
             },
         },
         {

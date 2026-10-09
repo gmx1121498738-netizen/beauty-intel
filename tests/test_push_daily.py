@@ -116,11 +116,13 @@ class FeishuCardTests(unittest.TestCase):
         )
         self.assertIn("**周报｜2026年第30周**", content)
         self.assertIn("周报主线一", content)
-        self.assertIn("**日报｜8月17—19日**", content)
-        self.assertIn("日报详情请在网页端查看。", content)
-        self.assertNotIn("17日重点一", content)
-        self.assertNotIn("18日重点一", content)
-        self.assertNotIn("19日重点一", content)
+        self.assertIn("**日报｜8月17—19日阶段总结**", content)
+        self.assertIn("8月17日｜", content)
+        self.assertIn("8月18日｜", content)
+        self.assertIn("8月19日｜", content)
+        self.assertIn("17日重点一", content)
+        self.assertIn("18日重点一", content)
+        self.assertIn("19日重点一", content)
 
         self.assertEqual(len(card["elements"]), 4)
         urls = [element["actions"][0]["url"] for element in card["elements"] if element["tag"] == "action"]
