@@ -1,0 +1,585 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年10月22日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a></nav>
+<!-- Published source: archive/日报/2026-10-22/beauty-daily-20261022.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第43周 · 10月22日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>10月22日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>片仔癀出海准入、上海美妆制造出口、广州海外买手对接、宝洁财报与多芬香氛新品</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>5</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>2</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>2</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>市场版图</span><b>01</b></a><a href="#item-2"><span>市场版图</span><b>02</b></a><a href="#item-3"><span>渠道生态</span><b>03</b></a><a href="#item-4"><span>品牌动态</span><b>04</b></a><a href="#item-5"><span>品牌动态</span><b>05</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card market-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">市场版图</span></div><div><p class="region-label">国内·中国</p><h3>片仔癀化妆品披露多地产品准入进展，皇后面霜完成欧盟合规文件</h3><div class="report-body"><p>片仔癀化妆品 10 月 22 日在<a href="https://pzhchina.com/pzhhzp/news/info_366.aspx?itemid=57108" target="_blank" rel="noopener noreferrer">官网披露</a>，片仔癀与皇后品牌的海外准入已覆盖东南亚、港澳台和欧洲。柬埔寨已有多款护肤产品完成备案，越南及中国台湾仍在推进；中国香港完成定制款珍珠膏、霜注册。面向法国市场的皇后宣娇抗皱面霜已完成安全报告 CPSR、产品信息档案 PIF 及欧盟 CPNP 通报。官网未给出各项备案的逐一完成日期，因此本条记录的是 22 日集中披露的准入进展，并非当日全部完成注册或已经形成海外销售。</p><p>这次披露的关键在于品类矩阵和合规路径：从经典膏霜扩展到洁面、精华、面膜、防晒，同时为欧盟市场准备配方、标签和包装资料。准入解决了销售前提，接下来仍需由当地渠道铺货、定价和复购验证海外业务规模。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/01-pzh.png" aria-label="放大查看 片仔癀化妆品10月22日多国备案官方披露截图"><img src="assets/01-pzh.png" alt="片仔癀化妆品10月22日多国备案官方披露截图" loading="lazy"></button><figcaption>片仔癀化妆品10月22日多国备案官方披露截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>国货出海正进入逐市场、逐品类办理准入的执行阶段；能否把备案矩阵转成当地经销和终端动销，是比“覆盖国家数”更有价值的下一项指标。</p></div><div class="sources"><p>图片及信息来源：<a href="https://pzhchina.com/pzhhzp/news/info_366.aspx?itemid=57108" target="_blank" rel="noopener noreferrer">片仔癀化妆品官网 10 月 22 日披露</a>。</p></div></div></article>
+<article class="card market-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">市场版图</span></div><div><p class="region-label">国内·中国</p><h3>上海披露前三季化妆品制造与出口延续增长，本土大单品形成产业集群</h3><div class="report-body"><p>10 月 22 日，<a href="https://www.jiemian.com/article/15222310.html" target="_blank" rel="noopener noreferrer">界面新闻获得上海市经信委提供的数据</a>：今年 1—9 月上海化妆品工业产值同比增长超过 15%，出口交货值增幅超过 18%。经信委还介绍，上海已有超过 50 个亿元级化妆品单品，橘朵高光修容盘、韩束多肽胶原礼盒、林清轩山茶花精华油等进入更高销售量级。市政府此前<a href="https://www.shanghai.gov.cn/nw9820/20260918/04631f6726324e98a6b968416b6b02b6.html" target="_blank" rel="noopener noreferrer">披露的 1—8 月数据</a>同样显示化妆品工业产值与出口交货值增长；两个统计期不同，不能直接当作月度环比。</p><p>上海的产业链同时聚集本土品牌、国际企业、代工制造和科研评价机构。对品牌而言，研发、配方验证、包装和制造集中在同一城市，有利于缩短产品迭代周期；出口交货值增长则说明制造端正在承接海外需求。产值和出口额不等同于品牌零售额，仍需区分制造订单与终端消费。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/03-shanghai.png" aria-label="放大查看 界面新闻10月22日上海化妆品产业数据报道截图"><img src="assets/03-shanghai.png" alt="界面新闻10月22日上海化妆品产业数据报道截图" loading="lazy"></button><figcaption>界面新闻10月22日上海化妆品产业数据报道截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>上海美妆竞争力已具备大单品与制造出口两条可观测线索；选品与供应链决策应同时看品牌零售表现和工厂交付能力，避免仅凭线上榜单判断区域产业实力。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.jiemian.com/article/15222310.html" target="_blank" rel="noopener noreferrer">界面新闻对上海市经信委提供数据的报道</a>；<a href="https://www.shanghai.gov.cn/nw9820/20260918/04631f6726324e98a6b968416b6b02b6.html" target="_blank" rel="noopener noreferrer">上海市政府 9 月发布的前八月基准数据</a>。</p></div></div></article>
+<article class="card channel-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">渠道生态</span></div><div><p class="region-label">国内·中国</p><h3>广州国际美妆周公布11月商贸对接安排，海外买家与跨境平台集中参与</h3><div class="report-body"><p>10 月 22 日，第四届广州国际美妆周在广州举行<a href="https://huacheng.gz-cmc.com/pages/2026/10/22/96742b66ea3d4b95888428fecabd315d.html" target="_blank" rel="noopener noreferrer">媒体座谈会</a>，披露 11 月 4—8 日的活动安排。其<a href="https://www.guangzhoucosmeticsweek.com/zh" target="_blank" rel="noopener noreferrer">官方站点</a>也确认展期与主办单位。主办方计划设置全球买手采购季、海外买家对接会及产业溯源线路，安排供应链、品牌和海外达人等专场，并让跨境电商平台进入趋势发布环节。相关安排属于计划，不能提前写成已完成的订单或合作。</p><p>会上还预告“广东美妆”区域公共品牌与《2026广州化妆品产业白皮书》将在 11 月活动期间亮相，后者将梳理广州美妆出海版图与路径。广州把原料、制造、包材、品牌和境外买家放进同一个采购场景，能否形成持续合作，应在活动结束后看实际签约与渠道落地。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/02-guangzhou.png" aria-label="放大查看 广州国际美妆周10月22日媒体座谈会现场及报道截图"><img src="assets/02-guangzhou.png" alt="广州国际美妆周10月22日媒体座谈会现场及报道截图" loading="lazy"></button><figcaption>广州国际美妆周10月22日媒体座谈会现场及报道截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>广州正在把产业展示与海外采购转成更明确的对接机制；出海服务能力的检验点是买家匹配、准入支持和后续成交，而非展会规模本身。</p></div><div class="sources"><p>图片及信息来源：<a href="https://huacheng.gz-cmc.com/pages/2026/10/22/96742b66ea3d4b95888428fecabd315d.html" target="_blank" rel="noopener noreferrer">广州日报新花城 10 月 22 日现场报道</a>；<a href="https://www.guangzhoucosmeticsweek.com/zh" target="_blank" rel="noopener noreferrer">广州国际美妆周官网</a>。</p></div></div></article>
+<article class="card brand-card reveal" id="item-4"><div class="rank"><b>#4</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际·美国</p><h3>宝洁美妆业务新财季有机销售增长，中国个护销量提供支撑</h3><div class="report-body"><p>宝洁（Procter &amp; Gamble）于 10 月 22 日发布截至 9 月 30 日的<a href="https://us.pg.com/newsroom/news-releases/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/" target="_blank" rel="noopener noreferrer">2027 财年第一季度业绩</a>。Beauty 部门有机销售同比增长 5.4%，其中销量贡献 2.2%、产品组合贡献 2.5%，净销售额同比增长 6.4%。公司表示，头发护理销售受北美和拉美创新定价及产品组合推动；个人护理的销量增长来自大中华区和欧洲；护肤增长受高端产品组合及北美销量支持。财报未单独披露中国 Beauty 部门销售额，不能把大中华区个护销量增长写成中国美妆整体增长。</p><p>这一结构显示，头部集团的增量并非只靠提价：美妆业务有实际销量和组合升级共同贡献。对中国市场而言，大中华区个护销量被公司点名，是与本土洗护、身体护理品牌竞争时值得跟踪的变化；细分品牌份额仍需后续渠道数据验证。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/04-pg.png" aria-label="放大查看 宝洁10月22日财报官方页面截图"><img src="assets/04-pg.png" alt="宝洁10月22日财报官方页面截图" loading="lazy"></button><figcaption>宝洁10月22日财报官方页面截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>宝洁美妆的增长质量取决于销量与高端产品组合能否持续同步提升；中国个护销量回升会增加本土品牌在价格带、功效表达和渠道铺货上的竞争压力。</p></div><div class="sources"><p>图片及数据来源：<a href="https://us.pg.com/newsroom/news-releases/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/" target="_blank" rel="noopener noreferrer">宝洁官方财报原文</a>；<a href="https://www.pginvestor.com/news/news-details/2026/PG-Announces-Fiscal-Year-2027-First-Quarter-Results/default.aspx" target="_blank" rel="noopener noreferrer">宝洁投资者关系页面</a>。</p></div></div></article>
+<article class="card brand-card reveal" id="item-5"><div class="rank"><b>#5</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际·美国</p><h3>多芬发布首款精品香水，以经典香皂气味做限量社交首发</h3><div class="report-body"><p>联合利华北美于当地时间 10 月 22 日<a href="https://www.prnewswire.com/news-releases/the-scent-of-the-shower-bottled-dove-launches-its-first-ever-fine-fragrance-in-a-one-time-social-drop-302916586.html" target="_blank" rel="noopener noreferrer">发布</a> Dove Original Fragrance，这是多芬（Dove）首次将经典 Beauty Bar 气味做成精品香水。瓶身沿用香皂外形，香水由调香师 Ann Gottlieb 参与开发。22 日开放候补登记，计划于 10 月 27 日在品牌专门网站限量开售；因此本日是新品官宣与登记日，不是正式销售日。</p><p>多芬将已经广泛被识别的日常清洁气味转为香水，优先测试现有消费者对跨品类产品的接受度。限量、专门站点和社交传播降低了新品试水成本，但目前不能据一次首发推断品牌会长期经营香水品类，也没有中国上市时间。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/05-dove.png" aria-label="放大查看 联合利华北美发布多芬首款精品香水的官方新闻稿截图"><img src="assets/05-dove.png" alt="联合利华北美发布多芬首款精品香水的官方新闻稿截图" loading="lazy"></button><figcaption>联合利华北美发布多芬首款精品香水的官方新闻稿截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>成熟个护品牌可以把长期积累的气味记忆转成新产品资产；真正的品类机会要由正式开卖后的转化、复购和常态化供给验证。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnewswire.com/news-releases/the-scent-of-the-shower-bottled-dove-launches-its-first-ever-fine-fragrance-in-a-one-time-social-drop-302916586.html" target="_blank" rel="noopener noreferrer">联合利华北美官方新闻稿</a>。</p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-18/">10/18<b>2</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-19/">10/19<b>4</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-20/">10/20<b>5</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-21/">10/21<b>3</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-10-22/">10/22<b>5</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
