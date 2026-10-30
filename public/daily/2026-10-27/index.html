@@ -1,0 +1,583 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年10月27日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a></nav>
+<!-- Published source: archive/日报/2026-10-27/beauty-daily-20261027.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第44周 · 10月27日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>10月27日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>自然堂系列焕新、Coty AI搜索合作与mes°洗护首发</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>3</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>2</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>0</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>品牌动态</span><b>01</b></a><a href="#item-2"><span>渠道生态</span><b>02</b></a><a href="#item-3"><span>品牌动态</span><b>03</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card brand-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">品牌动态</span></div><div><p class="region-label">国内·中国</p><h3>自然堂发布25周年产品线焕新说明，凝时「美容觉」进入线下渠道</h3><div class="report-body"><p>自然堂集团在<a href="https://www.prnasia.com/story/553345-1.shtml" target="_blank" rel="noopener noreferrer">10月27日公开发布的品牌说明</a>中，集中展示雪域精粹、凝时、极地圣水等六条经典产品线的更新，并将凝时「美容觉」系列列为本轮新品。新闻稿的地点日期栏写作上海10月26日，但公开发布时间为27日；没有确切首销日，因此本条只记录27日公开披露的产品线与渠道动作，不把系列上新误写成当天开卖。</p><p>集团称该系列已进入线下 CS 渠道，但未给出逐店铺货规模。自然堂的重点是用已有认知度的凝时线承接熟龄抗老需求，把科技成分、使用场景和线下柜台体验放在同一条产品叙事里。后续需要观察系列单品能否形成稳定复购，以及六条线同步焕新后是否会稀释主力单品资源。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/01-chando.png" aria-label="放大查看 自然堂25周年凝时系列品牌发布页截图"><img src="assets/01-chando.png" alt="自然堂25周年凝时系列品牌发布页截图" loading="lazy"></button><figcaption>自然堂25周年凝时系列品牌发布页截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>国货成熟品牌继续把研发叙事嵌入经典系列迭代；产品表现应看线下真实动销与复购，而非周年传播声量。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnasia.com/story/553345-1.shtml" target="_blank" rel="noopener noreferrer">自然堂集团品牌新闻稿</a>。</p></div></div></article>
+<article class="card channel-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际·美国</p><h3>Coty 与 Brandlight 合作，把品牌可见度管理延伸至AI问答</h3><div class="report-body"><p>Coty 在<a href="https://v2.coty.com/news/coty-and-brandlight-unveil-strategic-partnership" target="_blank" rel="noopener noreferrer">10月27日官方公告</a>中宣布与 Brandlight 建立合作，计划监测并优化旗下品牌在 AI 助手和生成式搜索中的被发现与推荐情况。合作内容覆盖商品详情页、创作者素材、数字公关和新品发布资料，也包括品牌团队培训。公司提到早期试点已观察到可见度改善，但未披露统一量化效果或具体品牌名单。</p><p>消费者在对话式工具里往往从“肤质、场景、价格”提问开始，而不是直接搜索品牌名。Coty 的动作说明大型美妆集团开始把这些回答入口视为渠道运营的一部分；商品信息的准确性、可引用证据和跨平台一致性会影响后续发现过程，但公告本身不能证明销售转化已经提升。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/02-coty.png" aria-label="放大查看 Coty与Brandlight合作官方公告截图"><img src="assets/02-coty.png" alt="Coty与Brandlight合作官方公告截图" loading="lazy"></button><figcaption>Coty与Brandlight合作官方公告截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>美妆渠道竞争正在增加AI问答这一发现入口，品牌需要管理可被机器准确理解的产品资料，而非仅增加内容投放。</p></div><div class="sources"><p>图片及信息来源：<a href="https://v2.coty.com/news/coty-and-brandlight-unveil-strategic-partnership" target="_blank" rel="noopener noreferrer">Coty 官方公告</a>。</p></div></div></article>
+<article class="card brand-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际·美国</p><h3>Jennifer Lawrence 联合 Arcaea 推出 mes° 洗护品牌，首发三款多功能产品</h3><div class="report-body"><p>mes° 在<a href="https://www.prnewswire.com/news-releases/jennifer-lawrence-launches-mes-a-new-biodesigned-haircare-brand-created-with-arcaea-302919703.html" target="_blank" rel="noopener noreferrer">10月27日品牌新闻稿</a>中确认，Jennifer Lawrence 与生物设计公司 Arcaea 联合创立的洗护品牌当天上线独立站。首批产品为修护发膜、发根丰盈喷雾及双相重塑精华，分别针对洗发后的护理、发根出油塌陷和隔日造型恢复。品牌在官方稿中给出功效测试数值，但缺少可供独立复核的完整方法，本稿不据此作效果排名。</p><p>这个组合把护发与造型放到同一使用流程中，试图减少消费者在“洗—护—吹—隔日补救”之间使用多支单品的负担。明星创始人与生物设计叙事可以带来首发关注，后续是否具备非粉丝复购和清楚的品类定位仍需由零售表现验证。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/03-mes.png" aria-label="放大查看 mes°洗护品牌首发产品官方新闻稿截图"><img src="assets/03-mes.png" alt="mes°洗护品牌首发产品官方新闻稿截图" loading="lazy"></button><figcaption>mes°洗护品牌首发产品官方新闻稿截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>海外新洗护品牌把多功能和隔日造型管理做成产品核心，提示洗护竞争向完整日常流程延伸。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnewswire.com/news-releases/jennifer-lawrence-launches-mes-a-new-biodesigned-haircare-brand-created-with-arcaea-302919703.html" target="_blank" rel="noopener noreferrer">mes° 官方新闻稿</a>。</p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-23/">10/23<b>4</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-24/">10/24<b>3</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-25/">10/25<b>2</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-26/">10/26<b>3</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-10-27/">10/27<b>3</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>

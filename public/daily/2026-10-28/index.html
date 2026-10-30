@@ -1,0 +1,584 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年10月28日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a></nav>
+<!-- Published source: archive/日报/2026-10-28/beauty-daily-20261028.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第44周 · 10月28日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>10月28日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>上海家化三季报、优时颜成分传播、欧莱雅进博阵容与PINK美妆专区</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>4</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>2</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>1</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>品牌动态</span><b>01</b></a><a href="#item-2"><span>品牌动态</span><b>02</b></a><a href="#item-3"><span>市场版图</span><b>03</b></a><a href="#item-4"><span>渠道生态</span><b>04</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card brand-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">品牌动态</span></div><div><p class="region-label">国内·中国</p><h3>上海家化三季报：美妆业务放大，归母利润增幅含股权处置收益</h3><div class="report-body"><p>上海家化<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12664599&amp;stockid=600315" target="_blank" rel="noopener noreferrer">10月28日公告的第三季度报告</a>显示，前三季度营收53.61亿元，同比增长8.06%，归母净利润8.06亿元，同比增长98.95%，扣非归母净利润3.76亿元，同比增长63.01%。公司<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12664602&amp;stockid=600315" target="_blank" rel="noopener noreferrer">同期经营数据公告</a>列出第三季度美妆板块营收4.86亿元，涵盖玉泽、佰草集、双妹及典萃。前三季度归母利润中包含出售丝芙兰股权带来的投资收益，不能将近一倍的增幅全部归因于护肤主业。</p><p>公司披露的第三季度扣非净利润约2467万元，同比增长157.32%，绝对体量仍较小；美妆板块与线上渠道增长值得继续跟踪。佰草集、玉泽等品牌的产品结构与大促渠道投入是否能在下一季转化为持续利润，比一次性资产处置后的报表增速更能说明经营质量。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/01-jahwa.png" aria-label="放大查看 上海家化第三季度报告公告页截图"><img src="assets/01-jahwa.png" alt="上海家化第三季度报告公告页截图" loading="lazy"></button><figcaption>上海家化第三季度报告公告页截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>家化的美妆业务呈现恢复迹象，但评估改善程度应优先看扣非利润、品牌动销和渠道结构，剔除股权处置的一次性影响。</p></div><div class="sources"><p>图片及信息来源：<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12664599&amp;stockid=600315" target="_blank" rel="noopener noreferrer">上海家化第三季度报告原文镜像</a>；<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12664602&amp;stockid=600315" target="_blank" rel="noopener noreferrer">第三季度主要经营数据公告</a>。</p></div></div></article>
+<article class="card brand-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">品牌动态</span></div><div><p class="region-label">国内·中国</p><h3>优时颜集中传播PDRN-850K眼周成分，强调分子量与配方证据</h3><div class="report-body"><p>优时颜在<a href="https://www.prnasia.com/story/553630-1.shtml" target="_blank" rel="noopener noreferrer">10月28日发布的品牌新闻稿</a>中，公布与央视网共同制作的《了不起的中国成分——PDRN-850K》内容，把850KDa分子量PDRN与国人眶周护理需求联系起来。稿件使用“近日”描述合作内容，未写出视频首次上线日，因此本条只把28日品牌对外公开说明作为时间锚点，不把它当作当天新原料获批或新品上市。</p><p>该动作的产品意义在于把PDRN从热门成分词推进到“分子量、部位、递送与证据”的更细分叙事。报道所述作用机制来自品牌阐述，尚需具体配方、测试条件和法规允许的功效宣称对应核对；对国货功效护肤而言，成分科普的下一步是可查验的产品证据。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/02-uniskin.png" aria-label="放大查看 优时颜PDRN-850K品牌发布页截图"><img src="assets/02-uniskin.png" alt="优时颜PDRN-850K品牌发布页截图" loading="lazy"></button><figcaption>优时颜PDRN-850K品牌发布页截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>国货眼周护理的成分传播正在细化到分子量与部位适配，但传播材料不能替代成品功效验证。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnasia.com/story/553630-1.shtml" target="_blank" rel="noopener noreferrer">优时颜品牌新闻稿</a>。</p></div></div></article>
+<article class="card market-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">市场版图</span></div><div><p class="region-label">国际·中国</p><h3>欧莱雅公布进博阵容，预告五个新品牌亮相中国市场</h3><div class="report-body"><p>欧莱雅在<a href="https://www.prnasia.com/lightnews/lightnews-1-77-100408.shtml" target="_blank" rel="noopener noreferrer">10月28日上海进博预热沟通会新闻稿</a>中披露，第九届进博会将展示五个新品牌，包括 Bottega Veneta、Balenciaga、Creed 香氛，以及 COLOR WOW、Skinbetter Science 等品牌。28日可确认的是参展阵容与计划；品牌于11月展期的实际展示、上市与零售覆盖都尚未发生，不能提前写作“已进入中国”。</p><p>新阵容横跨高端香氛、专业护发与皮肤学护肤，显示集团仍用进博会作为中国市场的品牌试水窗口。后续应区别“展出”“发布”和“正式开售”，并跟踪是否进入稳定的电商与线下渠道。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/03-loreal.png" aria-label="放大查看 欧莱雅进博预热沟通会官方新闻稿截图"><img src="assets/03-loreal.png" alt="欧莱雅进博预热沟通会官方新闻稿截图" loading="lazy"></button><figcaption>欧莱雅进博预热沟通会官方新闻稿截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>国际集团对中国市场继续引入细分高端品牌，但进博亮相后的常态零售落地才决定竞争影响。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnasia.com/lightnews/lightnews-1-77-100408.shtml" target="_blank" rel="noopener noreferrer">欧莱雅进博预热沟通会新闻稿</a>。</p></div></div></article>
+<article class="card channel-card reveal" id="item-4"><div class="rank"><b>#4</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际·美国</p><h3>Victoria&#x27;s Secret PINK 上线跨品牌美妆专区，先在线上销售</h3><div class="report-body"><p>Victoria&#x27;s Secret 在<a href="https://www.prnewswire.com/news-releases/victorias-secret-pink-launches-the-pink-mini-bar-a-new-destination-featuring-its-first-ever-beauty-collaborations-302921521.html" target="_blank" rel="noopener noreferrer">10月28日官方公告</a>中宣布，PINK Mini Bar 当天在官网上线，整合 Patchology、Touchland、Vacation、Mario Badescu 等九个美妆品牌的16款独家合作商品，覆盖眼膜、喷雾、防晒和美甲等。美国及波多黎各门店的专区计划11月4日开放，因此28日只计线上渠道上线。</p><p>PINK 原有年轻女性客群与门店网络可以给美妆品牌增加高频接触点，合作品也通过限定包装和小规格降低试购门槛。渠道价值取决于首批合作后是否形成稳定补货与常设货架，而不止于节日限定组合。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/04-pink.png" aria-label="放大查看 PINK Mini Bar合作商品官方新闻稿截图"><img src="assets/04-pink.png" alt="PINK Mini Bar合作商品官方新闻稿截图" loading="lazy"></button><figcaption>PINK Mini Bar合作商品官方新闻稿截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>非传统美妆零售商继续用跨品牌专区吸引年轻消费者，线上首发到门店常设的转化值得观察。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnewswire.com/news-releases/victorias-secret-pink-launches-the-pink-mini-bar-a-new-destination-featuring-its-first-ever-beauty-collaborations-302921521.html" target="_blank" rel="noopener noreferrer">Victoria&#x27;s Secret 官方新闻稿</a>。</p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-24/">10/24<b>3</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-25/">10/25<b>2</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-26/">10/26<b>3</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-10-27/">10/27<b>3</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-10-28/">10/28<b>4</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
