@@ -1,0 +1,583 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>美妆竞对情报日报｜2026年11月10日</title><style>
+    :root {
+      --bg: #f7f5f1;
+      --paper: #fffefd;
+      --paper-2: #f1eee8;
+      --ink: #20211f;
+      --muted: #73716a;
+      --line: #ded9cf;
+      --accent: #8f3f35;
+      --accent-2: #275d57;
+      --gold: #a97838;
+      --brand: #8f3f35;
+      --market: #b06f2e;
+      --channel: #315f74;
+      --shadow: 0 18px 40px rgba(49, 41, 31, .08);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(143,63,53,.06) 1px, transparent 1px),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 42%, #f4f1eb 100%);
+      background-size: 28px 28px, auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+      letter-spacing: 0;
+    }
+
+    a { color: var(--accent-2); text-underline-offset: 3px; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      height: 3px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      z-index: 80;
+    }
+
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      border-bottom: 1px solid rgba(222,217,207,.85);
+      background: rgba(247,245,241,.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 0;
+      line-height: 1.25;
+    }
+
+    .brand strong { font-size: 15px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      height: 32px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #34312d;
+      background: rgba(255,254,253,.82);
+      text-decoration: none;
+      font-size: 13px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .nav a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(143,63,53,.38);
+      background: #fff;
+    }
+
+    .hero {
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    h1 {
+      margin: 10px 0 14px;
+      font-size: clamp(32px, 5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 760px;
+      color: #4e4b45;
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .meta-panel {
+      display: grid;
+      gap: 10px;
+      justify-self: stretch;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .focus-card {
+      padding: 15px 16px;
+      border: 1px solid rgba(143,63,53,.24);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .focus-card small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .focus-card strong {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--accent);
+    }
+
+    .stat {
+      min-height: 88px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.84);
+      box-shadow: 0 10px 24px rgba(49,41,31,.05);
+    }
+
+    .stat.brand-stat { border-color: rgba(143,63,53,.28); }
+    .stat.market-stat { border-color: rgba(176,111,46,.3); }
+    .stat.channel-stat { border-color: rgba(49,95,116,.3); }
+    .stat.brand-stat strong { color: var(--brand); }
+    .stat.market-stat strong { color: var(--market); }
+    .stat.channel-stat strong { color: var(--channel); }
+    .stat.total-stat strong { color: var(--accent-2); }
+
+    .stat small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .date-cell {
+      padding: 10px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.62);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .date-cell.active {
+      color: var(--ink);
+      border-color: rgba(143,63,53,.45);
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(143,63,53,.12);
+    }
+
+    .date-cell b {
+      display: block;
+      color: inherit;
+      font-size: 20px;
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 28px;
+      padding: 30px 0 70px;
+      align-items: start;
+    }
+
+    .side {
+      position: sticky;
+      top: 82px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .side a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: #4d4a44;
+      text-decoration: none;
+      font-size: 13px;
+      background: rgba(255,254,253,.5);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+
+    .side a:hover {
+      transform: translateX(2px);
+      background: #fff;
+      border-color: var(--line);
+    }
+
+    .section {
+      scroll-margin-top: 84px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .conclusion {
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.86);
+      box-shadow: var(--shadow);
+      font-size: 16px;
+    }
+
+    .feed {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.9);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent-2);
+      opacity: .78;
+    }
+
+    .card.brand-card::before { background: var(--brand); }
+    .card.market-card::before { background: var(--market); }
+    .card.channel-card::before { background: var(--channel); }
+    .card.brand-card:hover { border-color: rgba(143,63,53,.34); }
+    .card.market-card:hover { border-color: rgba(176,111,46,.34); }
+    .card.channel-card:hover { border-color: rgba(49,95,116,.34); }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(143,63,53,.32);
+      box-shadow: 0 18px 42px rgba(49,41,31,.09);
+    }
+
+    .rank {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .rank b {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      height: 25px;
+      padding: 0 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper-2);
+      color: #55504a;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-card .tag { color: var(--brand); background: rgba(143,63,53,.08); border-color: rgba(143,63,53,.2); }
+    .market-card .tag { color: var(--market); background: rgba(176,111,46,.1); border-color: rgba(176,111,46,.24); }
+    .channel-card .tag { color: var(--channel); background: rgba(49,95,116,.1); border-color: rgba(49,95,116,.24); }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: #44413c;
+    }
+
+    .signal {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius);
+      background: #f5f2ec;
+      color: #3a3935;
+    }
+
+    .signal strong { color: var(--accent); }
+
+    .media {
+      margin-top: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #efebe4;
+      box-shadow: 0 10px 22px rgba(49,41,31,.06);
+    }
+
+    .media button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .media img {
+      display: block;
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      transition: transform .28s ease, filter .28s ease;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .media-grid .media {
+      margin-top: 0;
+    }
+
+    .media.full img {
+      max-height: 620px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.portrait img {
+      max-height: 520px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media.compact {
+      max-width: 420px;
+    }
+
+    .media.compact img {
+      max-height: 360px;
+      object-fit: contain;
+      background: #f7f4ee;
+    }
+
+    .media:hover img { transform: scale(1.018); filter: saturate(1.04); }
+
+    .volume-section {
+      margin-top: 28px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,253,.72);
+      box-shadow: 0 12px 28px rgba(49,41,31,.05);
+    }
+
+    .volume-section h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .caption {
+      margin: 0;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,254,253,.8);
+    }
+
+    .source-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      color: var(--muted);
+      background: rgba(255,254,253,.55);
+      font-size: 13px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 28px;
+      background: rgba(31,28,24,.72);
+    }
+
+    .lightbox.open { display: grid; }
+    .lightbox img {
+      max-width: min(980px, 94vw);
+      max-height: 86vh;
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 70;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, main { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .side a { min-width: fit-content; }
+      .card { grid-template-columns: 1fr; }
+      .rank { display: flex; align-items: center; }
+      .stat-row, .date-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .media-grid { grid-template-columns: 1fr; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 10px 0; }
+      .nav { justify-content: flex-start; }
+    }
+.region-label{margin:0 0 6px;color:var(--muted);font-size:12px;font-weight:700}.report-body p,.sources p{margin:0 0 12px}.report-body ul{margin:0 0 14px;padding-left:20px}.signal p{display:inline;margin:0}.sources{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}.media img{object-fit:contain;background:#f7f4ee}.media figcaption{padding:8px 10px;color:var(--muted);font-size:12px;line-height:1.45}.empty-card{padding:34px;text-align:center}.empty-card h3{margin:0 0 8px}@media print{@page{size:A4;margin:12mm}.progress,.topbar,.side,.lightbox{display:none!important}.shell{width:100%;max-width:none}.hero{padding:10mm 0 8mm}.hero-grid{grid-template-columns:1fr}.card{break-before:page;box-shadow:none}.media img{max-height:190mm;object-fit:contain}.reveal{opacity:1!important;transform:none!important}}
+</style><link rel="stylesheet" href="/beauty-intel/assets/site-shell.css" />
+</head><body data-site-section="daily">
+<nav class="site-global-nav" aria-label="日报｜日历｜周报｜搜索"><a href="/beauty-intel/" aria-current="page">日报</a><span>｜</span><a href="/beauty-intel/calendar/">日历</a><span>｜</span><a href="/beauty-intel/weekly/">周报</a><span>｜</span><a href="/beauty-intel/search/">搜索</a></nav>
+<!-- Published source: archive/日报/2026-11-10/beauty-daily-20261110.html --><div class="progress" id="progress"></div><header class="topbar"><div class="shell topbar-inner"><div class="brand"><strong>美妆竞对情报日报</strong><span>2026年第46周 · 11月10日</span></div><nav class="nav"><a href="#feed">情报卡片</a><a href="#volume">近5日事件量</a></nav></div></header><section class="hero"><div class="shell hero-grid"><div><div class="eyebrow">DAILY SIGNAL MONITOR</div><h1>11月10日<br>美妆行业日报</h1></div><aside class="meta-panel"><div class="focus-card"><small>重点关注</small><strong>诺斯贝尔与巴斯夫合作、资生堂业绩、Glow Recipe扩展Ulta</strong></div><div class="stat-row"><div class="stat total-stat"><small>今日收录</small><strong>3</strong></div><div class="stat brand-stat"><small>品牌动态</small><strong>2</strong></div><div class="stat market-stat"><small>市场/监管</small><strong>0</strong></div><div class="stat channel-stat"><small>渠道生态</small><strong>1</strong></div></div></aside></div></section><main class="shell"><nav class="side"><a href="#item-1"><span>品牌动态</span><b>01</b></a><a href="#item-2"><span>品牌动态</span><b>02</b></a><a href="#item-3"><span>渠道生态</span><b>03</b></a></nav><div><section class="section" id="feed"><div class="section-title"><h2>今日结论</h2></div><p class="daily-conclusion">国内ODM开始与国际原料商联合开发可验证的配方技术；资生堂利润改善，但中国消费者购买仍弱，Ulta则继续扩张功效护肤货盘。</p><div class="section-title"><h2>情报卡片</h2><span>按重要性排序</span></div><div class="feed"><article class="card brand-card reveal" id="item-1"><div class="rank"><b>#1</b><span class="tag">品牌动态</span></div><div><p class="region-label">国内·中国/国际</p><h3>诺斯贝尔与巴斯夫签署合作备忘录，联合开发个护配方</h3><div class="report-body"><p><a href="https://www.basf.com/sg/en/media/news-releases/asia-pacific/2026/11/apac-26-131" target="_blank" rel="noopener noreferrer">巴斯夫11月10日公告</a>确认，其与广东中山化妆品ODM企业诺斯贝尔签署合作备忘录，拟围绕清洁技术、成分递送、防晒耐水配方、功效验证等方向共同开发个护产品。公告附有双方在香港签约的现场图片；合作性质为备忘录，尚非具体产品上市或采购合同。</p><p>诺斯贝尔提供产品设计和规模制造，巴斯夫提供原料、配方与监管支持。组合重点落在防晒、清洁和功效验证这些可转化为品牌差异化的技术环节，也有助于中国ODM服务国内外客户时形成更完整的研发方案。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/01-basf-nbc.png" aria-label="放大查看 巴斯夫与诺斯贝尔签约公告截图"><img src="assets/01-basf-nbc.png" alt="巴斯夫与诺斯贝尔签约公告截图" loading="lazy"></button><figcaption>巴斯夫与诺斯贝尔签约公告截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>中国ODM与国际原料商把合作前移至配方和功效验证，供应链竞争更依赖共同研发能力。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.basf.com/sg/en/media/news-releases/asia-pacific/2026/11/apac-26-131" target="_blank" rel="noopener noreferrer">巴斯夫官方新闻稿</a>。</p></div></div></article>
+<article class="card brand-card reveal" id="item-2"><div class="rank"><b>#2</b><span class="tag">品牌动态</span></div><div><p class="region-label">国际·日本/中国</p><h3>资生堂公布前三季度业绩，中国消费者购买仍承压</h3><div class="report-body"><p><a href="https://corp.shiseido.com/en/ir/pdf/ir20261110_309.pdf" target="_blank" rel="noopener noreferrer">资生堂11月10日投资者材料</a>显示，2026年前三季度集团净销售额为7411亿日元，按相同口径同比增长1%；核心营业利润为675亿日元，同比增长124%。中国及旅游零售分部销售额为2685亿日元，按相同口径同比增长1%，但中国消费者购买额在第三季度仍呈低个位数下滑，线下和电商均为负增长。集团上调全年核心营业利润预测。</p><p>利润改善与中国终端需求需分开看。资生堂材料指出，中国高端美妆市场仍增长，但品牌在中国继续管理渠道与品牌资产；NARS和悦薇部分产品表现较好，肌肤之钥和SHISEIDO消费者购买额下降。旅游零售补货支撑了分部账面销售，不能直接等同于中国消费者回购恢复。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/02-shiseido-q3.png" aria-label="放大查看 资生堂2026年第三季度业绩材料截图"><img src="assets/02-shiseido-q3.png" alt="资生堂2026年第三季度业绩材料截图" loading="lazy"></button><figcaption>资生堂2026年第三季度业绩材料截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>集团盈利修复主要体现成本与经营效率改善，中国市场竞争仍取决于终端动销及核心品牌的产品更新。</p></div><div class="sources"><p>图片及信息来源：<a href="https://corp.shiseido.com/en/ir/pdf/ir20261110_309.pdf" target="_blank" rel="noopener noreferrer">资生堂官方业绩演示材料</a>。</p></div></div></article>
+<article class="card channel-card reveal" id="item-3"><div class="rank"><b>#3</b><span class="tag">渠道生态</span></div><div><p class="region-label">国际·美国</p><h3>Glow Recipe宣布12月进入Ulta千店，扩大专业美妆渠道覆盖</h3><div class="report-body"><p><a href="https://www.prnewswire.com/news-releases/glow-recipe-announces-retail-expansion-with-nationwide-ulta-beauty-launch-302934861.html" target="_blank" rel="noopener noreferrer">Glow Recipe 11月10日公告</a>宣布，其护肤产品将于12月6日起进入美国Ulta Beauty线上商城及约1000家门店。这是11月10日披露的渠道合作，实际货架销售要从12月6日算起。品牌主打果源成分和韩式护肤理念，公告表示将以较完整的产品组合进入Ulta。</p><p>Glow Recipe此前已通过其他国际零售商覆盖多市场，这次新增美国大型专业美妆连锁，提升其线下触达密度。与珀莱雅等同期计划进入Ulta的品牌相比，门店覆盖规模和品牌教育方式提供了直接可比的渠道参照，但尚不能把铺货数写成销售结果。</p></div><div class="media-grid"><figure class="media"><button type="button" data-img="assets/03-glow-ulta.png" aria-label="放大查看 Glow Recipe进入Ulta公告截图"><img src="assets/03-glow-ulta.png" alt="Glow Recipe进入Ulta公告截图" loading="lazy"></button><figcaption>Glow Recipe进入Ulta公告截图</figcaption></figure></div><div class="signal"><strong>信号判断：</strong><p>Ulta持续扩充功效护肤与韩式护肤货盘，品牌争夺重点落在大规模门店陈列、试用和动销转化。</p></div><div class="sources"><p>图片及信息来源：<a href="https://www.prnewswire.com/news-releases/glow-recipe-announces-retail-expansion-with-nationwide-ulta-beauty-launch-302934861.html" target="_blank" rel="noopener noreferrer">Glow Recipe官方新闻稿</a>。</p></div></div></article></div></section><section class="volume-section reveal" id="volume"><div class="section-title"><h2>近5日事件量</h2></div><div class="date-strip"><a class="date-cell date-link" href="/beauty-intel/daily/2026-11-06/">11/6<b>3</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-11-07/">11/7<b>3</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-11-08/">11/8<b>2</b></a><a class="date-cell date-link" href="/beauty-intel/daily/2026-11-09/">11/9<b>3</b></a><a class="date-cell active date-link" href="/beauty-intel/daily/2026-11-10/">11/10<b>3</b></a></div></section></div></main><div class="lightbox" id="lightbox" aria-hidden="true"><img alt="" /></div>
+
+  <script>
+    const progress = document.getElementById("progress");
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = `${Math.max(0, Math.min(1, scrollY / max)) * 100}%`;
+    };
+    addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    const io = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) entry.target.classList.add("on");
+      }
+    }, { threshold: .12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-img]").forEach((button) => {
+      button.addEventListener("click", () => {
+        lightboxImg.src = button.dataset.img;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      });
+    });
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.removeAttribute("src");
+    });
+  </script>
+</body></html>
